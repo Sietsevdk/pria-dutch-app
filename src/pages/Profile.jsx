@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Star,
@@ -13,12 +13,17 @@ import {
   AlertTriangle,
   Download,
   Crosshair,
+  Heart,
+  Volume2,
 } from 'lucide-react';
 import ProgressRing from '../components/ProgressRing';
 import useProgress from '../hooks/useProgress';
 import useStreak from '../hooks/useStreak';
 import useSRS from '../hooks/useSRS';
 import useMistakes from '../hooks/useMistakes';
+import useFavourites from '../hooks/useFavourites';
+import { useSpeech } from '../hooks/useSpeech';
+import { dutchWithArticle, dutchBareWord } from '../utils/dutch';
 import { getLevel, LEVELS } from '../utils/xp';
 import { calculateAccuracy } from '../utils/xp';
 
@@ -45,7 +50,7 @@ export default function Profile() {
   const resetProgress = useProgress((s) => s.resetProgress);
   const currentStreak = useStreak((s) => s.currentStreak);
   const longestStreak = useStreak((s) => s.longestStreak);
-  const getCalendarData = useStreak((s) => s.getCalendarData);
+  const activityCalendar = useStreak((s) => s.activityCalendar);
   const resetStreak = useStreak((s) => s.resetStreak);
   const getWeakItems = useSRS((s) => s.getWeakItems);
   const clearSRS = useSRS((s) => s.clearAll);
@@ -96,55 +101,26 @@ export default function Profile() {
     setTimeout(() => setExported(false), 2000);
   };
 
-  const startFocusMode = () => {
-    const weakSRS = getWeakItems(10);
-    const mistakeExercises = generatePracticeFromMistakes(10);
-    // Combine weak SRS items + mistake exercises, take up to 10
-    const combined = [];
-    weakSRS.forEach((item) => {
-      combined.push({
-        id: item.id,
-        question: item.id,
-        options: null, // will be generated below
-        correctAnswer: item.id,
-        source: 'srs-weak',
-      });
-    });
-    mistakeExercises.forEach((ex) => {
-      combined.push({
-        id: ex.id,
-        question: ex.word || ex.correctAnswer,
-        correctAnswer: ex.correctAnswer,
-        source: 'mistake',
-      });
-    });
-    // Deduplicate and limit to 10
-    const seen = new Set();
-    const unique = combined.filter((e) => {
-      const key = e.question + e.correctAnswer;
-      if (seen.has(key)) return false;
-      seen.add(key);
-      return true;
-    }).slice(0, 10);
-    // Generate multiple choice options for each exercise
-    const exercises = unique.map((ex) => {
-      // Generate plausible wrong options from the vocabulary pool
+  // Helper: build MC exercises from a list of vocab words
+  const buildExercises = (words) => {
+    return words.map((word) => {
       const wrongOptions = allVocabWords
-        .filter((w) => w.dutch !== ex.correctAnswer && w.id !== ex.correctAnswer && w.english !== ex.correctAnswer)
-        .map((w) => w.dutch || w.english)
+        .filter((w) => w.english !== word.english)
+        .map((w) => w.english)
         .sort(() => Math.random() - 0.5)
         .slice(0, 3);
-      // Fallback if not enough vocab words
-      if (wrongOptions.length < 3) {
-        const fallbacks = ['de', 'het', 'een', 'die', 'dat', 'dit', 'deze']
-          .filter((o) => o !== ex.correctAnswer);
-        while (wrongOptions.length < 3 && fallbacks.length > 0) {
-          wrongOptions.push(fallbacks.pop());
-        }
-      }
-      const options = [ex.correctAnswer, ...wrongOptions].sort(() => Math.random() - 0.5);
-      return { ...ex, options };
+      const options = [word.english, ...wrongOptions].sort(() => Math.random() - 0.5);
+      return {
+        id: word.id,
+        question: word.dutch,
+        correctAnswer: word.english,
+        prompt: `What does "${word.dutch}" mean?`,
+        options,
+      };
     });
+  };
+
+  const launchFocusExercises = (exercises) => {
     setFocusExercises(exercises);
     setFocusIndex(0);
     setFocusAnswer(null);
@@ -152,9 +128,68 @@ export default function Profile() {
     setFocusMode(true);
   };
 
+  // Review a single word
+  const startSingleReview = (wordId) => {
+    const word = allVocabWords.find((w) => w.id === wordId);
+    if (!word) return;
+    launchFocusExercises(buildExercises([word]));
+  };
+
+  const startFocusMode = () => {
+    const weakSRS = getWeakItems(10);
+    const mistakeExercises = generatePracticeFromMistakes(10);
+    const combined = [];
+
+    // SRS weak items: look up actual word data and create Dutch→English questions
+    weakSRS.forEach((item) => {
+      const word = allVocabWords.find((w) => w.id === item.id);
+      if (!word) return;
+      combined.push(word);
+    });
+
+    // Mistake exercises: look up the vocabulary word (ex.word stores the word ID)
+    mistakeExercises.forEach((ex) => {
+      if (!ex.correctAnswer) return;
+      const word = allVocabWords.find(
+        (w) => w.id === ex.word || w.dutch === ex.word || w.id === ex.id || w.dutch === ex.correctAnswer
+      );
+      if (!word) return;
+      combined.push(word);
+    });
+
+    // Deduplicate and limit to 10
+    const seen = new Set();
+    const unique = combined.filter((w) => {
+      if (seen.has(w.id)) return false;
+      seen.add(w.id);
+      return true;
+    }).slice(0, 10);
+
+    launchFocusExercises(buildExercises(unique));
+  };
+
   const level = getLevel(totalXP);
   const accuracy = calculateAccuracy(totalCorrect, totalExercises);
-  const calendarData = getCalendarData(84); // 12 weeks
+  const calendarData = useMemo(() => {
+    const data = [];
+    const today = new Date();
+    for (let i = 83; i >= 0; i--) {
+      const date = new Date(today);
+      date.setDate(date.getDate() - i);
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const day = String(date.getDate()).padStart(2, '0');
+      const dateStr = `${year}-${month}-${day}`;
+      const activity = activityCalendar?.[dateStr];
+      data.push({
+        date: dateStr,
+        dayOfWeek: date.getDay(),
+        completed: activity?.completed || false,
+        xp: activity?.xp || 0,
+      });
+    }
+    return data;
+  }, [activityCalendar]); // 12 weeks
   const weakItems = getWeakItems(5);
   const grammarCount = Object.values(grammarMastered).filter((g) => g.mastered).length;
 
@@ -207,7 +242,10 @@ export default function Profile() {
           Exercise {focusIndex + 1} of {focusExercises.length}
         </p>
         <div className="bg-white rounded-2xl p-5 shadow-sm border border-cream-dark/50 mb-4">
-          <p className="text-lg font-semibold text-charcoal mb-4 text-center">
+          <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-2 text-center">
+            {currentEx.prompt || 'What does this mean?'}
+          </p>
+          <p className="text-2xl font-bold text-charcoal mb-5 text-center">
             {currentEx.question}
           </p>
           <div className="grid grid-cols-2 gap-2">
@@ -327,19 +365,41 @@ export default function Profile() {
       {/* Weak areas */}
       {weakItems.length > 0 && (
         <motion.div variants={item} className="bg-white rounded-2xl p-4 shadow-sm border border-cream-dark/50 mb-4">
-          <h3 className="font-semibold text-sm text-charcoal mb-3">Needs Practice</h3>
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="font-semibold text-sm text-charcoal">Needs Practice</h3>
+            <button
+              onClick={startFocusMode}
+              className="text-xs text-primary font-medium"
+            >
+              Practice all →
+            </button>
+          </div>
           <div className="space-y-2">
-            {weakItems.map((item) => (
-              <div key={item.id} className="flex items-center justify-between text-sm">
-                <span className="text-charcoal/70">{item.id}</span>
-                <span className="text-xs text-error/70">
-                  Ease: {item.easeFactor?.toFixed(1)}
-                </span>
-              </div>
-            ))}
+            {weakItems.map((wi) => {
+              const word = allVocabWords.find((w) => w.id === wi.id);
+              return (
+                <div key={wi.id} className="flex items-center justify-between text-sm py-1">
+                  <div>
+                    <span className="text-charcoal font-medium">{word?.dutch || wi.id}</span>
+                    {word?.english && (
+                      <span className="text-charcoal/50 ml-2 text-xs">— {word.english}</span>
+                    )}
+                  </div>
+                  <button
+                    onClick={() => startSingleReview(wi.id)}
+                    className="text-xs text-warning font-medium bg-warning/10 px-2.5 py-1 rounded-lg hover:bg-warning/20 transition-colors"
+                  >
+                    review
+                  </button>
+                </div>
+              );
+            })}
           </div>
         </motion.div>
       )}
+
+      {/* Favourites */}
+      <FavouritesSection item={item} />
 
       {/* Focus Mode */}
       <motion.div variants={item}>
@@ -583,5 +643,151 @@ function StatCard({ icon: Icon, label, value, color }) {
       <div className="text-lg font-bold text-charcoal leading-tight">{value}</div>
       <div className="text-[10px] text-charcoal/50">{label}</div>
     </div>
+  );
+}
+
+function FavouritesSection({ item: animVariant }) {
+  const favourites = useFavourites((s) => s.favourites);
+  const toggleFavourite = useFavourites((s) => s.toggleFavourite);
+  const { speak } = useSpeech();
+  const [isOpen, setIsOpen] = useState(false);
+
+  if (favourites.length === 0) return null;
+
+  const wordFavs = favourites.filter((f) => f.type === 'word');
+  const grammarFavs = favourites.filter((f) => f.type === 'grammar');
+  const verbFavs = favourites.filter((f) => f.type === 'verb');
+
+  return (
+    <motion.div variants={animVariant} className="mb-4">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full bg-white rounded-2xl p-4 shadow-sm border border-cream-dark/50 flex items-center justify-between"
+      >
+        <div className="flex items-center gap-3">
+          <Heart size={18} className="text-error" fill="currentColor" />
+          <div>
+            <span className="font-semibold text-sm text-charcoal">Favourites</span>
+            <span className="text-xs text-charcoal/50 ml-2">{favourites.length} saved</span>
+          </div>
+        </div>
+        <ChevronDown
+          size={16}
+          className={`text-charcoal/30 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+        />
+      </button>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="overflow-hidden"
+          >
+            <div className="bg-white rounded-b-2xl px-4 pb-4 border-x border-b border-cream-dark/50 -mt-2 pt-4 space-y-3">
+              {/* Words */}
+              {wordFavs.length > 0 && (
+                <div>
+                  <p className="text-[10px] font-semibold text-charcoal/40 uppercase tracking-wide mb-1.5">
+                    Words ({wordFavs.length})
+                  </p>
+                  <div className="space-y-1">
+                    {wordFavs.map((fav) => (
+                      <div key={fav.id} className="flex items-center justify-between py-1.5 text-sm">
+                        <div className="flex items-center gap-2 min-w-0 flex-1">
+                          <button
+                            onClick={() => speak(fav.data.dutch)}
+                            className="text-primary/60 hover:text-primary p-0.5"
+                          >
+                            <Volume2 size={12} />
+                          </button>
+                          <span className="font-medium text-charcoal truncate">
+                            {fav.data.article && <span className="text-primary/50 text-xs mr-1">{fav.data.article}</span>}
+                            {(() => {
+                              // Strip embedded article to avoid "de de familie"
+                              const d = fav.data.dutch || '';
+                              if (fav.data.article && d.toLowerCase().startsWith(fav.data.article.toLowerCase() + ' ')) {
+                                return d.slice(fav.data.article.length + 1);
+                              }
+                              return d;
+                            })()}
+                          </span>
+                          <span className="text-charcoal/40 text-xs truncate">— {fav.data.english}</span>
+                        </div>
+                        <button
+                          onClick={() => toggleFavourite(fav.id)}
+                          className="text-error p-1 shrink-0"
+                        >
+                          <Heart size={12} fill="currentColor" />
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Grammar */}
+              {grammarFavs.length > 0 && (
+                <div>
+                  <p className="text-[10px] font-semibold text-charcoal/40 uppercase tracking-wide mb-1.5">
+                    Grammar ({grammarFavs.length})
+                  </p>
+                  <div className="space-y-1">
+                    {grammarFavs.map((fav) => (
+                      <div key={fav.id} className="flex items-center justify-between py-1.5 text-sm">
+                        <div className="min-w-0 flex-1">
+                          <span className="font-medium text-charcoal truncate block">{fav.data.title}</span>
+                          {fav.data.summary && (
+                            <span className="text-charcoal/40 text-xs truncate block">{fav.data.summary}</span>
+                          )}
+                        </div>
+                        <button
+                          onClick={() => toggleFavourite(fav.id)}
+                          className="text-error p-1 shrink-0"
+                        >
+                          <Heart size={12} fill="currentColor" />
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Verbs */}
+              {verbFavs.length > 0 && (
+                <div>
+                  <p className="text-[10px] font-semibold text-charcoal/40 uppercase tracking-wide mb-1.5">
+                    Verbs ({verbFavs.length})
+                  </p>
+                  <div className="space-y-1">
+                    {verbFavs.map((fav) => (
+                      <div key={fav.id} className="flex items-center justify-between py-1.5 text-sm">
+                        <div className="flex items-center gap-2 min-w-0 flex-1">
+                          <button
+                            onClick={() => speak(fav.data.infinitive)}
+                            className="text-primary/60 hover:text-primary p-0.5"
+                          >
+                            <Volume2 size={12} />
+                          </button>
+                          <span className="font-medium text-charcoal">{fav.data.infinitive}</span>
+                          <span className="text-charcoal/40 text-xs">— {fav.data.meaning}</span>
+                        </div>
+                        <button
+                          onClick={() => toggleFavourite(fav.id)}
+                          className="text-error p-1 shrink-0"
+                        >
+                          <Heart size={12} fill="currentColor" />
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   );
 }

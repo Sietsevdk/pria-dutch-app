@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback, useRef } from 'react';
+import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { RotateCcw, Check, Trophy, Target, Sparkles, Send } from 'lucide-react';
 import FlashCard from './FlashCard';
@@ -6,7 +6,6 @@ import MultipleChoice from './MultipleChoice';
 import useSRS from '../hooks/useSRS';
 import useProgress from '../hooks/useProgress';
 import { shuffle, checkAnswer, dutchWithArticle } from '../utils/dutch';
-import { getDueItems } from '../utils/srs';
 
 // We need to load vocabulary data to get word details
 const vocabModules = import.meta.glob('../data/vocabulary/*.json', { eager: true });
@@ -24,8 +23,7 @@ Object.values(vocabModules).forEach((mod) => {
 const REVIEW_MODES = ['flashcard', 'quiz', 'typing'];
 
 export default function ReviewSession({ onComplete }) {
-  // Use raw items from store (stable reference) and compute due items in useMemo
-  const srsItems = useSRS((s) => s.items);
+  const getReviewSessionItems = useSRS((s) => s.getReviewSessionItems);
   const reviewItem = useSRS((s) => s.reviewItem);
   const addXP = useProgress((s) => s.addXP);
   const completeReviewGoal = useProgress((s) => s.completeReviewGoal);
@@ -37,10 +35,10 @@ export default function ReviewSession({ onComplete }) {
 
   const reviewMode = REVIEW_MODES[modeIndex % REVIEW_MODES.length];
 
-  // Snapshot items at session start — don't recompute when SRS updates mid-session
+  // Snapshot items at session start — use SRS batching with anti-annoyance filter
   const [items] = useState(() => {
-    const dueItems = getDueItems(srsItems);
-    return dueItems
+    const sessionItems = getReviewSessionItems(20);
+    return sessionItems
       .filter((item) => allVocab[item.id])
       .map((item) => ({
         ...item,
@@ -83,9 +81,11 @@ export default function ReviewSession({ onComplete }) {
   // Generate quiz options — must be before early returns to respect Rules of Hooks
   const quizOptions = useMemo(() => {
     if (!currentItem) return [];
-    const otherWords = Object.values(allVocab)
-      .filter((w) => w.id !== currentItem.word.id)
-      .map((w) => w.english);
+    const otherWords = [...new Set(
+      Object.values(allVocab)
+        .filter((w) => w.id !== currentItem.word.id && w.english !== currentItem.word.english)
+        .map((w) => w.english)
+    )];
     const wrongOptions = shuffle(otherWords).slice(0, 3);
     return shuffle([currentItem.word.english, ...wrongOptions]);
   }, [currentItem]);
@@ -238,6 +238,11 @@ function TypingReview({ word, onAnswer }) {
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [result, setResult] = useState(null);
   const inputRef = useRef(null);
+  const feedbackTimerRef = useRef(null);
+
+  useEffect(() => {
+    return () => { if (feedbackTimerRef.current) clearTimeout(feedbackTimerRef.current); };
+  }, []);
 
   const dutchAnswer = word.dutch.toLowerCase();
 
@@ -249,7 +254,7 @@ function TypingReview({ word, onAnswer }) {
     setResult(checkResult);
     setHasSubmitted(true);
 
-    setTimeout(() => {
+    feedbackTimerRef.current = setTimeout(() => {
       onAnswer(checkResult.correct);
     }, 2000);
   }, [userInput, dutchAnswer, hasSubmitted, onAnswer]);

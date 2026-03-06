@@ -1,8 +1,10 @@
 {
   "topic": "word-order",
   "topicNL": "Woordvolgorde",
+  "topicEN": "Word Order",
   "explanation": {
     "summary": "In het Nederlands staat het vervoegde werkwoord altijd op de tweede positie in de hoofdzin (de V2-regel). In bijzinnen gaat het werkwoord naar het einde. De volgorde van extra informatie volgt de regel: Tijd - Wijze - Plaats (wanneer - hoe - waar).",
+    "summaryEN": "In Dutch, the conjugated verb always goes in the second position in the main clause (the V2 rule). In subordinate clauses, the verb moves to the end. The order of additional information follows the rule: Time - Manner - Place (when - how - where).",
     "rules": [
       "V2-REGEL: Het vervoegde werkwoord staat ALTIJD op de tweede positie in een hoofdzin (bevestigende zin).",
       "Positie 1 kan gevuld worden door het onderwerp, maar ook door een tijdsbepaling, plaatsbepaling of ander zinsdeel.",
@@ -15,12 +17,31 @@
       "Na coordinerende voegwoorden (en, maar, want, of, dus) verandert de woordvolgorde NIET.",
       "Na subordinerende voegwoorden (omdat, dat, als, toen, terwijl, etc.) gaat het werkwoord naar het EINDE."
     ],
+    "rulesEN": [
+      "V2 RULE: The conjugated verb ALWAYS goes in the second position in a main clause (declarative sentence).",
+      "Position 1 can be filled by the subject, but also by a time expression, place expression, or other sentence element.",
+      "INVERSION: If something other than the subject is in position 1, the subject comes AFTER the verb: 'Morgen ga IK naar Amsterdam.' (Tomorrow I go to Amsterdam.) (not: 'Morgen ik ga...')",
+      "SUBORDINATE CLAUSE: In subordinate clauses (after omdat/because, dat/that, als/if, wanneer/when, etc.) the conjugated verb moves to the END: 'Ik weet dat hij morgen komt.' (I know that he comes tomorrow.)",
+      "TIME-MANNER-PLACE: The order of adverbials is: Time (when), Manner (how), Place (where). 'Ik ga morgen (T) met de trein (M) naar Amsterdam (P).' (I go tomorrow by train to Amsterdam.)",
+      "With two verbs: the conjugated verb goes to position 2, the second verb (infinitive/participle) goes to the end: 'Ik wil morgen naar Amsterdam gaan.' (I want to go to Amsterdam tomorrow.)",
+      "NEGATION: 'Niet' (not) usually goes at the end of the sentence or before the word being negated.",
+      "In a subordinate clause with two verbs, both verbs move to the end: '...omdat ik morgen naar Amsterdam wil gaan.' (...because I want to go to Amsterdam tomorrow.)",
+      "After coordinating conjunctions (en/and, maar/but, want/because, of/or, dus/so) the word order does NOT change.",
+      "After subordinating conjunctions (omdat/because, dat/that, als/if, toen/when, terwijl/while, etc.) the verb moves to the END."
+    ],
     "exceptions": [
       "In ja/nee-vragen staat het werkwoord op positie 1: 'Ga jij morgen naar Amsterdam?'",
       "In imperatieven (gebiedende wijs) staat het werkwoord op positie 1: 'Kom hier!'",
       "Het woordje 'er' (existentieel) neemt vaak positie 1 in bij inversie: 'Er staat een man voor de deur.'",
       "'Want' is een nevenschikkend voegwoord, maar sommige mensen behandelen het foutief als onderschikkend. Na 'want' verandert de woordvolgorde NIET: 'Ik ga niet, want ik ben ziek.' (niet: '...want ik ziek ben.')",
       "In informele spreektaal wordt de woordvolgorde soms niet strikt gevolgd, maar voor het examen moet je de standaardregels kennen."
+    ],
+    "exceptionsEN": [
+      "In yes/no questions, the verb goes to position 1: 'Ga jij morgen naar Amsterdam?' (Are you going to Amsterdam tomorrow?)",
+      "In imperatives (commands), the verb goes to position 1: 'Kom hier!' (Come here!)",
+      "The word 'er' (existential 'there') often takes position 1 with inversion: 'Er staat een man voor de deur.' (There is a man at the door.)",
+      "'Want' (because/for) is a coordinating conjunction, but some people mistakenly treat it as subordinating. After 'want' the word order does NOT change: 'Ik ga niet, want ik ben ziek.' (I'm not going, because I am sick.) (not: '...want ik ziek ben.')",
+      "In informal spoken language, word order is sometimes not strictly followed, but for the exam you need to know the standard rules."
     ],
     "commonMistakes": [
       "'Morgen ik ga naar school' is fout - bij inversie komt het onderwerp na het werkwoord: 'Morgen ga ik naar school.'",
@@ -29,7 +50,15 @@
       "'Omdat ik ga niet naar school' is fout - in de bijzin gaat het werkwoord naar het einde: 'Omdat ik niet naar school ga.'",
       "'Ik heb gegeten gisteren' is fout - het voltooid deelwoord staat aan het einde, maar tijdsbepalingen komen ervoor: 'Ik heb gisteren gegeten.'"
     ],
-    "tip": "Denk aan de Nederlandse zin als een trein: het werkwoord is de locomotief en staat altijd op spoor 2 (positie 2). In een bijzin rijdt de locomotief naar het laatste spoor (het einde). Onthoud TMP: Tijd-Manier-Plaats (wanneer-hoe-waar) voor de volgorde van extra informatie."
+    "commonMistakesEN": [
+      "'Morgen ik ga naar school' is wrong — with inversion the subject comes after the verb: 'Morgen ga ik naar school.' (Tomorrow I go to school.)",
+      "'Ik weet dat hij komt morgen' is wrong — in the subordinate clause the verb goes to the end: 'Ik weet dat hij morgen komt.' (I know that he comes tomorrow.)",
+      "'Ik ga naar Amsterdam morgen met de trein' is wrong — follow Time-Manner-Place: 'Ik ga morgen met de trein naar Amsterdam.' (I go tomorrow by train to Amsterdam.)",
+      "'Omdat ik ga niet naar school' is wrong — in the subordinate clause the verb goes to the end: 'Omdat ik niet naar school ga.' (Because I don't go to school.)",
+      "'Ik heb gegeten gisteren' is wrong — the past participle goes at the end, but time expressions come before it: 'Ik heb gisteren gegeten.' (I ate yesterday.)"
+    ],
+    "tip": "Denk aan de Nederlandse zin als een trein: het werkwoord is de locomotief en staat altijd op spoor 2 (positie 2). In een bijzin rijdt de locomotief naar het laatste spoor (het einde). Onthoud TMP: Tijd-Manier-Plaats (wanneer-hoe-waar) voor de volgorde van extra informatie.",
+    "tipEN": "Think of the Dutch sentence as a train: the verb is the locomotive and always goes on track 2 (position 2). In a subordinate clause, the locomotive moves to the last track (the end). Remember TMP: Time-Manner-Place (when-how-where) for the order of additional information."
   },
   "exercises": [
     {
@@ -37,20 +66,23 @@
       "sentence": "Morgen ga ik naar de markt.",
       "words": ["de", "ga", "ik", "Morgen", "markt", "naar"],
       "answer": "Morgen ga ik naar de markt.",
-      "explanation": "'Morgen' staat op positie 1, dus het werkwoord 'ga' komt op positie 2, gevolgd door het onderwerp 'ik' (inversie)."
+      "explanation": "'Morgen' staat op positie 1, dus het werkwoord 'ga' komt op positie 2, gevolgd door het onderwerp 'ik' (inversie).",
+      "explanationEN": "'Morgen' (tomorrow) is in position 1, so the verb 'ga' (go) comes in position 2, followed by the subject 'ik' (I) — this is inversion."
     },
     {
       "type": "reorder",
       "sentence": "Ik ga morgen met de fiets naar school.",
       "words": ["school", "ga", "naar", "met", "de", "fiets", "morgen", "Ik"],
       "answer": "Ik ga morgen met de fiets naar school.",
-      "explanation": "Woordvolgorde: onderwerp (Ik) + werkwoord (ga) + Tijd (morgen) + Wijze (met de fiets) + Plaats (naar school)."
+      "explanation": "Woordvolgorde: onderwerp (Ik) + werkwoord (ga) + Tijd (morgen) + Wijze (met de fiets) + Plaats (naar school).",
+      "explanationEN": "Word order: subject (Ik/I) + verb (ga/go) + Time (morgen/tomorrow) + Manner (met de fiets/by bike) + Place (naar school/to school)."
     },
     {
       "type": "fill_blank",
       "sentence": "Ik weet dat hij morgen ___. (komen)",
       "answer": "komt",
-      "explanation": "In een bijzin (na 'dat') gaat het werkwoord naar het einde: '...dat hij morgen komt.'"
+      "explanation": "In een bijzin (na 'dat') gaat het werkwoord naar het einde: '...dat hij morgen komt.'",
+      "explanationEN": "In a subordinate clause (after 'dat'/that) the verb moves to the end: '...dat hij morgen komt.' (...that he comes tomorrow.)"
     },
     {
       "type": "multiple_choice",
@@ -62,20 +94,23 @@
         "Gisteren een film ik heb gezien."
       ],
       "answer": "Gisteren heb ik een film gezien.",
-      "explanation": "'Gisteren' staat op positie 1, dus het werkwoord 'heb' moet op positie 2 staan, gevolgd door het onderwerp 'ik' (inversie). Let op: 'gezien' is het voltooid deelwoord van 'zien'."
+      "explanation": "'Gisteren' staat op positie 1, dus het werkwoord 'heb' moet op positie 2 staan, gevolgd door het onderwerp 'ik' (inversie). Let op: 'gezien' is het voltooid deelwoord van 'zien'.",
+      "explanationEN": "'Gisteren' (yesterday) is in position 1, so the verb 'heb' (have) must be in position 2, followed by the subject 'ik' (I) — this is inversion. Note: 'gezien' is the past participle of 'zien' (to see)."
     },
     {
       "type": "reorder",
       "sentence": "Ik ga niet naar school omdat ik ziek ben.",
       "words": ["ik", "ga", "naar", "niet", "omdat", "school", "ben", "ik", "ziek", "Ik"],
       "answer": "Ik ga niet naar school omdat ik ziek ben.",
-      "explanation": "Hoofdzin: V2-regel (ga op positie 2). Bijzin na 'omdat': werkwoord 'ben' gaat naar het einde."
+      "explanation": "Hoofdzin: V2-regel (ga op positie 2). Bijzin na 'omdat': werkwoord 'ben' gaat naar het einde.",
+      "explanationEN": "Main clause: V2 rule ('ga' in position 2). Subordinate clause after 'omdat' (because): verb 'ben' (am) moves to the end."
     },
     {
       "type": "fill_blank",
       "sentence": "Zij vertelde dat zij in Amsterdam ___. (wonen, OVT)",
       "answer": "woonde",
-      "explanation": "In de bijzin (na 'dat') gaat het werkwoord naar het einde: '...dat zij in Amsterdam woonde.'"
+      "explanation": "In de bijzin (na 'dat') gaat het werkwoord naar het einde: '...dat zij in Amsterdam woonde.'",
+      "explanationEN": "In the subordinate clause (after 'dat'/that) the verb moves to the end: '...dat zij in Amsterdam woonde.' (...that she lived in Amsterdam.)"
     },
     {
       "type": "multiple_choice",
@@ -87,20 +122,23 @@
         "Ik gaan wil morgen naar Amsterdam."
       ],
       "answer": "Ik wil morgen naar Amsterdam gaan.",
-      "explanation": "Het modale werkwoord 'wil' staat op positie 2. De infinitief 'gaan' staat aan het einde. Daartussen: Tijd (morgen) + Plaats (naar Amsterdam)."
+      "explanation": "Het modale werkwoord 'wil' staat op positie 2. De infinitief 'gaan' staat aan het einde. Daartussen: Tijd (morgen) + Plaats (naar Amsterdam).",
+      "explanationEN": "The modal verb 'wil' (want) is in position 2. The infinitive 'gaan' (to go) is at the end. In between: Time (morgen/tomorrow) + Place (naar Amsterdam/to Amsterdam)."
     },
     {
       "type": "reorder",
       "sentence": "Vandaag moet ik vroeg naar huis gaan.",
       "words": ["naar", "moet", "ik", "vroeg", "gaan", "huis", "Vandaag"],
       "answer": "Vandaag moet ik vroeg naar huis gaan.",
-      "explanation": "'Vandaag' op positie 1, werkwoord 'moet' op positie 2 (inversie), infinitief 'gaan' aan het einde."
+      "explanation": "'Vandaag' op positie 1, werkwoord 'moet' op positie 2 (inversie), infinitief 'gaan' aan het einde.",
+      "explanationEN": "'Vandaag' (today) in position 1, verb 'moet' (must) in position 2 (inversion), infinitive 'gaan' (to go) at the end."
     },
     {
       "type": "fill_blank",
       "sentence": "Hij is blij, want hij ___ een nieuwe baan ___. (hebben, VTT)",
       "answer": "heeft, gekregen",
-      "explanation": "Na 'want' (nevenschikkend voegwoord) verandert de woordvolgorde NIET. De hoofdzinvolgorde blijft: werkwoord op positie 2."
+      "explanation": "Na 'want' (nevenschikkend voegwoord) verandert de woordvolgorde NIET. De hoofdzinvolgorde blijft: werkwoord op positie 2.",
+      "explanationEN": "After 'want' (coordinating conjunction meaning 'because/for') the word order does NOT change. The main clause word order remains: verb in position 2."
     },
     {
       "type": "multiple_choice",
@@ -112,27 +150,31 @@
         "Als morgen het regent, blijf ik thuis."
       ],
       "answer": "Als het morgen regent, blijf ik thuis.",
-      "explanation": "In de bijzin (als het morgen regent) gaat het werkwoord naar het einde. In de hoofdzin na de bijzin: inversie - werkwoord op positie 2: 'blijf ik'."
+      "explanation": "In de bijzin (als het morgen regent) gaat het werkwoord naar het einde. In de hoofdzin na de bijzin: inversie - werkwoord op positie 2: 'blijf ik'.",
+      "explanationEN": "In the subordinate clause (als het morgen regent / if it rains tomorrow) the verb moves to the end. In the main clause after the subordinate clause: inversion — verb in position 2: 'blijf ik' (I stay)."
     },
     {
       "type": "reorder",
       "sentence": "In de zomer gaan wij altijd naar het strand.",
       "words": ["strand", "In", "wij", "de", "het", "altijd", "gaan", "zomer", "naar"],
       "answer": "In de zomer gaan wij altijd naar het strand.",
-      "explanation": "'In de zomer' op positie 1, werkwoord 'gaan' op positie 2, inversie: 'wij' na het werkwoord."
+      "explanation": "'In de zomer' op positie 1, werkwoord 'gaan' op positie 2, inversie: 'wij' na het werkwoord.",
+      "explanationEN": "'In de zomer' (in the summer) in position 1, verb 'gaan' (go) in position 2, inversion: 'wij' (we) after the verb."
     },
     {
       "type": "fill_blank",
       "sentence": "Ik eet nu een boterham, terwijl ik naar de radio ___.",
       "answer": "luister",
-      "explanation": "In de bijzin (na 'terwijl') gaat het werkwoord naar het einde: '...terwijl ik naar de radio luister.'"
+      "explanation": "In de bijzin (na 'terwijl') gaat het werkwoord naar het einde: '...terwijl ik naar de radio luister.'",
+      "explanationEN": "In the subordinate clause (after 'terwijl'/while) the verb moves to the end: '...terwijl ik naar de radio luister.' (...while I listen to the radio.)"
     },
     {
       "type": "reorder",
       "sentence": "Volgende week gaan wij met de auto naar Duitsland.",
       "words": ["auto", "Volgende", "wij", "gaan", "de", "week", "naar", "Duitsland", "met"],
       "answer": "Volgende week gaan wij met de auto naar Duitsland.",
-      "explanation": "Tijd (Volgende week) op positie 1, werkwoord (gaan) op positie 2, inversie, dan Wijze (met de auto) + Plaats (naar Duitsland)."
+      "explanation": "Tijd (Volgende week) op positie 1, werkwoord (gaan) op positie 2, inversie, dan Wijze (met de auto) + Plaats (naar Duitsland).",
+      "explanationEN": "Time (Volgende week/next week) in position 1, verb (gaan/go) in position 2, inversion, then Manner (met de auto/by car) + Place (naar Duitsland/to Germany)."
     },
     {
       "type": "multiple_choice",
@@ -144,14 +186,16 @@
         "Ik ga slapen, omdat ben ik moe."
       ],
       "answer": "Omdat ik moe ben, ga ik slapen.",
-      "explanation": "Bijzin: werkwoord 'ben' naar het einde (omdat ik moe ben). Hoofdzin na de bijzin: inversie - werkwoord op positie 2 (ga ik slapen)."
+      "explanation": "Bijzin: werkwoord 'ben' naar het einde (omdat ik moe ben). Hoofdzin na de bijzin: inversie - werkwoord op positie 2 (ga ik slapen).",
+      "explanationEN": "Subordinate clause: verb 'ben' (am) moves to the end (omdat ik moe ben / because I am tired). Main clause after the subordinate clause: inversion — verb in position 2 (ga ik slapen / I go to sleep)."
     },
     {
       "type": "reorder",
       "sentence": "Ik heb gisteren de hele dag thuis gewerkt.",
       "words": ["thuis", "heb", "gisteren", "hele", "de", "Ik", "gewerkt", "dag"],
       "answer": "Ik heb gisteren de hele dag thuis gewerkt.",
-      "explanation": "Werkwoord 'heb' op positie 2, voltooid deelwoord 'gewerkt' aan het einde. Tijd (gisteren de hele dag) + Plaats (thuis) ertussen."
+      "explanation": "Werkwoord 'heb' op positie 2, voltooid deelwoord 'gewerkt' aan het einde. Tijd (gisteren de hele dag) + Plaats (thuis) ertussen.",
+      "explanationEN": "Verb 'heb' (have) in position 2, past participle 'gewerkt' (worked) at the end. Time (gisteren de hele dag / yesterday all day) + Place (thuis / at home) in between."
     }
   ]
 }

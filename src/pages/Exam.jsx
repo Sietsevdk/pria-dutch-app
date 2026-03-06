@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Clock, BookOpen, Headphones, PenTool, ArrowLeft, ChevronRight, Volume2, Mic, Eye, EyeOff, CheckCircle, XCircle } from 'lucide-react';
 import useProgress from '../hooks/useProgress';
+import { shuffle } from '../utils/dutch';
 
 const readingModule = import.meta.glob('../data/exam/reading.json', { eager: true });
 const listeningModule = import.meta.glob('../data/exam/listening.json', { eager: true });
@@ -62,16 +63,36 @@ export default function Exam() {
   const [knmQuestions, setKnmQuestions] = useState([]);
   // Reading translation toggle
   const [showTranslation, setShowTranslation] = useState({});
+  // Writing prompt navigation (must be at top level to respect Rules of Hooks)
+  const [promptIndex, setPromptIndex] = useState(0);
   const timerRef = useRef(null);
 
   useEffect(() => {
-    if (timerActive && timeLeft > 0) {
-      timerRef.current = setInterval(() => {
-        setTimeLeft((t) => t - 1);
-      }, 1000);
-    }
+    if (!timerActive) return;
+    timerRef.current = setInterval(() => {
+      setTimeLeft((t) => {
+        if (t <= 1) {
+          clearInterval(timerRef.current);
+          setTimerActive(false);
+          setShowResults(true);
+          return 0;
+        }
+        return t - 1;
+      });
+    }, 1000);
     return () => clearInterval(timerRef.current);
-  }, [timerActive, timeLeft]);
+  }, [timerActive]);
+
+  // Warn user before navigating away during active exam
+  useEffect(() => {
+    if (!timerActive) return;
+    const handler = (e) => {
+      e.preventDefault();
+      e.returnValue = '';
+    };
+    window.addEventListener('beforeunload', handler);
+    return () => window.removeEventListener('beforeunload', handler);
+  }, [timerActive]);
 
   const formatTime = (seconds) => {
     const m = Math.floor(seconds / 60);
@@ -181,6 +202,7 @@ export default function Exam() {
               setTimeLeft(30 * 60);
               setTimerActive(true);
               setWritingText('');
+              setPromptIndex(0);
               setShowModelAnswer(false);
             }}
           />
@@ -216,7 +238,7 @@ export default function Exam() {
                   allQuestions.push({ ...q, categoryName: cat.name, categoryNameNl: cat.nameNl });
                 });
               });
-              const shuffled = allQuestions.sort(() => Math.random() - 0.5);
+              const shuffled = shuffle([...allQuestions]);
               setKnmQuestions(shuffled.slice(0, 15));
             }}
           />
@@ -360,6 +382,7 @@ export default function Exam() {
                   <div className="flex gap-2">
                     <button
                       onClick={() => {
+                        window.speechSynthesis.cancel();
                         const u = new SpeechSynthesisUtterance(passage.text);
                         u.lang = 'nl-NL';
                         u.rate = 0.9;
@@ -371,6 +394,7 @@ export default function Exam() {
                     </button>
                     <button
                       onClick={() => {
+                        window.speechSynthesis.cancel();
                         const u = new SpeechSynthesisUtterance(passage.text);
                         u.lang = 'nl-NL';
                         u.rate = 0.65;
@@ -427,7 +451,6 @@ export default function Exam() {
   if (activeSection === 'writing') {
     const section = writingData.sections?.find((s) => s.examNumber === selectedExam);
     const prompts = section?.prompts || [];
-    const [promptIndex, setPromptIndex] = useState(0);
     const currentPrompt = prompts[promptIndex];
 
     return (
@@ -666,6 +689,7 @@ export default function Exam() {
                     <p className="text-sm text-charcoal/80 italic">{currentTask.modelPhrase}</p>
                     <button
                       onClick={() => {
+                        window.speechSynthesis.cancel();
                         const u = new SpeechSynthesisUtterance(currentTask.modelPhrase);
                         u.lang = 'nl-NL';
                         u.rate = 0.85;

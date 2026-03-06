@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Lightbulb, Send, Check, X } from 'lucide-react';
 import { checkAnswer } from '../utils/dutch';
@@ -22,6 +22,11 @@ export default function FillInBlank({
   const [result, setResult] = useState(null); // null | { correct, exact, distance }
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const inputRef = useRef(null);
+  const feedbackTimerRef = useRef(null);
+
+  useEffect(() => {
+    return () => { if (feedbackTimerRef.current) clearTimeout(feedbackTimerRef.current); };
+  }, []);
 
   const handleSubmit = useCallback(
     (e) => {
@@ -33,7 +38,7 @@ export default function FillInBlank({
       setHasSubmitted(true);
 
       if (onAnswer) {
-        setTimeout(() => {
+        feedbackTimerRef.current = setTimeout(() => {
           onAnswer(checkResult.correct);
         }, 1500);
       }

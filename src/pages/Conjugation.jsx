@@ -1,7 +1,10 @@
 import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, Search, Filter, Check, X, ChevronDown, ChevronRight } from 'lucide-react';
-import { checkAnswer } from '../utils/dutch';
+import { ArrowLeft, Search, Filter, Check, X, ChevronDown, ChevronRight, BookOpen, Zap, Trophy, Heart } from 'lucide-react';
+import { checkAnswer, shuffle } from '../utils/dutch';
+import useProgress from '../hooks/useProgress';
+import useStreak from '../hooks/useStreak';
+import useFavourites from '../hooks/useFavourites';
 
 const conjModule = import.meta.glob('../data/conjugations.json', { eager: true });
 let conjData = { verbs: [] };
@@ -196,6 +199,9 @@ function ReferenceMode() {
 }
 
 function VerbCard({ verb, isExpanded, onToggle, index }) {
+  const toggleFavourite = useFavourites((s) => s.toggleFavourite);
+  const isFav = useFavourites((s) => s.isFavourite(verb.infinitive));
+
   const typeColor = {
     regular: 'bg-success/10 text-success',
     irregular: 'bg-primary/10 text-primary',
@@ -209,30 +215,47 @@ function VerbCard({ verb, isExpanded, onToggle, index }) {
       transition={{ delay: Math.min(index * 0.02, 0.3) }}
       className="bg-white rounded-2xl shadow-sm border border-cream-dark/50 overflow-hidden"
     >
-      <button
-        onClick={onToggle}
-        className="w-full p-4 flex items-center gap-3 text-left"
-      >
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2">
-            <h3 className="font-semibold text-charcoal">{verb.infinitive}</h3>
-            <span
-              className={`text-[10px] font-medium px-2 py-0.5 rounded-full ${
-                typeColor[verb.type] || 'bg-cream-dark text-charcoal/50'
-              }`}
-            >
-              {verb.type}
-            </span>
-          </div>
-          <p className="text-sm text-charcoal/50">{verb.meaning}</p>
-        </div>
-        <motion.div
-          animate={{ rotate: isExpanded ? 180 : 0 }}
-          transition={{ duration: 0.2 }}
+      <div className="flex items-center">
+        <button
+          onClick={onToggle}
+          className="flex-1 p-4 flex items-center gap-3 text-left min-w-0"
         >
-          <ChevronDown size={18} className="text-charcoal/30" />
-        </motion.div>
-      </button>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2">
+              <h3 className="font-semibold text-charcoal">{verb.infinitive}</h3>
+              <span
+                className={`text-[10px] font-medium px-2 py-0.5 rounded-full ${
+                  typeColor[verb.type] || 'bg-cream-dark text-charcoal/50'
+                }`}
+              >
+                {verb.type}
+              </span>
+            </div>
+            <p className="text-sm text-charcoal/50">{verb.meaning}</p>
+          </div>
+          <motion.div
+            animate={{ rotate: isExpanded ? 180 : 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            <ChevronDown size={18} className="text-charcoal/30" />
+          </motion.div>
+        </button>
+        <button
+          onClick={() =>
+            toggleFavourite(verb.infinitive, 'verb', {
+              infinitive: verb.infinitive,
+              meaning: verb.meaning,
+              type: verb.type,
+            })
+          }
+          className={`p-2 mr-3 rounded-full transition-colors shrink-0 ${
+            isFav ? 'text-error' : 'text-charcoal/20 hover:text-error/50'
+          }`}
+          aria-label={isFav ? 'Remove from favourites' : 'Add to favourites'}
+        >
+          <Heart size={14} fill={isFav ? 'currentColor' : 'none'} />
+        </button>
+      </div>
 
       <AnimatePresence>
         {isExpanded && (
@@ -271,14 +294,14 @@ function VerbCard({ verb, isExpanded, onToggle, index }) {
   );
 }
 
-function ConjugationTable({ verb }) {
+function ConjugationTable({ verb, onlyTense }) {
   const conj = verb.conjugations || {};
   const isIrregular = verb.type === 'irregular' || verb.type === 'modal';
 
   return (
     <div className="space-y-4">
       {/* Present tense */}
-      {conj.present && (
+      {conj.present && (!onlyTense || onlyTense === 'present') && (
         <TenseTable
           title="Present (Tegenwoordige tijd)"
           conjugations={conj.present}
@@ -287,7 +310,7 @@ function ConjugationTable({ verb }) {
       )}
 
       {/* Past tense */}
-      {conj.past && (
+      {conj.past && (!onlyTense || onlyTense === 'past') && (
         <TenseTable
           title="Past (Verleden tijd)"
           conjugations={conj.past}
@@ -296,7 +319,7 @@ function ConjugationTable({ verb }) {
       )}
 
       {/* Perfect */}
-      {conj.perfect && (
+      {conj.perfect && (!onlyTense || onlyTense === 'perfect') && (
         <div>
           <h4 className="text-xs font-semibold text-charcoal/60 uppercase tracking-wide mb-2">
             Perfect (Voltooid deelwoord)
@@ -366,10 +389,380 @@ function TenseTable({ title, conjugations, isIrregular }) {
 }
 
 function PracticeMode() {
+  const [practiceType, setPracticeType] = useState('guided'); // 'guided' | 'random'
+
+  return (
+    <div>
+      {/* Mode toggle */}
+      <div className="flex bg-cream-dark rounded-xl p-1 mb-5">
+        <button
+          onClick={() => setPracticeType('guided')}
+          className={`flex-1 py-2 rounded-lg text-sm font-medium transition-all flex items-center justify-center gap-1.5 ${
+            practiceType === 'guided' ? 'bg-white text-charcoal shadow-sm' : 'text-charcoal/50'
+          }`}
+        >
+          <BookOpen size={14} /> Guided Lesson
+        </button>
+        <button
+          onClick={() => setPracticeType('random')}
+          className={`flex-1 py-2 rounded-lg text-sm font-medium transition-all flex items-center justify-center gap-1.5 ${
+            practiceType === 'random' ? 'bg-white text-charcoal shadow-sm' : 'text-charcoal/50'
+          }`}
+        >
+          <Zap size={14} /> Random Quiz
+        </button>
+      </div>
+
+      {practiceType === 'guided' ? <GuidedLesson /> : <RandomQuiz />}
+    </div>
+  );
+}
+
+function GuidedLesson() {
+  const verbs = conjData.verbs || [];
+  const completeLessonGoal = useProgress((s) => s.completeLessonGoal);
+  const recordActivity = useStreak((s) => s.recordActivity);
+  const [phase, setPhase] = useState('teaching'); // 'teaching' | 'quiz' | 'complete'
+  const [lessonVerbs] = useState(() => shuffle([...verbs]).slice(0, 4));
+  const [teachIndex, setTeachIndex] = useState(0);
+  const [tense, setTense] = useState('present');
+  const [quizChallenges, setQuizChallenges] = useState([]);
+  const [quizIndex, setQuizIndex] = useState(0);
+  const [userInput, setUserInput] = useState('');
+  const [feedback, setFeedback] = useState(null);
+  const [score, setScore] = useState({ correct: 0, total: 0 });
+  const inputRef = useRef(null);
+
+  // Hooks MUST be called before any conditional returns (Rules of Hooks)
+  const completionRecorded = useRef(false);
+
+  // Record goals when entering completion phase
+  useEffect(() => {
+    if (phase === 'complete' && !completionRecorded.current) {
+      completionRecorded.current = true;
+      completeLessonGoal();
+      const xp = score.correct * 5;
+      if (xp > 0) recordActivity(xp);
+    }
+  }, [phase, score.correct, completeLessonGoal, recordActivity]);
+
+  // Auto-complete quiz when challenges are exhausted (avoids setState during render)
+  useEffect(() => {
+    if (phase === 'quiz' && quizChallenges.length > 0 && quizIndex >= quizChallenges.length) {
+      setPhase('complete');
+    }
+  }, [phase, quizIndex, quizChallenges.length]);
+
+  // Generate quiz challenges from lesson verbs
+  const startQuiz = useCallback(() => {
+    const challenges = [];
+    lessonVerbs.forEach((verb) => {
+      const tenseData = verb.conjugations?.[tense];
+      if (!tenseData) return;
+      if (tense === 'perfect') {
+        challenges.push({
+          verb,
+          tense,
+          pronoun: null,
+          correctAnswer: tenseData.participle || '',
+          displayPrompt: `${verb.infinitive} → voltooid deelwoord`,
+        });
+      } else {
+        const availablePronouns = PRONOUNS.filter((p) => tenseData[p]);
+        const selectedPronouns = shuffle(availablePronouns).slice(0, 2);
+        selectedPronouns.forEach((pronoun) => {
+          challenges.push({
+            verb,
+            tense,
+            pronoun,
+            correctAnswer: tenseData[pronoun],
+            displayPrompt: `${PRONOUN_DISPLAY[pronoun]} ___ (${verb.infinitive})`,
+          });
+        });
+      }
+    });
+    setQuizChallenges(shuffle(challenges));
+    setQuizIndex(0);
+    setScore({ correct: 0, total: 0 });
+    setFeedback(null);
+    setUserInput('');
+    setPhase('quiz');
+  }, [lessonVerbs, tense]);
+
+  // Teaching phase
+  if (phase === 'teaching') {
+    const verb = lessonVerbs[teachIndex];
+    if (!verb) return null;
+
+    return (
+      <div>
+        {/* Teaching header */}
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <p className="text-xs font-semibold text-primary uppercase tracking-wide">Learning</p>
+            <p className="text-sm text-charcoal/60">Study these verbs, then take the quiz</p>
+          </div>
+          <div className="flex gap-1">
+            {lessonVerbs.map((_, i) => (
+              <div
+                key={i}
+                className={`w-2 h-2 rounded-full ${i <= teachIndex ? 'bg-primary' : 'bg-cream-dark'}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Tense focus picker */}
+        <div className="flex gap-2 mb-4">
+          <p className="text-xs text-charcoal/50 self-center mr-1">Quiz on:</p>
+          {TENSES.map((t) => (
+            <button
+              key={t}
+              onClick={() => setTense(t)}
+              className={`flex-1 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                tense === t ? 'bg-primary text-white shadow-sm' : 'bg-cream-dark text-charcoal/50'
+              }`}
+            >
+              {TENSE_DISPLAY[t]}
+            </button>
+          ))}
+        </div>
+
+        {/* Verb teaching card */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={verb.infinitive}
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -30 }}
+            className="bg-white rounded-2xl p-5 shadow-sm border border-cream-dark/50 mb-4"
+          >
+            <div className="text-center mb-4">
+              <span className={`text-[10px] font-medium px-2 py-0.5 rounded-full inline-block mb-2 ${
+                { regular: 'bg-success/10 text-success', irregular: 'bg-primary/10 text-primary', modal: 'bg-info/10 text-info' }[verb.type] || 'bg-cream-dark text-charcoal/50'
+              }`}>
+                {verb.type} verb
+              </span>
+              <h2 className="font-display text-3xl font-semibold text-charcoal">{verb.infinitive}</h2>
+              <p className="text-charcoal/50 mt-1">{verb.meaning}</p>
+            </div>
+
+            <ConjugationTable verb={verb} onlyTense={tense} />
+
+            {verb.examples?.length > 0 && (
+              <div className="mt-4">
+                <h4 className="text-xs font-semibold text-charcoal/60 uppercase tracking-wide mb-2">Examples</h4>
+                <div className="space-y-2">
+                  {verb.examples.slice(0, 2).map((ex, i) => (
+                    <div key={i} className="bg-cream/50 rounded-xl p-3">
+                      <p className="text-sm text-charcoal font-medium">{ex.nl}</p>
+                      <p className="text-xs text-charcoal/50 mt-0.5">{ex.en}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Navigation */}
+        <div className="flex gap-3">
+          {teachIndex > 0 ? (
+            <button
+              onClick={() => setTeachIndex((i) => i - 1)}
+              className="flex-1 py-3 rounded-xl text-sm font-medium bg-cream-dark text-charcoal/60"
+            >
+              ← Previous
+            </button>
+          ) : null}
+          {teachIndex < lessonVerbs.length - 1 ? (
+            <button
+              onClick={() => setTeachIndex((i) => i + 1)}
+              className="flex-1 py-3 rounded-xl text-sm font-semibold bg-primary text-white flex items-center justify-center gap-2"
+            >
+              Next Verb <ChevronRight size={16} />
+            </button>
+          ) : (
+            <button
+              onClick={startQuiz}
+              className="flex-1 py-3 rounded-xl text-sm font-semibold bg-primary text-white flex items-center justify-center gap-2"
+            >
+              Start Quiz <Zap size={16} />
+            </button>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  // Completion phase
+  if (phase === 'complete') {
+    const accuracy = score.total > 0 ? Math.round((score.correct / score.total) * 100) : 0;
+    return (
+      <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="text-center py-4">
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
+          <Trophy size={32} className="text-primary" />
+        </div>
+        <h2 className="font-display text-2xl font-semibold text-charcoal mb-1">
+          {accuracy >= 80 ? 'Geweldig!' : accuracy >= 50 ? 'Goed gedaan!' : 'Keep practicing!'}
+        </h2>
+        <p className="text-charcoal/60 mb-6">
+          {score.correct}/{score.total} correct ({accuracy}%)
+        </p>
+        <p className="text-sm text-charcoal/40 mb-4">
+          Verbs studied: {lessonVerbs.map((v) => v.infinitive).join(', ')}
+        </p>
+        <button
+          onClick={() => { setPhase('teaching'); setTeachIndex(0); setScore({ correct: 0, total: 0 }); }}
+          className="w-full py-3 rounded-xl text-sm font-semibold bg-primary text-white mb-3"
+        >
+          New Lesson
+        </button>
+        <button
+          onClick={() => { setPhase('teaching'); setTeachIndex(0); }}
+          className="w-full py-3 rounded-xl text-sm font-medium bg-cream-dark text-charcoal/60"
+        >
+          Review Same Verbs
+        </button>
+      </motion.div>
+    );
+  }
+
+  // Quiz phase — useEffect above handles auto-transition to complete
+  const currentChallenge = quizChallenges[quizIndex];
+  if (!currentChallenge) return null;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!userInput.trim() || feedback) return;
+    const result = checkAnswer(userInput, currentChallenge.correctAnswer);
+    setFeedback({
+      correct: result.correct,
+      exact: result.exact,
+      answer: currentChallenge.correctAnswer,
+      userAnswer: userInput.trim(),
+      verb: currentChallenge.verb,
+      pronoun: currentChallenge.pronoun,
+    });
+    setScore((s) => ({ correct: s.correct + (result.correct ? 1 : 0), total: s.total + 1 }));
+  };
+
+  const handleNext = () => {
+    setUserInput('');
+    setFeedback(null);
+    if (quizIndex + 1 >= quizChallenges.length) {
+      setPhase('complete');
+    } else {
+      setQuizIndex((i) => i + 1);
+    }
+    setTimeout(() => inputRef.current?.focus(), 50);
+  };
+
+  const handleSkip = () => {
+    setFeedback({
+      correct: false, exact: false,
+      answer: currentChallenge.correctAnswer,
+      userAnswer: '', verb: currentChallenge.verb,
+      pronoun: currentChallenge.pronoun, skipped: true,
+    });
+    setScore((s) => ({ ...s, total: s.total + 1 }));
+  };
+
+  return (
+    <div>
+      {/* Quiz progress */}
+      <div className="flex items-center justify-between mb-3">
+        <button
+          onClick={() => { setPhase('teaching'); setTeachIndex(0); setFeedback(null); setUserInput(''); }}
+          className="text-sm text-charcoal/50 font-medium"
+        >
+          ← Back
+        </button>
+        <p className="text-sm text-charcoal/60">Question {quizIndex + 1} of {quizChallenges.length}</p>
+        <p className="text-sm text-charcoal/40">{score.correct} correct</p>
+      </div>
+      <div className="w-full bg-cream-dark rounded-full h-2 mb-5">
+        <motion.div
+          className="bg-primary h-2 rounded-full"
+          animate={{ width: `${((quizIndex + 1) / quizChallenges.length) * 100}%` }}
+          transition={{ duration: 0.3 }}
+        />
+      </div>
+
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={quizIndex}
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -15 }}
+          className="bg-white rounded-2xl p-6 shadow-sm border border-cream-dark/50 mb-4"
+        >
+          <div className="text-center mb-5">
+            <span className={`text-[10px] font-medium px-2 py-0.5 rounded-full inline-block mb-2 ${
+              { regular: 'bg-success/10 text-success', irregular: 'bg-primary/10 text-primary', modal: 'bg-info/10 text-info' }[currentChallenge.verb.type] || 'bg-cream-dark text-charcoal/50'
+            }`}>{currentChallenge.verb.type}</span>
+            <h2 className="font-display text-2xl font-semibold text-charcoal">{currentChallenge.verb.infinitive}</h2>
+            <p className="text-sm text-charcoal/50 mt-0.5">{currentChallenge.verb.meaning}</p>
+          </div>
+          <div className="bg-cream/80 rounded-xl p-4 text-center mb-5">
+            <p className="text-lg text-charcoal font-medium">{currentChallenge.displayPrompt}</p>
+            <p className="text-xs text-charcoal/40 mt-1">{TENSE_DISPLAY[currentChallenge.tense]}</p>
+          </div>
+          <form onSubmit={handleSubmit}>
+            <input
+              ref={inputRef}
+              type="text" value={userInput}
+              onChange={(e) => setUserInput(e.target.value)}
+              placeholder="Type the conjugation..."
+              disabled={!!feedback}
+              autoComplete="off" autoCapitalize="off" spellCheck="false"
+              className={`w-full text-center text-lg py-3 rounded-xl border-2 transition-all focus:outline-none ${
+                feedback
+                  ? feedback.correct ? 'border-success bg-success/5 text-success' : 'border-error bg-error/5 text-error'
+                  : 'border-cream-dark/50 focus:border-primary/40 focus:ring-1 focus:ring-primary/20'
+              }`}
+            />
+            {!feedback && (
+              <div className="flex gap-3 mt-3">
+                <button type="button" onClick={handleSkip} className="flex-1 py-2.5 rounded-xl text-sm font-medium bg-cream-dark text-charcoal/60">Skip</button>
+                <button type="submit" disabled={!userInput.trim()} className="flex-1 py-2.5 rounded-xl text-sm font-semibold bg-primary text-white disabled:opacity-40">Check</button>
+              </div>
+            )}
+          </form>
+          <AnimatePresence>
+            {feedback && (
+              <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="overflow-hidden">
+                <div className={`mt-4 rounded-xl p-4 ${feedback.correct ? 'bg-success/5 border border-success/20' : 'bg-error/5 border border-error/20'}`}>
+                  {feedback.correct ? (
+                    <div className="flex items-center gap-2">
+                      <Check size={16} className="text-success" />
+                      <span className="text-sm font-semibold text-success">{feedback.exact ? 'Perfect!' : 'Close enough!'}</span>
+                    </div>
+                  ) : (
+                    <div>
+                      <div className="flex items-center gap-2 mb-2"><X size={16} className="text-error" /><span className="text-sm font-semibold text-error">{feedback.skipped ? 'Skipped' : 'Not quite right'}</span></div>
+                      <p className="text-sm text-charcoal/70">Correct: <span className="font-semibold text-success">{feedback.answer}</span></p>
+                      {feedback.userAnswer && <p className="text-sm text-charcoal/50 mt-0.5">Your answer: <span className="text-error">{feedback.userAnswer}</span></p>}
+                    </div>
+                  )}
+                </div>
+                <button onClick={handleNext} className="w-full mt-3 bg-primary text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2">
+                  {quizIndex + 1 >= quizChallenges.length ? 'See Results' : 'Next'} <ChevronRight size={18} />
+                </button>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
+      </AnimatePresence>
+    </div>
+  );
+}
+
+function RandomQuiz() {
   const verbs = conjData.verbs || [];
   const [tense, setTense] = useState('present');
   const [userInput, setUserInput] = useState('');
-  const [feedback, setFeedback] = useState(null); // { correct, answer, userAnswer, exact, verb, pronoun }
+  const [feedback, setFeedback] = useState(null);
   const [score, setScore] = useState({ correct: 0, total: 0 });
   const [currentChallenge, setCurrentChallenge] = useState(() => generateChallenge(verbs, 'present'));
   const inputRef = useRef(null);

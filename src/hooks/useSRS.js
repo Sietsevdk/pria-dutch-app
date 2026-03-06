@@ -109,10 +109,10 @@ const useSRS = create(
         return get().items[itemId] || null;
       },
 
-      // Get weakest items (lowest ease factor)
+      // Get weakest items (lowest ease factor) — only items user got wrong
       getWeakItems: (limit = 10) => {
         return Object.entries(get().items)
-          .filter(([, item]) => item.repetitions > 0) // Only items that have been reviewed
+          .filter(([, item]) => item.repetitions > 0 && (item.incorrectCount || 0) > 0)
           .sort((a, b) => a[1].easeFactor - b[1].easeFactor)
           .slice(0, limit)
           .map(([id, item]) => ({ id, ...item }));

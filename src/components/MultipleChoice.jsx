@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Check, X } from 'lucide-react';
 
@@ -15,6 +15,11 @@ export default function MultipleChoice({
 }) {
   const [selected, setSelected] = useState(null);
   const [hasAnswered, setHasAnswered] = useState(false);
+  const feedbackTimerRef = useRef(null);
+
+  useEffect(() => {
+    return () => { if (feedbackTimerRef.current) clearTimeout(feedbackTimerRef.current); };
+  }, []);
 
   const isCorrect = selected === correctAnswer;
 
@@ -25,7 +30,7 @@ export default function MultipleChoice({
       setHasAnswered(true);
       if (onAnswer) {
         // Brief delay so user sees the feedback
-        setTimeout(() => {
+        feedbackTimerRef.current = setTimeout(() => {
           onAnswer(option === correctAnswer);
         }, 1200);
       }
@@ -89,7 +94,7 @@ export default function MultipleChoice({
       >
         {options.map((option, index) => (
           <motion.button
-            key={option}
+            key={`${option}-${index}`}
             variants={optionVariants}
             whileTap={!hasAnswered ? { scale: 0.97 } : {}}
             onClick={() => handleSelect(option)}

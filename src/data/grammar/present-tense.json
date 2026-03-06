@@ -1,8 +1,10 @@
 {
   "topic": "present-tense",
   "topicNL": "Onvoltooid tegenwoordige tijd (OTT)",
+  "topicEN": "Present Tense",
   "explanation": {
     "summary": "De tegenwoordige tijd in het Nederlands wordt gevormd vanuit de stam van het werkwoord. De stam vind je door -en van het hele werkwoord af te halen. Daarna voeg je de juiste uitgang toe: ik = stam, jij/je = stam + t, u = stam + t, hij/zij/het = stam + t, wij = hele werkwoord, jullie = hele werkwoord, zij (meervoud) = hele werkwoord.",
+    "summaryEN": "The present tense in Dutch is formed from the verb stem. You find the stem by removing -en from the infinitive. Then you add the correct ending: ik (I) = stem, jij/je (you) = stem + t, u (you formal) = stem + t, hij/zij/het (he/she/it) = stem + t, wij (we) = full infinitive, jullie (you plural) = full infinitive, zij (they) = full infinitive.",
     "rules": [
       "De stam vind je door -en van de infinitief te halen: werken → werk, lopen → loop.",
       "Ik-vorm = stam zonder uitgang: ik werk, ik loop.",
@@ -15,6 +17,18 @@
       "Spellingregel: v aan het einde van de stam wordt f: leven → leef, schrijven → schrijf.",
       "Spellingregel: z aan het einde van de stam wordt s: lezen → lees, reizen → reis."
     ],
+    "rulesEN": [
+      "You find the stem by removing -en from the infinitive: werken → werk, lopen → loop.",
+      "I-form = stem only, no ending: ik werk (I work), ik loop (I walk).",
+      "Jij/je (you), u (you formal), hij/zij/het (he/she/it) = stem + t: jij werkt (you work), hij loopt (he walks).",
+      "Wij/we (we), jullie (you plural), zij (they) = infinitive (full verb): wij werken (we work), jullie lopen (you walk).",
+      "The 'jij-rule' (inversion): when 'jij/je' comes AFTER the verb, the -t is dropped: jij werkt → werk jij? (do you work?) / Morgen werk je (Tomorrow you work).",
+      "The jij-rule does NOT apply to 'u' (formal you): werkt u hier? (do you work here?) — the -t stays.",
+      "Spelling rule: the stem never ends in two identical consonants: rennen → ren (not renn).",
+      "Spelling rule: a long vowel in an open syllable becomes a double vowel in a closed stem: lo-pen → loop, ma-ken → maak, le-ven → leef.",
+      "Spelling rule: v at the end of the stem becomes f: leven → leef, schrijven → schrijf.",
+      "Spelling rule: z at the end of the stem becomes s: lezen → lees, reizen → reis."
+    ],
     "exceptions": [
       "Zijn is volledig onregelmatig: ik ben, jij bent, hij is, wij zijn, jullie zijn, zij zijn. Bij inversie: ben jij? (niet 'bent jij?' in informeel taalgebruik, hoewel 'bent u' wél correct is).",
       "Hebben is gedeeltelijk onregelmatig: ik heb, jij hebt, hij heeft, wij hebben. Let op: de stam is 'heb', maar de derde persoon is 'heeft' (niet 'hebt').",
@@ -22,6 +36,14 @@
       "Mogen: ik mag, jij mag, hij mag, wij mogen.",
       "Willen: ik wil, jij wilt/wil, hij wil, wij willen.",
       "Zullen: ik zal, jij zult/zal, hij zal, wij zullen."
+    ],
+    "exceptionsEN": [
+      "'Zijn' (to be) is completely irregular: ik ben (I am), jij bent (you are), hij is (he is), wij zijn (we are), jullie zijn (you are), zij zijn (they are). With inversion: ben jij? (are you?), though 'bent u?' (are you? formal) is correct.",
+      "'Hebben' (to have) is partially irregular: ik heb (I have), jij hebt (you have), hij heeft (he has), wij hebben (we have). Note: the stem is 'heb', but the third person is 'heeft' (not 'hebt').",
+      "Kunnen (can): ik kan, jij kunt/kan, hij kan, wij kunnen.",
+      "Mogen (may): ik mag, jij mag, hij mag, wij mogen.",
+      "Willen (want to): ik wil, jij wilt/wil, hij wil, wij willen.",
+      "Zullen (shall/will): ik zal, jij zult/zal, hij zal, wij zullen."
     ],
     "commonMistakes": [
       "'Jij leest' is goed, maar 'lees jij?' (zonder -t!) bij inversie. Vergeet de jij-regel niet.",
@@ -31,84 +53,105 @@
       "'Ik loop' (niet 'ik lop') - een lange klinker moet bewaard blijven: lopen → loop.",
       "'Bent u' is correct (de jij-regel geldt niet voor u), maar 'ben jij' is correct bij inversie."
     ],
-    "tip": "Onthoud het ezelsbruggetje: stam = infinitief min -en. Dan voeg je toe: niets voor ik, -t voor jij/hij/zij/u, en -en voor wij/jullie/zij. Bij inversie met jij: de -t valt weg. Denk aan: 'Jij vindt' maar 'Vind jij?'"
+    "commonMistakesEN": [
+      "'Jij leest' (you read) is correct, but 'lees jij?' (do you read?) without the -t when inverted. Don't forget the jij-rule!",
+      "'Hij leeft' (he lives), not 'hij leevt' — v becomes f at the end of the stem: leven → leef → hij leeft.",
+      "'Zij reist' (she travels), not with a z — z becomes s: reizen → reis → zij reist.",
+      "'Wij werken' (we work), not 'wij werkt' — with wij/jullie/zij you use the full infinitive.",
+      "'Ik loop' (I walk), not 'ik lop' — a long vowel must be preserved: lopen → loop.",
+      "'Bent u' (are you, formal) is correct (the jij-rule does not apply to u), but 'ben jij' is correct with inversion."
+    ],
+    "tip": "Onthoud het ezelsbruggetje: stam = infinitief min -en. Dan voeg je toe: niets voor ik, -t voor jij/hij/zij/u, en -en voor wij/jullie/zij. Bij inversie met jij: de -t valt weg. Denk aan: 'Jij vindt' maar 'Vind jij?'",
+    "tipEN": "Remember the mnemonic: stem = infinitive minus -en. Then add: nothing for ik (I), -t for jij/hij/zij/u (you/he/she/formal you), and -en for wij/jullie/zij (we/you plural/they). With inversion and jij: the -t drops. Think: 'Jij vindt' (you find) but 'Vind jij?' (do you find?)."
   },
   "exercises": [
     {
       "type": "fill_blank",
       "sentence": "Ik ___ elke dag naar mijn werk. (fietsen)",
       "answer": "fiets",
-      "explanation": "De stam van 'fietsen' is 'fiets'. Bij 'ik' gebruik je alleen de stam."
+      "explanation": "De stam van 'fietsen' is 'fiets'. Bij 'ik' gebruik je alleen de stam.",
+      "explanationEN": "The stem of 'fietsen' (to cycle) is 'fiets'. With 'ik' (I) you use only the stem."
     },
     {
       "type": "fill_blank",
       "sentence": "Hij ___ een boek. (lezen)",
       "answer": "leest",
-      "explanation": "De stam van 'lezen' is 'lees' (z → s). Bij 'hij' voeg je -t toe: leest."
+      "explanation": "De stam van 'lezen' is 'lees' (z → s). Bij 'hij' voeg je -t toe: leest.",
+      "explanationEN": "The stem of 'lezen' (to read) is 'lees' (z → s). With 'hij' (he) you add -t: leest."
     },
     {
       "type": "multiple_choice",
       "sentence": "___ jij ook koffie?",
       "options": ["Drinkt", "Drink", "Drinken", "Drinkte"],
       "answer": "Drink",
-      "explanation": "Bij inversie (jij staat NA het werkwoord) valt de -t weg: drink jij? Dit is de jij-regel."
+      "explanation": "Bij inversie (jij staat NA het werkwoord) valt de -t weg: drink jij? Dit is de jij-regel.",
+      "explanationEN": "With inversion (jij comes AFTER the verb), the -t is dropped: drink jij? (do you drink?) This is the jij-rule."
     },
     {
       "type": "fill_blank",
       "sentence": "Wij ___ Nederlands. (leren)",
       "answer": "leren",
-      "explanation": "Bij 'wij' gebruik je de hele infinitief: wij leren."
+      "explanation": "Bij 'wij' gebruik je de hele infinitief: wij leren.",
+      "explanationEN": "With 'wij' (we) you use the full infinitive: wij leren (we learn)."
     },
     {
       "type": "fill_blank",
       "sentence": "Zij ___ in Amsterdam. (wonen)",
       "answer": "woont",
-      "explanation": "De stam van 'wonen' is 'woon'. Bij 'zij' (enkelvoud) voeg je -t toe: woont."
+      "explanation": "De stam van 'wonen' is 'woon'. Bij 'zij' (enkelvoud) voeg je -t toe: woont.",
+      "explanationEN": "The stem of 'wonen' (to live) is 'woon'. With 'zij' (she, singular) you add -t: woont."
     },
     {
       "type": "multiple_choice",
       "sentence": "Hij ___ naar de radio.",
       "options": ["luistert", "luisterd", "luisteren", "luister"],
       "answer": "luistert",
-      "explanation": "De stam van 'luisteren' is 'luister'. Bij 'hij' voeg je -t toe: luistert."
+      "explanation": "De stam van 'luisteren' is 'luister'. Bij 'hij' voeg je -t toe: luistert.",
+      "explanationEN": "The stem of 'luisteren' (to listen) is 'luister'. With 'hij' (he) you add -t: luistert."
     },
     {
       "type": "fill_blank",
       "sentence": "Ik ___ elke dag hard. (werken)",
       "answer": "werk",
-      "explanation": "De stam van 'werken' is 'werk'. Bij 'ik' gebruik je alleen de stam."
+      "explanation": "De stam van 'werken' is 'werk'. Bij 'ik' gebruik je alleen de stam.",
+      "explanationEN": "The stem of 'werken' (to work) is 'werk'. With 'ik' (I) you use only the stem."
     },
     {
       "type": "fill_blank",
       "sentence": "Jullie ___ goed Engels. (spreken)",
       "answer": "spreken",
-      "explanation": "Bij 'jullie' gebruik je de hele infinitief: jullie spreken."
+      "explanation": "Bij 'jullie' gebruik je de hele infinitief: jullie spreken.",
+      "explanationEN": "With 'jullie' (you plural) you use the full infinitive: jullie spreken (you speak)."
     },
     {
       "type": "multiple_choice",
       "sentence": "Mijn moeder ___ elke dag. (schrijven)",
       "options": ["schrijft", "schrijvt", "schrijven", "schrijf"],
       "answer": "schrijft",
-      "explanation": "De stam van 'schrijven' is 'schrijf' (v → f). Bij derde persoon enkelvoud: schrijft."
+      "explanation": "De stam van 'schrijven' is 'schrijf' (v → f). Bij derde persoon enkelvoud: schrijft.",
+      "explanationEN": "The stem of 'schrijven' (to write) is 'schrijf' (v → f). With the third person singular: schrijft."
     },
     {
       "type": "fill_blank",
       "sentence": "Ik ___ blij vandaag. (zijn)",
       "answer": "ben",
-      "explanation": "'Zijn' is onregelmatig. De ik-vorm is 'ben'."
+      "explanation": "'Zijn' is onregelmatig. De ik-vorm is 'ben'.",
+      "explanationEN": "'Zijn' (to be) is irregular. The I-form is 'ben' (I am)."
     },
     {
       "type": "multiple_choice",
       "sentence": "Wij ___ twee katten.",
       "options": ["heeft", "hebt", "hebben", "heb"],
       "answer": "hebben",
-      "explanation": "Bij 'wij' gebruik je de hele infinitief. 'Hebben' is hier correct."
+      "explanation": "Bij 'wij' gebruik je de hele infinitief. 'Hebben' is hier correct.",
+      "explanationEN": "With 'wij' (we) you use the full infinitive. 'Hebben' (to have) is correct here: we have two cats."
     },
     {
       "type": "fill_blank",
       "sentence": "Waar ___ jij? (wonen)",
       "answer": "woon",
-      "explanation": "Bij inversie (jij staat NA het werkwoord) valt de -t weg: 'woon jij?' Dit is de jij-regel."
+      "explanation": "Bij inversie (jij staat NA het werkwoord) valt de -t weg: 'woon jij?' Dit is de jij-regel.",
+      "explanationEN": "With inversion (jij comes AFTER the verb), the -t is dropped: 'woon jij?' (where do you live?) This is the jij-rule."
     }
   ]
 }

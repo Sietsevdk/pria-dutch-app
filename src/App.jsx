@@ -84,6 +84,17 @@ export default function App() {
               </Suspense>
             }
           />
+          <Route path="*" element={
+            <div className="flex items-center justify-center min-h-[60vh]">
+              <div className="text-center px-6">
+                <p className="text-lg font-semibold text-charcoal mb-2">Page not found</p>
+                <p className="text-sm text-charcoal/50 mb-4">The page you are looking for does not exist.</p>
+                <a href="/" className="px-6 py-2 bg-primary text-white rounded-xl text-sm font-medium inline-block">
+                  Go Home
+                </a>
+              </div>
+            </div>
+          } />
         </Routes>
       </Suspense>
     </ErrorBoundary>

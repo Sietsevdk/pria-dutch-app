@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, X, RotateCcw, ArrowRight } from 'lucide-react';
 
@@ -15,6 +15,11 @@ export default function SentenceBuilder({
   const [placed, setPlaced] = useState([]);
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
+  const feedbackTimerRef = useRef(null);
+
+  useEffect(() => {
+    return () => { if (feedbackTimerRef.current) clearTimeout(feedbackTimerRef.current); };
+  }, []);
 
   // Words still available (not yet placed)
   const available = words.filter((_, i) => !placed.includes(i));
@@ -53,7 +58,7 @@ export default function SentenceBuilder({
     setHasSubmitted(true);
 
     if (onAnswer) {
-      setTimeout(() => {
+      feedbackTimerRef.current = setTimeout(() => {
         onAnswer(correct);
       }, 1500);
     }

@@ -1,8 +1,10 @@
 {
   "topic": "question-formation",
   "topicNL": "Vragen stellen",
+  "topicEN": "Forming questions",
   "explanation": {
     "summary": "Er zijn twee soorten vragen in het Nederlands: ja/nee-vragen (waarbij het werkwoord op de eerste positie staat) en open vragen met een vraagwoord (wie, wat, waar, wanneer, waarom, hoe). Bij open vragen staat het vraagwoord op positie 1 en het werkwoord op positie 2.",
+    "summaryEN": "There are two types of questions in Dutch: yes/no questions (where the verb is in first position) and open questions with a question word (wie, wat, waar, wanneer, waarom, hoe). In open questions, the question word is in position 1 and the verb is in position 2.",
     "rules": [
       "JA/NEE-VRAGEN: het werkwoord staat op positie 1, het onderwerp op positie 2: Werk jij hier? Heb je honger? Is zij je zus?",
       "OPEN VRAGEN: vraagwoord op positie 1, werkwoord op positie 2, onderwerp op positie 3: Waar werk jij? Wanneer kom je?",
@@ -19,6 +21,22 @@
       "HOE OUD = how old: Hoe oud ben je? (voor leeftijd)",
       "Bij de jij-regel: ook in vragen valt de -t weg als 'jij/je' na het werkwoord staat: Werk je hier? (niet: Werkt je hier?)"
     ],
+    "rulesEN": [
+      "YES/NO QUESTIONS: the verb is in position 1, the subject in position 2: Werk jij hier? (Do you work here?) Heb je honger? (Are you hungry?) Is zij je zus? (Is she your sister?)",
+      "OPEN QUESTIONS: question word in position 1, verb in position 2, subject in position 3: Waar werk jij? (Where do you work?) Wanneer kom je? (When are you coming?)",
+      "WIE = who: Wie is dat? (Who is that?) Wie heb je gebeld? (Who did you call?) — for people.",
+      "WAT = what: Wat doe je? (What are you doing?) Wat is dat? (What is that?) — for things.",
+      "WAAR = where: Waar woon je? (Where do you live?) Waar is het station? (Where is the station?) — for places.",
+      "WANNEER = when: Wanneer kom je? (When are you coming?) Wanneer is het feest? (When is the party?) — for points in time.",
+      "WAAROM = why: Waarom ben je laat? (Why are you late?) Waarom leer je Nederlands? (Why are you learning Dutch?) — for reasons.",
+      "HOE = how: Hoe gaat het? (How are you?) Hoe heet je? (What is your name?) Hoe kom je hier? (How do you get here?) — for manner.",
+      "WELK(E) = which: Welk boek lees je? (Which book are you reading? — het-word) / Welke auto heb je? (Which car do you have? — de-word/plural).",
+      "HOEVEEL = how much/how many: Hoeveel kost dat? (How much does that cost?) Hoeveel kinderen heb je? (How many children do you have?) — for quantities.",
+      "HOE LAAT = what time: Hoe laat begint de les? (What time does the lesson start?) — for clock times.",
+      "HOE LANG = how long: Hoe lang woon je hier al? (How long have you lived here?) — for duration.",
+      "HOE OUD = how old: Hoe oud ben je? (How old are you?) — for age.",
+      "The 'jij-rule': in questions too, the -t is dropped when 'jij/je' comes after the verb: Werk je hier? (not: Werkt je hier?). This is a key Dutch grammar rule that also applies in questions."
+    ],
     "exceptions": [
       "'Wat voor' = what kind of: Wat voor werk doe je? Wat voor een auto heb je?",
       "'Waar' + voorzetsel = waar...mee, waar...aan, waar...over, etc.: Waar denk je aan? Waar praat je over? Waar wacht je op?",
@@ -26,6 +44,14 @@
       "'Hoe' in combinaties: hoe laat, hoe lang, hoe oud, hoe ver, hoe vaak.",
       "Retorische vragen hebben dezelfde structuur maar verwachten geen antwoord: Wie doet zoiets nou?",
       "'Of' voor indirecte ja/nee-vragen: Ik weet niet of hij komt. (bijzin: werkwoord naar het einde)"
+    ],
+    "exceptionsEN": [
+      "'Wat voor' = what kind of: Wat voor werk doe je? (What kind of work do you do?) Wat voor een auto heb je? (What kind of car do you have?)",
+      "'Waar' + preposition splits in spoken Dutch: waar...mee, waar...aan, waar...over, etc.: Waar denk je aan? (What are you thinking about?) Waar praat je over? (What are you talking about?) Waar wacht je op? (What are you waiting for?)",
+      "In formal language, 'waar' + preposition can be written together: Waaraan denk je? Waarover praat je? (same meaning, more formal style).",
+      "'Hoe' in combinations: hoe laat (what time), hoe lang (how long), hoe oud (how old), hoe ver (how far), hoe vaak (how often).",
+      "Rhetorical questions have the same structure but don't expect an answer: Wie doet zoiets nou? (Who does something like that?)",
+      "'Of' for indirect yes/no questions: Ik weet niet of hij komt. (I don't know if/whether he is coming.) — subordinate clause: verb goes to the end."
     ],
     "commonMistakes": [
       "'Waar je woont?' is fout als directe vraag - het werkwoord moet op positie 2: 'Waar woon je?'",
@@ -35,72 +61,91 @@
       "'Wat doe je voor werk?' is correct, maar 'Wat voor werk doe je?' is ook goed.",
       "'Hoe veel' (twee woorden) is fout - het is altijd 'hoeveel' (een woord)."
     ],
-    "tip": "Bij ja/nee-vragen: draai het onderwerp en werkwoord om (Je werkt → Werk je?). Bij open vragen: begin met het vraagwoord, dan het werkwoord, dan het onderwerp (Waar + woon + je?). Vergeet de jij-regel niet: als 'jij/je' na het werkwoord staat, valt de -t weg!"
+    "commonMistakesEN": [
+      "'Waar je woont?' is wrong as a direct question — the verb must be in position 2: 'Waar woon je?' (Where do you live?) Don't keep the statement word order in questions.",
+      "'Wanneer je komt?' is wrong — same reason: 'Wanneer kom je?' (When are you coming?) The verb must come before the subject.",
+      "'Welk auto heb je?' is wrong — 'auto' is a de-word, so use 'welke': 'Welke auto heb je?' (Which car do you have?) Use 'welk' only for het-words.",
+      "'Werkt je hier?' is wrong — with inversion and 'jij/je' the -t is dropped: 'Werk je hier?' (Do you work here?)",
+      "'Wat doe je voor werk?' is correct, and 'Wat voor werk doe je?' is also fine. (What kind of work do you do?) Both word orders are acceptable.",
+      "'Hoe veel' (two words) is wrong — it is always 'hoeveel' (one word). (How much / how many)"
+    ],
+    "tip": "Bij ja/nee-vragen: draai het onderwerp en werkwoord om (Je werkt → Werk je?). Bij open vragen: begin met het vraagwoord, dan het werkwoord, dan het onderwerp (Waar + woon + je?). Vergeet de jij-regel niet: als 'jij/je' na het werkwoord staat, valt de -t weg!",
+    "tipEN": "For yes/no questions: swap the subject and verb (Je werkt → Werk je? = You work → Do you work?). For open questions: start with the question word, then the verb, then the subject (Waar + woon + je? = Where + live + you?). Don't forget the jij-rule: when 'jij/je' comes after the verb, the -t ending is dropped!"
   },
   "exercises": [
     {
       "type": "fill_blank",
       "sentence": "___ woon je? - Ik woon in Amsterdam.",
       "answer": "Waar",
-      "explanation": "'Waar' vraagt naar een plaats: Waar woon je? (Where do you live?)"
+      "explanation": "'Waar' vraagt naar een plaats: Waar woon je? (Where do you live?)",
+      "explanationEN": "'Waar' (where) asks about a place: Waar woon je? (Where do you live?) The answer mentions a place (Amsterdam), so 'waar' is the correct question word."
     },
     {
       "type": "multiple_choice",
       "sentence": "___ heb je gebeld? - Mijn moeder.",
       "options": ["Wat", "Waar", "Wie", "Wanneer"],
       "answer": "Wie",
-      "explanation": "'Wie' vraagt naar een persoon: Wie heb je gebeld? (Who did you call?)"
+      "explanation": "'Wie' vraagt naar een persoon: Wie heb je gebeld? (Who did you call?)",
+      "explanationEN": "'Wie' (who) asks about a person: Wie heb je gebeld? (Who did you call?) The answer is a person (my mother), so 'wie' is the correct question word."
     },
     {
       "type": "fill_blank",
       "sentence": "___ leer je Nederlands? - Omdat ik in Nederland woon.",
       "answer": "Waarom",
-      "explanation": "'Waarom' vraagt naar een reden: Waarom leer je Nederlands? (Why are you learning Dutch?)"
+      "explanation": "'Waarom' vraagt naar een reden: Waarom leer je Nederlands? (Why are you learning Dutch?)",
+      "explanationEN": "'Waarom' (why) asks about a reason: Waarom leer je Nederlands? (Why are you learning Dutch?) The answer gives a reason (because I live in the Netherlands)."
     },
     {
       "type": "fill_blank",
       "sentence": "___ kost deze jas? - 50 euro.",
       "answer": "Hoeveel",
-      "explanation": "'Hoeveel' vraagt naar een hoeveelheid of prijs: Hoeveel kost deze jas?"
+      "explanation": "'Hoeveel' vraagt naar een hoeveelheid of prijs: Hoeveel kost deze jas?",
+      "explanationEN": "'Hoeveel' (how much) asks about a quantity or price: Hoeveel kost deze jas? (How much does this coat cost?) Remember: 'hoeveel' is always one word."
     },
     {
       "type": "multiple_choice",
       "sentence": "___ begint de les? - Om 9 uur.",
       "options": ["Hoe laat", "Wanneer", "Hoe lang", "Waar"],
       "answer": "Hoe laat",
-      "explanation": "'Hoe laat' vraagt specifiek naar een kloktijd: Hoe laat begint de les?"
+      "explanation": "'Hoe laat' vraagt specifiek naar een kloktijd: Hoe laat begint de les?",
+      "explanationEN": "'Hoe laat' (what time) asks specifically about a clock time: Hoe laat begint de les? (What time does the lesson start?) The answer gives a specific time (at 9 o'clock)."
     },
     {
       "type": "fill_blank",
       "sentence": "___ je hier? (werken, ja/nee-vraag)",
       "answer": "Werk",
-      "explanation": "Ja/nee-vraag: werkwoord op positie 1. Met de jij-regel: de -t valt weg: 'Werk je hier?' (niet 'Werkt je hier?')"
+      "explanation": "Ja/nee-vraag: werkwoord op positie 1. Met de jij-regel: de -t valt weg: 'Werk je hier?' (niet 'Werkt je hier?')",
+      "explanationEN": "Yes/no question: verb in position 1. With the jij-rule: the -t is dropped: 'Werk je hier?' (not 'Werkt je hier?'). Do you work here?"
     },
     {
       "type": "multiple_choice",
       "sentence": "___ boek lees je? - Dat rode boek.",
       "options": ["Welk", "Welke", "Wat", "Wie"],
       "answer": "Welk",
-      "explanation": "'Boek' is een het-woord, dus: 'welk' (zonder -e). Bij de-woorden en meervouden: 'welke'."
+      "explanation": "'Boek' is een het-woord, dus: 'welk' (zonder -e). Bij de-woorden en meervouden: 'welke'.",
+      "explanationEN": "'Boek' (book) is a het-word, so use 'welk' (without -e). For de-words and plurals use 'welke'. Which book are you reading?"
     },
     {
       "type": "fill_blank",
       "sentence": "___ oud ben je? - Ik ben 30 jaar.",
       "answer": "Hoe",
-      "explanation": "'Hoe oud' vraagt naar leeftijd: Hoe oud ben je?"
+      "explanation": "'Hoe oud' vraagt naar leeftijd: Hoe oud ben je?",
+      "explanationEN": "'Hoe oud' (how old) asks about age: Hoe oud ben je? (How old are you?) 'Hoe' combines with many adjectives to form question phrases."
     },
     {
       "type": "fill_blank",
       "sentence": "___ doe je vanavond? - Ik ga naar een feest.",
       "answer": "Wat",
-      "explanation": "'Wat' vraagt naar dingen/activiteiten: Wat doe je vanavond?"
+      "explanation": "'Wat' vraagt naar dingen/activiteiten: Wat doe je vanavond?",
+      "explanationEN": "'Wat' (what) asks about things/activities: Wat doe je vanavond? (What are you doing tonight?) The answer describes an activity."
     },
     {
       "type": "multiple_choice",
       "sentence": "___ kom je? - Morgen.",
       "options": ["Waar", "Wie", "Wanneer", "Waarom"],
       "answer": "Wanneer",
-      "explanation": "'Wanneer' vraagt naar een tijdstip: Wanneer kom je? - Morgen."
+      "explanation": "'Wanneer' vraagt naar een tijdstip: Wanneer kom je? - Morgen.",
+      "explanationEN": "'Wanneer' (when) asks about a point in time: Wanneer kom je? (When are you coming?) The answer gives a time (tomorrow)."
     }
   ]
 }

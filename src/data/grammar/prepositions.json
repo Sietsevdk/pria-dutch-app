@@ -1,8 +1,10 @@
 {
   "topic": "prepositions",
   "topicNL": "Voorzetsels",
+  "topicEN": "Prepositions",
   "explanation": {
     "summary": "Voorzetsels (preposities) geven de relatie aan tussen woorden in een zin, vaak met betrekking tot plaats, richting, tijd of manier. In het Nederlands zijn er veel vaste combinaties van werkwoorden met voorzetsels die je uit je hoofd moet leren.",
+    "summaryEN": "Prepositions indicate the relationship between words in a sentence, often relating to place, direction, time, or manner. In Dutch, there are many fixed verb-preposition combinations that you need to learn by heart.",
     "rules": [
       "IN: plaats (in de kamer), tijd (in januari, in de zomer, in 2024), duur (in twee uur).",
       "OP: oppervlak (op de tafel, op straat), dag/datum (op maandag, op 5 maart), medium (op televisie, op internet).",
@@ -23,6 +25,26 @@
       "NAAST: positie (naast de school).",
       "TEGEN: tegenaan (tegen de muur), oppositie (tegen het plan), tijd (tegen de avond)."
     ],
+    "rulesEN": [
+      "IN: place (in de kamer = in the room), time (in januari = in January, in de zomer = in summer, in 2024), duration (in twee uur = in two hours).",
+      "OP: surface (op de tafel = on the table, op straat = on the street), day/date (op maandag = on Monday, op 5 maart = on March 5th), medium (op televisie = on television, op internet = on the internet).",
+      "AAN: attached to (aan de muur = on the wall, aan tafel = at the table), coast/water (aan zee = at the seaside, aan het meer = at the lake).",
+      "BIJ: near/at (bij het station = near the station), at someone's place (bij mijn ouders = at my parents'), company (ik werk bij een bank = I work at a bank).",
+      "NAAR: direction/destination (naar Amsterdam = to Amsterdam, naar huis = home, naar school = to school, naar de dokter = to the doctor).",
+      "UIT: origin (uit Nederland = from the Netherlands, uit de kast = from the cupboard), material (uit hout = from wood).",
+      "MET: together/instrument (met mijn vriend = with my friend, met de trein = by train, met een mes = with a knife).",
+      "VOOR: purpose/reason (voor jou = for you, voor het examen = for the exam), time (voor zessen = before six), position (voor het huis = in front of the house).",
+      "VAN: possession/origin (van mijn vader = my father's/from my father, van Amsterdam = from Amsterdam), material (van hout = made of wood), time (van 9 tot 5 = from 9 to 5).",
+      "OVER: topic (over het weer praten = to talk about the weather), across (over de brug = across the bridge), time (over twee weken = in two weeks).",
+      "DOOR: means/cause (door de regen = because of the rain, door hard werken = by working hard), through (door het bos = through the forest).",
+      "OM: time (om 3 uur = at 3 o'clock), around (om het huis = around the house), reason (om die reden = for that reason).",
+      "TUSSEN: position (tussen de huizen = between the houses), time (tussen 9 en 5 = between 9 and 5), relationship (tussen ons = between us).",
+      "ONDER: position (onder de tafel = under the table), less than (onder de 18 = under 18).",
+      "BOVEN: position (boven de deur = above the door), more than (boven de 100 = above 100).",
+      "ACHTER: position (achter het huis = behind the house).",
+      "NAAST: position (naast de school = next to the school).",
+      "TEGEN: against (tegen de muur = against the wall), opposition (tegen het plan = against the plan), time (tegen de avond = towards the evening)."
+    ],
     "exceptions": [
       "NAAR HUIS (geen lidwoord): Ik ga naar huis (niet: naar het huis).",
       "NAAR BED (geen lidwoord): Ik ga naar bed (niet: naar het bed).",
@@ -30,6 +52,14 @@
       "OP SCHOOL / OP KANTOOR / OP VAKANTIE: vaste uitdrukkingen zonder lidwoord.",
       "MET DE TREIN / MET DE BUS / MET DE AUTO: vervoermiddelen met 'met' en lidwoord.",
       "TE VOET / TE PAARD: oudere constructie met 'te'."
+    ],
+    "exceptionsEN": [
+      "NAAR HUIS (no article): Ik ga naar huis (not: naar het huis). 'Naar huis' is a fixed expression meaning 'home'.",
+      "NAAR BED (no article): Ik ga naar bed (not: naar het bed). 'Naar bed' is a fixed expression meaning 'to bed'.",
+      "AAN TAFEL (no article): Wij zitten aan tafel (not: aan de tafel, unless you mean a specific table). 'Aan tafel' is a fixed expression meaning 'at the table'.",
+      "OP SCHOOL / OP KANTOOR / OP VAKANTIE: fixed expressions without an article (at school / at the office / on vacation).",
+      "MET DE TREIN / MET DE BUS / MET DE AUTO: means of transport use 'met' with an article (by train / by bus / by car).",
+      "TE VOET / TE PAARD: older construction using 'te' (on foot / on horseback)."
     ],
     "commonMistakes": [
       "'Ik ga in Amsterdam' is fout als je richting bedoelt - gebruik 'naar': Ik ga naar Amsterdam. ('In Amsterdam' = je bent er al.)",
@@ -39,7 +69,16 @@
       "'Op de avond' is fout - gebruik 'in': in de avond / 's avonds.",
       "'Naar het huis' is ongebruikelijk - gebruik 'naar huis' (vaste uitdrukking zonder lidwoord)."
     ],
+    "commonMistakesEN": [
+      "'Ik ga in Amsterdam' is wrong when you mean direction — use 'naar': Ik ga naar Amsterdam. ('In Amsterdam' = you are already there.)",
+      "'Ik werk in een bank' is uncommon — use 'bij': Ik werk bij een bank. (You work AT a company, not IN it.)",
+      "'Ik denk over jou' is wrong — use 'aan': Ik denk aan jou. (Fixed combination: denken aan = to think about.)",
+      "'Ik wacht op de bus op maandag' is correct but confusing — 'op' has two different meanings here (waiting for / on Monday).",
+      "'Op de avond' is wrong — use 'in': in de avond / 's avonds (in the evening).",
+      "'Naar het huis' is uncommon — use 'naar huis' (fixed expression without an article meaning 'home')."
+    ],
     "tip": "Leer de vaste werkwoord-voorzetsel-combinaties! Deze zijn heel belangrijk voor het examen. Denken AAN, wachten OP, luisteren NAAR, praten OVER, houden VAN, beginnen MET, stoppen MET, zoeken NAAR, vragen OM/NAAR. Schrijf ze op kaartjes en oefen ze elke dag!",
+    "tipEN": "Learn the fixed verb-preposition combinations! These are very important for the exam. Denken AAN (think about), wachten OP (wait for), luisteren NAAR (listen to), praten OVER (talk about), houden VAN (love), beginnen MET (start with), stoppen MET (stop with), zoeken NAAR (search for), vragen OM/NAAR (ask for/about). Write them on flashcards and practice them every day!",
     "fixedCombinations": [
       "denken aan (think about): Ik denk aan mijn familie.",
       "wachten op (wait for): Ik wacht op de bus.",
@@ -63,78 +102,90 @@
       "type": "fill_blank",
       "sentence": "Ik ga morgen ___ Amsterdam.",
       "answer": "naar",
-      "explanation": "Bij richting/bestemming gebruik je 'naar': Ik ga naar Amsterdam."
+      "explanation": "Bij richting/bestemming gebruik je 'naar': Ik ga naar Amsterdam.",
+      "explanationEN": "For direction/destination you use 'naar': Ik ga naar Amsterdam. (I am going to Amsterdam.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "Het boek ligt ___ de tafel.",
       "options": ["in", "op", "aan", "bij"],
       "answer": "op",
-      "explanation": "'Op' wordt gebruikt voor oppervlakken: het boek ligt op de tafel."
+      "explanation": "'Op' wordt gebruikt voor oppervlakken: het boek ligt op de tafel.",
+      "explanationEN": "'Op' is used for surfaces: het boek ligt op de tafel. (The book is on the table.)"
     },
     {
       "type": "fill_blank",
       "sentence": "Ik wacht ___ de bus.",
       "answer": "op",
-      "explanation": "Vaste combinatie: wachten OP. Ik wacht op de bus."
+      "explanation": "Vaste combinatie: wachten OP. Ik wacht op de bus.",
+      "explanationEN": "Fixed combination: wachten OP (to wait for). Ik wacht op de bus. (I am waiting for the bus.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "Zij luistert ___ muziek.",
       "options": ["aan", "op", "naar", "met"],
       "answer": "naar",
-      "explanation": "Vaste combinatie: luisteren NAAR. Zij luistert naar muziek."
+      "explanation": "Vaste combinatie: luisteren NAAR. Zij luistert naar muziek.",
+      "explanationEN": "Fixed combination: luisteren NAAR (to listen to). Zij luistert naar muziek. (She listens to music.)"
     },
     {
       "type": "fill_blank",
       "sentence": "Ik ga ___ de trein naar Utrecht.",
       "answer": "met",
-      "explanation": "Vervoermiddelen: met de trein, met de bus, met de auto."
+      "explanation": "Vervoermiddelen: met de trein, met de bus, met de auto.",
+      "explanationEN": "Means of transport: met de trein (by train), met de bus (by bus), met de auto (by car)."
     },
     {
       "type": "fill_blank",
       "sentence": "Zij komt ___ Turkije.",
       "answer": "uit",
-      "explanation": "Herkomst: 'uit' + land/stad. Zij komt uit Turkije."
+      "explanation": "Herkomst: 'uit' + land/stad. Zij komt uit Turkije.",
+      "explanationEN": "Origin: 'uit' + country/city. Zij komt uit Turkije. (She comes from Turkey.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "Ik denk ___ mijn familie.",
       "options": ["over", "aan", "voor", "om"],
       "answer": "aan",
-      "explanation": "Vaste combinatie: denken AAN. Ik denk aan mijn familie."
+      "explanation": "Vaste combinatie: denken AAN. Ik denk aan mijn familie.",
+      "explanationEN": "Fixed combination: denken AAN (to think about). Ik denk aan mijn familie. (I think about my family.)"
     },
     {
       "type": "fill_blank",
       "sentence": "De vergadering begint ___ 9 uur.",
       "answer": "om",
-      "explanation": "Tijd (kloktijd): 'om' + tijdstip. De vergadering begint om 9 uur."
+      "explanation": "Tijd (kloktijd): 'om' + tijdstip. De vergadering begint om 9 uur.",
+      "explanationEN": "Time (clock time): 'om' + time. De vergadering begint om 9 uur. (The meeting starts at 9 o'clock.)"
     },
     {
       "type": "fill_blank",
       "sentence": "Wij praten ___ het weer.",
       "answer": "over",
-      "explanation": "Vaste combinatie: praten OVER (een onderwerp). Wij praten over het weer."
+      "explanation": "Vaste combinatie: praten OVER (een onderwerp). Wij praten over het weer.",
+      "explanationEN": "Fixed combination: praten OVER (to talk about a topic). Wij praten over het weer. (We are talking about the weather.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "Ik werk ___ een ziekenhuis.",
       "options": ["op", "in", "bij", "aan"],
       "answer": "in",
-      "explanation": "Je werkt IN een gebouw (in een ziekenhuis, in een winkel). Je werkt BIJ een organisatie (bij een bank, bij de politie)."
+      "explanation": "Je werkt IN een gebouw (in een ziekenhuis, in een winkel). Je werkt BIJ een organisatie (bij een bank, bij de politie).",
+      "explanationEN": "You work IN a building (in een ziekenhuis = in a hospital, in een winkel = in a shop). You work BIJ (at) an organization (bij een bank = at a bank, bij de politie = at the police)."
     },
     {
       "type": "fill_blank",
       "sentence": "De kat zit ___ de tafel.",
       "answer": "onder",
-      "explanation": "'Onder' geeft een positie aan: de kat zit onder de tafel."
+      "explanation": "'Onder' geeft een positie aan: de kat zit onder de tafel.",
+      "explanationEN": "'Onder' indicates a position: de kat zit onder de tafel. (The cat is sitting under the table.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "Ik houd ___ Nederlandse kaas.",
       "options": ["van", "met", "aan", "voor"],
       "answer": "van",
-      "explanation": "Vaste combinatie: houden VAN. Ik houd van Nederlandse kaas."
+      "explanation": "Vaste combinatie: houden VAN. Ik houd van Nederlandse kaas.",
+      "explanationEN": "Fixed combination: houden VAN (to love). Ik houd van Nederlandse kaas. (I love Dutch cheese.)"
     }
   ]
 }

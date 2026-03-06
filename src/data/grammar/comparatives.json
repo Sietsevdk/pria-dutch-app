@@ -1,8 +1,10 @@
 {
   "topic": "comparatives",
   "topicNL": "Vergelijkingen: comparatief en superlatief",
+  "topicEN": "Comparisons: comparative and superlative",
   "explanation": {
     "summary": "In het Nederlands maak je de vergrotende trap (comparatief) door -er aan het bijvoeglijk naamwoord toe te voegen, en de overtreffende trap (superlatief) door -st toe te voegen. Bij vergelijkingen gebruik je 'dan' (niet 'als').",
+    "summaryEN": "In Dutch, you form the comparative by adding -er to the adjective, and the superlative by adding -st. When making comparisons, you use 'dan' (than), not 'als'.",
     "rules": [
       "COMPARATIEF: bijvoeglijk naamwoord + -er: groot → groter, klein → kleiner, mooi → mooier.",
       "SUPERLATIEF: bijvoeglijk naamwoord + -st: groot → grootst, klein → kleinst, mooi → mooist.",
@@ -15,6 +17,18 @@
       "EVEN ... ALS voor gelijkheid: Hij is even groot als ik. (He is as tall as I am.)",
       "Bij superlatief met 'van': de grootste VAN de klas, de mooiste VAN allemaal."
     ],
+    "rulesEN": [
+      "COMPARATIVE: adjective + -er: groot (big) → groter (bigger), klein (small) → kleiner (smaller), mooi (beautiful) → mooier (more beautiful).",
+      "SUPERLATIVE: adjective + -st: groot → grootst (biggest), klein → kleinst (smallest), mooi → mooist (most beautiful).",
+      "For comparisons use 'dan' (than): Hij is groter DAN ik. (He is taller than me.) Amsterdam is groter DAN Utrecht.",
+      "The superlative as an adjective before a noun: het/de + adjective + -ste: de grootste stad (the biggest city), het kleinste huis (the smallest house).",
+      "The superlative used predicatively: het + adjective + -st(e): Dit huis is het grootst. / Dit huis is het grootste. (This house is the biggest.)",
+      "Spelling rule: words ending in -r get -der/-dst: duur (expensive) → duurder (more expensive) → duurst (most expensive).",
+      "Spelling rule: short vowel + single consonant → double the consonant: dik (fat) → dikker (fatter) → dikst, nat (wet) → natter (wetter) → natst.",
+      "Spelling rule: long vowel written as double → becomes single in open syllable: groot → groter (not grooter).",
+      "EVEN ... ALS for equality: Hij is even groot als ik. (He is as tall as I am.)",
+      "With superlative use 'van' (of): de grootste VAN de klas (the biggest in the class), de mooiste VAN allemaal (the most beautiful of all)."
+    ],
     "exceptions": [
       "GOED → beter → best (onregelmatig): Dit boek is goed. Dat boek is beter. Dit is het beste boek.",
       "VEEL → meer → meest (onregelmatig): Hij heeft veel geld. Zij heeft meer geld. Jan heeft het meeste geld.",
@@ -22,6 +36,14 @@
       "GRAAG → liever → liefst (onregelmatig): Ik zwem graag. Ik fiets liever. Ik lees het liefst.",
       "Bijvoeglijke naamwoorden op -s krijgen -er maar niet -st: fris → frisser, maar in de superlatief: het eerst (vermijd dubbele s).",
       "Sommige lange bijvoeglijke naamwoorden gebruiken 'meer' en 'meest': meer interessant (hoewel 'interessanter' ook correct is)."
+    ],
+    "exceptionsEN": [
+      "GOED → beter → best (irregular, like English good → better → best): Dit boek is goed. Dat boek is beter. Dit is het beste boek. (This book is good. That book is better. This is the best book.)",
+      "VEEL → meer → meest (irregular, like English much → more → most): Hij heeft veel geld. Zij heeft meer geld. Jan heeft het meeste geld. (He has a lot of money. She has more money. Jan has the most money.)",
+      "WEINIG → minder → minst (irregular, like English little → less → least): Ik heb weinig tijd. Hij heeft minder tijd. Zij heeft de minste tijd. (I have little time. He has less time. She has the least time.)",
+      "GRAAG → liever → liefst (irregular; graag = gladly/to like doing something): Ik zwem graag. Ik fiets liever. Ik lees het liefst. (I like swimming. I prefer cycling. I like reading the most.)",
+      "Adjectives ending in -s get -er but not -st: fris (fresh) → frisser (fresher), but in the superlative the double s is avoided.",
+      "Some long adjectives use 'meer' (more) and 'meest' (most): meer interessant (although 'interessanter' is also correct)."
     ],
     "commonMistakes": [
       "'Hij is groter als ik' is fout in standaard Nederlands - gebruik 'dan': Hij is groter DAN ik.",
@@ -31,72 +53,91 @@
       "'Dikker' schrijven als 'diker' is fout - bij een korte klinker verdubbel je de medeklinker: dikker.",
       "Vergeten dat 'even ... als' voor gelijkheid is: 'Hij is even groot dan ik' is fout → 'even groot als ik'."
     ],
-    "tip": "De drie onregelmatige vormen die je MOET kennen: goed-beter-best, veel-meer-meest, weinig-minder-minst. Bij vergelijkingen: altijd 'DAN' (niet 'als'!). Bij gelijkheid: 'even ... ALS'. Denk aan: verGELIJKing = 'DAN', geLIJKheid = 'ALS'."
+    "commonMistakesEN": [
+      "'Hij is groter als ik' is wrong in standard Dutch — use 'dan': Hij is groter DAN ik. (He is taller THAN me.) Many Dutch speakers make this mistake too!",
+      "'Goeder' is wrong — 'goed' is irregular: beter (not goeder). Just like English: 'gooder' doesn't exist.",
+      "'Meer groot' is unnecessary — just use 'groter'. 'Meer' + adjective is only for longer words.",
+      "'De groot stad' as a superlative is wrong — use: de grootste stad (the biggest city).",
+      "Writing 'dikker' as 'diker' is wrong — with a short vowel you double the consonant: dikker (fatter).",
+      "Forgetting that 'even ... als' is for equality: 'Hij is even groot dan ik' is wrong → 'even groot als ik' (as tall as me)."
+    ],
+    "tip": "De drie onregelmatige vormen die je MOET kennen: goed-beter-best, veel-meer-meest, weinig-minder-minst. Bij vergelijkingen: altijd 'DAN' (niet 'als'!). Bij gelijkheid: 'even ... ALS'. Denk aan: verGELIJKing = 'DAN', geLIJKheid = 'ALS'.",
+    "tipEN": "The three irregular forms you MUST know: goed-beter-best (good-better-best), veel-meer-meest (much-more-most), weinig-minder-minst (little-less-least). For comparisons: always 'DAN' (than), not 'als'! For equality: 'even ... ALS' (as ... as). Memory trick: compariSON = 'DAN', equALity = 'ALS'."
   },
   "exercises": [
     {
       "type": "fill_blank",
       "sentence": "Amsterdam is ___ dan Utrecht. (groot)",
       "answer": "groter",
-      "explanation": "Comparatief van 'groot' is 'groter'. Bij vergelijking: groter DAN."
+      "explanation": "Comparatief van 'groot' is 'groter'. Bij vergelijking: groter DAN.",
+      "explanationEN": "The comparative of 'groot' (big) is 'groter' (bigger). In comparisons: groter DAN (bigger than). Amsterdam is bigger than Utrecht."
     },
     {
       "type": "fill_blank",
       "sentence": "Dit is het ___ boek dat ik ooit heb gelezen. (goed)",
       "answer": "beste",
-      "explanation": "'Goed' is onregelmatig: goed → beter → best. Voor een zelfstandig naamwoord: het beste boek."
+      "explanation": "'Goed' is onregelmatig: goed → beter → best. Voor een zelfstandig naamwoord: het beste boek.",
+      "explanationEN": "'Goed' (good) is irregular: goed → beter → best. Before a noun: het beste boek (the best book). This is the best book I have ever read."
     },
     {
       "type": "multiple_choice",
       "sentence": "Zij heeft ___ geld dan hij.",
       "options": ["meer", "meerder", "veel", "veelst"],
       "answer": "meer",
-      "explanation": "'Veel' is onregelmatig: veel → meer → meest. Zij heeft meer geld dan hij."
+      "explanation": "'Veel' is onregelmatig: veel → meer → meest. Zij heeft meer geld dan hij.",
+      "explanationEN": "'Veel' (much/a lot) is irregular: veel → meer (more) → meest (most). Zij heeft meer geld dan hij. (She has more money than him.)"
     },
     {
       "type": "fill_blank",
       "sentence": "De Rijn is de ___ rivier van Nederland. (lang)",
       "answer": "langste",
-      "explanation": "Superlatief van 'lang' is 'langst'. Voor een zelfstandig naamwoord: de langste rivier."
+      "explanation": "Superlatief van 'lang' is 'langst'. Voor een zelfstandig naamwoord: de langste rivier.",
+      "explanationEN": "The superlative of 'lang' (long) is 'langst'. Before a noun: de langste rivier (the longest river). The Rhine is the longest river in the Netherlands."
     },
     {
       "type": "multiple_choice",
       "sentence": "Mijn broer is even groot ___ ik.",
       "options": ["dan", "als", "dan als", "van"],
       "answer": "als",
-      "explanation": "Bij gelijkheid ('even ... als'): Mijn broer is even groot ALS ik."
+      "explanation": "Bij gelijkheid ('even ... als'): Mijn broer is even groot ALS ik.",
+      "explanationEN": "For equality ('even ... als' = as ... as): Mijn broer is even groot ALS ik. (My brother is as tall as me.) Remember: equality uses 'als', comparisons use 'dan'."
     },
     {
       "type": "fill_blank",
       "sentence": "Vandaag is het ___ dan gisteren. (koud)",
       "answer": "kouder",
-      "explanation": "Comparatief van 'koud' is 'kouder'. Bij vergelijking: kouder DAN."
+      "explanation": "Comparatief van 'koud' is 'kouder'. Bij vergelijking: kouder DAN.",
+      "explanationEN": "The comparative of 'koud' (cold) is 'kouder' (colder). In comparisons: kouder DAN (colder than). Today it is colder than yesterday."
     },
     {
       "type": "fill_blank",
       "sentence": "Ik heb ___ tijd dan jij. (weinig)",
       "answer": "minder",
-      "explanation": "'Weinig' is onregelmatig: weinig → minder → minst. Ik heb minder tijd dan jij."
+      "explanation": "'Weinig' is onregelmatig: weinig → minder → minst. Ik heb minder tijd dan jij.",
+      "explanationEN": "'Weinig' (little/few) is irregular: weinig → minder (less) → minst (least). Ik heb minder tijd dan jij. (I have less time than you.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "Dit is de ___ dag van het jaar. (warm)",
       "options": ["warmste", "warmst", "warmer", "meest warme"],
       "answer": "warmste",
-      "explanation": "Superlatief voor een zelfstandig naamwoord: de warmste dag."
+      "explanation": "Superlatief voor een zelfstandig naamwoord: de warmste dag.",
+      "explanationEN": "Superlative before a noun: de warmste dag (the warmest day). Before a noun you add -ste, not just -st. This is the warmest day of the year."
     },
     {
       "type": "fill_blank",
       "sentence": "Een auto is ___ dan een fiets. (duur)",
       "answer": "duurder",
-      "explanation": "Comparatief van 'duur' is 'duurder' (woorden op -r krijgen -der). Bij vergelijking: duurder DAN."
+      "explanation": "Comparatief van 'duur' is 'duurder' (woorden op -r krijgen -der). Bij vergelijking: duurder DAN.",
+      "explanationEN": "The comparative of 'duur' (expensive) is 'duurder' (more expensive). Words ending in -r get -der. A car is more expensive than a bicycle."
     },
     {
       "type": "multiple_choice",
       "sentence": "Ik lees ___ dan ik televisie kijk. (graag)",
       "options": ["grager", "liever", "meer graag", "graagst"],
       "answer": "liever",
-      "explanation": "'Graag' is onregelmatig: graag → liever → liefst. Ik lees liever dan ik televisie kijk."
+      "explanation": "'Graag' is onregelmatig: graag → liever → liefst. Ik lees liever dan ik televisie kijk.",
+      "explanationEN": "'Graag' (gladly/to like) is irregular: graag → liever (rather/prefer) → liefst (most of all). Ik lees liever dan ik televisie kijk. (I prefer reading to watching television.)"
     }
   ]
 }

@@ -1,8 +1,10 @@
 {
   "topic": "perfect-tense",
   "topicNL": "Voltooid tegenwoordige tijd (VTT)",
+  "topicEN": "Present Perfect Tense",
   "explanation": {
     "summary": "De voltooid tegenwoordige tijd (het perfectum) gebruik je om te praten over het verleden in de spreektaal. Je vormt het met een hulpwerkwoord (hebben of zijn) + een voltooid deelwoord. Voorbeeld: Ik heb gewerkt. Zij is gekomen.",
+    "summaryEN": "The present perfect tense is used to talk about the past in spoken Dutch. You form it with an auxiliary verb (hebben or zijn) + a past participle. Example: Ik heb gewerkt (I have worked). Zij is gekomen (She has come).",
     "rules": [
       "Structuur: hulpwerkwoord (hebben/zijn) + voltooid deelwoord.",
       "Het hulpwerkwoord staat op de tweede positie (V2), het voltooid deelwoord staat aan het eind van de zin.",
@@ -19,6 +21,22 @@
       "Ook 'zijn' en 'blijven' gebruiken 'zijn' als hulpwerkwoord: ik ben geweest, ik ben gebleven.",
       "Vergelijking: 'Ik heb gefietst' (fietsen zonder richting) versus 'Ik ben naar huis gefietst' (fietsen met richting)."
     ],
+    "rulesEN": [
+      "Structure: auxiliary verb (hebben/zijn) + past participle.",
+      "The auxiliary verb goes in second position (V2), the past participle goes at the end of the sentence.",
+      "Past participle of weak (regular) verbs: ge- + stem + -t (if the stem ends in a 't kofschip' letter) or ge- + stem + -d (otherwise).",
+      "Weak verb example: werken → ge + werk + t = gewerkt (worked). Wonen → ge + woon + d = gewoond (lived).",
+      "Past participle of strong (irregular) verbs: ge- + changed stem + -en. Example: schrijven → geschreven (written), rijden → gereden (driven).",
+      "The 't kofschip rule applies here too for weak verbs: stem ends in t, k, f, s, ch, p → -t, otherwise → -d.",
+      "For v→f and z→s in the stem: look at the original sound. 'Leven' (to live) → geleefd (-d, because the original sound is v). 'Reizen' (to travel) → gereisd (-d, because the original sound is z).",
+      "Inseparable prefixes (be-, er-, ge-, her-, ont-, ver-) do NOT get an extra ge-: betalen → betaald (not gebetaald), vertellen → verteld (not geverteld).",
+      "Verbs ending in -eren get no ge-: studeren → gestudeerd (studied). But: repareren → gerepareerd (repaired).",
+      "Separable verbs: ge- goes BETWEEN the prefix and the verb: opbellen → opgebeld (called up), aankomen → aangekomen (arrived).",
+      "Hebben (to have) as auxiliary: most verbs use 'hebben'.",
+      "Zijn (to be) as auxiliary: verbs of movement with direction (gaan, komen, rijden, lopen, vliegen, vertrekken, aankomen) and change of state (worden, beginnen, stoppen, groeien, sterven, veranderen).",
+      "Also 'zijn' (to be) and 'blijven' (to stay) use 'zijn' as auxiliary: ik ben geweest (I have been), ik ben gebleven (I have stayed).",
+      "Comparison: 'Ik heb gefietst' (cycling without direction) versus 'Ik ben naar huis gefietst' (cycling with direction = toward home)."
+    ],
     "exceptions": [
       "Zijn → geweest (sterk, onregelmatig). Hulpwerkwoord: zijn. Ik ben geweest.",
       "Hebben → gehad (onregelmatig). Hulpwerkwoord: hebben. Ik heb gehad.",
@@ -32,6 +50,19 @@
       "Eten → gegeten (sterk). Hulpwerkwoord: hebben. Ik heb gegeten.",
       "Sommige werkwoorden kunnen zowel hebben als zijn krijgen afhankelijk van betekenis: 'Ik heb gelopen' (ik was aan het wandelen) versus 'Ik ben naar huis gelopen' (richting)."
     ],
+    "exceptionsEN": [
+      "Zijn (to be) → geweest (been). Auxiliary: zijn. Ik ben geweest (I have been).",
+      "Hebben (to have) → gehad (had). Auxiliary: hebben. Ik heb gehad (I have had).",
+      "Gaan (to go) → gegaan (gone). Auxiliary: zijn. Ik ben gegaan (I have gone).",
+      "Doen (to do) → gedaan (done). Auxiliary: hebben. Ik heb gedaan (I have done).",
+      "Komen (to come) → gekomen (come). Auxiliary: zijn. Ik ben gekomen (I have come).",
+      "Zien (to see) → gezien (seen). Auxiliary: hebben. Ik heb gezien (I have seen).",
+      "Kopen (to buy) → gekocht (bought). Auxiliary: hebben. Ik heb gekocht (I have bought).",
+      "Denken (to think) → gedacht (thought). Auxiliary: hebben. Ik heb gedacht (I have thought).",
+      "Brengen (to bring) → gebracht (brought). Auxiliary: hebben. Ik heb gebracht (I have brought).",
+      "Eten (to eat) → gegeten (eaten). Auxiliary: hebben. Ik heb gegeten (I have eaten).",
+      "Some verbs can take both hebben and zijn depending on meaning: 'Ik heb gelopen' (I was walking, no direction) versus 'Ik ben naar huis gelopen' (I walked home, with direction)."
+    ],
     "commonMistakes": [
       "'Ik heb gekomen' is fout - 'komen' gebruikt 'zijn': ik ben gekomen.",
       "'Ik heb gegaan' is fout - 'gaan' gebruikt 'zijn': ik ben gegaan.",
@@ -41,103 +72,128 @@
       "'Ik heb opgebellen' is fout - het voltooid deelwoord is 'opgebeld', niet de infinitief.",
       "Vergeten om 'ge-' tussen het voorvoegsel te plaatsen bij scheidbare werkwoorden: 'opgebeld' (niet 'geopbeld')."
     ],
-    "tip": "Onthoud voor hebben/zijn: beweging met RICHTING = zijn (ik ben naar huis gelopen), beweging zonder richting = hebben (ik heb gelopen). Verandering van toestand = zijn (hij is gestorven, het is begonnen). Bij twijfel: de meeste werkwoorden gebruiken 'hebben'."
+    "commonMistakesEN": [
+      "'Ik heb gekomen' is wrong — 'komen' (to come) uses 'zijn': ik ben gekomen (I have come).",
+      "'Ik heb gegaan' is wrong — 'gaan' (to go) uses 'zijn': ik ben gegaan (I have gone).",
+      "'Ik heb gewerked' is wrong — the past participle of 'werken' (to work) is 'gewerkt' (not -ed as in English).",
+      "'Ik heb gebetaald' is wrong — 'betalen' (to pay) has the inseparable prefix be-, so no extra ge-: ik heb betaald (I have paid).",
+      "'Ik heb geverteld' is wrong — 'vertellen' (to tell) has the inseparable prefix ver-, so: ik heb verteld (I have told).",
+      "'Ik heb opgebellen' is wrong — the past participle is 'opgebeld' (called up), not the infinitive.",
+      "Forgetting to place 'ge-' between the prefix in separable verbs: 'opgebeld' (not 'geopbeld')."
+    ],
+    "tip": "Onthoud voor hebben/zijn: beweging met RICHTING = zijn (ik ben naar huis gelopen), beweging zonder richting = hebben (ik heb gelopen). Verandering van toestand = zijn (hij is gestorven, het is begonnen). Bij twijfel: de meeste werkwoorden gebruiken 'hebben'.",
+    "tipEN": "Remember for hebben/zijn: movement with DIRECTION = zijn (ik ben naar huis gelopen = I walked home), movement without direction = hebben (ik heb gelopen = I walked/was walking). Change of state = zijn (hij is gestorven = he died, het is begonnen = it has started). When in doubt: most verbs use 'hebben'."
   },
   "exercises": [
     {
       "type": "fill_blank",
       "sentence": "Ik ___ gisteren hard ___. (werken)",
       "answer": "heb, gewerkt",
-      "explanation": "'Werken' is een zwak werkwoord. Stam 'werk' eindigt op k ('t kofschip) → gewerkt. Hulpwerkwoord: hebben."
+      "explanation": "'Werken' is een zwak werkwoord. Stam 'werk' eindigt op k ('t kofschip) → gewerkt. Hulpwerkwoord: hebben.",
+      "explanationEN": "'Werken' (to work) is a weak verb. Stem 'werk' ends in k ('t kofschip) → gewerkt. Auxiliary: hebben. (I worked hard yesterday.)"
     },
     {
       "type": "fill_blank",
       "sentence": "Zij ___ naar Amsterdam ___. (reizen)",
       "answer": "is, gereisd",
-      "explanation": "'Reizen' met richting → hulpwerkwoord 'zijn'. Stam 'reis' (z→s), maar oorspronkelijke klank is z → gereisd."
+      "explanation": "'Reizen' met richting → hulpwerkwoord 'zijn'. Stam 'reis' (z→s), maar oorspronkelijke klank is z → gereisd.",
+      "explanationEN": "'Reizen' (to travel) with direction → auxiliary 'zijn'. Stem 'reis' (z→s), but original sound is z → gereisd. (She traveled to Amsterdam.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "Wij ___ een film ___. (kijken)",
       "options": ["hebben, gekijkt", "zijn, gekeken", "hebben, gekeken", "zijn, gekijkt"],
       "answer": "hebben, gekeken",
-      "explanation": "'Kijken' is een sterk werkwoord: gekeken. Het is geen bewegings- of veranderingswerkwoord, dus: hebben."
+      "explanation": "'Kijken' is een sterk werkwoord: gekeken. Het is geen bewegings- of veranderingswerkwoord, dus: hebben.",
+      "explanationEN": "'Kijken' (to watch) is a strong verb: gekeken. It is not a movement or change-of-state verb, so: hebben. (We watched a movie.)"
     },
     {
       "type": "fill_blank",
       "sentence": "Hij ___ de rekening ___. (betalen)",
       "answer": "heeft, betaald",
-      "explanation": "'Betalen' heeft het onscheidbare voorvoegsel be-, dus geen ge-. Stam 'betaal', l is niet in 't kofschip → betaald."
+      "explanation": "'Betalen' heeft het onscheidbare voorvoegsel be-, dus geen ge-. Stam 'betaal', l is niet in 't kofschip → betaald.",
+      "explanationEN": "'Betalen' (to pay) has the inseparable prefix be-, so no ge-. Stem 'betaal', l is not in 't kofschip → betaald. (He paid the bill.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "De kinderen ___ naar school ___. (lopen)",
       "options": ["hebben, geloopt", "zijn, gelopen", "hebben, gelopen", "zijn, geloopt"],
       "answer": "zijn, gelopen",
-      "explanation": "'Lopen' is een sterk werkwoord (gelopen) en hier is er sprake van beweging met richting (naar school), dus: zijn."
+      "explanation": "'Lopen' is een sterk werkwoord (gelopen) en hier is er sprake van beweging met richting (naar school), dus: zijn.",
+      "explanationEN": "'Lopen' (to walk) is a strong verb (gelopen) and here there is movement with direction (naar school = to school), so: zijn. (The children walked to school.)"
     },
     {
       "type": "fill_blank",
       "sentence": "Ik ___ mijn moeder ___. (opbellen)",
       "answer": "heb, opgebeld",
-      "explanation": "'Opbellen' is scheidbaar. Het ge- komt tussen op- en -beld: opgebeld. Hulpwerkwoord: hebben."
+      "explanation": "'Opbellen' is scheidbaar. Het ge- komt tussen op- en -beld: opgebeld. Hulpwerkwoord: hebben.",
+      "explanationEN": "'Opbellen' (to call up) is separable. The ge- goes between op- and -beld: opgebeld. Auxiliary: hebben. (I called my mother.)"
     },
     {
       "type": "fill_blank",
       "sentence": "Wij ___ Nederlands ___. (studeren)",
       "answer": "hebben, gestudeerd",
-      "explanation": "'Studeren' is een zwak werkwoord op -eren: gestudeerd. Hulpwerkwoord: hebben."
+      "explanation": "'Studeren' is een zwak werkwoord op -eren: gestudeerd. Hulpwerkwoord: hebben.",
+      "explanationEN": "'Studeren' (to study) is a weak verb ending in -eren: gestudeerd. Auxiliary: hebben. (We studied Dutch.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "Zij ___ gisteren vroeg ___. (vertrekken)",
       "options": ["heeft, vertrokken", "is, vertrokken", "heeft, gevertrokken", "is, gevertrokken"],
       "answer": "is, vertrokken",
-      "explanation": "'Vertrekken' is een sterk werkwoord (vertrokken) met onscheidbaar voorvoegsel ver- (geen ge-). Beweging met richting → zijn."
+      "explanation": "'Vertrekken' is een sterk werkwoord (vertrokken) met onscheidbaar voorvoegsel ver- (geen ge-). Beweging met richting → zijn.",
+      "explanationEN": "'Vertrekken' (to depart) is a strong verb (vertrokken) with inseparable prefix ver- (no ge-). Movement with direction → zijn. (She departed early yesterday.)"
     },
     {
       "type": "fill_blank",
       "sentence": "De leraar ___ alles goed ___. (uitleggen)",
       "answer": "heeft, uitgelegd",
-      "explanation": "'Uitleggen' is scheidbaar. Ge- komt tussen uit- en -legd: uitgelegd. Stam 'leg', g niet in 't kofschip → -d."
+      "explanation": "'Uitleggen' is scheidbaar. Ge- komt tussen uit- en -legd: uitgelegd. Stam 'leg', g niet in 't kofschip → -d.",
+      "explanationEN": "'Uitleggen' (to explain) is separable. Ge- goes between uit- and -legd: uitgelegd. Stem 'leg', g is not in 't kofschip → -d. (The teacher explained everything well.)"
     },
     {
       "type": "fill_blank",
       "sentence": "Ik ___ een boek ___. (lezen)",
       "answer": "heb, gelezen",
-      "explanation": "'Lezen' is een sterk werkwoord: gelezen. Hulpwerkwoord: hebben."
+      "explanation": "'Lezen' is een sterk werkwoord: gelezen. Hulpwerkwoord: hebben.",
+      "explanationEN": "'Lezen' (to read) is a strong verb: gelezen. Auxiliary: hebben. (I read a book.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "Het kind ___ snel ___. (groeien)",
       "options": ["heeft, gegroeid", "is, gegroeid", "heeft, gegroed", "is, gegroeien"],
       "answer": "is, gegroeid",
-      "explanation": "'Groeien' is een verandering van toestand → hulpwerkwoord 'zijn'. Voltooid deelwoord: gegroeid."
+      "explanation": "'Groeien' is een verandering van toestand → hulpwerkwoord 'zijn'. Voltooid deelwoord: gegroeid.",
+      "explanationEN": "'Groeien' (to grow) is a change of state → auxiliary 'zijn'. Past participle: gegroeid. (The child grew quickly.)"
     },
     {
       "type": "fill_blank",
       "sentence": "Mijn zus ___ in Parijs ___. (wonen)",
       "answer": "heeft, gewoond",
-      "explanation": "'Wonen' is een zwak werkwoord. Stam 'woon', n niet in 't kofschip → gewoond. Hulpwerkwoord: hebben."
+      "explanation": "'Wonen' is een zwak werkwoord. Stam 'woon', n niet in 't kofschip → gewoond. Hulpwerkwoord: hebben.",
+      "explanationEN": "'Wonen' (to live) is a weak verb. Stem 'woon', n is not in 't kofschip → gewoond. Auxiliary: hebben. (My sister lived in Paris.)"
     },
     {
       "type": "fill_blank",
       "sentence": "Jullie ___ goed ___! (doen)",
       "answer": "hebben, gedaan",
-      "explanation": "'Doen' is onregelmatig: gedaan. Hulpwerkwoord: hebben."
+      "explanation": "'Doen' is onregelmatig: gedaan. Hulpwerkwoord: hebben.",
+      "explanationEN": "'Doen' (to do) is irregular: gedaan. Auxiliary: hebben. (You did well!)"
     },
     {
       "type": "multiple_choice",
       "sentence": "Ik ___ de hele dag thuis ___. (blijven)",
       "options": ["heb, gebleven", "ben, gebleven", "heb, geblijfd", "ben, geblijven"],
       "answer": "ben, gebleven",
-      "explanation": "'Blijven' is een sterk werkwoord (gebleven) en gebruikt altijd 'zijn' als hulpwerkwoord."
+      "explanation": "'Blijven' is een sterk werkwoord (gebleven) en gebruikt altijd 'zijn' als hulpwerkwoord.",
+      "explanationEN": "'Blijven' (to stay) is a strong verb (gebleven) and always uses 'zijn' as auxiliary. (I stayed home all day.)"
     },
     {
       "type": "fill_blank",
       "sentence": "Wij ___ het verhaal niet ___. (begrijpen)",
       "answer": "hebben, begrepen",
-      "explanation": "'Begrijpen' is sterk (begrepen) met onscheidbaar voorvoegsel be- (geen extra ge-). Hulpwerkwoord: hebben."
+      "explanation": "'Begrijpen' is sterk (begrepen) met onscheidbaar voorvoegsel be- (geen extra ge-). Hulpwerkwoord: hebben.",
+      "explanationEN": "'Begrijpen' (to understand) is strong (begrepen) with inseparable prefix be- (no extra ge-). Auxiliary: hebben. (We did not understand the story.)"
     }
   ]
 }

@@ -1,8 +1,10 @@
 {
   "topic": "pronouns",
   "topicNL": "Voornaamwoorden",
+  "topicEN": "Pronouns",
   "explanation": {
     "summary": "Het Nederlands heeft persoonlijke voornaamwoorden (onderwerp en lijdend/meewerkend voorwerp), bezittelijke voornaamwoorden en aanwijzende voornaamwoorden. Veel voornaamwoorden hebben een volle (benadrukte) en een gereduceerde (onbenadrukte) vorm.",
+    "summaryEN": "Dutch has personal pronouns (subject and direct/indirect object), possessive pronouns, and demonstrative pronouns. Many pronouns have a full (stressed) and a reduced (unstressed) form.",
     "rules": [
       "PERSOONLIJKE VOORNAAMWOORDEN (onderwerp, vol/gereduceerd): ik/-, jij/je, u/-, hij/-ie, zij/ze, het/'t, wij/we, jullie/-, zij/ze.",
       "PERSOONLIJKE VOORNAAMWOORDEN (lijdend voorwerp, vol/gereduceerd): mij/me, jou/je, u/-, hem/'m, haar/d'r of ze, het/'t, ons/-, jullie/-, hen of hun/ze.",
@@ -15,12 +17,31 @@
       "De gereduceerde vormen (je, ze, me, 'm, 't, d'r, m'n, z'n) worden veel gebruikt in de spreektaal.",
       "'Het' als onderwerp verwijst naar het-woorden of naar een hele situatie: Het regent. Het is moeilijk."
     ],
+    "rulesEN": [
+      "PERSONAL PRONOUNS (subject, full/reduced): ik (I)/-, jij (you)/je, u (you, formal)/-, hij (he)/-ie, zij (she)/ze, het (it)/'t, wij (we)/we, jullie (you, plural)/-, zij (they)/ze.",
+      "PERSONAL PRONOUNS (direct object, full/reduced): mij (me)/me, jou (you)/je, u (you, formal)/-, hem (him)/'m, haar (her)/d'r or ze, het (it)/'t, ons (us)/-, jullie (you, plural)/-, hen or hun (them)/ze.",
+      "PERSONAL PRONOUNS (indirect object, full/reduced): mij (me)/me, jou (you)/je, u (you, formal)/-, hem (him)/'m, haar (her)/d'r, het (it)/'t, ons (us)/-, jullie (you, plural)/-, hun (them)/ze.",
+      "POSSESSIVE PRONOUNS: mijn/m'n (my), jouw/je (your), uw (your, formal), zijn/z'n (his), haar/d'r (her), ons/onze (our), jullie/je (your, plural), hun (their).",
+      "'Ons' is used with het-words in the singular: ons huis (our house). 'Onze' is used with de-words and plurals: onze auto (our car), onze kinderen (our children).",
+      "DEMONSTRATIVE PRONOUNS: deze/dit (this, nearby), die/dat (that, far away). 'Deze' and 'die' are used with de-words and plurals. 'Dit' and 'dat' are used with het-words in the singular.",
+      "'U' is the polite form (formal). It is used as subject, direct object, and indirect object.",
+      "'Hen' is officially the direct object form, 'hun' the indirect object form. In spoken language, this distinction is often not made and many Dutch people use 'hun' or 'ze' for both.",
+      "The reduced forms (je, ze, me, 'm, 't, d'r, m'n, z'n) are widely used in spoken language.",
+      "'Het' as a subject refers to het-words or to an entire situation: Het regent. (It's raining.) Het is moeilijk. (It is difficult.)"
+    ],
     "exceptions": [
       "'Hun' als onderwerp ('Hun hebben dat gedaan') wordt NIET geaccepteerd in standaard Nederlands. Gebruik 'Zij hebben dat gedaan'.",
       "'Hen/hun'-onderscheid: officieel is 'hen' lijdend voorwerp (Ik zie hen) en 'hun' meewerkend voorwerp (Ik geef hun een boek). In de praktijk gebruiken veel mensen 'ze' voor beide.",
       "Bij dingen (niet-personen) gebruik je 'het', 'hem' of 'er' in plaats van 'hij/zij': Het boek? Ik heb het gelezen. (niet: Ik heb hem gelezen, hoewel dit in de spreektaal wel voorkomt).",
       "'Er' wordt vaak gebruikt als verwijzing naar een plaats of als voorlopig onderwerp: Ik woon er al 5 jaar. Er zijn veel mensen.",
       "Bij voorzetsel + voornaamwoord voor dingen: gebruik 'er' + voorzetsel: Ik denk eraan (niet: Ik denk aan het)."
+    ],
+    "exceptionsEN": [
+      "'Hun' as a subject ('Hun hebben dat gedaan' / They did that) is NOT accepted in standard Dutch. Use 'Zij hebben dat gedaan.' (They did that.)",
+      "'Hen/hun' distinction: officially 'hen' is the direct object (Ik zie hen / I see them) and 'hun' is the indirect object (Ik geef hun een boek / I give them a book). In practice, many people use 'ze' for both.",
+      "For things (not people), you use 'het', 'hem', or 'er' instead of 'hij/zij': Het boek? Ik heb het gelezen. (The book? I have read it.) (not: Ik heb hem gelezen, though this does occur in spoken language.)",
+      "'Er' is often used as a reference to a place or as a preliminary subject: Ik woon er al 5 jaar. (I've lived there for 5 years.) Er zijn veel mensen. (There are many people.)",
+      "With preposition + pronoun for things: use 'er' + preposition: Ik denk eraan (I think about it) (not: Ik denk aan het)."
     ],
     "commonMistakes": [
       "'Hun hebben dat gezegd' is fout in standaard Nederlands - gebruik 'Zij hebben dat gezegd'.",
@@ -30,86 +51,107 @@
       "Verwarring tussen 'zijn' (bezittelijk voornaamwoord) en 'zijn' (werkwoord): 'Zijn auto is rood' versus 'Hij is rood'.",
       "'Dit auto' is fout - 'auto' is een de-woord, dus: 'deze auto'. 'Dit' alleen bij het-woorden enkelvoud."
     ],
-    "tip": "Onthoud: de volle vormen (mij, jou, hij, zij, wij) gebruik je als je NADRUK wilt leggen: 'IK heb dat gedaan, niet hij!' De gereduceerde vormen (me, je, ie, ze, we) gebruik je in gewone, neutrale zinnen: 'Heb je dat gedaan?' Oefen met beide vormen!"
+    "commonMistakesEN": [
+      "'Hun hebben dat gezegd' is wrong in standard Dutch — use 'Zij hebben dat gezegd.' (They said that.)",
+      "'Jou auto' is wrong — 'jou' is the direct object form. The possessive pronoun is 'jouw': jouw auto (your car).",
+      "'Ik geef het aan zij' is wrong — after a preposition you use the object form: Ik geef het aan haar. (I give it to her.)",
+      "'Mijn en jouw huis' — note: 'mijn' (possessive) is not the same as 'mij' (object form).",
+      "Confusion between 'zijn' (possessive pronoun, meaning 'his') and 'zijn' (verb, meaning 'to be'): 'Zijn auto is rood' (His car is red) versus 'Hij is rood' (He/It is red).",
+      "'Dit auto' is wrong — 'auto' (car) is a de-word, so: 'deze auto' (this car). 'Dit' is only used with het-words in the singular."
+    ],
+    "tip": "Onthoud: de volle vormen (mij, jou, hij, zij, wij) gebruik je als je NADRUK wilt leggen: 'IK heb dat gedaan, niet hij!' De gereduceerde vormen (me, je, ie, ze, we) gebruik je in gewone, neutrale zinnen: 'Heb je dat gedaan?' Oefen met beide vormen!",
+    "tipEN": "Remember: the full forms (mij, jou, hij, zij, wij) are used when you want to add EMPHASIS: 'IK heb dat gedaan, niet hij!' (I did that, not him!) The reduced forms (me, je, ie, ze, we) are used in normal, neutral sentences: 'Heb je dat gedaan?' (Did you do that?) Practice with both forms!"
   },
   "exercises": [
     {
       "type": "fill_blank",
       "sentence": "Ik zie ___. (hij, lijdend voorwerp)",
       "answer": "hem",
-      "explanation": "Het lijdend voorwerp van 'hij' is 'hem': Ik zie hem."
+      "explanation": "Het lijdend voorwerp van 'hij' is 'hem': Ik zie hem.",
+      "explanationEN": "The direct object form of 'hij' (he) is 'hem' (him): Ik zie hem. (I see him.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "___ fiets staat voor de deur. (bezittelijk, jij)",
       "options": ["Jou", "Jouw", "Je", "Jij"],
       "answer": "Jouw",
-      "explanation": "Het bezittelijk voornaamwoord van 'jij' is 'jouw' (vol) of 'je' (gereduceerd). 'Jou' is de objectvorm, niet bezittelijk."
+      "explanation": "Het bezittelijk voornaamwoord van 'jij' is 'jouw' (vol) of 'je' (gereduceerd). 'Jou' is de objectvorm, niet bezittelijk.",
+      "explanationEN": "The possessive pronoun for 'jij' (you) is 'jouw' (full) or 'je' (reduced). 'Jou' is the object form, not possessive. Jouw fiets (your bike)."
     },
     {
       "type": "fill_blank",
       "sentence": "Wij geven ___ een cadeau. (zij, meervoud, meewerkend voorwerp)",
       "answer": "hun",
-      "explanation": "Het meewerkend voorwerp van 'zij' (meervoud) is 'hun': Wij geven hun een cadeau."
+      "explanation": "Het meewerkend voorwerp van 'zij' (meervoud) is 'hun': Wij geven hun een cadeau.",
+      "explanationEN": "The indirect object form of 'zij' (they, plural) is 'hun' (them): Wij geven hun een cadeau. (We give them a present.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "Dat is ___ huis. (wij, bezittelijk, het-woord)",
       "options": ["onze", "ons", "onzen", "wij"],
       "answer": "ons",
-      "explanation": "'Huis' is een het-woord enkelvoud, dus gebruiken we 'ons' (niet 'onze'): ons huis."
+      "explanation": "'Huis' is een het-woord enkelvoud, dus gebruiken we 'ons' (niet 'onze'): ons huis.",
+      "explanationEN": "'Huis' (house) is a het-word in the singular, so we use 'ons' (not 'onze'): ons huis (our house)."
     },
     {
       "type": "fill_blank",
       "sentence": "___ kinderen zijn lief. (wij, bezittelijk)",
       "answer": "Onze",
-      "explanation": "'Kinderen' is meervoud, dus gebruiken we 'onze' (niet 'ons'): onze kinderen."
+      "explanation": "'Kinderen' is meervoud, dus gebruiken we 'onze' (niet 'ons'): onze kinderen.",
+      "explanationEN": "'Kinderen' (children) is plural, so we use 'onze' (not 'ons'): onze kinderen (our children)."
     },
     {
       "type": "multiple_choice",
       "sentence": "Ken jij ___ vrouw? (hij, bezittelijk)",
       "options": ["hem", "hij", "zijn", "haar"],
       "answer": "zijn",
-      "explanation": "Het bezittelijk voornaamwoord van 'hij' is 'zijn': zijn vrouw."
+      "explanation": "Het bezittelijk voornaamwoord van 'hij' is 'zijn': zijn vrouw.",
+      "explanationEN": "The possessive pronoun for 'hij' (he) is 'zijn' (his): zijn vrouw (his wife)."
     },
     {
       "type": "fill_blank",
       "sentence": "Ik bel ___ morgen. (jij, lijdend voorwerp)",
       "answer": "je",
-      "explanation": "Het lijdend voorwerp van 'jij' is 'jou' (vol) of 'je' (gereduceerd). In een neutrale zin is 'je' gebruikelijk."
+      "explanation": "Het lijdend voorwerp van 'jij' is 'jou' (vol) of 'je' (gereduceerd). In een neutrale zin is 'je' gebruikelijk.",
+      "explanationEN": "The direct object form of 'jij' (you) is 'jou' (full/stressed) or 'je' (reduced/unstressed). In a neutral sentence, 'je' is common: Ik bel je morgen. (I'll call you tomorrow.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "___ boek is heel interessant. (dichtbij, het-woord)",
       "options": ["Deze", "Dit", "Die", "Dat"],
       "answer": "Dit",
-      "explanation": "'Boek' is een het-woord enkelvoud. Dichtbij = 'dit': dit boek."
+      "explanation": "'Boek' is een het-woord enkelvoud. Dichtbij = 'dit': dit boek.",
+      "explanationEN": "'Boek' (book) is a het-word in the singular. Nearby = 'dit' (this): dit boek (this book)."
     },
     {
       "type": "fill_blank",
       "sentence": "___ schoenen zijn van mij. (ver weg, meervoud)",
       "answer": "Die",
-      "explanation": "Meervoud + ver weg = 'die': die schoenen."
+      "explanation": "Meervoud + ver weg = 'die': die schoenen.",
+      "explanationEN": "Plural + far away = 'die' (those): die schoenen (those shoes)."
     },
     {
       "type": "multiple_choice",
       "sentence": "De leraar geeft ___ de boeken. (wij, meewerkend voorwerp)",
       "options": ["wij", "onze", "ons", "we"],
       "answer": "ons",
-      "explanation": "Het meewerkend voorwerp van 'wij' is 'ons': De leraar geeft ons de boeken."
+      "explanation": "Het meewerkend voorwerp van 'wij' is 'ons': De leraar geeft ons de boeken.",
+      "explanationEN": "The indirect object form of 'wij' (we) is 'ons' (us): De leraar geeft ons de boeken. (The teacher gives us the books.)"
     },
     {
       "type": "fill_blank",
       "sentence": "Ik heb ___ gisteren gezien. (zij, enkelvoud, lijdend voorwerp)",
       "answer": "haar",
-      "explanation": "Het lijdend voorwerp van 'zij' (enkelvoud) is 'haar': Ik heb haar gisteren gezien."
+      "explanation": "Het lijdend voorwerp van 'zij' (enkelvoud) is 'haar': Ik heb haar gisteren gezien.",
+      "explanationEN": "The direct object form of 'zij' (she, singular) is 'haar' (her): Ik heb haar gisteren gezien. (I saw her yesterday.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "___ auto is blauw. (zij, enkelvoud, bezittelijk)",
       "options": ["Zij", "Ze", "Haar", "Hun"],
       "answer": "Haar",
-      "explanation": "Het bezittelijk voornaamwoord van 'zij' (enkelvoud) is 'haar': haar auto."
+      "explanation": "Het bezittelijk voornaamwoord van 'zij' (enkelvoud) is 'haar': haar auto.",
+      "explanationEN": "The possessive pronoun for 'zij' (she, singular) is 'haar' (her): haar auto (her car)."
     }
   ]
 }

@@ -543,7 +543,20 @@ function ListeningPractice() {
     return <p className="text-center text-charcoal/60">Loading listening exercises...</p>;
   }
 
-  const current = sentences[currentIndex % sentences.length];
+  if (currentIndex >= sentences.length) {
+    return (
+      <div className="text-center py-8">
+        <div className="text-4xl mb-3">🎧</div>
+        <h3 className="font-display text-xl font-semibold text-charcoal mb-2">Session Complete!</h3>
+        <p className="text-charcoal/60 text-sm mb-4">You completed {sentences.length} listening exercises.</p>
+        <button onClick={() => setCurrentIndex(0)} className="bg-primary text-white font-semibold px-6 py-3 rounded-xl">
+          Practice Again
+        </button>
+      </div>
+    );
+  }
+
+  const current = sentences[currentIndex];
 
   return (
     <div>
@@ -639,7 +652,20 @@ function SpeakingSentences() {
     return <p className="text-center text-charcoal/60">Loading speaking exercises...</p>;
   }
 
-  const current = sentences[currentIndex % sentences.length];
+  if (currentIndex >= sentences.length) {
+    return (
+      <div className="text-center py-8">
+        <div className="text-4xl mb-3">🎤</div>
+        <h3 className="font-display text-xl font-semibold text-charcoal mb-2">Great Speaking Practice!</h3>
+        <p className="text-charcoal/60 text-sm mb-4">You completed {sentences.length} speaking exercises.</p>
+        <button onClick={() => setCurrentIndex(0)} className="bg-primary text-white font-semibold px-6 py-3 rounded-xl">
+          Practice Again
+        </button>
+      </div>
+    );
+  }
+
+  const current = sentences[currentIndex];
 
   return (
     <div>

@@ -98,7 +98,8 @@ export function useSpeech() {
         reject(new Error('text-too-long'));
         return;
       }
-      const speed = slow ? 0.15 : 0.24;
+      // ttsspeed: 1.0 = natural conversational speed, 0.5 = learner-friendly slow
+      const speed = slow ? 0.5 : 1.0;
       const url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=nl&client=tw-ob&q=${encoded}&ttsspeed=${speed}`;
 
       const audio = new Audio(url);
@@ -118,7 +119,7 @@ export function useSpeech() {
       const timeout = setTimeout(() => {
         audio.pause();
         reject(new Error('google-tts-timeout'));
-      }, 3000);
+      }, 4000);
 
       audio.play()
         .then(() => clearTimeout(timeout))
@@ -138,8 +139,9 @@ export function useSpeech() {
 
         const utterance = new SpeechSynthesisUtterance(text);
         utterance.lang = 'nl-NL';
-        utterance.rate = options.slow ? 0.4 : 0.55;
-        utterance.pitch = 1.02;
+        // 1.0 = browser default speed; 0.85 sounds natural, 0.55 for learner-slow
+        utterance.rate = options.slow ? 0.55 : 0.85;
+        utterance.pitch = 1.05;
         utterance.volume = 1;
 
         if (selectedVoiceRef.current) {

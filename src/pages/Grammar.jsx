@@ -1,9 +1,10 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BookOpen, Search, Check, ChevronRight, Star, ArrowLeft } from 'lucide-react';
+import { BookOpen, Search, Check, ChevronRight, Star, ArrowLeft, Heart } from 'lucide-react';
 import FillInBlank from '../components/FillInBlank';
 import MultipleChoice from '../components/MultipleChoice';
 import useProgress from '../hooks/useProgress';
+import useFavourites from '../hooks/useFavourites';
 import { shuffle, checkAnswer } from '../utils/dutch';
 import { COMMON_HET_WORDS, HET_WORD_RULES } from '../utils/dutch';
 
@@ -34,6 +35,8 @@ export default function Grammar() {
       (g) =>
         g.topic?.toLowerCase().includes(q) ||
         g.topicNL?.toLowerCase().includes(q) ||
+        g.topicEN?.toLowerCase().includes(q) ||
+        g.explanation?.summaryEN?.toLowerCase().includes(q) ||
         g.explanation?.summary?.toLowerCase().includes(q)
     );
   }, [search]);
@@ -96,22 +99,39 @@ export default function Grammar() {
       </motion.button>
 
       {/* Grammar topics list */}
-      <div className="space-y-2">
-        {filteredGrammar.map((topic, i) => {
-          const mastered = grammarMastered[topic.topic]?.mastered;
-          return (
-            <motion.button
-              key={topic.topic}
-              onClick={() => setSelectedTopic(topic.topic)}
-              className="w-full bg-white rounded-2xl p-4 shadow-sm border border-cream-dark/50 flex items-center gap-3 text-left"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.03 }}
-              whileHover={{ scale: 1.01 }}
-              whileTap={{ scale: 0.98 }}
+      <GrammarTopicList
+        topics={filteredGrammar}
+        grammarMastered={grammarMastered}
+        onSelect={(topic) => setSelectedTopic(topic)}
+      />
+    </div>
+  );
+}
+
+function GrammarTopicList({ topics, grammarMastered, onSelect }) {
+  const toggleFavourite = useFavourites((s) => s.toggleFavourite);
+  const favourites = useFavourites((s) => s.favourites);
+  const favIds = new Set(favourites.filter((f) => f.type === 'grammar').map((f) => f.id));
+
+  return (
+    <div className="space-y-2">
+      {topics.map((topic, i) => {
+        const mastered = grammarMastered[topic.topic]?.mastered;
+        const isFav = favIds.has(topic.topic);
+        return (
+          <motion.div
+            key={topic.topic}
+            className="bg-white rounded-2xl shadow-sm border border-cream-dark/50 flex items-center gap-3 text-left overflow-hidden"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.03 }}
+          >
+            <button
+              onClick={() => onSelect(topic.topic)}
+              className="flex-1 flex items-center gap-3 p-4 min-w-0"
             >
               <div
-                className={`w-8 h-8 rounded-lg flex items-center justify-center ${
+                className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${
                   mastered ? 'bg-success/10' : 'bg-cream-dark'
                 }`}
               >
@@ -123,17 +143,31 @@ export default function Grammar() {
               </div>
               <div className="flex-1 min-w-0">
                 <h3 className="font-semibold text-sm text-charcoal truncate">
-                  {topic.topicNL || topic.topic}
+                  {topic.topicEN || topic.topicNL || topic.topic}
                 </h3>
                 <p className="text-xs text-charcoal/50 truncate">
-                  {topic.explanation?.summary}
+                  {topic.explanation?.summaryEN || topic.explanation?.summary}
                 </p>
               </div>
               <ChevronRight size={16} className="text-charcoal/30 shrink-0" />
-            </motion.button>
-          );
-        })}
-      </div>
+            </button>
+            <button
+              onClick={() =>
+                toggleFavourite(topic.topic, 'grammar', {
+                  title: topic.topicEN || topic.topicNL || topic.topic,
+                  summary: topic.explanation?.summaryEN || topic.explanation?.summary,
+                })
+              }
+              className={`p-2 mr-2 rounded-full transition-colors shrink-0 ${
+                isFav ? 'text-error' : 'text-charcoal/20 hover:text-error/50'
+              }`}
+              aria-label={isFav ? 'Remove from favourites' : 'Add to favourites'}
+            >
+              <Heart size={14} fill={isFav ? 'currentColor' : 'none'} />
+            </button>
+          </motion.div>
+        );
+      })}
     </div>
   );
 }
@@ -142,9 +176,45 @@ function GrammarDetail({ topic, onBack }) {
   const [showExercises, setShowExercises] = useState(false);
   const [exerciseIndex, setExerciseIndex] = useState(0);
   const [score, setScore] = useState({ correct: 0, total: 0 });
+  const [sectionIndex, setSectionIndex] = useState(0);
   const masterGrammar = useProgress((s) => s.masterGrammar);
+  const exerciseTimerRef = useRef(null);
+
+  useEffect(() => {
+    return () => { if (exerciseTimerRef.current) clearTimeout(exerciseTimerRef.current); };
+  }, []);
 
   const exercises = topic.exercises || [];
+
+  // Build paginated sections from the topic data
+  const sections = [];
+  const expl = topic.explanation;
+  if (expl) {
+    // Section 1: Summary
+    if (expl.summaryEN || expl.summary) {
+      sections.push({ type: 'summary', text: expl.summaryEN || expl.summary, textNL: expl.summaryEN ? expl.summary : null });
+    }
+    // One section per rule
+    const rules = expl.rulesEN || expl.rules || [];
+    const rulesNL = expl.rulesEN ? (expl.rules || []) : [];
+    rules.forEach((rule, i) => {
+      sections.push({ type: 'rule', index: i, total: rules.length, text: rule, textNL: rulesNL[i] || null });
+    });
+    // Exceptions (grouped)
+    const exceptions = expl.exceptionsEN || expl.exceptions || [];
+    if (exceptions.length > 0) {
+      sections.push({ type: 'exceptions', items: exceptions, itemsNL: expl.exceptionsEN ? (expl.exceptions || []) : [] });
+    }
+    // Common mistakes (grouped)
+    const mistakes = expl.commonMistakesEN || expl.commonMistakes || [];
+    if (mistakes.length > 0) {
+      sections.push({ type: 'mistakes', items: mistakes, itemsNL: expl.commonMistakesEN ? (expl.commonMistakes || []) : [] });
+    }
+    // Tip
+    if (expl.tipEN || expl.tip) {
+      sections.push({ type: 'tip', text: expl.tipEN || expl.tip, textNL: expl.tipEN ? expl.tip : null });
+    }
+  }
 
   // Track grammar mastery when exercises are completed
   const isComplete = showExercises && exerciseIndex >= exercises.length && exercises.length > 0;
@@ -195,13 +265,13 @@ function GrammarDetail({ topic, onBack }) {
             sentence={ex.sentence}
             answer={ex.answer}
             hint=""
-            explanation={ex.explanation}
+            explanation={ex.explanationEN || ex.explanation}
             onAnswer={(correct) => {
               setScore((s) => ({
                 correct: s.correct + (correct ? 1 : 0),
                 total: s.total + 1,
               }));
-              setTimeout(() => setExerciseIndex((i) => i + 1), 1500);
+              exerciseTimerRef.current = setTimeout(() => setExerciseIndex((i) => i + 1), 1500);
             }}
           />
         )}
@@ -216,7 +286,7 @@ function GrammarDetail({ topic, onBack }) {
                 correct: s.correct + (correct ? 1 : 0),
                 total: s.total + 1,
               }));
-              setTimeout(() => setExerciseIndex((i) => i + 1), 1500);
+              exerciseTimerRef.current = setTimeout(() => setExerciseIndex((i) => i + 1), 1500);
             }}
           />
         )}
@@ -224,76 +294,150 @@ function GrammarDetail({ topic, onBack }) {
     );
   }
 
+  const currentSection = sections[sectionIndex];
+  const isLastSection = sectionIndex >= sections.length - 1;
+
+  // If no explanation content is available, show a simple message
+  if (sections.length === 0 || !currentSection) {
+    return (
+      <div className="px-4 pt-6 pb-4">
+        <button onClick={onBack} className="text-sm text-primary font-medium flex items-center gap-1 mb-4">
+          <ArrowLeft size={14} /> Back
+        </button>
+        <h2 className="font-display text-xl font-semibold text-charcoal mb-2">{topic.title || topic.topic}</h2>
+        <p className="text-charcoal/60 text-sm">No explanation content available for this topic yet.</p>
+        {exercises.length > 0 && (
+          <button onClick={() => setShowExercises(true)} className="mt-4 w-full py-3 bg-primary text-white font-semibold rounded-xl">
+            Practice Exercises ({exercises.length})
+          </button>
+        )}
+      </div>
+    );
+  }
+
   return (
     <div className="px-4 pt-6 pb-4">
-      <button onClick={onBack} className="text-sm text-primary font-medium mb-4 flex items-center gap-1">
-        <ArrowLeft size={14} /> Back
-      </button>
-
-      <h1 className="font-display text-2xl font-semibold text-charcoal mb-4">
-        {topic.topicNL || topic.topic}
-      </h1>
-
-      {topic.explanation && (
-        <div className="bg-white rounded-2xl p-5 shadow-sm border border-cream-dark/50 mb-4">
-          <p className="text-charcoal/80 mb-4">{topic.explanation.summary}</p>
-
-          {topic.explanation.rules?.length > 0 && (
-            <div className="mb-4">
-              <h3 className="font-semibold text-sm text-charcoal mb-2">Rules</h3>
-              <ul className="space-y-2">
-                {topic.explanation.rules.map((rule, i) => (
-                  <li key={i} className="text-sm text-charcoal/70 flex gap-2">
-                    <span className="text-primary font-bold shrink-0">{i + 1}.</span>
-                    {rule}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {topic.explanation.exceptions?.length > 0 && (
-            <div className="mb-4">
-              <h3 className="font-semibold text-sm text-charcoal mb-2">Exceptions</h3>
-              <ul className="space-y-1">
-                {topic.explanation.exceptions.map((ex, i) => (
-                  <li key={i} className="text-sm text-charcoal/60 italic">⚠ {ex}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {topic.explanation.commonMistakes?.length > 0 && (
-            <div className="mb-4">
-              <h3 className="font-semibold text-sm text-error mb-2">Common Mistakes</h3>
-              <ul className="space-y-1">
-                {topic.explanation.commonMistakes.map((m, i) => (
-                  <li key={i} className="text-sm text-charcoal/60">❌ {m}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {topic.explanation.tip && (
-            <div className="bg-primary/5 border border-primary/10 rounded-xl p-3">
-              <p className="text-sm text-charcoal/70">💡 {topic.explanation.tip}</p>
-            </div>
-          )}
-        </div>
-      )}
-
-      {exercises.length > 0 && (
-        <button
-          onClick={() => {
-            setShowExercises(true);
-            setExerciseIndex(0);
-            setScore({ correct: 0, total: 0 });
-          }}
-          className="w-full bg-primary text-white font-semibold py-3 rounded-xl hover:bg-primary-dark transition-colors"
-        >
-          Practice ({exercises.length} exercises)
+      {/* Header */}
+      <div className="flex items-center justify-between mb-4">
+        <button onClick={onBack} className="text-sm text-primary font-medium flex items-center gap-1">
+          <ArrowLeft size={14} /> Back
         </button>
+        {sections.length > 0 && (
+          <span className="text-xs text-charcoal/40">{sectionIndex + 1} / {sections.length}</span>
+        )}
+      </div>
+
+      <h1 className="font-display text-xl font-semibold text-charcoal mb-0.5">
+        {topic.topicEN || topic.topicNL || topic.topic}
+      </h1>
+      {topic.topicNL && (
+        <p className="text-xs text-charcoal/40 italic mb-4">{topic.topicNL}</p>
       )}
+
+      {/* Paginated section card */}
+      {currentSection && (
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={sectionIndex}
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ duration: 0.2 }}
+            className="bg-white rounded-2xl p-5 shadow-sm border border-cream-dark/50 mb-4 min-h-[180px]"
+          >
+            {currentSection.type === 'summary' && (
+              <div>
+                <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-3">Overview</p>
+                <p className="text-charcoal/80 leading-relaxed">{currentSection.text}</p>
+                {currentSection.textNL && (
+                  <p className="text-sm text-charcoal/40 italic mt-3 leading-relaxed">{currentSection.textNL}</p>
+                )}
+              </div>
+            )}
+            {currentSection.type === 'rule' && (
+              <div>
+                <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-3">
+                  Rule {currentSection.index + 1} of {currentSection.total}
+                </p>
+                <p className="text-charcoal/80 leading-relaxed">{currentSection.text}</p>
+                {currentSection.textNL && (
+                  <p className="text-sm text-charcoal/40 italic mt-3 leading-relaxed">{currentSection.textNL}</p>
+                )}
+              </div>
+            )}
+            {currentSection.type === 'exceptions' && (
+              <div>
+                <p className="text-xs font-semibold text-warning uppercase tracking-wide mb-3">⚠ Exceptions</p>
+                <ul className="space-y-2">
+                  {currentSection.items.map((ex, i) => (
+                    <li key={i}>
+                      <p className="text-sm text-charcoal/80">{ex}</p>
+                      {currentSection.itemsNL?.[i] && (
+                        <p className="text-xs text-charcoal/40 italic mt-0.5">{currentSection.itemsNL[i]}</p>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {currentSection.type === 'mistakes' && (
+              <div>
+                <p className="text-xs font-semibold text-error uppercase tracking-wide mb-3">❌ Common Mistakes</p>
+                <ul className="space-y-2">
+                  {currentSection.items.map((m, i) => (
+                    <li key={i}>
+                      <p className="text-sm text-charcoal/80">{m}</p>
+                      {currentSection.itemsNL?.[i] && (
+                        <p className="text-xs text-charcoal/40 italic mt-0.5">{currentSection.itemsNL[i]}</p>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {currentSection.type === 'tip' && (
+              <div>
+                <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-3">💡 Tip</p>
+                <p className="text-charcoal/80 leading-relaxed">{currentSection.text}</p>
+                {currentSection.textNL && (
+                  <p className="text-sm text-charcoal/40 italic mt-3 leading-relaxed">{currentSection.textNL}</p>
+                )}
+              </div>
+            )}
+          </motion.div>
+        </AnimatePresence>
+      )}
+
+      {/* Navigation */}
+      <div className="flex gap-3 mb-3">
+        {sectionIndex > 0 && (
+          <button
+            onClick={() => setSectionIndex((i) => i - 1)}
+            className="flex-1 py-3 rounded-xl text-sm font-medium bg-cream-dark text-charcoal/70"
+          >
+            ← Previous
+          </button>
+        )}
+        {!isLastSection ? (
+          <button
+            onClick={() => setSectionIndex((i) => i + 1)}
+            className="flex-1 py-3 rounded-xl text-sm font-semibold bg-primary text-white"
+          >
+            Next →
+          </button>
+        ) : exercises.length > 0 ? (
+          <button
+            onClick={() => {
+              setShowExercises(true);
+              setExerciseIndex(0);
+              setScore({ correct: 0, total: 0 });
+            }}
+            className="flex-1 py-3 rounded-xl text-sm font-semibold bg-primary text-white"
+          >
+            Practice ({exercises.length} exercises) →
+          </button>
+        ) : null}
+      </div>
     </div>
   );
 }

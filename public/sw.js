@@ -1,4 +1,4 @@
-const CACHE_NAME = 'pria-v2';
+const CACHE_NAME = 'pria-v3';
 
 const APP_SHELL = [
   '/',

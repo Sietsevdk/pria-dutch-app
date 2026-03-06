@@ -19,6 +19,7 @@ import ProgressRing from '../components/ProgressRing';
 import useProgress from '../hooks/useProgress';
 import useStreak from '../hooks/useStreak';
 import useSRS from '../hooks/useSRS';
+import useMistakes from '../hooks/useMistakes';
 import { getDueItems } from '../utils/srs';
 
 // Load idioms eagerly
@@ -38,15 +39,18 @@ export default function Home() {
   const currentStreak = useStreak((s) => s.currentStreak);
   const completedToday = useStreak((s) => s.completedToday);
   const checkStreak = useStreak((s) => s.checkStreak);
-  const shouldShowEasterEgg = useStreak((s) => s.shouldShowEasterEgg);
+  const shouldShowEasterEgg = useStreak((s) => s.currentStreak === 30);
   const srsItems = useSRS((s) => s.items);
   const dueCount = useMemo(() => getDueItems(srsItems).length, [srsItems]);
 
   const [dailyIdiom, setDailyIdiom] = useState(null);
 
+  const clearOldMistakes = useMistakes((s) => s.clearOldMistakes);
+
   useEffect(() => {
     checkStreak();
     resetDailyGoals();
+    clearOldMistakes(30); // Clean up mistakes older than 30 days
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // Run only on mount — these are store actions that don't change
 
@@ -92,7 +96,7 @@ export default function Home() {
       <motion.div variants={item} className="flex items-center justify-between mb-6">
         <div>
           <h1 className="font-display text-2xl font-semibold text-charcoal">
-            {greeting}! 👋
+            {greeting}, Pria! 👋
           </h1>
           <p className="text-sm text-charcoal/60 mt-0.5">
             {completedToday
@@ -106,7 +110,7 @@ export default function Home() {
       </motion.div>
 
       {/* Easter egg for 30-day streak */}
-      {shouldShowEasterEgg() && (
+      {shouldShowEasterEgg && (
         <motion.div
           variants={item}
           className="bg-gradient-to-r from-primary to-primary-light rounded-2xl p-4 mb-4 text-white"
@@ -146,8 +150,8 @@ export default function Home() {
         <ChevronRight size={22} />
       </motion.button>
 
-      {/* Review Card — only when items are due */}
-      {dueCount > 0 && (
+      {/* Review Card */}
+      {dueCount > 0 ? (
         <motion.button
           variants={item}
           onClick={() => navigate('/review')}
@@ -167,6 +171,19 @@ export default function Home() {
           </div>
           <ChevronRight size={18} className="text-charcoal/30" />
         </motion.button>
+      ) : (
+        <motion.div
+          variants={item}
+          className="w-full bg-white rounded-2xl p-4 flex items-center gap-3 shadow-sm border border-cream-dark/50 mb-4"
+        >
+          <div className="w-10 h-10 bg-success/10 rounded-xl flex items-center justify-center">
+            <RefreshCw size={20} className="text-success" />
+          </div>
+          <div className="text-left">
+            <div className="font-semibold text-sm text-charcoal/70">Reviews complete</div>
+            <div className="text-xs text-charcoal/40">Next reviews tomorrow</div>
+          </div>
+        </motion.div>
       )}
 
       {/* Daily Goals */}
@@ -280,7 +297,7 @@ export default function Home() {
         <h3 className="font-semibold text-sm text-charcoal mb-3">This Week</h3>
         <div className="flex items-end justify-between gap-1 h-20">
           {(() => {
-            const dayNames = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+            const dayNames = ['zo', 'ma', 'di', 'wo', 'do', 'vr', 'za'];
             const today = new Date().getDay();
             return Array.from({ length: 7 }, (_, i) => dayNames[(today - 6 + i + 7) % 7]);
           })().map((day, i) => {

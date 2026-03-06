@@ -1,8 +1,10 @@
 {
   "topic": "conjunctions",
   "topicNL": "Voegwoorden",
+  "topicEN": "Conjunctions",
   "explanation": {
     "summary": "Voegwoorden verbinden zinnen met elkaar. Er zijn twee soorten: nevenschikkende voegwoorden (en, maar, want, of, dus) veranderen de woordvolgorde NIET, en onderschikkende voegwoorden (omdat, dat, als, toen, etc.) sturen het werkwoord naar het EINDE van de bijzin.",
+    "summaryEN": "Conjunctions connect sentences to each other. There are two types: coordinating conjunctions (en, maar, want, of, dus) do NOT change the word order, and subordinating conjunctions (omdat, dat, als, toen, etc.) send the verb to the END of the subordinate clause.",
     "rules": [
       "NEVENSCHIKKENDE VOEGWOORDEN verbinden twee hoofdzinnen. De woordvolgorde verandert NIET.",
       "EN (and): Ik werk en hij studeert.",
@@ -24,12 +26,40 @@
       "TOTDAT (until): Wacht hier totdat ik terugkom.",
       "Als een bijzin VOOR de hoofdzin staat, begint de hoofdzin met het werkwoord (inversie): 'Omdat ik ziek ben, ga ik niet.' (bijzin + werkwoord + onderwerp)"
     ],
+    "rulesEN": [
+      "COORDINATING CONJUNCTIONS connect two main clauses. The word order does NOT change.",
+      "EN (and): Ik werk en hij studeert. (I work and he studies.)",
+      "MAAR (but): Ik wil komen, maar ik heb geen tijd. (I want to come, but I have no time.)",
+      "WANT (because): Ik ga niet, want ik ben ziek. (I'm not going, because I am sick.) Note: 'want' gives a reason, like 'because', but the word order does NOT change!",
+      "OF (or): Wil je koffie of thee? (Do you want coffee or tea?)",
+      "DUS (so/therefore): Het regent, dus ik neem een paraplu mee. (It's raining, so I'm taking an umbrella.)",
+      "SUBORDINATING CONJUNCTIONS create a subordinate clause. The verb goes to the END of the subordinate clause.",
+      "OMDAT (because): Ik ga niet, omdat ik ziek ben. (I'm not going, because I am sick.) — verb 'ben' moves to the end.",
+      "DAT (that): Ik weet dat hij morgen komt. (I know that he is coming tomorrow.)",
+      "ALS (if/when): Als het regent, neem ik een paraplu mee. (If it rains, I'll take an umbrella.)",
+      "WANNEER (when): Ik bel je wanneer ik thuis ben. (I'll call you when I'm home.)",
+      "TOEN (when, past tense): Toen ik jong was, woonde ik in Rotterdam. (When I was young, I lived in Rotterdam.)",
+      "TERWIJL (while): Ik lees terwijl hij kookt. (I read while he cooks.)",
+      "HOEWEL/ALHOEWEL (although): Hoewel het regent, ga ik toch fietsen. (Although it's raining, I'm still going cycling.)",
+      "VOORDAT (before): Voordat je weggaat, moet je opruimen. (Before you leave, you must tidy up.)",
+      "NADAT (after): Nadat ik had gegeten, ging ik slapen. (After I had eaten, I went to sleep.)",
+      "ZODRA (as soon as): Zodra ik klaar ben, bel ik je. (As soon as I'm ready, I'll call you.)",
+      "TOTDAT (until): Wacht hier totdat ik terugkom. (Wait here until I come back.)",
+      "When a subordinate clause comes BEFORE the main clause, the main clause starts with the verb (inversion): 'Omdat ik ziek ben, ga ik niet.' (subordinate clause + verb + subject)"
+    ],
     "exceptions": [
       "'Want' en 'omdat' betekenen allebei 'because', maar 'want' is nevenschikkend (geen verandering) en 'omdat' is onderschikkend (werkwoord naar einde). Ik ga niet, want ik ben ziek. / Ik ga niet, omdat ik ziek ben.",
       "'Toen' als voegwoord = onderschikkend (Toen ik jong was...). 'Toen' als bijwoord = daarna (Toen ging ik naar huis). Let op het verschil!",
       "'Als' voor hypothetisch/toekomst: Als het morgen regent, blijf ik thuis. 'Toen' voor verleden: Toen het regende, bleef ik thuis.",
       "'Doordat' (because of the fact that) is een alternatief voor 'omdat' bij oorzaak-gevolg: Doordat het hard regende, kwam ik te laat.",
       "'Zodat' (so that) = doel: Ik studeer hard zodat ik slaag."
+    ],
+    "exceptionsEN": [
+      "'Want' and 'omdat' both mean 'because', but 'want' is coordinating (no word order change) and 'omdat' is subordinating (verb to the end). Ik ga niet, want ik ben ziek. / Ik ga niet, omdat ik ziek ben.",
+      "'Toen' as a conjunction = subordinating (Toen ik jong was... = When I was young...). 'Toen' as an adverb = then/after that (Toen ging ik naar huis = Then I went home). Pay attention to the difference!",
+      "'Als' for hypothetical/future: Als het morgen regent, blijf ik thuis. (If it rains tomorrow, I'll stay home.) 'Toen' for the past: Toen het regende, bleef ik thuis. (When it rained, I stayed home.)",
+      "'Doordat' (because of the fact that) is an alternative for 'omdat' for cause-effect: Doordat het hard regende, kwam ik te laat. (Because it rained heavily, I was late.)",
+      "'Zodat' (so that) = purpose: Ik studeer hard zodat ik slaag. (I study hard so that I pass.)"
     ],
     "commonMistakes": [
       "'Ik ga niet, omdat ik ben ziek' is fout - na 'omdat' gaat het werkwoord naar het einde: '...omdat ik ziek ben.'",
@@ -39,65 +69,83 @@
       "'Omdat ik ben ziek, ik ga niet' heeft twee fouten: 1) in de bijzin gaat het werkwoord naar het einde (omdat ik ziek ben), 2) in de hoofdzin na een bijzin: inversie (ga ik niet).",
       "'Ik weet niet dat hij morgen komt of niet' - beter: 'Ik weet niet of hij morgen komt.'"
     ],
-    "tip": "Onthoud: na EN, MAAR, WANT, OF, DUS verandert er NIETS aan de woordvolgorde. Na alle andere voegwoorden (omdat, dat, als, toen, terwijl, etc.) gaat het werkwoord naar het EINDE. Ezelsbruggetje: de nevenschikkende voegwoorden vormen het woord 'MOWDD' (Maar, Of, Want, Dus, en Dan) - nee, beter: onthoud gewoon de vijf: en, maar, of, want, dus."
+    "commonMistakesEN": [
+      "'Ik ga niet, omdat ik ben ziek' is wrong — after 'omdat' the verb goes to the end: '...omdat ik ziek ben.' (because I am sick).",
+      "'Ik ga niet, want ik ziek ben' is wrong — after 'want' the word order does NOT change: '...want ik ben ziek.' (because I am sick).",
+      "Confusion between 'want' and 'omdat': both mean 'because', but they have different word orders!",
+      "'Als ik was jong' is wrong — use 'toen' for the past: 'Toen ik jong was...' (When I was young...), not 'als'.",
+      "'Omdat ik ben ziek, ik ga niet' has two errors: 1) in the subordinate clause the verb goes to the end (omdat ik ziek ben), 2) in the main clause after a subordinate clause: inversion (ga ik niet).",
+      "'Ik weet niet dat hij morgen komt of niet' — better: 'Ik weet niet of hij morgen komt.' (I don't know if he is coming tomorrow.)"
+    ],
+    "tip": "Onthoud: na EN, MAAR, WANT, OF, DUS verandert er NIETS aan de woordvolgorde. Na alle andere voegwoorden (omdat, dat, als, toen, terwijl, etc.) gaat het werkwoord naar het EINDE. Ezelsbruggetje: de nevenschikkende voegwoorden vormen het woord 'MOWDD' (Maar, Of, Want, Dus, en Dan) - nee, beter: onthoud gewoon de vijf: en, maar, of, want, dus.",
+    "tipEN": "Remember: after EN, MAAR, WANT, OF, DUS NOTHING changes in the word order. After all other conjunctions (omdat, dat, als, toen, terwijl, etc.) the verb goes to the END. Just memorize the five coordinating conjunctions: en (and), maar (but), of (or), want (because), dus (so). Everything else sends the verb to the end!"
   },
   "exercises": [
     {
       "type": "fill_blank",
       "sentence": "Ik ga niet naar het feest, ___ ik ben moe.",
       "answer": "want",
-      "explanation": "Na 'want' verandert de woordvolgorde niet: '...want ik ben moe.' De volgorde onderwerp + werkwoord blijft hetzelfde."
+      "explanation": "Na 'want' verandert de woordvolgorde niet: '...want ik ben moe.' De volgorde onderwerp + werkwoord blijft hetzelfde.",
+      "explanationEN": "After 'want' the word order does not change: '...want ik ben moe.' The subject + verb order stays the same. (I'm not going to the party, because I am tired.)"
     },
     {
       "type": "fill_blank",
       "sentence": "Ik ga niet naar het feest, ___ ik moe ben.",
       "answer": "omdat",
-      "explanation": "Na 'omdat' gaat het werkwoord naar het einde: '...omdat ik moe ben.' Het werkwoord 'ben' staat aan het einde."
+      "explanation": "Na 'omdat' gaat het werkwoord naar het einde: '...omdat ik moe ben.' Het werkwoord 'ben' staat aan het einde.",
+      "explanationEN": "After 'omdat' the verb goes to the end: '...omdat ik moe ben.' The verb 'ben' is at the end. (I'm not going to the party, because I am tired.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "Ik weet ___ hij morgen komt.",
       "options": ["want", "dus", "dat", "maar"],
       "answer": "dat",
-      "explanation": "'Dat' is een onderschikkend voegwoord dat een bijzin inleidt. Het werkwoord 'komt' gaat naar het einde."
+      "explanation": "'Dat' is een onderschikkend voegwoord dat een bijzin inleidt. Het werkwoord 'komt' gaat naar het einde.",
+      "explanationEN": "'Dat' (that) is a subordinating conjunction that introduces a subordinate clause. The verb 'komt' goes to the end. (I know that he is coming tomorrow.)"
     },
     {
       "type": "fill_blank",
       "sentence": "___ het regent, neem ik een paraplu mee.",
       "answer": "Als",
-      "explanation": "'Als' drukt een voorwaarde uit. In de bijzin gaat het werkwoord naar het einde: 'Als het regent,...'"
+      "explanation": "'Als' drukt een voorwaarde uit. In de bijzin gaat het werkwoord naar het einde: 'Als het regent,...'",
+      "explanationEN": "'Als' (if) expresses a condition. In the subordinate clause the verb goes to the end: 'Als het regent,...' (If it rains, I'll take an umbrella.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "___ ik jong was, woonde ik in Amsterdam.",
       "options": ["Als", "Toen", "Omdat", "Dat"],
       "answer": "Toen",
-      "explanation": "'Toen' wordt gebruikt voor het verleden (een moment in het verleden). 'Als' is voor de toekomst of herhaalde acties."
+      "explanation": "'Toen' wordt gebruikt voor het verleden (een moment in het verleden). 'Als' is voor de toekomst of herhaalde acties.",
+      "explanationEN": "'Toen' (when) is used for the past (a moment in the past). 'Als' is for the future or repeated actions. (When I was young, I lived in Amsterdam.)"
     },
     {
       "type": "fill_blank",
       "sentence": "Ik wil helpen, ___ ik heb geen tijd.",
       "answer": "maar",
-      "explanation": "'Maar' is een nevenschikkend voegwoord (tegenstelling). De woordvolgorde verandert niet: '...maar ik heb geen tijd.'"
+      "explanation": "'Maar' is een nevenschikkend voegwoord (tegenstelling). De woordvolgorde verandert niet: '...maar ik heb geen tijd.'",
+      "explanationEN": "'Maar' (but) is a coordinating conjunction (contrast). The word order does not change: '...maar ik heb geen tijd.' (I want to help, but I have no time.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "Ik lees een boek ___ hij televisie kijkt.",
       "options": ["terwijl", "omdat", "want", "maar"],
       "answer": "terwijl",
-      "explanation": "'Terwijl' (while) geeft aan dat twee dingen tegelijkertijd gebeuren. Het werkwoord 'kijkt' gaat naar het einde: '...terwijl hij televisie kijkt.'"
+      "explanation": "'Terwijl' (while) geeft aan dat twee dingen tegelijkertijd gebeuren. Het werkwoord 'kijkt' gaat naar het einde: '...terwijl hij televisie kijkt.'",
+      "explanationEN": "'Terwijl' (while) indicates that two things happen at the same time. The verb 'kijkt' goes to the end: '...terwijl hij televisie kijkt.' (I read a book while he watches television.)"
     },
     {
       "type": "fill_blank",
       "sentence": "___ je weggaat, moet je de deur sluiten.",
       "answer": "Voordat",
-      "explanation": "'Voordat' (before) is een onderschikkend voegwoord. In de bijzin gaat het werkwoord naar het einde."
+      "explanation": "'Voordat' (before) is een onderschikkend voegwoord. In de bijzin gaat het werkwoord naar het einde.",
+      "explanationEN": "'Voordat' (before) is a subordinating conjunction. In the subordinate clause the verb goes to the end. (Before you leave, you must close the door.)"
     },
     {
       "type": "fill_blank",
       "sentence": "Het is koud, ___ ik trek een jas aan.",
       "answer": "dus",
-      "explanation": "'Dus' (therefore) is een nevenschikkend voegwoord. De woordvolgorde verandert niet."
+      "explanation": "'Dus' (therefore) is een nevenschikkend voegwoord. De woordvolgorde verandert niet.",
+      "explanationEN": "'Dus' (so/therefore) is a coordinating conjunction. The word order does not change. (It is cold, so I'm putting on a coat.)"
     },
     {
       "type": "multiple_choice",
@@ -109,20 +157,23 @@
         "Ik niet ga, omdat ik ziek ben."
       ],
       "answer": "Ik ga niet, omdat ik ziek ben.",
-      "explanation": "Na 'omdat' gaat het werkwoord naar het einde van de bijzin: '...omdat ik ziek ben.'"
+      "explanation": "Na 'omdat' gaat het werkwoord naar het einde van de bijzin: '...omdat ik ziek ben.'",
+      "explanationEN": "After 'omdat' the verb goes to the end of the subordinate clause: '...omdat ik ziek ben.' (I'm not going, because I am sick.)"
     },
     {
       "type": "fill_blank",
       "sentence": "___ ik had gegeten, ging ik naar bed.",
       "answer": "Nadat",
-      "explanation": "'Nadat' (after) is een onderschikkend voegwoord. In de bijzin gaat het werkwoord naar het einde."
+      "explanation": "'Nadat' (after) is een onderschikkend voegwoord. In de bijzin gaat het werkwoord naar het einde.",
+      "explanationEN": "'Nadat' (after) is a subordinating conjunction. In the subordinate clause the verb goes to the end. (After I had eaten, I went to bed.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "Wil je koffie ___ thee?",
       "options": ["maar", "en", "of", "dus"],
       "answer": "of",
-      "explanation": "'Of' (or) wordt gebruikt bij een keuze. Het is een nevenschikkend voegwoord."
+      "explanation": "'Of' (or) wordt gebruikt bij een keuze. Het is een nevenschikkend voegwoord.",
+      "explanationEN": "'Of' (or) is used when making a choice. It is a coordinating conjunction. (Do you want coffee or tea?)"
     }
   ]
 }

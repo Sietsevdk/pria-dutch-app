@@ -1,8 +1,51 @@
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Volume2, ChevronDown, X, BookOpen } from 'lucide-react';
+import { Search, Volume2, ChevronDown, X, BookOpen, Play, ArrowLeft, RefreshCw, Heart } from 'lucide-react';
 import { useSpeech } from '../hooks/useSpeech';
-import { dutchWithArticle } from '../utils/dutch';
+import { dutchWithArticle, dutchBareWord, shuffle, getEncouragement, getGentleCorrection } from '../utils/dutch';
+import { calculateLessonXP } from '../utils/xp';
+import MultipleChoice from '../components/MultipleChoice';
+import FillInBlank from '../components/FillInBlank';
+import MatchPairs from '../components/MatchPairs';
+import ListeningExercise from '../components/ListeningExercise';
+import SpeakingExercise from '../components/SpeakingExercise';
+import LessonComplete from '../components/LessonComplete';
+import useProgress from '../hooks/useProgress';
+import useStreak from '../hooks/useStreak';
+import useSRS from '../hooks/useSRS';
+import useFavourites from '../hooks/useFavourites';
+
+// Slug → proper English title
+const TOPIC_EN = {
+  greetings: 'Greetings',
+  'food-drink': 'Food & Drink',
+  family: 'Family',
+  weather: 'Weather',
+  shopping: 'Shopping',
+  'time-dates': 'Time & Dates',
+  health: 'Health',
+  feelings: 'Feelings',
+  clothing: 'Clothing',
+  work: 'Work',
+  directions: 'Directions & Locations',
+  housing: 'Housing',
+  'daily-routine': 'Daily Routine',
+  transport: 'Transport',
+  numbers: 'Numbers',
+  common_verbs: 'Common Verbs',
+  question_words: 'Question Words',
+  appointments: 'Appointments',
+  hobbies: 'Hobbies',
+  adjectives: 'Adjectives',
+  government: 'Government',
+  banking: 'Banking',
+  social: 'Social Life',
+  education: 'Education',
+  correspondence: 'Correspondence',
+  culture: 'Dutch Culture',
+  future: 'Future',
+  exam: 'Exam Prep',
+};
 
 // Load all vocabulary files eagerly
 let allTopics = [];
@@ -36,16 +79,7 @@ export default function Dictionary() {
   const [query, setQuery] = useState('');
   const [selectedTopic, setSelectedTopic] = useState(null);
   const [expandedWord, setExpandedWord] = useState(null);
-
-  if (allWords.length === 0) {
-    return (
-      <div className="px-4 pt-6 pb-4 text-center">
-        <BookOpen size={32} className="text-charcoal/30 mx-auto mb-3" />
-        <p className="text-charcoal/60 text-sm">Loading dictionary...</p>
-        <p className="text-charcoal/40 text-xs mt-1">Try refreshing the page</p>
-      </div>
-    );
-  }
+  const [practiceTopic, setPracticeTopic] = useState(null);
 
   const filtered = useMemo(() => {
     let words = allWords;
@@ -84,6 +118,28 @@ export default function Dictionary() {
     setQuery('');
     setSelectedTopic(null);
   };
+
+  if (practiceTopic) {
+    const topicWords = allWords.filter((w) => w._topic === practiceTopic.topic);
+    return (
+      <TopicPractice
+        topic={practiceTopic}
+        words={topicWords}
+        allWords={allWords}
+        onBack={() => setPracticeTopic(null)}
+      />
+    );
+  }
+
+  if (allWords.length === 0) {
+    return (
+      <div className="px-4 pt-6 pb-4 text-center">
+        <BookOpen size={32} className="text-charcoal/30 mx-auto mb-3" />
+        <p className="text-charcoal/60 text-sm">Loading dictionary...</p>
+        <p className="text-charcoal/40 text-xs mt-1">Try refreshing the page</p>
+      </div>
+    );
+  }
 
   return (
     <div className="px-4 pt-6 pb-4">
@@ -145,7 +201,7 @@ export default function Dictionary() {
                 : 'bg-white border border-cream-dark/50 text-charcoal/60'
             }`}
           >
-            {t.icon} {t.topicNL || t.topic}
+            {t.icon} {TOPIC_EN[t.topic] || t.topic}
           </button>
         ))}
       </div>
@@ -153,12 +209,25 @@ export default function Dictionary() {
       {/* Results */}
       {query.trim() || selectedTopic ? (
         <div>
-          <p className="text-xs text-charcoal/40 mb-3">
-            {filtered.length} {filtered.length === 1 ? 'result' : 'results'}
-            {selectedTopic && !query.trim() && (
-              <span> in {allTopics.find((t) => t.topic === selectedTopic)?.topicNL || selectedTopic}</span>
+          <div className="flex items-center justify-between mb-3">
+            <p className="text-xs text-charcoal/40">
+              {filtered.length} {filtered.length === 1 ? 'result' : 'results'}
+              {selectedTopic && !query.trim() && (
+                <span> in {TOPIC_EN[selectedTopic] || selectedTopic}</span>
+              )}
+            </p>
+            {selectedTopic && filtered.length >= 4 && (
+              <button
+                onClick={() => {
+                  const t = allTopics.find((tp) => tp.topic === selectedTopic);
+                  if (t) setPracticeTopic(t);
+                }}
+                className="flex items-center gap-1.5 px-3 py-1.5 bg-primary text-white text-xs font-medium rounded-full"
+              >
+                <Play size={12} /> Practice
+              </button>
             )}
-          </p>
+          </div>
           <div className="space-y-2">
             {filtered.map((word) => (
               <WordCard
@@ -186,6 +255,7 @@ export default function Dictionary() {
               expandedWord={expandedWord}
               onToggleWord={(id) => setExpandedWord(expandedWord === id ? null : id)}
               onSelectTopic={() => setSelectedTopic(group.topic)}
+              onPractice={() => setPracticeTopic(group)}
             />
           ))}
         </div>
@@ -194,7 +264,7 @@ export default function Dictionary() {
   );
 }
 
-function TopicGroup({ group, expandedWord, onToggleWord, onSelectTopic }) {
+function TopicGroup({ group, expandedWord, onToggleWord, onSelectTopic, onPractice }) {
   const [isOpen, setIsOpen] = useState(false);
   const previewWords = group.words.slice(0, 3);
 
@@ -210,10 +280,10 @@ function TopicGroup({ group, expandedWord, onToggleWord, onSelectTopic }) {
         <span className="text-xl">{group.icon}</span>
         <div className="flex-1 min-w-0">
           <p className="font-semibold text-sm text-charcoal">
-            {group.topicNL || group.topic}
+            {TOPIC_EN[group.topic] || group.topic}
           </p>
           <p className="text-xs text-charcoal/40">
-            {group.words.length} words
+            {group.topicNL || group.topic} · {group.words.length} words
           </p>
         </div>
         <motion.div
@@ -244,6 +314,14 @@ function TopicGroup({ group, expandedWord, onToggleWord, onSelectTopic }) {
           >
             <div className="px-4 pb-4 space-y-2">
               <div className="h-px bg-cream-dark/30 mb-2" />
+              {group.words.length >= 4 && (
+                <button
+                  onClick={(e) => { e.stopPropagation(); onPractice(); }}
+                  className="w-full flex items-center justify-center gap-2 py-2.5 bg-primary/10 text-primary text-sm font-medium rounded-xl hover:bg-primary/20 transition-colors mb-2"
+                >
+                  <Play size={14} /> Practice these words
+                </button>
+              )}
               {group.words.map((word) => (
                 <WordCard
                   key={word.id}
@@ -263,6 +341,8 @@ function TopicGroup({ group, expandedWord, onToggleWord, onSelectTopic }) {
 
 function WordCard({ word, isExpanded, onToggle, compact = false }) {
   const { speak, isSpeaking } = useSpeech();
+  const toggleFavourite = useFavourites((s) => s.toggleFavourite);
+  const isFav = useFavourites((s) => s.isFavourite(word.id));
 
   const handleSpeak = useCallback(
     (e, slow = false) => {
@@ -270,6 +350,19 @@ function WordCard({ word, isExpanded, onToggle, compact = false }) {
       speak(dutchWithArticle(word), { slow });
     },
     [speak, word]
+  );
+
+  const handleFav = useCallback(
+    (e) => {
+      e.stopPropagation();
+      toggleFavourite(word.id, 'word', {
+        dutch: word.dutch,
+        english: word.english,
+        article: word.article,
+        pronunciation: word.pronunciation,
+      });
+    },
+    [toggleFavourite, word]
   );
 
   return (
@@ -297,11 +390,21 @@ function WordCard({ word, isExpanded, onToggle, compact = false }) {
               <span className="text-xs text-primary/60 font-medium">{word.article}</span>
             )}
             <span className="font-semibold text-sm text-charcoal truncate">
-              {word.dutch}
+              {dutchBareWord(word) || word.dutch}
             </span>
           </div>
           <p className="text-xs text-charcoal/50 truncate">{word.english}</p>
         </div>
+
+        <button
+          onClick={handleFav}
+          className={`p-1.5 rounded-full transition-colors flex-shrink-0 ${
+            isFav ? 'text-error' : 'text-charcoal/20 hover:text-error/50'
+          }`}
+          aria-label={isFav ? 'Remove from favourites' : 'Add to favourites'}
+        >
+          <Heart size={14} fill={isFav ? 'currentColor' : 'none'} />
+        </button>
 
         <button
           onClick={(e) => handleSpeak(e)}
@@ -394,5 +497,341 @@ function WordCard({ word, isExpanded, onToggle, compact = false }) {
         )}
       </AnimatePresence>
     </motion.div>
+  );
+}
+
+// ── Topic Practice Mode ──
+
+function generateTopicExercises(words, allWordsList) {
+  const exercises = [];
+  const lessonWords = words.slice(0, 12);
+
+  // Phase 1: Introduce & test in batches
+  const batchSize = 4;
+  for (let i = 0; i < lessonWords.length; i += batchSize) {
+    const batch = lessonWords.slice(i, i + batchSize);
+    batch.forEach((word) => exercises.push({ type: 'word_intro', word }));
+    batch.forEach((word) => {
+      const otherOptions = lessonWords.filter((w) => w.id !== word.id).map((w) => w.english);
+      exercises.push({
+        type: 'multiple_choice',
+        question: `What does "${dutchWithArticle(word)}" mean?`,
+        options: shuffle([word.english, ...shuffle(otherOptions).slice(0, 3)]),
+        correctAnswer: word.english,
+        wordId: word.id,
+      });
+    });
+  }
+
+  // Phase 2: Reverse MC (English → Dutch)
+  shuffle(lessonWords).slice(0, 4).forEach((word) => {
+    const otherOptions = lessonWords.filter((w) => w.id !== word.id).map((w) => dutchWithArticle(w));
+    exercises.push({
+      type: 'multiple_choice',
+      question: `How do you say "${word.english}" in Dutch?`,
+      options: shuffle([dutchWithArticle(word), ...shuffle(otherOptions).slice(0, 3)]),
+      correctAnswer: dutchWithArticle(word),
+      wordId: word.id,
+      direction: 'english-to-dutch',
+    });
+  });
+
+  // Phase 3: Fill in blank
+  shuffle(lessonWords).slice(0, 5).forEach((word) => {
+    if (word.exampleNL && word.dutch) {
+      const bareWord = dutchBareWord(word) || word.dutch;
+      const escaped = bareWord.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const sentence = word.exampleNL.replace(new RegExp(escaped, 'i'), '___');
+      if (sentence !== word.exampleNL) {
+        exercises.push({
+          type: 'fill_blank',
+          sentence,
+          answer: bareWord.toLowerCase(),
+          hint: `Translate "${word.english}" → Dutch`,
+          explanation: word.exampleEN,
+          wordId: word.id,
+        });
+      }
+    }
+  });
+
+  // Phase 4: Listening
+  shuffle(lessonWords).slice(0, 3).forEach((word) => {
+    const text = word.exampleNL || dutchWithArticle(word);
+    const otherOptions = lessonWords.filter((w) => w.id !== word.id).slice(0, 3).map((w) => w.exampleNL || w.dutch);
+    exercises.push({
+      type: 'listening',
+      text,
+      options: shuffle([text, ...otherOptions]),
+      correctAnswer: text,
+      wordId: word.id,
+    });
+  });
+
+  // Phase 5: Match pairs
+  if (lessonWords.length >= 5) {
+    exercises.push({
+      type: 'match_pairs',
+      pairs: shuffle(lessonWords).slice(0, 5).map((w) => ({
+        dutch: dutchWithArticle(w),
+        english: w.english,
+      })),
+    });
+  }
+
+  // Phase 6: Speaking
+  shuffle(lessonWords).slice(0, 2).forEach((word) => {
+    const text = word.exampleNL || dutchWithArticle(word);
+    exercises.push({
+      type: 'speaking',
+      text,
+      translation: word.exampleEN || word.english,
+    });
+  });
+
+  return exercises;
+}
+
+function TopicPractice({ topic, words, allWords: allWordsList, onBack }) {
+  const learnWord = useProgress((s) => s.learnWord);
+  const recordExercise = useProgress((s) => s.recordExercise);
+  const completeSpeakingGoal = useProgress((s) => s.completeSpeakingGoal);
+  const completeLessonGoal = useProgress((s) => s.completeLessonGoal);
+  const recordActivity = useStreak((s) => s.recordActivity);
+  const addSRSItem = useSRS((s) => s.addItem);
+
+  const [exercises] = useState(() => generateTopicExercises(words, allWordsList));
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [correctCount, setCorrectCount] = useState(0);
+  const [mistakeCount, setMistakeCount] = useState(0);
+  const [wordsIntroduced, setWordsIntroduced] = useState(0);
+  const [feedback, setFeedback] = useState(null);
+  const [isComplete, setIsComplete] = useState(false);
+  const [correctStreak, setCorrectStreak] = useState(0);
+  const advanceTimerRef = useRef(null);
+
+  useEffect(() => {
+    return () => { if (advanceTimerRef.current) clearTimeout(advanceTimerRef.current); };
+  }, []);
+
+  const currentExercise = exercises[currentIndex];
+  const progress = exercises.length > 0
+    ? Math.min(currentIndex + 1, exercises.length) / exercises.length
+    : 0;
+
+  const handleNext = useCallback(() => {
+    if (advanceTimerRef.current) { clearTimeout(advanceTimerRef.current); advanceTimerRef.current = null; }
+    setFeedback(null);
+    if (currentIndex + 1 >= exercises.length) {
+      if (!isComplete) {
+        const totalQ = correctCount + mistakeCount;
+        const xp = calculateLessonXP({ correctAnswers: correctCount, totalQuestions: totalQ, mistakes: mistakeCount });
+        recordActivity(xp);
+        completeLessonGoal();
+        setIsComplete(true);
+      }
+    } else {
+      setCurrentIndex((i) => i + 1);
+    }
+  }, [currentIndex, exercises.length, correctCount, mistakeCount, isComplete, recordActivity]);
+
+  const handleAnswer = useCallback(
+    (isCorrect, wordId) => {
+      if (isCorrect) {
+        const newStreak = correctStreak + 1;
+        setCorrectStreak(newStreak);
+        setCorrectCount((c) => c + 1);
+        let message = getEncouragement();
+        if (newStreak === 3) message = '3 in a row! Lekker bezig!';
+        else if (newStreak === 5) message = '5 streak! Je bent on fire!';
+        else if (newStreak === 7) message = '7 in a row! Ongelooflijk!';
+        setFeedback({ type: 'correct', message });
+      } else {
+        setCorrectStreak(0);
+        setMistakeCount((m) => m + 1);
+        let message = getGentleCorrection();
+        if (currentExercise?.correctAnswer) {
+          message = `The answer is "${currentExercise.correctAnswer}". ${message}`;
+        }
+        setFeedback({ type: 'incorrect', message });
+        if (wordId) addSRSItem(wordId, 'vocabulary');
+      }
+      if (wordId) recordExercise(isCorrect, currentExercise?.type || 'unknown');
+      if (currentExercise?.type === 'speaking') completeSpeakingGoal();
+      advanceTimerRef.current = setTimeout(handleNext, isCorrect ? 1200 : 2500);
+    },
+    [currentExercise, handleNext, recordExercise, addSRSItem, completeSpeakingGoal, correctStreak]
+  );
+
+  const handleWordIntro = useCallback(
+    (word) => { learnWord(word.id); addSRSItem(word.id, 'vocabulary'); setWordsIntroduced((w) => w + 1); },
+    [learnWord, addSRSItem]
+  );
+
+  if (isComplete) {
+    const totalQ = correctCount + mistakeCount;
+    return (
+      <LessonComplete
+        xpEarned={calculateLessonXP({ correctAnswers: correctCount, totalQuestions: totalQ, mistakes: mistakeCount })}
+        accuracy={totalQ > 0 ? Math.round((correctCount / totalQ) * 100) : 100}
+        wordsLearned={wordsIntroduced}
+        mistakeCount={mistakeCount}
+        onContinue={onBack}
+        onReviewMistakes={null}
+      />
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-cream">
+      {/* Header */}
+      <div className="sticky top-0 bg-cream/95 backdrop-blur-sm z-40 px-4 pt-4 pb-2">
+        <div className="flex items-center gap-3">
+          <button onClick={onBack} className="p-1.5 rounded-full hover:bg-cream-dark transition-colors" aria-label="Back to dictionary">
+            <ArrowLeft size={20} className="text-charcoal/60" />
+          </button>
+          <div className="flex-1 h-2.5 bg-cream-dark rounded-full overflow-hidden">
+            <motion.div className="h-full bg-primary rounded-full" animate={{ width: `${progress * 100}%` }} transition={{ duration: 0.3 }} />
+          </div>
+          <span className="text-xs text-charcoal/50 font-medium min-w-[32px] text-right">
+            {Math.min(currentIndex + 1, exercises.length)}/{exercises.length}
+          </span>
+        </div>
+        <p className="text-xs text-charcoal/40 mt-1 ml-10">
+          {topic.icon} {TOPIC_EN[topic.topic] || topic.topic}
+        </p>
+      </div>
+
+      {/* Exercise area */}
+      <div className="px-4 pt-4 pb-8">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -40 }}
+            transition={{ duration: 0.25 }}
+          >
+            {currentExercise?.type === 'word_intro' && (
+              <PracticeWordIntro word={currentExercise.word} onLearn={handleWordIntro} onNext={handleNext} />
+            )}
+            {currentExercise?.type === 'multiple_choice' && (
+              <MultipleChoice
+                question={currentExercise.question}
+                options={currentExercise.options}
+                correctAnswer={currentExercise.correctAnswer}
+                onAnswer={(correct) => handleAnswer(correct, currentExercise.wordId)}
+                type={currentExercise.direction === 'english-to-dutch' ? 'english-to-dutch' : 'dutch-to-english'}
+              />
+            )}
+            {currentExercise?.type === 'fill_blank' && (
+              <FillInBlank
+                sentence={currentExercise.sentence}
+                answer={currentExercise.answer}
+                hint={currentExercise.hint}
+                explanation={currentExercise.explanation}
+                onAnswer={(correct) => handleAnswer(correct, currentExercise.wordId)}
+              />
+            )}
+            {currentExercise?.type === 'listening' && (
+              <ListeningExercise
+                text={currentExercise.text}
+                options={currentExercise.options}
+                correctAnswer={currentExercise.correctAnswer}
+                onAnswer={(correct) => handleAnswer(correct, currentExercise.wordId)}
+              />
+            )}
+            {currentExercise?.type === 'match_pairs' && (
+              <MatchPairs
+                pairs={currentExercise.pairs}
+                onComplete={(mistakes) => {
+                  if (mistakes === 0) setCorrectCount((c) => c + 1);
+                  else setMistakeCount((m) => m + mistakes);
+                  advanceTimerRef.current = setTimeout(handleNext, 1500);
+                }}
+              />
+            )}
+            {currentExercise?.type === 'speaking' && (
+              <SpeakingExercise
+                text={currentExercise.text}
+                translation={currentExercise.translation}
+                onAnswer={(correct) => handleAnswer(correct)}
+              />
+            )}
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Feedback toast */}
+        <AnimatePresence>
+          {feedback && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className={`fixed bottom-24 left-4 right-4 mx-auto max-w-lg p-4 rounded-xl text-center font-semibold ${
+                feedback.type === 'correct' ? 'bg-success text-white' : 'bg-error/90 text-white'
+              }`}
+            >
+              {feedback.message}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </div>
+  );
+}
+
+function PracticeWordIntro({ word, onLearn, onNext }) {
+  const { speak, isSpeaking } = useSpeech();
+
+  useEffect(() => {
+    onLearn(word);
+    const timer = setTimeout(() => speak(dutchWithArticle(word)), 500);
+    return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [word.id]);
+
+  return (
+    <div className="text-center py-4">
+      <p className="text-sm text-charcoal/50 mb-2 uppercase tracking-wide font-medium">New word</p>
+      <motion.div
+        className="bg-white rounded-3xl p-8 shadow-sm border border-cream-dark/50 mb-4"
+        initial={{ scale: 0.9 }}
+        animate={{ scale: 1 }}
+        transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+      >
+        <div className="text-3xl font-display font-semibold text-charcoal mb-2">
+          {word.article && <span className="text-primary/60 text-2xl">{word.article} </span>}
+          {dutchBareWord(word)}
+        </div>
+        <div className="flex items-center justify-center gap-2 mb-4">
+          <button
+            onClick={() => speak(dutchWithArticle(word))}
+            className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-colors ${
+              isSpeaking ? 'bg-primary text-white' : 'text-primary hover:bg-primary/5'
+            }`}
+          >
+            <Volume2 size={16} />
+            <span className="text-sm font-medium">{word.pronunciation || 'Listen'}</span>
+          </button>
+          <button
+            onClick={() => speak(dutchWithArticle(word), { slow: true })}
+            className="px-3 py-1.5 rounded-full bg-cream text-charcoal/60 hover:bg-primary/10 text-xs font-medium transition-colors"
+          >
+            🐢 Slow
+          </button>
+        </div>
+        <div className="text-xl text-charcoal/70 mb-4">{word.english}</div>
+        {word.exampleNL && (
+          <div className="mt-4 pt-4 border-t border-cream-dark/50 text-left">
+            <p className="text-sm font-medium text-charcoal">🇳🇱 {word.exampleNL}</p>
+            {word.exampleEN && <p className="text-xs text-charcoal/50 mt-1">🇬🇧 {word.exampleEN}</p>}
+          </div>
+        )}
+      </motion.div>
+      <button onClick={onNext} className="w-full bg-primary text-white font-semibold py-3 rounded-xl hover:bg-primary-dark transition-colors">
+        Continue
+      </button>
+    </div>
   );
 }

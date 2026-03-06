@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { RefreshCw } from 'lucide-react';
+import { RefreshCw, ArrowLeft } from 'lucide-react';
 import ReviewSession from '../components/ReviewSession';
 import useSRS from '../hooks/useSRS';
 import { getDueItems } from '../utils/srs';
@@ -19,6 +19,9 @@ export default function Review() {
         className="mb-6"
       >
         <div className="flex items-center gap-3 mb-1">
+          <button onClick={() => navigate(-1)} className="p-1 -ml-1 text-charcoal/50">
+            <ArrowLeft size={20} />
+          </button>
           <RefreshCw size={22} className="text-primary" />
           <h1 className="font-display text-2xl font-semibold text-charcoal">
             Review

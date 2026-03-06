@@ -1,8 +1,10 @@
 {
   "topic": "negation",
   "topicNL": "Ontkenning: niet en geen",
+  "topicEN": "Negation: niet and geen",
   "explanation": {
     "summary": "Het Nederlands heeft twee belangrijke ontkennende woorden: 'niet' en 'geen'. 'Geen' vervangt het onbepaald lidwoord 'een' of wordt gebruikt als er geen lidwoord is. 'Niet' wordt in alle andere gevallen gebruikt.",
+    "summaryEN": "Dutch has two important negation words: 'niet' and 'geen'. 'Geen' replaces the indefinite article 'een' (a/an) or is used when there is no article. 'Niet' is used in all other cases.",
     "rules": [
       "GEEN: gebruik 'geen' als je 'een' zou ontkennen: Ik heb een auto → Ik heb geen auto.",
       "GEEN: gebruik 'geen' als het zelfstandig naamwoord GEEN lidwoord heeft (onbepaalde hoeveelheid): Ik heb geld → Ik heb geen geld. Ik drink melk → Ik drink geen melk.",
@@ -17,6 +19,20 @@
       "POSITIE van 'niet': VOOR een bijvoeglijk naamwoord, bijwoord of voorzetsel: Zij is niet aardig. Hij loopt niet snel. Ik ga niet naar huis.",
       "POSITIE van 'niet': VOOR het voltooid deelwoord of infinitief aan het einde: Ik heb het niet gedaan. Ik wil niet komen."
     ],
+    "rulesEN": [
+      "GEEN: use 'geen' when you would negate 'een' (a/an): Ik heb een auto → Ik heb geen auto. (I have a car → I have no car.)",
+      "GEEN: use 'geen' when the noun has NO article (indefinite quantity): Ik heb geld → Ik heb geen geld. (I have money → I have no money.) Ik drink melk → Ik drink geen melk. (I drink milk → I don't drink milk.)",
+      "GEEN: use 'geen' with countable plurals without an article: Ik heb kinderen → Ik heb geen kinderen. (I have children → I have no children.)",
+      "NIET: use 'niet' when negating verbs: Ik werk niet. (I don't work.)",
+      "NIET: use 'niet' when negating adjectives: Het is niet groot. (It is not big.)",
+      "NIET: use 'niet' when negating adverbs: Hij loopt niet snel. (He doesn't walk fast.)",
+      "NIET: use 'niet' with nouns that have 'de' or 'het' (the definite article): Ik lees het boek niet. (I don't read the book.)",
+      "NIET: use 'niet' with prepositions: Ik ga niet naar school. (I don't go to school.)",
+      "POSITION of 'niet': at the END of the sentence when negating the entire verb: Ik werk vandaag niet. (I don't work today.)",
+      "POSITION of 'niet': BEFORE the word you are specifically negating: Ik ga niet naar school (maar naar mijn werk). (I don't go to school (but to my work).) / Het is niet groot (maar klein). (It is not big (but small).)",
+      "POSITION of 'niet': BEFORE an adjective, adverb, or preposition: Zij is niet aardig. (She is not nice.) Hij loopt niet snel. (He doesn't walk fast.) Ik ga niet naar huis. (I don't go home.)",
+      "POSITION of 'niet': BEFORE the past participle or infinitive at the end: Ik heb het niet gedaan. (I haven't done it.) Ik wil niet komen. (I don't want to come.)"
+    ],
     "exceptions": [
       "'Nog niet' = not yet: Ik heb nog niet gegeten.",
       "'Niet meer' = no longer: Ik woon niet meer in Amsterdam.",
@@ -25,6 +41,14 @@
       "'Niet' staat VOOR graag, altijd, vaak en andere frequentiewoorden als je die specifiek ontkent: Ik zwem niet graag.",
       "Dubbele ontkenning wordt NIET gebruikt in standaard Nederlands: 'Ik heb geen niks' is fout."
     ],
+    "exceptionsEN": [
+      "'Nog niet' = not yet: Ik heb nog niet gegeten. (I haven't eaten yet.)",
+      "'Niet meer' = no longer: Ik woon niet meer in Amsterdam. (I no longer live in Amsterdam.)",
+      "'Helemaal niet' = not at all: Ik begrijp het helemaal niet. (I don't understand it at all.)",
+      "'Nog geen' = not yet (with a noun): Ik heb nog geen werk gevonden. (I haven't found a job yet.)",
+      "'Niet' goes BEFORE graag (gladly), altijd (always), vaak (often), and other frequency words when you are specifically negating them: Ik zwem niet graag. (I don't like swimming.)",
+      "Double negation is NOT used in standard Dutch: 'Ik heb geen niks' is wrong."
+    ],
     "commonMistakes": [
       "'Ik heb niet een auto' is fout - gebruik 'geen' in plaats van 'niet een': Ik heb geen auto.",
       "'Ik drink niet melk' is fout (als je melk in het algemeen bedoelt) - gebruik 'geen': Ik drink geen melk.",
@@ -32,7 +56,15 @@
       "'Ik heb niet geld' is fout - gebruik 'geen' bij onbepaalde hoeveelheden: Ik heb geen geld.",
       "De positie van 'niet' aan het einde vergeten: 'Ik niet kom morgen' is fout → Ik kom morgen niet."
     ],
-    "tip": "Vuistregel: als je in het Engels 'no' of 'not a/any' zou zeggen voor een zelfstandig naamwoord, gebruik dan 'geen'. Als je 'not' zou zeggen bij een werkwoord, bijvoeglijk naamwoord of bijwoord, gebruik dan 'niet'. Voorbeeld: 'I have no car' = 'Ik heb geen auto'. 'I do not work' = 'Ik werk niet'."
+    "commonMistakesEN": [
+      "'Ik heb niet een auto' is wrong — use 'geen' instead of 'niet een': Ik heb geen auto. (I don't have a car.)",
+      "'Ik drink niet melk' is wrong (when talking about milk in general) — use 'geen': Ik drink geen melk. (I don't drink milk.)",
+      "'Ik niet werk vandaag' is wrong — 'niet' does not go before the verb in a main clause: Ik werk vandaag niet. (I don't work today.)",
+      "'Ik heb niet geld' is wrong — use 'geen' with indefinite quantities: Ik heb geen geld. (I have no money.)",
+      "Forgetting the position of 'niet' at the end: 'Ik niet kom morgen' is wrong → Ik kom morgen niet. (I'm not coming tomorrow.)"
+    ],
+    "tip": "Vuistregel: als je in het Engels 'no' of 'not a/any' zou zeggen voor een zelfstandig naamwoord, gebruik dan 'geen'. Als je 'not' zou zeggen bij een werkwoord, bijvoeglijk naamwoord of bijwoord, gebruik dan 'niet'. Voorbeeld: 'I have no car' = 'Ik heb geen auto'. 'I do not work' = 'Ik werk niet'.",
+    "tipEN": "Rule of thumb: if you would say 'no' or 'not a/any' before a noun in English, use 'geen'. If you would say 'not' with a verb, adjective, or adverb, use 'niet'. Example: 'I have no car' = 'Ik heb geen auto'. 'I do not work' = 'Ik werk niet'."
   },
   "exercises": [
     {
@@ -40,65 +72,75 @@
       "sentence": "Ik heb ___ auto.",
       "options": ["niet", "geen", "niet een", "nee"],
       "answer": "geen",
-      "explanation": "'Auto' heeft hier het onbepaalde lidwoord 'een' nodig (ik heb een auto). Bij ontkenning wordt 'een' vervangen door 'geen': Ik heb geen auto."
+      "explanation": "'Auto' heeft hier het onbepaalde lidwoord 'een' nodig (ik heb een auto). Bij ontkenning wordt 'een' vervangen door 'geen': Ik heb geen auto.",
+      "explanationEN": "'Auto' (car) requires the indefinite article 'een' (a) here (ik heb een auto / I have a car). In negation, 'een' is replaced by 'geen': Ik heb geen auto. (I have no car.)"
     },
     {
       "type": "fill_blank",
       "sentence": "Zij werkt vandaag ___.",
       "answer": "niet",
-      "explanation": "Je ontkent het werkwoord 'werken'. 'Niet' staat aan het einde van de zin: Zij werkt vandaag niet."
+      "explanation": "Je ontkent het werkwoord 'werken'. 'Niet' staat aan het einde van de zin: Zij werkt vandaag niet.",
+      "explanationEN": "You are negating the verb 'werken' (to work). 'Niet' goes at the end of the sentence: Zij werkt vandaag niet. (She doesn't work today.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "Wij hebben ___ kinderen.",
       "options": ["niet", "geen", "niet de", "nee"],
       "answer": "geen",
-      "explanation": "'Kinderen' is een meervoud zonder lidwoord. Bij ontkenning gebruik je 'geen': Wij hebben geen kinderen."
+      "explanation": "'Kinderen' is een meervoud zonder lidwoord. Bij ontkenning gebruik je 'geen': Wij hebben geen kinderen.",
+      "explanationEN": "'Kinderen' (children) is a plural without an article. In negation, you use 'geen': Wij hebben geen kinderen. (We have no children.)"
     },
     {
       "type": "fill_blank",
       "sentence": "Het weer is ___ goed vandaag.",
       "answer": "niet",
-      "explanation": "Je ontkent het bijvoeglijk naamwoord 'goed'. 'Niet' staat VOOR het bijvoeglijk naamwoord: Het weer is niet goed."
+      "explanation": "Je ontkent het bijvoeglijk naamwoord 'goed'. 'Niet' staat VOOR het bijvoeglijk naamwoord: Het weer is niet goed.",
+      "explanationEN": "You are negating the adjective 'goed' (good). 'Niet' goes BEFORE the adjective: Het weer is niet goed. (The weather is not good today.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "Ik drink ___ koffie.",
       "options": ["niet", "geen", "nooit niet", "niet een"],
       "answer": "geen",
-      "explanation": "'Koffie' heeft hier geen lidwoord (onbepaalde hoeveelheid). Bij ontkenning gebruik je 'geen': Ik drink geen koffie."
+      "explanation": "'Koffie' heeft hier geen lidwoord (onbepaalde hoeveelheid). Bij ontkenning gebruik je 'geen': Ik drink geen koffie.",
+      "explanationEN": "'Koffie' (coffee) has no article here (indefinite quantity). In negation, you use 'geen': Ik drink geen koffie. (I don't drink coffee.)"
     },
     {
       "type": "fill_blank",
       "sentence": "Hij gaat ___ naar school vandaag.",
       "answer": "niet",
-      "explanation": "Je ontkent het voorzetsel 'naar school'. 'Niet' staat VOOR het voorzetsel: Hij gaat niet naar school."
+      "explanation": "Je ontkent het voorzetsel 'naar school'. 'Niet' staat VOOR het voorzetsel: Hij gaat niet naar school.",
+      "explanationEN": "You are negating the preposition 'naar school' (to school). 'Niet' goes BEFORE the preposition: Hij gaat niet naar school. (He doesn't go to school.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "Ik heb het boek ___ gelezen.",
       "options": ["geen", "niet", "geen niet", "nee"],
       "answer": "niet",
-      "explanation": "'Het boek' heeft het bepaalde lidwoord 'het'. Bij ontkenning gebruik je 'niet'. 'Niet' staat VOOR het voltooid deelwoord: Ik heb het boek niet gelezen."
+      "explanation": "'Het boek' heeft het bepaalde lidwoord 'het'. Bij ontkenning gebruik je 'niet'. 'Niet' staat VOOR het voltooid deelwoord: Ik heb het boek niet gelezen.",
+      "explanationEN": "'Het boek' (the book) has the definite article 'het'. In negation, you use 'niet'. 'Niet' goes BEFORE the past participle: Ik heb het boek niet gelezen. (I haven't read the book.)"
     },
     {
       "type": "fill_blank",
       "sentence": "Er is ___ brood meer in huis.",
       "answer": "geen",
-      "explanation": "'Brood' heeft hier geen lidwoord (onbepaalde hoeveelheid). Bij ontkenning: geen brood."
+      "explanation": "'Brood' heeft hier geen lidwoord (onbepaalde hoeveelheid). Bij ontkenning: geen brood.",
+      "explanationEN": "'Brood' (bread) has no article here (indefinite quantity). In negation: geen brood (no bread). Er is geen brood meer in huis. (There is no more bread in the house.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "Ik wil ___ naar de dokter gaan.",
       "options": ["geen", "niet", "geen niet", "nee"],
       "answer": "niet",
-      "explanation": "Je ontkent de actie 'naar de dokter gaan'. 'Niet' staat VOOR het voorzetsel 'naar': Ik wil niet naar de dokter gaan."
+      "explanation": "Je ontkent de actie 'naar de dokter gaan'. 'Niet' staat VOOR het voorzetsel 'naar': Ik wil niet naar de dokter gaan.",
+      "explanationEN": "You are negating the action 'naar de dokter gaan' (going to the doctor). 'Niet' goes BEFORE the preposition 'naar': Ik wil niet naar de dokter gaan. (I don't want to go to the doctor.)"
     },
     {
       "type": "fill_blank",
       "sentence": "Zij heeft ___ tijd voor een afspraak.",
       "answer": "geen",
-      "explanation": "'Tijd' heeft hier geen lidwoord. Bij ontkenning van een zelfstandig naamwoord zonder lidwoord gebruik je 'geen': Zij heeft geen tijd."
+      "explanation": "'Tijd' heeft hier geen lidwoord. Bij ontkenning van een zelfstandig naamwoord zonder lidwoord gebruik je 'geen': Zij heeft geen tijd.",
+      "explanationEN": "'Tijd' (time) has no article here. When negating a noun without an article, you use 'geen': Zij heeft geen tijd. (She has no time for an appointment.)"
     }
   ]
 }

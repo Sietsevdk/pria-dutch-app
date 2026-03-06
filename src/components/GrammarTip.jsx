@@ -6,8 +6,12 @@ import { Lightbulb, ChevronDown } from 'lucide-react';
  * GrammarTip - Collapsible grammar explanation card.
  * Shows a lightbulb-accented card with a title, explanation content, and optional tip.
  */
-export default function GrammarTip({ title, content, tip }) {
+export default function GrammarTip({ title, content, tip, titleEN, contentEN, tipEN }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const displayTitle = titleEN || title;
+  const displayContent = contentEN || content;
+  const displayTip = tipEN || tip;
 
   return (
     <div className="w-full max-w-md mx-auto">
@@ -30,8 +34,11 @@ export default function GrammarTip({ title, content, tip }) {
               Grammar Tip
             </p>
             <p className="text-sm font-medium text-charcoal truncate">
-              {title}
+              {displayTitle}
             </p>
+            {titleEN && title && titleEN !== title && (
+              <p className="text-xs text-charcoal/40 italic truncate">{title}</p>
+            )}
           </div>
           <motion.div
             animate={{ rotate: isOpen ? 180 : 0 }}
@@ -56,17 +63,20 @@ export default function GrammarTip({ title, content, tip }) {
                 {/* Divider */}
                 <div className="h-px bg-cream-dark/30" />
 
-                {/* Content */}
+                {/* Content - English primary */}
                 <div className="text-sm text-charcoal-light leading-relaxed">
-                  {typeof content === 'string' ? (
-                    <p>{content}</p>
+                  {typeof displayContent === 'string' ? (
+                    <p>{displayContent}</p>
                   ) : (
-                    content
+                    displayContent
+                  )}
+                  {contentEN && content && contentEN !== content && (
+                    <p className="text-xs text-charcoal/30 italic mt-2">{content}</p>
                   )}
                 </div>
 
-                {/* Tip box */}
-                {tip && (
+                {/* Tip box - English primary */}
+                {displayTip && (
                   <motion.div
                     initial={{ opacity: 0, y: 5 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -77,8 +87,11 @@ export default function GrammarTip({ title, content, tip }) {
                       <span className="mt-0.5 flex-shrink-0">
                         <Lightbulb size={14} />
                       </span>
-                      <span>{tip}</span>
+                      <span>{displayTip}</span>
                     </p>
+                    {tipEN && tip && tipEN !== tip && (
+                      <p className="text-xs text-charcoal/30 italic mt-1.5 ml-5">{tip}</p>
+                    )}
                   </motion.div>
                 )}
               </div>

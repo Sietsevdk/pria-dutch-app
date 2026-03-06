@@ -1,8 +1,10 @@
 {
   "topic": "past-tense",
   "topicNL": "Onvoltooid verleden tijd (OVT)",
+  "topicEN": "Simple Past Tense",
   "explanation": {
     "summary": "De onvoltooid verleden tijd (imperfectum) beschrijft acties in het verleden. Voor zwakke werkwoorden gebruik je de stam + -te(n) of -de(n), afhankelijk van de laatste letter van de stam. Voor sterke werkwoorden verandert de klinker in de stam.",
+    "summaryEN": "The simple past tense (imperfect) describes actions in the past. For weak (regular) verbs you use the stem + -te(n) or -de(n), depending on the last letter of the stem. For strong (irregular) verbs the vowel in the stem changes.",
     "rules": [
       "Zwakke werkwoorden: vind de stam (infinitief min -en).",
       "Gebruik het ezelsbruggetje 't kofschip: als de stam eindigt op t, k, f, s, ch of p, voeg je -te (enkelvoud) of -ten (meervoud) toe.",
@@ -14,6 +16,17 @@
       "Veel voorkomende sterke werkwoorden moet je uit je hoofd leren (rijden → reed/reden, schrijven → schreef/schreven).",
       "Let op bij v/f en z/s: de stam van 'leven' wordt geschreven als 'leef', maar de oorspronkelijke klank is v (stemhebbend). Daarom: leefDE (niet leefte). Hetzelfde geldt voor z→s: 'reizen' → stam 'reis', maar de oorspronkelijke klank is z, dus: reisDE."
     ],
+    "rulesEN": [
+      "Weak (regular) verbs: find the stem (infinitive minus -en).",
+      "Use the mnemonic 't kofschip: if the stem ends in t, k, f, s, ch, or p, you add -te (singular) or -ten (plural).",
+      "If the stem does NOT end in a 't kofschip' letter, you add -de (singular) or -den (plural).",
+      "Ik/jij/u/hij/zij/het (I/you/formal you/he/she/it) = stem + -te or -de (singular).",
+      "Wij/jullie/zij (we/you plural/they) = stem + -ten or -den (plural).",
+      "Strong (irregular) verbs have a vowel change in the stem and do not get the -te/-de ending.",
+      "For strong verbs: singular = changed stem, plural = changed stem + -en.",
+      "Many common strong verbs must be memorized (rijden → reed/reden, schrijven → schreef/schreven).",
+      "Watch out for v/f and z/s: the stem of 'leven' (to live) is spelled 'leef', but the original sound is v (voiced). Therefore: leefDE (not leefte). The same applies for z→s: 'reizen' (to travel) → stem 'reis', but the original sound is z, so: reisDE."
+    ],
     "exceptions": [
       "Zijn: ik was, jij was, hij was, wij waren, jullie waren, zij waren.",
       "Hebben: ik had, jij had, hij had, wij hadden, jullie hadden, zij hadden.",
@@ -24,6 +37,16 @@
       "Zien: ik zag, wij zagen.",
       "Sommige werkwoorden hebben een gemengde vervoeging: vragen → vroeg (sterk), maar ook weten → wist."
     ],
+    "exceptionsEN": [
+      "Zijn (to be): ik was (I was), jij was (you were), hij was (he was), wij waren (we were), jullie waren (you were), zij waren (they were).",
+      "Hebben (to have): ik had (I had), jij had (you had), hij had (he had), wij hadden (we had), jullie hadden (you had), zij hadden (they had).",
+      "Komen (to come): ik kwam (I came), wij kwamen (we came) — strong vowel change.",
+      "Gaan (to go): ik ging (I went), wij gingen (we went).",
+      "Staan (to stand): ik stond (I stood), wij stonden (we stood).",
+      "Doen (to do): ik deed (I did), wij deden (we did).",
+      "Zien (to see): ik zag (I saw), wij zagen (we saw).",
+      "Some verbs have a mixed conjugation: vragen (to ask) → vroeg (strong), and also weten (to know) → wist."
+    ],
     "commonMistakes": [
       "'Ik werkte' (niet 'ik werkde') - de stam 'werk' eindigt op k ('t kofschip), dus -te.",
       "Bij werkwoorden met v→f of z→s in de stam: kijk naar de OORSPRONKELIJKE klank. 'Leven' heeft een v-klank (stemhebbend), dus: 'ik leefde' (niet 'ik leefte'). 'Reizen' heeft een z-klank (stemhebbend), dus: 'ik reisde' (niet 'ik reiste').",
@@ -32,84 +55,105 @@
       "Sterke werkwoorden krijgen GEEN -te/-de: 'ik liep' (niet 'ik loopte').",
       "Vergeten dat het meervoud -ten/-den krijgt: 'wij werkten' (niet 'wij werkte')."
     ],
-    "tip": "Onthoud 't kofschip! Zeg hardop: t-k-o-f-s-ch-i-p. Als de stam eindigt op een van deze medeklinkers (t, k, f, s, ch, p), gebruik je -te/-ten. Anders -de/-den. Denk aan de zin: 'Ik kocht fischhappen op de pont' (alle medeklinkers van 't kofschip zitten erin: k, f, s, ch, p, t)."
+    "commonMistakesEN": [
+      "'Ik werkte' (I worked), not 'ik werkde' — the stem 'werk' ends in k ('t kofschip), so it takes -te.",
+      "For verbs with v→f or z→s in the stem: look at the ORIGINAL sound. 'Leven' (to live) has a v-sound (voiced), so: 'ik leefde' (not 'ik leefte'). 'Reizen' (to travel) has a z-sound (voiced), so: 'ik reisde' (not 'ik reiste').",
+      "'Wij maakten' (we made), not with -den — the stem 'maak' ends in k ('t kofschip), so it takes -ten.",
+      "'Hij reiste' is wrong — the stem of 'reizen' is 'reis' (z → s), but the original sound is z (voiced). So: hij reisDE (he traveled).",
+      "Strong verbs do NOT get -te/-de: 'ik liep' (I walked), not 'ik loopte'.",
+      "Forgetting that the plural takes -ten/-den: 'wij werkten' (we worked), not 'wij werkte'."
+    ],
+    "tip": "Onthoud 't kofschip! Zeg hardop: t-k-o-f-s-ch-i-p. Als de stam eindigt op een van deze medeklinkers (t, k, f, s, ch, p), gebruik je -te/-ten. Anders -de/-den. Denk aan de zin: 'Ik kocht fischhappen op de pont' (alle medeklinkers van 't kofschip zitten erin: k, f, s, ch, p, t).",
+    "tipEN": "Remember 't kofschip! Say it out loud: t-k-o-f-s-ch-i-p. If the stem ends in one of these consonants (t, k, f, s, ch, p), you use -te/-ten. Otherwise -de/-den. Think of the word 'soft ketchup' — it contains the key consonants: s, f, t, k, ch, p."
   },
   "exercises": [
     {
       "type": "fill_blank",
       "sentence": "Ik ___ gisteren hard. (werken)",
       "answer": "werkte",
-      "explanation": "De stam van 'werken' is 'werk'. De k zit in 't kofschip, dus: werkte."
+      "explanation": "De stam van 'werken' is 'werk'. De k zit in 't kofschip, dus: werkte.",
+      "explanationEN": "The stem of 'werken' (to work) is 'werk'. The k is in 't kofschip, so: werkte (I worked)."
     },
     {
       "type": "fill_blank",
       "sentence": "Zij ___ een brief naar haar moeder. (sturen)",
       "answer": "stuurde",
-      "explanation": "De stam van 'sturen' is 'stuur'. De r zit NIET in 't kofschip, dus: stuurde."
+      "explanation": "De stam van 'sturen' is 'stuur'. De r zit NIET in 't kofschip, dus: stuurde.",
+      "explanationEN": "The stem of 'sturen' (to send) is 'stuur'. The r is NOT in 't kofschip, so: stuurde (she sent)."
     },
     {
       "type": "multiple_choice",
       "sentence": "Wij ___ naar de radio. (luisteren)",
       "options": ["luisterden", "luisterden", "luisterten", "luisterde"],
       "answer": "luisterden",
-      "explanation": "De stam van 'luisteren' is 'luister'. De r zit NIET in 't kofschip, dus: luisterden (meervoud)."
+      "explanation": "De stam van 'luisteren' is 'luister'. De r zit NIET in 't kofschip, dus: luisterden (meervoud).",
+      "explanationEN": "The stem of 'luisteren' (to listen) is 'luister'. The r is NOT in 't kofschip, so: luisterden (we listened, plural)."
     },
     {
       "type": "fill_blank",
       "sentence": "Hij ___ de hele dag. (fietsen)",
       "answer": "fietste",
-      "explanation": "De stam van 'fietsen' is 'fiets'. De s zit in 't kofschip, dus: fietste."
+      "explanation": "De stam van 'fietsen' is 'fiets'. De s zit in 't kofschip, dus: fietste.",
+      "explanationEN": "The stem of 'fietsen' (to cycle) is 'fiets'. The s is in 't kofschip, so: fietste (he cycled)."
     },
     {
       "type": "multiple_choice",
       "sentence": "De kinderen ___ in de tuin. (spelen)",
       "options": ["speelden", "speelten", "spelden", "speelen"],
       "answer": "speelden",
-      "explanation": "De stam van 'spelen' is 'speel'. De l zit NIET in 't kofschip, dus: speelden (meervoud)."
+      "explanation": "De stam van 'spelen' is 'speel'. De l zit NIET in 't kofschip, dus: speelden (meervoud).",
+      "explanationEN": "The stem of 'spelen' (to play) is 'speel'. The l is NOT in 't kofschip, so: speelden (the children played, plural)."
     },
     {
       "type": "fill_blank",
       "sentence": "Ik ___ gisteren een goed boek. (lezen)",
       "answer": "las",
-      "explanation": "'Lezen' is een sterk werkwoord. De verleden tijd is: ik las, wij lazen."
+      "explanation": "'Lezen' is een sterk werkwoord. De verleden tijd is: ik las, wij lazen.",
+      "explanationEN": "'Lezen' (to read) is a strong verb. The past tense is: ik las (I read), wij lazen (we read)."
     },
     {
       "type": "fill_blank",
       "sentence": "Wij ___ naar Amsterdam. (rijden)",
       "answer": "reden",
-      "explanation": "'Rijden' is een sterk werkwoord. Meervoud verleden tijd: wij reden."
+      "explanation": "'Rijden' is een sterk werkwoord. Meervoud verleden tijd: wij reden.",
+      "explanationEN": "'Rijden' (to drive/ride) is a strong verb. Plural past tense: wij reden (we drove)."
     },
     {
       "type": "multiple_choice",
       "sentence": "Zij ___ het antwoord niet. (weten)",
       "options": ["wiste", "wist", "weette", "weetde"],
       "answer": "wist",
-      "explanation": "'Weten' is een onregelmatig werkwoord. De verleden tijd is: ik/hij/zij wist."
+      "explanation": "'Weten' is een onregelmatig werkwoord. De verleden tijd is: ik/hij/zij wist.",
+      "explanationEN": "'Weten' (to know) is an irregular verb. The past tense is: ik/hij/zij wist (I/he/she knew)."
     },
     {
       "type": "fill_blank",
       "sentence": "Ik ___ een kopje koffie. (maken)",
       "answer": "maakte",
-      "explanation": "De stam van 'maken' is 'maak'. De k zit in 't kofschip, dus: maakte."
+      "explanation": "De stam van 'maken' is 'maak'. De k zit in 't kofschip, dus: maakte.",
+      "explanationEN": "The stem of 'maken' (to make) is 'maak'. The k is in 't kofschip, so: maakte (I made)."
     },
     {
       "type": "fill_blank",
       "sentence": "Wij ___ in Den Haag. (wonen)",
       "answer": "woonden",
-      "explanation": "De stam van 'wonen' is 'woon'. De n zit NIET in 't kofschip, dus: woonden (meervoud)."
+      "explanation": "De stam van 'wonen' is 'woon'. De n zit NIET in 't kofschip, dus: woonden (meervoud).",
+      "explanationEN": "The stem of 'wonen' (to live) is 'woon'. The n is NOT in 't kofschip, so: woonden (we lived, plural)."
     },
     {
       "type": "multiple_choice",
       "sentence": "Hij ___ gisteren vroeg thuis. (komen)",
       "options": ["komde", "kwam", "kwamde", "koomde"],
       "answer": "kwam",
-      "explanation": "'Komen' is een sterk werkwoord. De verleden tijd is: hij kwam."
+      "explanation": "'Komen' is een sterk werkwoord. De verleden tijd is: hij kwam.",
+      "explanationEN": "'Komen' (to come) is a strong verb. The past tense is: hij kwam (he came)."
     },
     {
       "type": "fill_blank",
       "sentence": "Jullie ___ heel goed Nederlands. (praten)",
       "answer": "praatten",
-      "explanation": "De stam van 'praten' is 'praat'. De t zit in 't kofschip, dus: praatten (meervoud: -ten)."
+      "explanation": "De stam van 'praten' is 'praat'. De t zit in 't kofschip, dus: praatten (meervoud: -ten).",
+      "explanationEN": "The stem of 'praten' (to talk) is 'praat'. The t is in 't kofschip, so: praatten (you talked, plural: -ten)."
     }
   ]
 }

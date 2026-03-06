@@ -1,8 +1,10 @@
 {
   "topic": "separable-verbs",
   "topicNL": "Scheidbare werkwoorden",
+  "topicEN": "Separable Verbs",
   "explanation": {
     "summary": "Scheidbare werkwoorden bestaan uit een voorvoegsel en een werkwoord. In de hoofdzin worden ze gesplitst: het werkwoord staat op positie 2 en het voorvoegsel gaat naar het einde van de zin. Voorbeeld: opstaan → Ik sta elke dag om 7 uur op.",
+    "summaryEN": "Separable verbs consist of a prefix and a verb. In the main clause they are split: the verb goes to position 2 and the prefix moves to the end of the sentence. Example: opstaan (to get up) → Ik sta elke dag om 7 uur op. (I get up every day at 7 o'clock.)",
     "rules": [
       "In een hoofdzin met de tegenwoordige of verleden tijd: het werkwoord staat op positie 2, het voorvoegsel gaat naar het einde. Ik bel mijn moeder op.",
       "In een bijzin (met omdat, dat, als, etc.): het werkwoord blijft aan elkaar. ...omdat ik mijn moeder opbel.",
@@ -14,12 +16,30 @@
       "Bij onscheidbare werkwoorden ligt de klemtoon op het werkwoord: beSTAAN, verSTAAN, ontSTAAN.",
       "Sommige voorvoegsels kunnen zowel scheidbaar als onscheidbaar zijn, afhankelijk van de betekenis: doorLOPEN (doorgaan) versus DOORlopen (door iets heen lopen)."
     ],
+    "rulesEN": [
+      "In a main clause in the present or past tense: the verb goes to position 2, the prefix goes to the end. Ik bel mijn moeder op. (I call my mother.)",
+      "In a subordinate clause (with omdat, dat, als, etc.): the verb stays together. ...omdat ik mijn moeder opbel. (...because I call my mother.)",
+      "In the present perfect: ge- is inserted BETWEEN the prefix and the verb: opgebeld (called), aangemaakt (created), uitgenodigd (invited).",
+      "With 'te' (infinitive): 'te' is inserted BETWEEN the prefix and the verb: Ik probeer mijn moeder op te bellen. (I try to call my mother.)",
+      "With a modal verb: the separable verb stays together as an infinitive at the end: Ik moet mijn moeder opbellen. (I must call my mother.)",
+      "Common separable prefixes: aan-, af-, bij-, in-, mee-, na-, op-, om-, onder-, over- (with stress), uit-, terug-, vast-, voor- (with stress), weg-.",
+      "You can recognize a separable verb by the STRESS: separable verbs have the stress on the prefix: OPstaan (get up), AANkomen (arrive), UITgaan (go out).",
+      "Inseparable verbs have the stress on the verb: beSTAAN (exist), verSTAAN (understand), ontSTAAN (arise).",
+      "Some prefixes can be either separable or inseparable, depending on the meaning: doorLOPEN (to continue walking) versus DOORlopen (to walk through something)."
+    ],
     "exceptions": [
       "Voorvoegsels die ALTIJD onscheidbaar zijn: be-, er-, ge-, her-, ont-, ver-. Deze krijgen ook geen ge- in het voltooid deelwoord.",
       "Sommige werkwoorden met 'over-' zijn scheidbaar (oversteken: ik steek over) en sommige onscheidbaar (overleven: ik overleef).",
       "Sommige werkwoorden met 'door-' zijn scheidbaar (doorgaan: het gaat door) en sommige onscheidbaar (doorkruisen: ik doorkruis).",
       "Sommige werkwoorden met 'onder-' zijn scheidbaar (ondergaan: de zon gaat onder) en sommige onscheidbaar (ondervinden: ik ondervind).",
       "'Meedoen' is scheidbaar: Ik doe mee, maar: Ik wil meedoen."
+    ],
+    "exceptionsEN": [
+      "Prefixes that are ALWAYS inseparable: be-, er-, ge-, her-, ont-, ver-. These also do not get ge- in the past participle.",
+      "Some verbs with 'over-' are separable (oversteken/to cross: ik steek over) and some are inseparable (overleven/to survive: ik overleef).",
+      "Some verbs with 'door-' are separable (doorgaan/to continue: het gaat door) and some are inseparable (doorkruisen/to traverse: ik doorkruis).",
+      "Some verbs with 'onder-' are separable (ondergaan/to set (sun): de zon gaat onder) and some are inseparable (ondervinden/to experience: ik ondervind).",
+      "'Meedoen' (to participate) is separable: Ik doe mee (I participate), but: Ik wil meedoen (I want to participate)."
     ],
     "commonMistakes": [
       "'Ik opsta om 7 uur' is fout - het werkwoord moet op positie 2: Ik sta om 7 uur op.",
@@ -28,7 +48,15 @@
       "'...omdat ik sta op om 7 uur' is fout - in de bijzin blijft het werkwoord aan elkaar: ...omdat ik om 7 uur opsta.",
       "Het scheidbare werkwoord splitsen bij een modaal werkwoord: 'Ik moet op staan' is fout - bij een modaal werkwoord blijft het bij elkaar: Ik moet opstaan."
     ],
+    "commonMistakesEN": [
+      "'Ik opsta om 7 uur' is wrong — the verb must be in position 2: Ik sta om 7 uur op. (I get up at 7 o'clock.)",
+      "'Ik heb geopbeld' is wrong — ge- goes BETWEEN the prefix and the verb: opgebeld.",
+      "'Ik probeer opbellen mijn moeder' is wrong — 'te' must be inserted: Ik probeer mijn moeder op te bellen. (I try to call my mother.)",
+      "'...omdat ik sta op om 7 uur' is wrong — in a subordinate clause the verb stays together: ...omdat ik om 7 uur opsta. (...because I get up at 7 o'clock.)",
+      "Splitting the separable verb with a modal verb: 'Ik moet op staan' is wrong — with a modal verb it stays together: Ik moet opstaan. (I must get up.)"
+    ],
     "tip": "Denk aan het scheidbare werkwoord als een boemerang: in de hoofdzin gooi je het voorvoegsel naar het einde van de zin (Ik bel op), maar in de bijzin en bij infinitieven blijft alles bij elkaar (omdat ik opbel / ik moet opbellen). Bij het voltooid deelwoord: het ge- gaat ertussen, als vulling in een sandwich (op-ge-beld).",
+    "tipEN": "Think of the separable verb as a boomerang: in the main clause you throw the prefix to the end of the sentence (Ik bel op), but in subordinate clauses and with infinitives everything stays together (omdat ik opbel / ik moet opbellen). For the past participle: ge- goes in between, like a sandwich filling (op-ge-beld).",
     "commonSeparableVerbs": [
       "aankomen (arrive) - Ik kom om 3 uur aan.",
       "aantrekken (put on) - Ik trek mijn jas aan.",
@@ -57,79 +85,91 @@
       "type": "fill_blank",
       "sentence": "Ik ___ elke dag om 7 uur ___. (opstaan)",
       "answer": "sta, op",
-      "explanation": "'Opstaan' is scheidbaar. In de hoofdzin: het werkwoord 'sta' op positie 2, het voorvoegsel 'op' aan het einde."
+      "explanation": "'Opstaan' is scheidbaar. In de hoofdzin: het werkwoord 'sta' op positie 2, het voorvoegsel 'op' aan het einde.",
+      "explanationEN": "'Opstaan' (to get up) is separable. In the main clause: the verb 'sta' goes to position 2, the prefix 'op' goes to the end."
     },
     {
       "type": "reorder",
       "sentence": "Zij trekt haar jas aan.",
       "words": ["haar", "aan", "jas", "trekt", "Zij"],
       "answer": "Zij trekt haar jas aan.",
-      "explanation": "'Aantrekken' is scheidbaar: 'trekt' op positie 2, 'aan' aan het einde."
+      "explanation": "'Aantrekken' is scheidbaar: 'trekt' op positie 2, 'aan' aan het einde.",
+      "explanationEN": "'Aantrekken' (to put on) is separable: 'trekt' goes to position 2, 'aan' goes to the end."
     },
     {
       "type": "fill_blank",
       "sentence": "Ik heb mijn vriend ___. (opbellen, voltooid deelwoord)",
       "answer": "opgebeld",
-      "explanation": "Bij het voltooid deelwoord komt ge- tussen het voorvoegsel en het werkwoord: op-ge-beld."
+      "explanation": "Bij het voltooid deelwoord komt ge- tussen het voorvoegsel en het werkwoord: op-ge-beld.",
+      "explanationEN": "In the past participle, ge- is inserted between the prefix and the verb: op-ge-beld (called)."
     },
     {
       "type": "multiple_choice",
       "sentence": "...omdat hij vroeg ___. (opstaan)",
       "options": ["op staat", "staat op", "opstaat", "opgestaan"],
       "answer": "opstaat",
-      "explanation": "In een bijzin (na 'omdat') blijft het scheidbare werkwoord aan elkaar: opstaat."
+      "explanation": "In een bijzin (na 'omdat') blijft het scheidbare werkwoord aan elkaar: opstaat.",
+      "explanationEN": "In a subordinate clause (after 'omdat'/because) the separable verb stays together: opstaat (gets up)."
     },
     {
       "type": "fill_blank",
       "sentence": "Ik probeer mijn kamer ___ ___ ___. (opruimen, met te)",
       "answer": "op te ruimen",
-      "explanation": "Bij een infinitief met 'te' komt 'te' tussen het voorvoegsel en het werkwoord: op te ruimen."
+      "explanation": "Bij een infinitief met 'te' komt 'te' tussen het voorvoegsel en het werkwoord: op te ruimen.",
+      "explanationEN": "With an infinitive using 'te', 'te' is inserted between the prefix and the verb: op te ruimen (to tidy up)."
     },
     {
       "type": "multiple_choice",
       "sentence": "Wij ___ vanavond ___. (uitgaan)",
       "options": ["gaan, uit", "uit, gaan", "uitgaan, -", "gaan, uitgaan"],
       "answer": "gaan, uit",
-      "explanation": "'Uitgaan' is scheidbaar. In de hoofdzin: 'gaan' op positie 2, 'uit' aan het einde."
+      "explanation": "'Uitgaan' is scheidbaar. In de hoofdzin: 'gaan' op positie 2, 'uit' aan het einde.",
+      "explanationEN": "'Uitgaan' (to go out) is separable. In the main clause: 'gaan' goes to position 2, 'uit' goes to the end."
     },
     {
       "type": "fill_blank",
       "sentence": "De trein ___ om 9 uur ___. (aankomen)",
       "answer": "komt, aan",
-      "explanation": "'Aankomen' is scheidbaar: 'komt' op positie 2, 'aan' aan het einde."
+      "explanation": "'Aankomen' is scheidbaar: 'komt' op positie 2, 'aan' aan het einde.",
+      "explanationEN": "'Aankomen' (to arrive) is separable: 'komt' goes to position 2, 'aan' goes to the end."
     },
     {
       "type": "fill_blank",
       "sentence": "Ik moet morgen vroeg ___. (opstaan)",
       "answer": "opstaan",
-      "explanation": "Na een modaal werkwoord (moet) blijft het scheidbare werkwoord aan elkaar als infinitief: opstaan."
+      "explanation": "Na een modaal werkwoord (moet) blijft het scheidbare werkwoord aan elkaar als infinitief: opstaan.",
+      "explanationEN": "After a modal verb (moet/must), the separable verb stays together as an infinitive: opstaan (to get up)."
     },
     {
       "type": "multiple_choice",
       "sentence": "Zij heeft haar vrienden ___. (uitnodigen)",
       "options": ["uitnodigd", "uitgenodigd", "genodigd uit", "uitnodigen"],
       "answer": "uitgenodigd",
-      "explanation": "Voltooid deelwoord van 'uitnodigen': uit-ge-nodigd. Ge- komt tussen het voorvoegsel en het werkwoord."
+      "explanation": "Voltooid deelwoord van 'uitnodigen': uit-ge-nodigd. Ge- komt tussen het voorvoegsel en het werkwoord.",
+      "explanationEN": "Past participle of 'uitnodigen' (to invite): uit-ge-nodigd (invited). Ge- is inserted between the prefix and the verb."
     },
     {
       "type": "reorder",
       "sentence": "De kinderen doen altijd mee.",
       "words": ["altijd", "kinderen", "mee", "De", "doen"],
       "answer": "De kinderen doen altijd mee.",
-      "explanation": "'Meedoen' is scheidbaar: 'doen' op positie 2, 'mee' aan het einde."
+      "explanation": "'Meedoen' is scheidbaar: 'doen' op positie 2, 'mee' aan het einde.",
+      "explanationEN": "'Meedoen' (to participate) is separable: 'doen' goes to position 2, 'mee' goes to the end."
     },
     {
       "type": "fill_blank",
       "sentence": "...dat zij haar schoenen ___. (uittrekken)",
       "answer": "uittrekt",
-      "explanation": "In een bijzin (na 'dat') blijft het scheidbare werkwoord aan elkaar: uittrekt."
+      "explanation": "In een bijzin (na 'dat') blijft het scheidbare werkwoord aan elkaar: uittrekt.",
+      "explanationEN": "In a subordinate clause (after 'dat'/that) the separable verb stays together: uittrekt (takes off)."
     },
     {
       "type": "multiple_choice",
       "sentence": "Wij zijn gisteren om 6 uur ___. (weggaan)",
       "options": ["weggegeaan", "weggegaan", "gegaan weg", "geweggaan"],
       "answer": "weggegaan",
-      "explanation": "Voltooid deelwoord van 'weggaan': weg-ge-gaan. 'Gaan' is sterk: gegaan."
+      "explanation": "Voltooid deelwoord van 'weggaan': weg-ge-gaan. 'Gaan' is sterk: gegaan.",
+      "explanationEN": "Past participle of 'weggaan' (to leave): weg-ge-gaan (left). 'Gaan' is a strong verb: gegaan."
     }
   ]
 }

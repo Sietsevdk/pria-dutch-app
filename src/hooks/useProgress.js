@@ -38,6 +38,9 @@ const useProgress = create(
         speaking: false,
       },
 
+      // KNM progress
+      knmProgress: {}, // { categoryId: { completed, score, total, bestScore, completedAt } }
+
       // Settings
       ttsSpeed: 'normal', // 'slow' | 'normal'
       dailyGoalMinutes: 15,
@@ -48,13 +51,28 @@ const useProgress = create(
         const today = new Date().toDateString();
         const isNewDay = state.lastXPDate !== today;
 
+        let newWeeklyXP = [...state.weeklyXP];
+        if (isNewDay) {
+          // Calculate how many days were skipped
+          let daysMissed = 1;
+          if (state.lastXPDate) {
+            const lastDate = new Date(state.lastXPDate);
+            const now = new Date();
+            daysMissed = Math.round((now - lastDate) / (1000 * 60 * 60 * 24));
+            daysMissed = Math.max(1, Math.min(daysMissed, 7));
+          }
+          // Shift by the number of missed days, fill gaps with 0
+          newWeeklyXP = [...newWeeklyXP.slice(daysMissed), ...Array(daysMissed).fill(0)];
+          newWeeklyXP[6] = amount;
+        } else {
+          newWeeklyXP[6] = newWeeklyXP[6] + amount;
+        }
+
         set({
           totalXP: state.totalXP + amount,
           todayXP: isNewDay ? amount : state.todayXP + amount,
           lastXPDate: today,
-          weeklyXP: isNewDay
-            ? [...state.weeklyXP.slice(1), amount]
-            : [...state.weeklyXP.slice(0, -1), state.weeklyXP[6] + amount],
+          weeklyXP: newWeeklyXP,
         });
       },
 
@@ -158,6 +176,11 @@ const useProgress = create(
         }
       },
 
+      completeLessonGoal: () =>
+        set((state) => ({
+          goalsCompleted: { ...state.goalsCompleted, lesson: true },
+        })),
+
       completeReviewGoal: () =>
         set((state) => ({
           goalsCompleted: { ...state.goalsCompleted, review: true },
@@ -171,12 +194,29 @@ const useProgress = create(
       resetDailyGoals: () => {
         const state = get();
         const today = new Date().toDateString();
-        if (state.lastXPDate !== today) {
+        if (state.lastXPDate !== today && state.lastGoalResetDate !== today) {
           set({
             goalsCompleted: { lesson: false, review: false, speaking: false },
             todayXP: 0,
+            lastGoalResetDate: today,
           });
         }
+      },
+
+      recordKNMProgress: (categoryId, score, total) => {
+        const state = get();
+        set({
+          knmProgress: {
+            ...state.knmProgress,
+            [categoryId]: {
+              completed: true,
+              score,
+              total,
+              completedAt: new Date().toISOString(),
+              bestScore: Math.max(score, state.knmProgress[categoryId]?.bestScore || 0),
+            },
+          },
+        });
       },
 
       setDailyGoal: (minutes) => set({ dailyGoalMinutes: minutes }),
@@ -200,12 +240,12 @@ const useProgress = create(
           goalsCompleted: { lesson: false, review: false, speaking: false },
         }),
 
-      // Check if a lesson is unlocked
+      // Check if a lesson is unlocked — completion of the previous lesson is sufficient
       isLessonUnlocked: (lessonId) => {
         const state = get();
         if (lessonId === 1) return true;
         const prevLesson = state.lessonProgress[lessonId - 1];
-        return prevLesson?.completed && (prevLesson?.bestScore || 0) >= 80;
+        return !!prevLesson?.completed;
       },
     }),
     {

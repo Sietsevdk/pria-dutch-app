@@ -16,6 +16,15 @@ export default function MatchPairs({ pairs, onComplete }) {
   const [matchedPairs, setMatchedPairs] = useState([]); // [{ dutch, english }]
   const [wrongFlash, setWrongFlash] = useState(null); // { dutch, english }
   const [mistakes, setMistakes] = useState(0);
+  const wrongFlashTimerRef = useRef(null);
+  const completionTimerRef = useRef(null);
+
+  useEffect(() => {
+    return () => {
+      if (wrongFlashTimerRef.current) clearTimeout(wrongFlashTimerRef.current);
+      if (completionTimerRef.current) clearTimeout(completionTimerRef.current);
+    };
+  }, []);
 
   const isMatched = useCallback(
     (word, lang) => {
@@ -45,7 +54,7 @@ export default function MatchPairs({ pairs, onComplete }) {
       setWrongFlash({ dutch: selectedDutch, english: selectedEnglish });
       setMistakes((prev) => prev + 1);
 
-      setTimeout(() => {
+      wrongFlashTimerRef.current = setTimeout(() => {
         setWrongFlash(null);
         setSelectedDutch(null);
         setSelectedEnglish(null);
@@ -59,7 +68,7 @@ export default function MatchPairs({ pairs, onComplete }) {
     if (matchedPairs.length === pairs.length && pairs.length > 0 && !completedRef.current) {
       completedRef.current = true;
       if (onComplete) {
-        setTimeout(() => {
+        completionTimerRef.current = setTimeout(() => {
           onComplete(mistakes);
         }, 800);
       }

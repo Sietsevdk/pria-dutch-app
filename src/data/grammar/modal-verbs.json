@@ -1,8 +1,10 @@
 {
   "topic": "modal-verbs",
   "topicNL": "Modale werkwoorden",
+  "topicEN": "Modal Verbs",
   "explanation": {
     "summary": "Modale werkwoorden (kunnen, mogen, moeten, willen, zullen) geven aan of iets mogelijk, toegestaan, noodzakelijk of gewenst is. Ze worden gecombineerd met een infinitief die aan het einde van de zin staat.",
+    "summaryEN": "Modal verbs (kunnen, mogen, moeten, willen, zullen) express whether something is possible, permitted, necessary, or desired. They are combined with an infinitive that goes at the end of the sentence.",
     "rules": [
       "Modale werkwoorden staan op de tweede positie (V2) in de hoofdzin. De infinitief gaat naar het einde van de zin.",
       "Structuur: onderwerp + modaal werkwoord + ... + infinitief. Voorbeeld: Ik kan goed Nederlands spreken.",
@@ -15,6 +17,18 @@
       "In het perfectum worden modale werkwoorden zelden gebruikt. In plaats van het perfectum gebruik je meestal de OVT: Ik kon niet komen (niet: ik heb kunnen komen).",
       "Bij inversie met 'jij': 'kun jij?' (kan ook), 'wil jij?' (wilt ook), 'zul jij?' (zal ook)."
     ],
+    "rulesEN": [
+      "Modal verbs go in second position (V2) in the main clause. The infinitive goes to the end of the sentence.",
+      "Structure: subject + modal verb + ... + infinitive. Example: Ik kan goed Nederlands spreken (I can speak Dutch well).",
+      "KUNNEN (possibility/ability): ik kan (I can), jij kunt/kan (you can), hij kan (he can), wij kunnen (we can), jullie kunnen (you can), zij kunnen (they can).",
+      "MOGEN (permission): ik mag (I may), jij mag (you may), hij mag (he may), wij mogen (we may), jullie mogen (you may), zij mogen (they may).",
+      "MOETEN (obligation/necessity): ik moet (I must), jij moet (you must), hij moet (he must), wij moeten (we must), jullie moeten (you must), zij moeten (they must).",
+      "WILLEN (wish/desire): ik wil (I want), jij wilt/wil (you want), hij wil (he wants), wij willen (we want), jullie willen (you want), zij willen (they want).",
+      "ZULLEN (future/suggestion): ik zal (I shall), jij zult/zal (you shall), hij zal (he shall), wij zullen (we shall), jullie zullen (you shall), zij zullen (they shall).",
+      "HOEVEN (niet hoeven = not necessary): always used with 'niet' (not) or 'geen' (no) + te + infinitive: Je hoeft niet te komen (You don't have to come).",
+      "In the perfect tense, modal verbs are rarely used. Instead, you usually use the simple past: Ik kon niet komen (I couldn't come), not: ik heb kunnen komen.",
+      "With inversion and 'jij': 'kun jij?' (can you?), 'wil jij?' (do you want?), 'zul jij?' (will you?)."
+    ],
     "exceptions": [
       "'Hoeven' wordt alleen in ontkennende zinnen of vragen gebruikt: Je hoeft niet te werken. Hoef ik dat te doen?",
       "In de verleden tijd: kon (kunnen), mocht (mogen), moest (moeten), wilde/wou (willen), zou (zullen).",
@@ -23,6 +37,14 @@
       "'Mogen' kan ook 'misschien' betekenen in formele taal: Het moge duidelijk zijn dat...",
       "'Willen' in de verleden tijd: 'wilde' is standaard, 'wou' is informeel."
     ],
+    "exceptionsEN": [
+      "'Hoeven' (to need to) is only used in negative sentences or questions: Je hoeft niet te werken (You don't need to work). Hoef ik dat te doen? (Do I need to do that?)",
+      "In the past tense: kon (could), mocht (was allowed to), moest (had to), wilde/wou (wanted to), zou (would).",
+      "'Zou' (would) is also used for politeness: Zou u mij kunnen helpen? (Could you help me?)",
+      "'Zullen' in the first person is a suggestion: Zullen we gaan? (Shall we go?)",
+      "'Mogen' can also mean 'perhaps' in formal language: Het moge duidelijk zijn dat... (It may be clear that...)",
+      "'Willen' in the past tense: 'wilde' is standard, 'wou' is informal."
+    ],
     "commonMistakes": [
       "'Ik kan spreken Nederlands' is fout - de infinitief gaat naar het EINDE: Ik kan Nederlands spreken.",
       "'Ik moet niet werken' kan verwarrend zijn - dit betekent 'ik mag niet werken' in sommige contexten. Gebruik 'ik hoef niet te werken' voor 'I don't have to work'.",
@@ -30,7 +52,15 @@
       "'Ik wil kan komen' is fout - je kunt niet twee modale werkwoorden na elkaar gebruiken op deze manier.",
       "Vergeten dat de infinitief aan het einde staat: 'Ik moet vandaag naar de dokter gaan' (niet 'Ik moet gaan vandaag naar de dokter')."
     ],
-    "tip": "Denk aan modale werkwoorden als een sandwich: het modale werkwoord staat op positie 2, alle andere informatie zit in het midden, en de infinitief is het 'brood' aan het einde. Voorbeeld: Ik [MOET] morgen vroeg naar kantoor [GAAN]."
+    "commonMistakesEN": [
+      "'Ik kan spreken Nederlands' is wrong — the infinitive goes to the END: Ik kan Nederlands spreken (I can speak Dutch).",
+      "'Ik moet niet werken' can be confusing — this can mean 'I must not work' (prohibition). Use 'ik hoef niet te werken' for 'I don't have to work' (no obligation).",
+      "'Je hoeft niet komen' is wrong — after 'hoeven' you need 'te' before the infinitive: Je hoeft niet te komen (You don't have to come).",
+      "'Ik wil kan komen' is wrong — you cannot stack two modal verbs like this.",
+      "Forgetting that the infinitive goes at the end: 'Ik moet vandaag naar de dokter gaan' (I have to go to the doctor today), not 'Ik moet gaan vandaag naar de dokter'."
+    ],
+    "tip": "Denk aan modale werkwoorden als een sandwich: het modale werkwoord staat op positie 2, alle andere informatie zit in het midden, en de infinitief is het 'brood' aan het einde. Voorbeeld: Ik [MOET] morgen vroeg naar kantoor [GAAN].",
+    "tipEN": "Think of modal verbs as a sandwich: the modal verb sits in position 2, all other information goes in the middle, and the infinitive is the 'bread' at the end. Example: Ik [MOET] morgen vroeg naar kantoor [GAAN] (I [MUST] tomorrow early to the office [GO])."
   },
   "exercises": [
     {
@@ -38,79 +68,91 @@
       "sentence": "Ik ___ goed Nederlands spreken.",
       "options": ["kan", "mogen", "moet", "zullen"],
       "answer": "kan",
-      "explanation": "'Kunnen' drukt vaardigheid uit: ik KAN goed Nederlands spreken (= ik ben in staat om het te doen)."
+      "explanation": "'Kunnen' drukt vaardigheid uit: ik KAN goed Nederlands spreken (= ik ben in staat om het te doen).",
+      "explanationEN": "'Kunnen' (can) expresses ability: ik KAN goed Nederlands spreken = I CAN speak Dutch well (= I am able to do it)."
     },
     {
       "type": "fill_blank",
       "sentence": "Hier ___ je niet roken.",
       "answer": "mag",
-      "explanation": "'Mogen' drukt toestemming (of het ontbreken daarvan) uit. Hier mag je niet roken = het is niet toegestaan."
+      "explanation": "'Mogen' drukt toestemming (of het ontbreken daarvan) uit. Hier mag je niet roken = het is niet toegestaan.",
+      "explanationEN": "'Mogen' (may) expresses permission (or lack thereof). Hier mag je niet roken = You may not smoke here (it is not allowed)."
     },
     {
       "type": "multiple_choice",
       "sentence": "Wij ___ morgen om 8 uur beginnen.",
       "options": ["mogen", "moeten", "willen", "kunnen"],
       "answer": "moeten",
-      "explanation": "'Moeten' drukt verplichting uit: wij moeten om 8 uur beginnen (= het is verplicht)."
+      "explanation": "'Moeten' drukt verplichting uit: wij moeten om 8 uur beginnen (= het is verplicht).",
+      "explanationEN": "'Moeten' (must/have to) expresses obligation: wij moeten om 8 uur beginnen = we must start at 8 o'clock (it is required)."
     },
     {
       "type": "fill_blank",
       "sentence": "___ je een kopje koffie?",
       "answer": "Wil",
-      "explanation": "'Willen' drukt een wens uit. 'Wil je een kopje koffie?' = Wens je koffie?"
+      "explanation": "'Willen' drukt een wens uit. 'Wil je een kopje koffie?' = Wens je koffie?",
+      "explanationEN": "'Willen' (to want) expresses a wish. 'Wil je een kopje koffie?' = Do you want a cup of coffee?"
     },
     {
       "type": "fill_blank",
       "sentence": "___ we vanavond naar de bioscoop gaan?",
       "answer": "Zullen",
-      "explanation": "'Zullen we...' is een voorstel. Zullen we gaan? = Shall we go?"
+      "explanation": "'Zullen we...' is een voorstel. Zullen we gaan? = Shall we go?",
+      "explanationEN": "'Zullen we...' is a suggestion. Zullen we vanavond naar de bioscoop gaan? = Shall we go to the cinema tonight?"
     },
     {
       "type": "multiple_choice",
       "sentence": "Je ___ niet zo hard te werken.",
       "options": ["moet", "hoeft", "kan", "mag"],
       "answer": "hoeft",
-      "explanation": "'Hoeven' + niet + te + infinitief = het is niet nodig. 'Je hoeft niet zo hard te werken' = je bent niet verplicht."
+      "explanation": "'Hoeven' + niet + te + infinitief = het is niet nodig. 'Je hoeft niet zo hard te werken' = je bent niet verplicht.",
+      "explanationEN": "'Hoeven' + niet + te + infinitive = it is not necessary. 'Je hoeft niet zo hard te werken' = You don't have to work so hard (you are not obligated to)."
     },
     {
       "type": "reorder",
       "sentence": "Ik moet morgen vroeg opstaan.",
       "words": ["opstaan", "morgen", "moet", "vroeg", "Ik"],
       "answer": "Ik moet morgen vroeg opstaan.",
-      "explanation": "Het modale werkwoord 'moet' staat op positie 2. De infinitief 'opstaan' staat aan het einde."
+      "explanation": "Het modale werkwoord 'moet' staat op positie 2. De infinitief 'opstaan' staat aan het einde.",
+      "explanationEN": "The modal verb 'moet' (must) is in position 2. The infinitive 'opstaan' (to get up) is at the end. (I must get up early tomorrow.)"
     },
     {
       "type": "fill_blank",
       "sentence": "Mijn dochter ___ graag dokter worden.",
       "answer": "wil",
-      "explanation": "'Willen' drukt een wens uit. De infinitief 'worden' staat aan het einde van de zin."
+      "explanation": "'Willen' drukt een wens uit. De infinitief 'worden' staat aan het einde van de zin.",
+      "explanationEN": "'Willen' (to want) expresses a wish. The infinitive 'worden' (to become) is at the end of the sentence. (My daughter wants to become a doctor.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "De kinderen ___ buiten spelen van hun moeder.",
       "options": ["moeten", "mogen", "zullen", "hoeven"],
       "answer": "mogen",
-      "explanation": "'Mogen' drukt toestemming uit: de kinderen mogen spelen = ze hebben toestemming."
+      "explanation": "'Mogen' drukt toestemming uit: de kinderen mogen spelen = ze hebben toestemming.",
+      "explanationEN": "'Mogen' (may) expresses permission: de kinderen mogen buiten spelen = the children are allowed to play outside (they have permission from their mother)."
     },
     {
       "type": "fill_blank",
       "sentence": "___ u mij helpen? (beleefd vragen, verleden tijd van zullen)",
       "answer": "Zou",
-      "explanation": "'Zou' (verleden tijd van 'zullen') wordt gebruikt voor beleefde verzoeken."
+      "explanation": "'Zou' (verleden tijd van 'zullen') wordt gebruikt voor beleefde verzoeken.",
+      "explanationEN": "'Zou' (past tense of 'zullen') is used for polite requests. Zou u mij helpen? = Could you help me? (Would you help me?)"
     },
     {
       "type": "reorder",
       "sentence": "Kun jij morgen wat eerder komen?",
       "words": ["morgen", "jij", "komen", "wat", "eerder", "Kun"],
       "answer": "Kun jij morgen wat eerder komen?",
-      "explanation": "Bij inversie met 'jij' wordt 'kunt' vaak 'kun'. De infinitief 'komen' staat aan het einde."
+      "explanation": "Bij inversie met 'jij' wordt 'kunt' vaak 'kun'. De infinitief 'komen' staat aan het einde.",
+      "explanationEN": "With inversion and 'jij', 'kunt' often becomes 'kun'. The infinitive 'komen' (to come) is at the end. (Can you come a bit earlier tomorrow?)"
     },
     {
       "type": "multiple_choice",
       "sentence": "Het is koud. Ik ___ een jas aantrekken.",
       "options": ["mag", "hoef", "zal", "wil"],
       "answer": "zal",
-      "explanation": "'Zullen' kan een intentie of plan uitdrukken: Ik zal een jas aantrekken = Ik ga een jas aantrekken."
+      "explanation": "'Zullen' kan een intentie of plan uitdrukken: Ik zal een jas aantrekken = Ik ga een jas aantrekken.",
+      "explanationEN": "'Zullen' (shall/will) can express an intention or plan: Ik zal een jas aantrekken = I will put on a coat. (It's cold, so I'm going to put on a coat.)"
     }
   ]
 }

@@ -80,9 +80,11 @@ function generateExercises(lesson) {
 
     // Test only this batch with multiple choice
     batch.forEach((word) => {
-      const otherOptions = lessonWords
-        .filter((w) => w.id !== word.id)
-        .map((w) => w.english);
+      const otherOptions = [...new Set(
+        lessonWords
+          .filter((w) => w.id !== word.id && w.english !== word.english)
+          .map((w) => w.english)
+      )];
       exercises.push({
         type: 'multiple_choice',
         question: `What does "${dutchWithArticle(word)}" mean?`,
@@ -96,9 +98,11 @@ function generateExercises(lesson) {
   // ── Phase 2: Active recall — reverse direction (English → Dutch) ──
   const reverseWords = shuffle(lessonWords).slice(0, 4);
   reverseWords.forEach((word) => {
-    const otherOptions = lessonWords
-      .filter((w) => w.id !== word.id)
-      .map((w) => dutchWithArticle(w));
+    const otherOptions = [...new Set(
+      lessonWords
+        .filter((w) => w.id !== word.id && dutchWithArticle(w) !== dutchWithArticle(word))
+        .map((w) => dutchWithArticle(w))
+    )];
     exercises.push({
       type: 'multiple_choice',
       question: `How do you say "${word.english}" in Dutch?`,
@@ -161,8 +165,11 @@ function generateExercises(lesson) {
       exercises.push({
         type: 'grammar_tip',
         title: grammar.topicNL || grammar.topic,
+        titleEN: grammar.topicEN,
         content: grammar.explanation?.summary || '',
+        contentEN: grammar.explanation?.summaryEN || '',
         tip: grammar.explanation?.tip || '',
+        tipEN: grammar.explanation?.tipEN || '',
       });
 
       (grammar.exercises || []).slice(0, 3).forEach((ex) => {
@@ -231,21 +238,41 @@ function generateReviewExercises(mistakeWordIds) {
   const uniqueIds = [...new Set(mistakeWordIds)];
   const allWordsList = Object.values(allVocab);
 
-  uniqueIds.forEach((wordId) => {
+  uniqueIds.forEach((wordId, index) => {
     const word = allVocab[wordId];
     if (!word) return;
 
-    const otherOptions = allWordsList
-      .filter((w) => w.id !== word.id)
-      .map((w) => w.english);
-    reviewExercises.push({
-      type: 'multiple_choice',
-      question: `What does "${dutchWithArticle(word)}" mean?`,
-      options: shuffle([word.english, ...shuffle(otherOptions).slice(0, 3)]),
-      correctAnswer: word.english,
-      wordId: word.id,
-      isReview: true,
-    });
+    // Alternate: even = Dutch→English (recognition), odd = English→Dutch (harder production)
+    if (index % 2 === 1) {
+      const otherOptions = [...new Set(
+        allWordsList
+          .filter((w) => w.id !== word.id && dutchWithArticle(w) !== dutchWithArticle(word))
+          .map((w) => dutchWithArticle(w))
+      )];
+      reviewExercises.push({
+        type: 'multiple_choice',
+        question: `How do you say "${word.english}" in Dutch?`,
+        options: shuffle([dutchWithArticle(word), ...shuffle(otherOptions).slice(0, 3)]),
+        correctAnswer: dutchWithArticle(word),
+        wordId: word.id,
+        isReview: true,
+        direction: 'english-to-dutch',
+      });
+    } else {
+      const otherOptions = [...new Set(
+        allWordsList
+          .filter((w) => w.id !== word.id && w.english !== word.english)
+          .map((w) => w.english)
+      )];
+      reviewExercises.push({
+        type: 'multiple_choice',
+        question: `What does "${dutchWithArticle(word)}" mean?`,
+        options: shuffle([word.english, ...shuffle(otherOptions).slice(0, 3)]),
+        correctAnswer: word.english,
+        wordId: word.id,
+        isReview: true,
+      });
+    }
   });
 
   return reviewExercises;
@@ -257,6 +284,7 @@ export default function Lesson() {
   const completeLesson = useProgress((s) => s.completeLesson);
   const learnWord = useProgress((s) => s.learnWord);
   const recordExercise = useProgress((s) => s.recordExercise);
+  const updateWordAccuracy = useProgress((s) => s.updateWordAccuracy);
   const startSession = useProgress((s) => s.startSession);
   const endSession = useProgress((s) => s.endSession);
   const addSRSItem = useSRS((s) => s.addItem);
@@ -277,6 +305,7 @@ export default function Lesson() {
   const [correctStreak, setCorrectStreak] = useState(0);
   const [reviewAdded, setReviewAdded] = useState(false);
   const advanceTimerRef = useRef(null);
+  const handleNextRef = useRef(null);
 
   useEffect(() => {
     startSession();
@@ -321,6 +350,9 @@ export default function Lesson() {
       setCurrentIndex((i) => Math.min(i + 1, exercises.length - 1));
     }
   }, [currentIndex, exercises.length, correctCount, mistakeCount, lessonId, isComplete, completeLesson, recordActivity, mistakeIds, reviewAdded]);
+
+  // Keep ref in sync so timers always call the latest version
+  useEffect(() => { handleNextRef.current = handleNext; }, [handleNext]);
 
   const handleAnswer = useCallback(
     (isCorrect, wordId) => {
@@ -367,10 +399,24 @@ export default function Lesson() {
               lessonId: Number(lessonId),
             });
           }
+        } else if (currentExercise?.type === 'fill_blank' || currentExercise?.type === 'multiple_choice') {
+          // Grammar exercise mistake — record for pattern detection
+          recordMistake({
+            word: currentExercise.question || currentExercise.sentence || 'grammar',
+            correctAnswer: currentExercise.correctAnswer || currentExercise.answer || '',
+            userAnswer: '',
+            exerciseType: currentExercise.type,
+            category: 'grammar',
+            lessonId: Number(lessonId),
+          });
         }
       }
 
+      // Track word accuracy and exercise stats
       if (wordId) {
+        recordExercise(isCorrect, currentExercise?.type || 'unknown');
+        updateWordAccuracy(wordId, isCorrect);
+      } else {
         recordExercise(isCorrect, currentExercise?.type || 'unknown');
       }
 
@@ -378,9 +424,9 @@ export default function Lesson() {
         completeSpeakingGoal();
       }
 
-      advanceTimerRef.current = setTimeout(handleNext, isCorrect ? 1200 : 2500);
+      advanceTimerRef.current = setTimeout(() => handleNextRef.current(), isCorrect ? 1200 : 2500);
     },
-    [currentExercise, handleNext, lessonId, recordExercise, addSRSItem, recordMistake, completeSpeakingGoal, correctStreak, currentIndex, exercises.length]
+    [currentExercise, lessonId, recordExercise, updateWordAccuracy, addSRSItem, recordMistake, completeSpeakingGoal, correctStreak, currentIndex, exercises.length]
   );
 
   const handleWordIntro = useCallback(
@@ -531,10 +577,12 @@ export default function Lesson() {
                 onComplete={(mistakes) => {
                   if (mistakes === 0) {
                     setCorrectCount((c) => c + 1);
+                    recordExercise(true, 'match_pairs');
                   } else {
                     setMistakeCount((m) => m + mistakes);
+                    recordExercise(false, 'match_pairs');
                   }
-                  advanceTimerRef.current = setTimeout(handleNext, 1500);
+                  advanceTimerRef.current = setTimeout(() => handleNextRef.current(), 1500);
                 }}
               />
             )}
@@ -559,8 +607,11 @@ export default function Lesson() {
               <div>
                 <GrammarTip
                   title={currentExercise.title}
+                  titleEN={currentExercise.titleEN}
                   content={currentExercise.content}
+                  contentEN={currentExercise.contentEN}
                   tip={currentExercise.tip}
+                  tipEN={currentExercise.tipEN}
                 />
                 <button
                   onClick={handleNext}
@@ -580,13 +631,21 @@ export default function Lesson() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className={`fixed bottom-24 left-4 right-4 mx-auto max-w-lg p-4 rounded-xl text-center font-semibold ${
+              onClick={() => {
+                if (advanceTimerRef.current) {
+                  clearTimeout(advanceTimerRef.current);
+                  advanceTimerRef.current = null;
+                }
+                handleNext();
+              }}
+              className={`fixed bottom-24 left-4 right-4 mx-auto max-w-lg p-4 rounded-xl text-center font-semibold cursor-pointer ${
                 feedback.type === 'correct'
                   ? 'bg-success text-white'
                   : 'bg-error/90 text-white'
               }`}
             >
               {feedback.message}
+              <span className="block text-xs font-normal mt-1 opacity-80">Tap to continue</span>
             </motion.div>
           )}
         </AnimatePresence>

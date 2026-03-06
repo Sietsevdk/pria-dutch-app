@@ -41,8 +41,7 @@ export function useDutchAudio() {
           v.name.toLowerCase().includes('female') ||
           v.name.toLowerCase().includes('vrouw') ||
           v.name.toLowerCase().includes('ellen') ||
-          v.name.toLowerCase().includes('flo') ||
-          v.name.toLowerCase().includes('xander') === false
+          v.name.toLowerCase().includes('flo')
       );
 
       setPreferredVoice(female || pool[0]);

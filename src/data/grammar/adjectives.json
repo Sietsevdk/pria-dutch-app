@@ -1,8 +1,10 @@
 {
   "topic": "adjectives",
   "topicNL": "Bijvoeglijke naamwoorden",
+  "topicEN": "Adjectives",
   "explanation": {
     "summary": "Bijvoeglijke naamwoorden in het Nederlands krijgen meestal de uitgang -e als ze voor een zelfstandig naamwoord staan. De belangrijkste uitzondering: bij een het-woord in het enkelvoud met 'een' (of zonder lidwoord) krijgt het bijvoeglijk naamwoord GEEN -e.",
+    "summaryEN": "Adjectives in Dutch usually get the ending -e when they come before a noun. The most important exception: with a het-word (neuter noun) in the singular with 'een' (a/an) or without an article, the adjective does NOT get -e.",
     "rules": [
       "HOOFDREGEL: een bijvoeglijk naamwoord VOOR een zelfstandig naamwoord krijgt -e: de grote auto, het grote huis, de grote huizen.",
       "UITZONDERING: het-woord + enkelvoud + een/geen/elk/ieder/welk/zo'n + bijvoeglijk naamwoord = GEEN -e: een groot huis, geen klein kind, elk nieuw boek.",
@@ -13,12 +15,29 @@
       "Bijvoeglijke naamwoorden op -en krijgen NOOIT extra -e: een gouden ring (niet: een goudene ring), een houten tafel.",
       "Bijvoeglijke naamwoorden op -a krijgen NOOIT -e: een prima idee, een extra taak."
     ],
+    "rulesEN": [
+      "MAIN RULE: an adjective BEFORE a noun gets -e: de grote auto (the big car), het grote huis (the big house), de grote huizen (the big houses).",
+      "EXCEPTION: het-word (neuter) + singular + een/geen/elk/ieder/welk/zo'n + adjective = NO -e: een groot huis (a big house), geen klein kind (no small child), elk nieuw boek (every new book).",
+      "With de-words (common gender nouns), the adjective ALWAYS gets -e: een grote auto (a big car), de grote auto (the big car), grote auto's (big cars).",
+      "With plurals, the adjective ALWAYS gets -e: grote huizen (big houses), de grote huizen (the big houses), nieuwe boeken (new books).",
+      "With het-words using 'de/het/dit/dat/mijn/jouw/etc.' (definite article or possessive), the adjective DOES get -e: het grote huis (the big house), dit kleine kind (this small child), mijn nieuwe boek (my new book).",
+      "When the adjective comes AFTER the noun (predicative use), it NEVER gets -e: Het huis is groot. (The house is big.) De auto is rood. (The car is red.)",
+      "Adjectives ending in -en NEVER get an extra -e: een gouden ring (a golden ring) (not: een goudene ring), een houten tafel (a wooden table).",
+      "Adjectives ending in -a NEVER get -e: een prima idee (a great idea), een extra taak (an extra task)."
+    ],
     "exceptions": [
       "Bijvoeglijke naamwoorden die eindigen op -en: gouden, zilveren, houten, stenen, ijzeren - krijgen nooit -e.",
       "Sommige vaste uitdrukkingen volgen de regels niet: 'in goed overleg', 'van groot belang'.",
       "Het bijvoeglijk naamwoord 'rechter-' en 'linker-' krijgen altijd -e: de rechterhand, het linkeroog.",
       "Bij eigennamen en titels zijn er uitzonderingen: 'het Koninklijk Paleis' (geen -e, vaste naam).",
       "Woorden als 'prima', 'gratis', 'roze', 'oranje', 'lila', 'paars' krijgen soms geen -e in informeel taalgebruik, maar officieel wel: een roze jurk."
+    ],
+    "exceptionsEN": [
+      "Adjectives ending in -en: gouden (golden), zilveren (silver), houten (wooden), stenen (stone), ijzeren (iron) — never get -e.",
+      "Some fixed expressions do not follow the rules: 'in goed overleg' (in good consultation), 'van groot belang' (of great importance).",
+      "The adjectives 'rechter-' (right) and 'linker-' (left) always get -e: de rechterhand (the right hand), het linkeroog (the left eye).",
+      "With proper names and titles there are exceptions: 'het Koninklijk Paleis' (the Royal Palace) — no -e, it is a fixed name.",
+      "Words like 'prima' (great), 'gratis' (free), 'roze' (pink), 'oranje' (orange), 'lila' (lilac), 'paars' (purple) sometimes don't get -e in informal usage, but officially they should: een roze jurk (a pink dress)."
     ],
     "commonMistakes": [
       "'Een grote huis' is fout - 'huis' is een het-woord met 'een', dus GEEN -e: een groot huis.",
@@ -28,84 +47,105 @@
       "'Het huis is grote' is fout - predicatief (na het werkwoord) krijgt het bijvoeglijk naamwoord NOOIT -e: Het huis is groot.",
       "'Een goudene ring' is fout - bijvoeglijke naamwoorden op -en krijgen geen extra -e: een gouden ring."
     ],
-    "tip": "De truc is simpel: ALTIJD -e, BEHALVE in deze ene situatie: het-woord + enkelvoud + een/geen = geen -e. Denk aan: 'een groot HUIS' (het huis, enkelvoud, met 'een' → geen -e) maar 'een grote AUTO' (de auto, dus altijd -e). Als je twijfelt: is het een het-woord met 'een'? Nee? Dan altijd -e!"
+    "commonMistakesEN": [
+      "'Een grote huis' is wrong — 'huis' (house) is a het-word with 'een', so NO -e: een groot huis (a big house).",
+      "'Het groot huis' is wrong — with the definite article 'het', the adjective DOES get -e: het grote huis (the big house).",
+      "'De groot auto' is wrong — with de-words, the adjective ALWAYS gets -e: de grote auto (the big car).",
+      "'Een groot auto' is wrong — 'auto' (car) is a de-word, so the adjective ALWAYS gets -e: een grote auto (a big car).",
+      "'Het huis is grote' is wrong — in predicative position (after the verb), the adjective NEVER gets -e: Het huis is groot. (The house is big.)",
+      "'Een goudene ring' is wrong — adjectives ending in -en never get an extra -e: een gouden ring (a golden ring)."
+    ],
+    "tip": "De truc is simpel: ALTIJD -e, BEHALVE in deze ene situatie: het-woord + enkelvoud + een/geen = geen -e. Denk aan: 'een groot HUIS' (het huis, enkelvoud, met 'een' → geen -e) maar 'een grote AUTO' (de auto, dus altijd -e). Als je twijfelt: is het een het-woord met 'een'? Nee? Dan altijd -e!",
+    "tipEN": "The trick is simple: ALWAYS -e, EXCEPT in this one situation: het-word + singular + een/geen = no -e. Think of: 'een groot HUIS' (het huis, singular, with 'een' → no -e) but 'een grote AUTO' (de auto, so always -e). When in doubt: is it a het-word with 'een'? No? Then always -e!"
   },
   "exercises": [
     {
       "type": "fill_blank",
       "sentence": "Dat is een ___ huis. (mooi)",
       "answer": "mooi",
-      "explanation": "'Huis' is een het-woord, enkelvoud, met 'een' → het bijvoeglijk naamwoord krijgt GEEN -e: een mooi huis."
+      "explanation": "'Huis' is een het-woord, enkelvoud, met 'een' → het bijvoeglijk naamwoord krijgt GEEN -e: een mooi huis.",
+      "explanationEN": "'Huis' (house) is a het-word, singular, with 'een' → the adjective does NOT get -e: een mooi huis (a beautiful house)."
     },
     {
       "type": "fill_blank",
       "sentence": "De ___ auto staat voor de deur. (rood)",
       "answer": "rode",
-      "explanation": "'Auto' is een de-woord → het bijvoeglijk naamwoord krijgt ALTIJD -e: de rode auto."
+      "explanation": "'Auto' is een de-woord → het bijvoeglijk naamwoord krijgt ALTIJD -e: de rode auto.",
+      "explanationEN": "'Auto' (car) is a de-word → the adjective ALWAYS gets -e: de rode auto (the red car)."
     },
     {
       "type": "multiple_choice",
       "sentence": "Het ___ kind speelt buiten.",
       "options": ["kleine", "klein", "kleins", "kleinen"],
       "answer": "kleine",
-      "explanation": "'Kind' is een het-woord, maar met het bepaalde lidwoord 'het' → het bijvoeglijk naamwoord krijgt WEL -e: het kleine kind."
+      "explanation": "'Kind' is een het-woord, maar met het bepaalde lidwoord 'het' → het bijvoeglijk naamwoord krijgt WEL -e: het kleine kind.",
+      "explanationEN": "'Kind' (child) is a het-word, but with the definite article 'het' → the adjective DOES get -e: het kleine kind (the small child)."
     },
     {
       "type": "fill_blank",
       "sentence": "Zij draagt een ___ jurk. (nieuw)",
       "answer": "nieuwe",
-      "explanation": "'Jurk' is een de-woord → het bijvoeglijk naamwoord krijgt ALTIJD -e, ook met 'een': een nieuwe jurk."
+      "explanation": "'Jurk' is een de-woord → het bijvoeglijk naamwoord krijgt ALTIJD -e, ook met 'een': een nieuwe jurk.",
+      "explanationEN": "'Jurk' (dress) is a de-word → the adjective ALWAYS gets -e, even with 'een': een nieuwe jurk (a new dress)."
     },
     {
       "type": "multiple_choice",
       "sentence": "Wij wonen in een ___ appartement. (klein)",
       "options": ["kleine", "klein", "kleins", "kleinen"],
       "answer": "klein",
-      "explanation": "'Appartement' is een het-woord, enkelvoud, met 'een' → GEEN -e: een klein appartement."
+      "explanation": "'Appartement' is een het-woord, enkelvoud, met 'een' → GEEN -e: een klein appartement.",
+      "explanationEN": "'Appartement' (apartment) is a het-word, singular, with 'een' → NO -e: een klein appartement (a small apartment)."
     },
     {
       "type": "fill_blank",
       "sentence": "De ___ boeken liggen op tafel. (dik)",
       "answer": "dikke",
-      "explanation": "Meervoud → het bijvoeglijk naamwoord krijgt ALTIJD -e: de dikke boeken. Let op de verdubbeling van de k."
+      "explanation": "Meervoud → het bijvoeglijk naamwoord krijgt ALTIJD -e: de dikke boeken. Let op de verdubbeling van de k.",
+      "explanationEN": "Plural → the adjective ALWAYS gets -e: de dikke boeken (the thick books). Note the doubling of the 'k'."
     },
     {
       "type": "fill_blank",
       "sentence": "Het weer is ___. (slecht)",
       "answer": "slecht",
-      "explanation": "Predicatief gebruik (na 'is') → het bijvoeglijk naamwoord krijgt NOOIT -e: Het weer is slecht."
+      "explanation": "Predicatief gebruik (na 'is') → het bijvoeglijk naamwoord krijgt NOOIT -e: Het weer is slecht.",
+      "explanationEN": "Predicative use (after 'is') → the adjective NEVER gets -e: Het weer is slecht. (The weather is bad.)"
     },
     {
       "type": "multiple_choice",
       "sentence": "Mijn ___ boek is heel interessant. (nieuw)",
       "options": ["nieuw", "nieuwe", "nieuwen", "nieuws"],
       "answer": "nieuwe",
-      "explanation": "'Boek' is een het-woord, maar met het bezittelijk voornaamwoord 'mijn' → het bijvoeglijk naamwoord krijgt WEL -e: mijn nieuwe boek."
+      "explanation": "'Boek' is een het-woord, maar met het bezittelijk voornaamwoord 'mijn' → het bijvoeglijk naamwoord krijgt WEL -e: mijn nieuwe boek.",
+      "explanationEN": "'Boek' (book) is a het-word, but with the possessive pronoun 'mijn' (my) → the adjective DOES get -e: mijn nieuwe boek (my new book)."
     },
     {
       "type": "fill_blank",
       "sentence": "Zij heeft ___ ogen. (blauw)",
       "answer": "blauwe",
-      "explanation": "Meervoud ('ogen') → het bijvoeglijk naamwoord krijgt ALTIJD -e: blauwe ogen."
+      "explanation": "Meervoud ('ogen') → het bijvoeglijk naamwoord krijgt ALTIJD -e: blauwe ogen.",
+      "explanationEN": "Plural ('ogen'/eyes) → the adjective ALWAYS gets -e: blauwe ogen (blue eyes)."
     },
     {
       "type": "fill_blank",
       "sentence": "Er staat een ___ tafel in de keuken. (houten)",
       "answer": "houten",
-      "explanation": "Bijvoeglijke naamwoorden op -en krijgen NOOIT extra -e. Het blijft: een houten tafel."
+      "explanation": "Bijvoeglijke naamwoorden op -en krijgen NOOIT extra -e. Het blijft: een houten tafel.",
+      "explanationEN": "Adjectives ending in -en NEVER get an extra -e. It stays: een houten tafel (a wooden table)."
     },
     {
       "type": "multiple_choice",
       "sentence": "Dit is een ___ idee! (goed)",
       "options": ["goede", "goed", "goeden", "goeds"],
       "answer": "goed",
-      "explanation": "'Idee' is een het-woord, enkelvoud, met 'een' → GEEN -e: een goed idee."
+      "explanation": "'Idee' is een het-woord, enkelvoud, met 'een' → GEEN -e: een goed idee.",
+      "explanationEN": "'Idee' (idea) is a het-word, singular, with 'een' → NO -e: een goed idee (a good idea)."
     },
     {
       "type": "fill_blank",
       "sentence": "De ___ man loopt door het park. (oud)",
       "answer": "oude",
-      "explanation": "'Man' is een de-woord → het bijvoeglijk naamwoord krijgt ALTIJD -e: de oude man."
+      "explanation": "'Man' is een de-woord → het bijvoeglijk naamwoord krijgt ALTIJD -e: de oude man.",
+      "explanationEN": "'Man' (man) is a de-word → the adjective ALWAYS gets -e: de oude man (the old man)."
     }
   ]
 }

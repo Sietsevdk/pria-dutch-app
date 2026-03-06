@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, Volume2, Star, Check, Mic } from 'lucide-react';
 import useDutchAudio from '../hooks/useDutchAudio';
@@ -410,6 +410,11 @@ function PracticeMode({ sound, audio, onBack, onComplete }) {
   const [stats, setStats] = useState({ correct: 0, needsPractice: 0, total: 0 });
   const [answered, setAnswered] = useState(false);
   const [finished, setFinished] = useState(false);
+  const advanceTimerRef = useRef(null);
+
+  useEffect(() => {
+    return () => { if (advanceTimerRef.current) clearTimeout(advanceTimerRef.current); };
+  }, []);
 
   const currentWord = words[wordIndex];
 
@@ -445,15 +450,17 @@ function PracticeMode({ sound, audio, onBack, onComplete }) {
   };
 
   const advanceAfterDelay = (latestStats) => {
-    setTimeout(() => {
-      const nextIndex = wordIndex + 1;
-      if (nextIndex >= words.length) {
-        setFinished(true);
-        onComplete(latestStats);
-      } else {
-        setWordIndex(nextIndex);
+    advanceTimerRef.current = setTimeout(() => {
+      setWordIndex((prev) => {
+        const nextIndex = prev + 1;
+        if (nextIndex >= words.length) {
+          setFinished(true);
+          onComplete(latestStats);
+          return prev;
+        }
         setAnswered(false);
-      }
+        return nextIndex;
+      });
     }, 600);
   };
 
