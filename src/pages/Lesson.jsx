@@ -218,6 +218,7 @@ export default function Lesson() {
   const addSRSItem = useSRS((s) => s.addItem);
   const recordActivity = useStreak((s) => s.recordActivity);
   const recordMistake = useMistakes((s) => s.recordMistake);
+  const completeSpeakingGoal = useProgress((s) => s.completeSpeakingGoal);
 
   const lesson = useMemo(() => getLessonData(lessonId), [lessonId]);
   const exercises = useMemo(() => generateExercises(lesson), [lesson]);
@@ -299,10 +300,15 @@ export default function Lesson() {
         recordExercise(isCorrect, currentExercise?.type || 'unknown');
       }
 
+      // Mark speaking goal complete when a speaking exercise is done
+      if (currentExercise?.type === 'speaking') {
+        completeSpeakingGoal();
+      }
+
       // Auto-advance after delay — use ref so it can be cancelled
       advanceTimerRef.current = setTimeout(handleNext, isCorrect ? 1200 : 2500);
     },
-    [currentExercise, handleNext, lessonId, recordExercise, addSRSItem, recordMistake]
+    [currentExercise, handleNext, lessonId, recordExercise, addSRSItem, recordMistake, completeSpeakingGoal]
   );
 
   const handleWordIntro = useCallback(
@@ -310,9 +316,8 @@ export default function Lesson() {
       learnWord(word.id);
       addSRSItem(word.id, 'vocabulary');
       setWordsIntroduced((w) => w + 1);
-      // Auto advance after viewing
     },
-    []
+    [learnWord, addSRSItem]
   );
 
   if (!lesson) {

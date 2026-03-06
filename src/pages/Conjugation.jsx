@@ -391,11 +391,19 @@ function PracticeMode() {
       };
     }
 
-    if (!tenseData) return generateChallenge(verbList, selectedTense);
+    if (!tenseData) {
+      // Try another random verb, but limit retries to avoid infinite recursion
+      const fallbackVerb = verbList.find((v) => {
+        const d = v.tenses?.[selectedTense];
+        return d && PRONOUNS.some((p) => d[p]);
+      });
+      if (!fallbackVerb) return { verb, tense: selectedTense, pronoun: 'ik', correctAnswer: verb.infinitive, displayPrompt: `${verb.infinitive} (${selectedTense})` };
+      return generateChallenge([fallbackVerb], selectedTense);
+    }
 
     // Pick a random pronoun that has a conjugation
     const availablePronouns = PRONOUNS.filter((p) => tenseData[p]);
-    if (!availablePronouns.length) return generateChallenge(verbList, selectedTense);
+    if (!availablePronouns.length) return { verb, tense: selectedTense, pronoun: 'ik', correctAnswer: verb.infinitive, displayPrompt: `${verb.infinitive} (${selectedTense})` };
 
     const pronoun = availablePronouns[Math.floor(Math.random() * availablePronouns.length)];
     const correctAnswer = tenseData[pronoun];

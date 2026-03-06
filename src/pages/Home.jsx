@@ -65,10 +65,11 @@ export default function Home() {
     return 'Goedenavond';
   }, []);
 
-  const goalsProgress = useMemo(() => {
-    const completed = Object.values(goalsCompleted).filter(Boolean).length;
-    return completed / 3;
+  const goalsCompleteCount = useMemo(() => {
+    return Object.values(goalsCompleted).filter(Boolean).length;
   }, [goalsCompleted]);
+  const goalsProgress = goalsCompleteCount / 3;
+  const allGoalsDone = goalsCompleteCount === 3;
 
   const container = {
     hidden: {},
@@ -200,7 +201,38 @@ export default function Home() {
             done={goalsCompleted.speaking}
           />
         </div>
+
+        {/* All goals done celebration */}
+        {allGoalsDone && (
+          <div className="mt-3 bg-success/10 rounded-xl p-3 flex items-center gap-2">
+            <Sparkles size={16} className="text-success flex-shrink-0" />
+            <p className="text-xs text-success font-medium">
+              All goals complete! Keep going for bonus XP!
+            </p>
+          </div>
+        )}
       </motion.div>
+
+      {/* Extra credit — shown when all goals done */}
+      {allGoalsDone && (
+        <motion.button
+          variants={item}
+          onClick={() => navigate(`/lesson/${currentLesson}`)}
+          className="w-full bg-gradient-to-r from-success to-success/80 text-white rounded-2xl p-4 flex items-center justify-between shadow-sm mb-4"
+          whileTap={{ scale: 0.98 }}
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+              <Sparkles size={20} />
+            </div>
+            <div className="text-left">
+              <div className="font-semibold text-sm">Extra Credit</div>
+              <div className="text-xs text-white/80">Do another lesson to get ahead!</div>
+            </div>
+          </div>
+          <ChevronRight size={18} />
+        </motion.button>
+      )}
 
       {/* Tools */}
       <motion.div variants={item} className="mb-3">

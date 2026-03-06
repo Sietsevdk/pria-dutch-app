@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BookOpen, Search, Check, ChevronRight, Star, ArrowLeft } from 'lucide-react';
 import FillInBlank from '../components/FillInBlank';
@@ -146,14 +146,22 @@ function GrammarDetail({ topic, onBack }) {
 
   const exercises = topic.exercises || [];
 
+  // Track grammar mastery when exercises are completed
+  const isComplete = showExercises && exerciseIndex >= exercises.length && exercises.length > 0;
+  const accuracy = isComplete && score.total > 0 ? Math.round((score.correct / score.total) * 100) : 0;
+  const [masteryRecorded, setMasteryRecorded] = useState(false);
+
+  useEffect(() => {
+    if (isComplete && !masteryRecorded) {
+      masterGrammar(topic.topic, accuracy);
+      setMasteryRecorded(true);
+    }
+  }, [isComplete, masteryRecorded, masterGrammar, topic.topic, accuracy]);
+
   if (showExercises && exercises.length > 0) {
     const ex = exercises[exerciseIndex];
-    const isComplete = exerciseIndex >= exercises.length;
 
     if (isComplete) {
-      const accuracy = score.total > 0 ? Math.round((score.correct / score.total) * 100) : 0;
-      masterGrammar(topic.topic, accuracy);
-
       return (
         <div className="px-4 pt-6 text-center">
           <div className="text-4xl mb-4">{accuracy >= 85 ? '🎉' : '💪'}</div>

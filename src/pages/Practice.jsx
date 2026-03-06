@@ -1,4 +1,5 @@
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BookOpen, PenTool, Headphones, Mic, Star, Eye, EyeOff, ChevronRight, MessageSquare } from 'lucide-react';
 import MultipleChoice from '../components/MultipleChoice';
@@ -30,7 +31,8 @@ const tabs = [
 ];
 
 export default function Practice() {
-  const [activeTab, setActiveTab] = useState('reading');
+  const [searchParams] = useSearchParams();
+  const [activeTab, setActiveTab] = useState(searchParams.get('tab') || 'reading');
   const [selectedDialogue, setSelectedDialogue] = useState(null);
 
   return (

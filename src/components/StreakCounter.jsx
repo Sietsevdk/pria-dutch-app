@@ -51,7 +51,7 @@ export default function StreakCounter({ compact = false }) {
           {currentStreak}
         </div>
         <div className="text-xs text-charcoal/60">
-          {currentStreak === 1 ? 'day streak' : 'day streak'}
+          {currentStreak === 1 ? 'day streak' : 'days streak'}
         </div>
       </div>
       {!completedToday && currentStreak > 0 && (

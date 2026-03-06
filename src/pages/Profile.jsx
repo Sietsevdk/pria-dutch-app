@@ -275,28 +275,7 @@ export default function Profile() {
       {/* Streak Calendar */}
       <motion.div variants={item} className="bg-white rounded-2xl p-4 shadow-sm border border-cream-dark/50 mb-4">
         <h3 className="font-semibold text-sm text-charcoal mb-3">Activity Calendar</h3>
-        <div className="grid grid-cols-7 gap-1">
-          {['M', 'T', 'W', 'T', 'F', 'S', 'S'].map((day, i) => (
-            <div key={i} className="text-center text-[9px] text-charcoal/40 font-medium pb-1">
-              {day}
-            </div>
-          ))}
-          {calendarData.map((day, i) => (
-            <div
-              key={i}
-              className={`aspect-square rounded-sm ${
-                day.completed
-                  ? day.xp > 100
-                    ? 'bg-success'
-                    : day.xp > 50
-                      ? 'bg-success/70'
-                      : 'bg-success/40'
-                  : 'bg-cream-dark/50'
-              }`}
-              title={`${day.date}: ${day.xp} XP`}
-            />
-          ))}
-        </div>
+        <ActivityCalendar data={calendarData} />
       </motion.div>
 
       {/* Accuracy by exercise type */}
@@ -485,6 +464,97 @@ export default function Profile() {
         )}
       </motion.div>
     </motion.div>
+  );
+}
+
+function ActivityCalendar({ data }) {
+  if (!data || data.length === 0) return null;
+
+  // Group data into weeks (Mon-Sun), last 8 weeks
+  const weeks = [];
+  const recent = data.slice(-56); // 8 weeks max
+
+  // Pad start so first day aligns to correct weekday (0=Sun, 1=Mon...)
+  const firstDayOfWeek = recent[0]?.dayOfWeek;
+  // Convert to Mon=0 format: (dayOfWeek + 6) % 7
+  const mondayOffset = (firstDayOfWeek + 6) % 7;
+  const padded = [...Array(mondayOffset).fill(null), ...recent];
+
+  // Split into weeks of 7
+  for (let i = 0; i < padded.length; i += 7) {
+    weeks.push(padded.slice(i, i + 7));
+  }
+
+  // Get month labels for the first day of each week
+  const monthLabels = weeks.map((week) => {
+    const firstDay = week.find((d) => d !== null);
+    if (!firstDay) return '';
+    const date = new Date(firstDay.date + 'T12:00:00');
+    const day = date.getDate();
+    if (day <= 7) {
+      return date.toLocaleString('en', { month: 'short' });
+    }
+    return '';
+  });
+
+  const today = new Date().toISOString().split('T')[0];
+
+  return (
+    <div>
+      {/* Day headers */}
+      <div className="flex gap-0.5 mb-1">
+        <div className="w-8" />
+        {['M', 'T', 'W', 'T', 'F', 'S', 'S'].map((d, i) => (
+          <div key={i} className="flex-1 text-center text-[9px] text-charcoal/40 font-medium">
+            {d}
+          </div>
+        ))}
+      </div>
+      {/* Weeks */}
+      <div className="space-y-0.5">
+        {weeks.map((week, wi) => (
+          <div key={wi} className="flex gap-0.5 items-center">
+            <div className="w-8 text-[9px] text-charcoal/40 text-right pr-1">
+              {monthLabels[wi]}
+            </div>
+            {week.map((day, di) => (
+              <div
+                key={di}
+                className={`flex-1 h-3.5 rounded-sm ${
+                  day === null
+                    ? 'bg-transparent'
+                    : day.completed
+                      ? day.xp > 100
+                        ? 'bg-success'
+                        : day.xp > 50
+                          ? 'bg-success/70'
+                          : 'bg-success/40'
+                      : day.date === today
+                        ? 'bg-primary/20 border border-primary/30'
+                        : 'bg-cream-dark/40'
+                }`}
+                title={day ? `${day.date}: ${day.xp} XP` : ''}
+              />
+            ))}
+          </div>
+        ))}
+      </div>
+      {/* Legend */}
+      <div className="flex items-center gap-3 mt-2 justify-end">
+        <div className="flex items-center gap-1">
+          <div className="w-2.5 h-2.5 rounded-sm bg-cream-dark/40" />
+          <span className="text-[9px] text-charcoal/40">No activity</span>
+        </div>
+        <div className="flex items-center gap-1">
+          <div className="w-2.5 h-2.5 rounded-sm bg-success/40" />
+          <span className="text-[9px] text-charcoal/40">Active</span>
+        </div>
+        <div className="flex items-center gap-1">
+          <div className="w-2.5 h-2.5 rounded-sm bg-success" />
+          <span className="text-[9px] text-charcoal/40">100+ XP</span>
+        </div>
+      </div>
+    </div>
   );
 }
 
