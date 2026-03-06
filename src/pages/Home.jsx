@@ -47,7 +47,8 @@ export default function Home() {
   useEffect(() => {
     checkStreak();
     resetDailyGoals();
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Run only on mount — these are store actions that don't change
 
   useEffect(() => {
     if (idiomsData.idioms?.length > 0) {
@@ -278,7 +279,11 @@ export default function Home() {
       >
         <h3 className="font-semibold text-sm text-charcoal mb-3">This Week</h3>
         <div className="flex items-end justify-between gap-1 h-20">
-          {['M', 'T', 'W', 'T', 'F', 'S', 'S'].map((day, i) => {
+          {(() => {
+            const dayNames = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+            const today = new Date().getDay();
+            return Array.from({ length: 7 }, (_, i) => dayNames[(today - 6 + i + 7) % 7]);
+          })().map((day, i) => {
             const xp = weeklyXP[i] || 0;
             const maxXP = Math.max(...weeklyXP, 1);
             const height = (xp / maxXP) * 100;

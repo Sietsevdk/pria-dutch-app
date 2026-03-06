@@ -1,4 +1,4 @@
-const CACHE_NAME = 'pria-v1';
+const CACHE_NAME = 'pria-v2';
 
 const APP_SHELL = [
   '/',
@@ -33,11 +33,15 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-// Fetch — network-first for navigation, cache-first for static assets
+// Fetch — smart caching strategy
 self.addEventListener('fetch', (event) => {
   const { request } = event;
+  const url = new URL(request.url);
 
-  // Navigation requests: network-first
+  // Skip non-GET requests
+  if (request.method !== 'GET') return;
+
+  // Navigation requests: network-first with offline fallback
   if (request.mode === 'navigate') {
     event.respondWith(
       fetch(request)
@@ -55,22 +59,66 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Static assets: cache-first
-  event.respondWith(
-    caches.match(request).then((cached) => {
-      if (cached) {
-        return cached;
-      }
-      return fetch(request).then((response) => {
-        // Only cache same-origin successful responses
-        if (response.ok && request.url.startsWith(self.location.origin)) {
-          const clone = response.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(request, clone);
-          });
-        }
-        return response;
-      });
-    })
-  );
+  // Google Translate TTS: cache audio for offline listening
+  if (url.hostname === 'translate.google.com' || url.hostname === 'translate.googleapis.com') {
+    event.respondWith(
+      caches.match(request).then((cached) => {
+        if (cached) return cached;
+        return fetch(request).then((response) => {
+          if (response.ok) {
+            const clone = response.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(request, clone);
+            });
+          }
+          return response;
+        }).catch(() => {
+          return new Response('', { status: 503, statusText: 'Offline' });
+        });
+      })
+    );
+    return;
+  }
+
+  // Vite hashed assets (JS/CSS bundles): cache-first, immutable
+  if (url.origin === self.location.origin && /\/assets\/.*\.[a-f0-9]+\.(js|css|woff2?)$/.test(url.pathname)) {
+    event.respondWith(
+      caches.match(request).then((cached) => {
+        if (cached) return cached;
+        return fetch(request).then((response) => {
+          if (response.ok) {
+            const clone = response.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(request, clone);
+            });
+          }
+          return response;
+        });
+      })
+    );
+    return;
+  }
+
+  // Same-origin assets: stale-while-revalidate
+  if (url.origin === self.location.origin) {
+    event.respondWith(
+      caches.match(request).then((cached) => {
+        const fetchPromise = fetch(request).then((response) => {
+          if (response.ok) {
+            const clone = response.clone();
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(request, clone);
+            });
+          }
+          return response;
+        }).catch(() => cached);
+
+        return cached || fetchPromise;
+      })
+    );
+    return;
+  }
+
+  // External requests: network-only (don't cache)
+  event.respondWith(fetch(request));
 });

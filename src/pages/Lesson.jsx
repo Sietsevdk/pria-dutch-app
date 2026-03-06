@@ -1,7 +1,7 @@
 import { useState, useMemo, useEffect, useCallback, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Volume2 } from 'lucide-react';
+import { X, Volume2, RefreshCw } from 'lucide-react';
 import MultipleChoice from '../components/MultipleChoice';
 import FillInBlank from '../components/FillInBlank';
 import FlashCard from '../components/FlashCard';
@@ -63,8 +63,8 @@ function generateExercises(lesson) {
     if (data?.words) words.push(...data.words);
   });
 
-  // Limit to manageable set — quality over quantity
-  const lessonWords = words.slice(0, 8);
+  // 12 words per lesson for comprehensive learning
+  const lessonWords = words.slice(0, 12);
 
   // ── Phase 1: Introduce & test in batches ──
   // Every word is introduced before it is tested.
@@ -93,34 +93,52 @@ function generateExercises(lesson) {
     });
   }
 
-  // ── Phase 2: Deeper practice on all introduced words ──
+  // ── Phase 2: Active recall — reverse direction (English → Dutch) ──
+  const reverseWords = shuffle(lessonWords).slice(0, 4);
+  reverseWords.forEach((word) => {
+    const otherOptions = lessonWords
+      .filter((w) => w.id !== word.id)
+      .map((w) => dutchWithArticle(w));
+    exercises.push({
+      type: 'multiple_choice',
+      question: `How do you say "${word.english}" in Dutch?`,
+      options: shuffle([dutchWithArticle(word), ...shuffle(otherOptions).slice(0, 3)]),
+      correctAnswer: dutchWithArticle(word),
+      wordId: word.id,
+      direction: 'english-to-dutch',
+    });
+  });
 
-  // Fill in blank (2-3) — only words with example sentences
-  const fibWords = shuffle(lessonWords).slice(0, 3);
+  // ── Phase 3: Deeper practice on all introduced words ──
+
+  // Fill in blank (5) — more active recall
+  const fibWords = shuffle(lessonWords).slice(0, 5);
   fibWords.forEach((word) => {
     if (word.exampleNL && word.dutch) {
+      const bareWord = dutchBareWord(word) || word.dutch;
+      const escaped = bareWord.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       const sentence = word.exampleNL.replace(
-        new RegExp(word.dutch, 'i'),
+        new RegExp(escaped, 'i'),
         '___'
       );
       if (sentence !== word.exampleNL) {
         exercises.push({
           type: 'fill_blank',
           sentence,
-          answer: word.dutch.toLowerCase(),
+          answer: bareWord.toLowerCase(),
           hint: `Translate "${word.english}" → Dutch`,
-          explanation: `${word.exampleEN}`,
+          explanation: word.exampleEN,
           englishContext: word.exampleEN,
           targetWord: word.english,
-          firstLetter: word.dutch.charAt(0).toLowerCase(),
+          firstLetter: bareWord.charAt(0).toLowerCase(),
           wordId: word.id,
         });
       }
     }
   });
 
-  // Listening (2)
-  const listenWords = shuffle(lessonWords).slice(0, 2);
+  // Listening (3)
+  const listenWords = shuffle(lessonWords).slice(0, 3);
   listenWords.forEach((word) => {
     const text = word.exampleNL || dutchWithArticle(word);
     const otherOptions = lessonWords
@@ -136,7 +154,7 @@ function generateExercises(lesson) {
     });
   });
 
-  // ── Phase 3: Grammar — TEACH then TEST ──
+  // ── Phase 4: Grammar — TEACH then TEST ──
   (lesson.grammarTopics || []).forEach((topic) => {
     const grammar = grammarByTopic[topic];
     if (grammar) {
@@ -168,7 +186,7 @@ function generateExercises(lesson) {
     }
   });
 
-  // ── Phase 4: Mixed practice (all words now familiar) ──
+  // ── Phase 5: Mixed practice (all words now familiar) ──
   if (lessonWords.length >= 5) {
     const matchWords = shuffle(lessonWords).slice(0, 5);
     exercises.push({
@@ -181,7 +199,7 @@ function generateExercises(lesson) {
   }
 
   const sbWords = lessonWords.filter((w) => w.exampleNL && w.exampleNL.split(' ').length >= 4);
-  shuffle(sbWords).slice(0, 1).forEach((word) => {
+  shuffle(sbWords).slice(0, 2).forEach((word) => {
     const wordsInSentence = word.exampleNL.replace(/[.,!?]/g, '').split(' ');
     if (wordsInSentence.length >= 4 && wordsInSentence.length <= 8) {
       exercises.push({
@@ -194,17 +212,43 @@ function generateExercises(lesson) {
     }
   });
 
-  if (lessonWords.length > 0) {
-    const speakWord = lessonWords[Math.floor(Math.random() * lessonWords.length)];
-    const text = speakWord.exampleNL || dutchWithArticle(speakWord);
+  // Speaking (2)
+  const speakWords = shuffle(lessonWords).slice(0, 2);
+  speakWords.forEach((word) => {
+    const text = word.exampleNL || dutchWithArticle(word);
     exercises.push({
       type: 'speaking',
       text,
-      translation: speakWord.exampleEN || speakWord.english,
+      translation: word.exampleEN || word.english,
     });
-  }
+  });
 
   return exercises;
+}
+
+function generateReviewExercises(mistakeWordIds) {
+  const reviewExercises = [{ type: 'review_header' }];
+  const uniqueIds = [...new Set(mistakeWordIds)];
+  const allWordsList = Object.values(allVocab);
+
+  uniqueIds.forEach((wordId) => {
+    const word = allVocab[wordId];
+    if (!word) return;
+
+    const otherOptions = allWordsList
+      .filter((w) => w.id !== word.id)
+      .map((w) => w.english);
+    reviewExercises.push({
+      type: 'multiple_choice',
+      question: `What does "${dutchWithArticle(word)}" mean?`,
+      options: shuffle([word.english, ...shuffle(otherOptions).slice(0, 3)]),
+      correctAnswer: word.english,
+      wordId: word.id,
+      isReview: true,
+    });
+  });
+
+  return reviewExercises;
 }
 
 export default function Lesson() {
@@ -221,15 +265,17 @@ export default function Lesson() {
   const completeSpeakingGoal = useProgress((s) => s.completeSpeakingGoal);
 
   const lesson = useMemo(() => getLessonData(lessonId), [lessonId]);
-  const exercises = useMemo(() => generateExercises(lesson), [lesson]);
+  const [exercises, setExercises] = useState(() => generateExercises(lesson));
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
   const [mistakeCount, setMistakeCount] = useState(0);
   const [wordsIntroduced, setWordsIntroduced] = useState(0);
-  const [feedback, setFeedback] = useState(null); // { type: 'correct'|'incorrect', message }
+  const [feedback, setFeedback] = useState(null);
   const [isComplete, setIsComplete] = useState(false);
   const [mistakeIds, setMistakeIds] = useState([]);
+  const [correctStreak, setCorrectStreak] = useState(0);
+  const [reviewAdded, setReviewAdded] = useState(false);
   const advanceTimerRef = useRef(null);
 
   useEffect(() => {
@@ -238,7 +284,8 @@ export default function Lesson() {
       endSession();
       if (advanceTimerRef.current) clearTimeout(advanceTimerRef.current);
     };
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Run only on mount/unmount — store actions are stable
 
   const currentExercise = exercises[currentIndex];
   const progress = exercises.length > 0
@@ -246,14 +293,19 @@ export default function Lesson() {
     : 0;
 
   const handleNext = useCallback(() => {
-    // Cancel any pending auto-advance to prevent double-calls
     if (advanceTimerRef.current) {
       clearTimeout(advanceTimerRef.current);
       advanceTimerRef.current = null;
     }
     setFeedback(null);
     if (currentIndex + 1 >= exercises.length) {
-      if (!isComplete) {
+      // Add review round for mistakes before completing
+      if (mistakeIds.length > 0 && !reviewAdded) {
+        const reviewExs = generateReviewExercises(mistakeIds);
+        setExercises((prev) => [...prev, ...reviewExs]);
+        setReviewAdded(true);
+        setCurrentIndex((i) => i + 1);
+      } else if (!isComplete) {
         const totalQuestions = correctCount + mistakeCount;
         const accuracy = totalQuestions > 0 ? Math.round((correctCount / totalQuestions) * 100) : 100;
         const xp = calculateLessonXP({
@@ -266,19 +318,41 @@ export default function Lesson() {
         setIsComplete(true);
       }
     } else {
-      // Guard: never increment past the last exercise
       setCurrentIndex((i) => Math.min(i + 1, exercises.length - 1));
     }
-  }, [currentIndex, exercises.length, correctCount, mistakeCount, lessonId, isComplete, completeLesson, recordActivity]);
+  }, [currentIndex, exercises.length, correctCount, mistakeCount, lessonId, isComplete, completeLesson, recordActivity, mistakeIds, reviewAdded]);
 
   const handleAnswer = useCallback(
     (isCorrect, wordId) => {
       if (isCorrect) {
+        const newStreak = correctStreak + 1;
+        setCorrectStreak(newStreak);
         setCorrectCount((c) => c + 1);
-        setFeedback({ type: 'correct', message: getEncouragement() });
+
+        // Streak milestones and progress messages
+        let message = getEncouragement();
+        if (newStreak === 3) message = '3 in a row! Lekker bezig!';
+        else if (newStreak === 5) message = '5 streak! Je bent on fire!';
+        else if (newStreak === 7) message = '7 in a row! Ongelooflijk!';
+        else if (newStreak >= 10 && newStreak % 5 === 0) message = `${newStreak} streak! Superster!`;
+
+        // Progress milestones
+        const pct = (currentIndex + 1) / exercises.length;
+        if (pct >= 0.48 && pct < 0.55) message += ' Halfway there!';
+        else if (pct >= 0.88 && pct < 0.95) message += ' Almost done!';
+
+        setFeedback({ type: 'correct', message });
       } else {
+        setCorrectStreak(0);
         setMistakeCount((m) => m + 1);
-        setFeedback({ type: 'incorrect', message: getGentleCorrection() });
+
+        // Specific corrective feedback with correct answer
+        let message = getGentleCorrection();
+        if (currentExercise?.correctAnswer) {
+          message = `The answer is "${currentExercise.correctAnswer}". ${message}`;
+        }
+        setFeedback({ type: 'incorrect', message });
+
         if (wordId) {
           setMistakeIds((ids) => [...ids, wordId]);
           addSRSItem(wordId, 'vocabulary');
@@ -300,15 +374,13 @@ export default function Lesson() {
         recordExercise(isCorrect, currentExercise?.type || 'unknown');
       }
 
-      // Mark speaking goal complete when a speaking exercise is done
       if (currentExercise?.type === 'speaking') {
         completeSpeakingGoal();
       }
 
-      // Auto-advance after delay — use ref so it can be cancelled
       advanceTimerRef.current = setTimeout(handleNext, isCorrect ? 1200 : 2500);
     },
-    [currentExercise, handleNext, lessonId, recordExercise, addSRSItem, recordMistake, completeSpeakingGoal]
+    [currentExercise, handleNext, lessonId, recordExercise, addSRSItem, recordMistake, completeSpeakingGoal, correctStreak, currentIndex, exercises.length]
   );
 
   const handleWordIntro = useCallback(
@@ -397,6 +469,27 @@ export default function Lesson() {
                 onNext={handleNext}
               />
             )}
+            {currentExercise?.type === 'review_header' && (
+              <div className="text-center py-8">
+                <motion.div
+                  initial={{ scale: 0.8 }}
+                  animate={{ scale: 1 }}
+                  className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-warning/10 mb-4"
+                >
+                  <RefreshCw size={28} className="text-warning" />
+                </motion.div>
+                <h2 className="font-display text-2xl text-charcoal mb-2">Review Round</h2>
+                <p className="text-charcoal/60 mb-6">
+                  Let's go over the words you missed
+                </p>
+                <button
+                  onClick={handleNext}
+                  className="w-full bg-primary text-white font-semibold py-3 rounded-xl"
+                >
+                  Let's go!
+                </button>
+              </div>
+            )}
             {currentExercise?.type === 'multiple_choice' && (
               <MultipleChoice
                 question={currentExercise.question}
@@ -405,6 +498,7 @@ export default function Lesson() {
                 onAnswer={(correct) =>
                   handleAnswer(correct, currentExercise.wordId)
                 }
+                type={currentExercise.direction === 'english-to-dutch' ? 'english-to-dutch' : 'dutch-to-english'}
               />
             )}
             {currentExercise?.type === 'fill_blank' && (

@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback, useEffect } from 'react';
+import { useState, useMemo, useCallback, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, Shuffle } from 'lucide-react';
 import { shuffle } from '../utils/dutch';
@@ -53,9 +53,11 @@ export default function MatchPairs({ pairs, onComplete }) {
     }
   }, [selectedDutch, selectedEnglish, pairs]);
 
-  // Check for completion
+  // Check for completion — use ref to prevent firing multiple times
+  const completedRef = useRef(false);
   useEffect(() => {
-    if (matchedPairs.length === pairs.length && pairs.length > 0) {
+    if (matchedPairs.length === pairs.length && pairs.length > 0 && !completedRef.current) {
+      completedRef.current = true;
       if (onComplete) {
         setTimeout(() => {
           onComplete(mistakes);

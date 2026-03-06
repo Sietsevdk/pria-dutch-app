@@ -22,6 +22,14 @@ import useMistakes from '../hooks/useMistakes';
 import { getLevel, LEVELS } from '../utils/xp';
 import { calculateAccuracy } from '../utils/xp';
 
+// Load vocabulary for Focus Mode distractors
+const vocabModules = import.meta.glob('../data/vocabulary/*.json', { eager: true });
+const allVocabWords = [];
+Object.values(vocabModules).forEach((mod) => {
+  const data = mod.default || mod;
+  if (data.words) allVocabWords.push(...data.words);
+});
+
 export default function Profile() {
   const totalXP = useProgress((s) => s.totalXP);
   const totalWordsLearned = useProgress((s) => s.totalWordsLearned);
@@ -120,10 +128,20 @@ export default function Profile() {
     }).slice(0, 10);
     // Generate multiple choice options for each exercise
     const exercises = unique.map((ex) => {
-      const wrongOptions = ['de', 'het', 'een', 'die', 'dat', 'dit', 'deze']
-        .filter((o) => o !== ex.correctAnswer)
+      // Generate plausible wrong options from the vocabulary pool
+      const wrongOptions = allVocabWords
+        .filter((w) => w.dutch !== ex.correctAnswer && w.id !== ex.correctAnswer && w.english !== ex.correctAnswer)
+        .map((w) => w.dutch || w.english)
         .sort(() => Math.random() - 0.5)
         .slice(0, 3);
+      // Fallback if not enough vocab words
+      if (wrongOptions.length < 3) {
+        const fallbacks = ['de', 'het', 'een', 'die', 'dat', 'dit', 'deze']
+          .filter((o) => o !== ex.correctAnswer);
+        while (wrongOptions.length < 3 && fallbacks.length > 0) {
+          wrongOptions.push(fallbacks.pop());
+        }
+      }
       const options = [ex.correctAnswer, ...wrongOptions].sort(() => Math.random() - 0.5);
       return { ...ex, options };
     });

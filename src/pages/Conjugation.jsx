@@ -394,7 +394,7 @@ function PracticeMode() {
     if (!tenseData) {
       // Try another random verb, but limit retries to avoid infinite recursion
       const fallbackVerb = verbList.find((v) => {
-        const d = v.tenses?.[selectedTense];
+        const d = v.conjugations?.[selectedTense];
         return d && PRONOUNS.some((p) => d[p]);
       });
       if (!fallbackVerb) return { verb, tense: selectedTense, pronoun: 'ik', correctAnswer: verb.infinitive, displayPrompt: `${verb.infinitive} (${selectedTense})` };

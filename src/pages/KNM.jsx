@@ -192,8 +192,8 @@ function CategoryQuiz({ category, onBack, onComplete, previousResult }) {
   const handleNext = () => {
     if (currentIndex + 1 >= totalQuestions) {
       setShowResults(true);
-      onComplete(category.id, score + (selectedOption === currentQuestion.correct ? 0 : 0), totalQuestions, wrongAnswers);
-      // Note: score already updated via handleSelectOption
+      const finalScore = totalQuestions - wrongAnswers.length - (selectedOption !== currentQuestion.correct ? 1 : 0);
+      onComplete(category.id, Math.max(0, finalScore), totalQuestions, wrongAnswers);
       return;
     }
 
@@ -213,7 +213,7 @@ function CategoryQuiz({ category, onBack, onComplete, previousResult }) {
 
   // Results screen
   if (showResults) {
-    const finalScore = score;
+    const finalScore = totalQuestions - wrongAnswers.length;
     const percentage = totalQuestions > 0 ? Math.round((finalScore / totalQuestions) * 100) : 0;
     const passed = percentage >= 70;
 
