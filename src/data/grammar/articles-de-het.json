@@ -1,0 +1,151 @@
+{
+  "topic": "articles-de-het",
+  "topicNL": "Lidwoorden: de en het",
+  "explanation": {
+    "summary": "Het Nederlands heeft twee bepaalde lidwoorden: 'de' voor mannelijke en vrouwelijke woorden (de-woorden) en 'het' voor onzijdige woorden (het-woorden). Het onbepaalde lidwoord is altijd 'een' voor beide groepen.",
+    "rules": [
+      "Ongeveer twee derde van alle Nederlandse zelfstandige naamwoorden zijn de-woorden.",
+      "Alle meervouden krijgen het lidwoord 'de', ook als het enkelvoud een het-woord is (het huis → de huizen).",
+      "Verkleinwoorden (woorden op -je, -tje, -pje, -etje, -mpje) zijn altijd het-woorden (het huisje, het kopje).",
+      "Woorden met het voorvoegsel ge- die een verzameling of resultaat aanduiden zijn meestal het-woorden (het geluid, het gevoel, het gebied).",
+      "Talen zijn het-woorden (het Nederlands, het Engels, het Frans).",
+      "Metalen zijn het-woorden (het goud, het zilver, het ijzer).",
+      "Sporten en spellen zijn het-woorden (het voetbal, het tennis, het schaken).",
+      "Windrichtingen zijn het-woorden (het noorden, het zuiden, het oosten, het westen).",
+      "Woorden op -isme zijn het-woorden (het kapitalisme, het toerisme).",
+      "Woorden op -ment zijn het-woorden (het moment, het appartement, het document).",
+      "De meeste tweelettergrepige woorden die beginnen met be-, ge-, ver-, ont- zijn het-woorden (het begin, het verhaal, het gebruik).",
+      "Woorden op -sel zijn het-woorden (het voedsel, het raadsel, het deksel).",
+      "Personen zijn bijna altijd de-woorden (de man, de vrouw, de leraar), behalve het kind en het meisje."
+    ],
+    "exceptions": [
+      "'Het meisje' is een het-woord, hoewel het een persoon aanduidt (vanwege het verkleinwoord -je).",
+      "'Het kind' is een het-woord, hoewel het een persoon aanduidt.",
+      "Sommige woorden kunnen zowel de als het krijgen, maar dit is zeldzaam (de/het aanrecht).",
+      "Leenwoorden volgen niet altijd de standaardregels (de computer, de telefoon).",
+      "'Het hoofd' (het lichaamsdeel) versus 'de hoofden' (de leiders).",
+      "Sommige ge-woorden zijn toch de-woorden: de gemeente, de geschiedenis, de gelegenheid, de gedachte."
+    ],
+    "commonMistakes": [
+      "'De meisje' is fout - het moet 'het meisje' zijn, want het is een verkleinwoord (-je).",
+      "'Het boek' vergeten en 'de boek' zeggen - boek is een het-woord.",
+      "In het meervoud altijd 'de' gebruiken: 'de boeken' (niet 'het boeken').",
+      "'De water' is fout - het moet 'het water' zijn.",
+      "'De kind' is fout - het moet 'het kind' zijn.",
+      "Vergeten dat verkleinwoorden altijd 'het' krijgen: 'het tafeltje', niet 'de tafeltje'."
+    ],
+    "tip": "Als je twijfelt, gok dan 'de' - twee van de drie Nederlandse woorden zijn de-woorden! Leer de het-woord patronen (verkleinwoorden, ge- woorden, talen, metalen, sporten) en je hebt al een groot deel onder de knie.",
+    "commonHetWords": [
+      "het huis", "het boek", "het kind", "het meisje", "het water",
+      "het brood", "het eten", "het werk", "het jaar", "het land",
+      "het probleem", "het woord", "het voorbeeld", "het geld", "het lichaam",
+      "het hoofd", "het oog", "het oor", "het been", "het hart",
+      "het weer", "het nummer", "het moment", "het leven", "het verschil",
+      "het gevoel", "het geluid", "het gebied", "het begin", "het einde",
+      "het systeem", "het station", "het vliegveld", "het ziekenhuis", "het museum",
+      "het kantoor", "het restaurant", "het verkeer", "het dier", "het paard",
+      "het raam", "het bed", "het dak", "het bord", "het glas",
+      "het park", "het strand", "het bos", "het eiland", "het punt"
+    ]
+  },
+  "exercises": [
+    {
+      "type": "multiple_choice",
+      "sentence": "___ huis is groot.",
+      "options": ["de", "het", "een de", "geen"],
+      "answer": "het",
+      "explanation": "'Huis' is een het-woord. Je moet het dus onthouden: het huis."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "___ vrouw loopt in het park.",
+      "options": ["het", "de", "een het", "geen"],
+      "answer": "de",
+      "explanation": "'Vrouw' is een de-woord. Personen zijn bijna altijd de-woorden."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "___ kinderen spelen buiten.",
+      "answer": "De",
+      "explanation": "In het meervoud gebruiken we altijd 'de', ook al is het enkelvoud 'het kind'."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "___ meisje leest een boek.",
+      "options": ["de", "het", "een", "die"],
+      "answer": "het",
+      "explanation": "'Meisje' is een verkleinwoord (het eindigt op -je), dus het is altijd een het-woord."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Ik drink ___ water.",
+      "answer": "het",
+      "explanation": "'Water' is een het-woord: het water."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "___ Nederlands is niet zo moeilijk.",
+      "options": ["de", "het", "een", "dit"],
+      "answer": "het",
+      "explanation": "Talen zijn altijd het-woorden: het Nederlands, het Engels, het Frans."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "___ voetbal is populair in Nederland.",
+      "answer": "Het",
+      "explanation": "Sporten zijn het-woorden: het voetbal, het tennis."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "___ goud is duur.",
+      "options": ["de", "het", "een", "geen"],
+      "answer": "het",
+      "explanation": "Metalen zijn het-woorden: het goud, het zilver, het ijzer."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "___ man werkt op ___ kantoor.",
+      "answer": "De, het",
+      "explanation": "'Man' is een de-woord (persoon). 'Kantoor' is een het-woord."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "___ gevoel is goed.",
+      "options": ["de", "het", "een de", "die"],
+      "answer": "het",
+      "explanation": "Woorden met het voorvoegsel ge- die een resultaat aanduiden zijn meestal het-woorden: het gevoel."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "___ hondje van de buren is lief.",
+      "answer": "Het",
+      "explanation": "'Hondje' is een verkleinwoord (-je), dus het is een het-woord: het hondje."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "___ noorden van Nederland is vlak.",
+      "options": ["de", "het", "een", "dit"],
+      "answer": "het",
+      "explanation": "Windrichtingen zijn het-woorden: het noorden, het zuiden, het oosten, het westen."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "___ auto staat voor ___ huis.",
+      "answer": "De, het",
+      "explanation": "'Auto' is een de-woord. 'Huis' is een het-woord."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "___ stoelen staan in de kamer.",
+      "options": ["het", "de", "een", "dat"],
+      "answer": "de",
+      "explanation": "Meervouden krijgen altijd 'de', ook al is het enkelvoud 'de stoel' (wat al een de-woord is)."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "___ probleem is dat ___ trein te laat is.",
+      "answer": "Het, de",
+      "explanation": "'Probleem' is een het-woord. 'Trein' is een de-woord."
+    }
+  ]
+}

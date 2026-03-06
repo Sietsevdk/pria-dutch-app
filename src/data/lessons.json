@@ -1,0 +1,385 @@
+{
+  "phases": [
+    {
+      "id": "foundation",
+      "name": "Foundation",
+      "nameNL": "Basis",
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Greetings & Introductions",
+          "titleNL": "Begroetingen & Kennismaken",
+          "icon": "👋",
+          "description": "Learn to say hello and introduce yourself",
+          "vocabularyTopics": ["greetings"],
+          "grammarTopics": [],
+          "dialogueIds": [],
+          "exerciseCount": 18,
+          "xpReward": 50
+        },
+        {
+          "id": 2,
+          "title": "Numbers & Counting",
+          "titleNL": "Nummers & Tellen",
+          "icon": "🔢",
+          "description": "Learn numbers 0-100 and how to count",
+          "vocabularyTopics": ["numbers"],
+          "grammarTopics": [],
+          "dialogueIds": [],
+          "exerciseCount": 18,
+          "xpReward": 50
+        },
+        {
+          "id": 3,
+          "title": "Days, Months & Time",
+          "titleNL": "Dagen, Maanden & Tijd",
+          "icon": "📅",
+          "description": "Learn days of the week, months, and how to tell time",
+          "vocabularyTopics": ["time-dates"],
+          "grammarTopics": [],
+          "dialogueIds": [],
+          "exerciseCount": 20,
+          "xpReward": 50
+        },
+        {
+          "id": 4,
+          "title": "Family & People",
+          "titleNL": "Familie & Mensen",
+          "icon": "👨‍👩‍👧‍👦",
+          "description": "Learn words for family members and describing people",
+          "vocabularyTopics": ["family"],
+          "grammarTopics": ["pronouns"],
+          "dialogueIds": [],
+          "exerciseCount": 18,
+          "xpReward": 50
+        },
+        {
+          "id": 5,
+          "title": "Present Tense Verbs",
+          "titleNL": "Werkwoorden in de Tegenwoordige Tijd",
+          "icon": "📝",
+          "description": "Learn how to conjugate regular verbs in the present tense",
+          "vocabularyTopics": ["common_verbs"],
+          "grammarTopics": ["present-tense"],
+          "dialogueIds": [],
+          "exerciseCount": 20,
+          "xpReward": 60
+        },
+        {
+          "id": 6,
+          "title": "Food & Drinks",
+          "titleNL": "Eten & Drinken",
+          "icon": "🍽️",
+          "description": "Learn vocabulary for food, drinks, and eating out",
+          "vocabularyTopics": ["food-drink"],
+          "grammarTopics": [],
+          "dialogueIds": [],
+          "exerciseCount": 18,
+          "xpReward": 50
+        },
+        {
+          "id": 7,
+          "title": "Colors & Clothes",
+          "titleNL": "Kleuren & Kleding",
+          "icon": "👕",
+          "description": "Learn colors and clothing vocabulary",
+          "vocabularyTopics": ["clothing"],
+          "grammarTopics": ["adjectives"],
+          "dialogueIds": ["at-the-shop"],
+          "exerciseCount": 18,
+          "xpReward": 50
+        },
+        {
+          "id": 8,
+          "title": "Around the House",
+          "titleNL": "In en om het Huis",
+          "icon": "🏠",
+          "description": "Learn words for rooms, furniture, and household items",
+          "vocabularyTopics": ["housing"],
+          "grammarTopics": ["articles-de-het"],
+          "dialogueIds": [],
+          "exerciseCount": 20,
+          "xpReward": 50
+        },
+        {
+          "id": 9,
+          "title": "Weather & Seasons",
+          "titleNL": "Weer & Seizoenen",
+          "icon": "🌦️",
+          "description": "Learn to talk about the weather and seasons",
+          "vocabularyTopics": ["weather"],
+          "grammarTopics": [],
+          "dialogueIds": [],
+          "exerciseCount": 18,
+          "xpReward": 50
+        },
+        {
+          "id": 10,
+          "title": "Asking Questions",
+          "titleNL": "Vragen Stellen",
+          "icon": "❓",
+          "description": "Learn question words and how to form questions",
+          "vocabularyTopics": ["question_words"],
+          "grammarTopics": ["question-formation"],
+          "dialogueIds": [],
+          "exerciseCount": 20,
+          "xpReward": 60
+        }
+      ]
+    },
+    {
+      "id": "building-blocks",
+      "name": "Building Blocks",
+      "nameNL": "Bouwstenen",
+      "lessons": [
+        {
+          "id": 11,
+          "title": "Shopping & Prices",
+          "titleNL": "Winkelen & Prijzen",
+          "icon": "🛒",
+          "description": "Learn to shop and discuss prices in Dutch",
+          "vocabularyTopics": ["shopping"],
+          "grammarTopics": ["comparatives"],
+          "dialogueIds": ["at-the-shop"],
+          "exerciseCount": 20,
+          "xpReward": 60
+        },
+        {
+          "id": 12,
+          "title": "Directions & Places",
+          "titleNL": "Richtingen & Plaatsen",
+          "icon": "🗺️",
+          "description": "Learn to give and understand directions",
+          "vocabularyTopics": ["directions"],
+          "grammarTopics": ["prepositions"],
+          "dialogueIds": [],
+          "exerciseCount": 20,
+          "xpReward": 60
+        },
+        {
+          "id": 13,
+          "title": "Public Transport",
+          "titleNL": "Openbaar Vervoer",
+          "icon": "🚆",
+          "description": "Learn to navigate trains, buses, and trams",
+          "vocabularyTopics": ["transport"],
+          "grammarTopics": ["modal-verbs"],
+          "dialogueIds": ["public-transport"],
+          "exerciseCount": 20,
+          "xpReward": 60
+        },
+        {
+          "id": 14,
+          "title": "Health & Body",
+          "titleNL": "Gezondheid & Lichaam",
+          "icon": "🏥",
+          "description": "Learn body parts and health-related vocabulary",
+          "vocabularyTopics": ["health"],
+          "grammarTopics": [],
+          "dialogueIds": ["at-the-doctor"],
+          "exerciseCount": 20,
+          "xpReward": 60
+        },
+        {
+          "id": 15,
+          "title": "Past Tense",
+          "titleNL": "De Verleden Tijd",
+          "icon": "⏪",
+          "description": "Learn to talk about the past using the perfect tense",
+          "vocabularyTopics": [],
+          "grammarTopics": ["perfect-tense", "past-tense"],
+          "dialogueIds": [],
+          "exerciseCount": 22,
+          "xpReward": 70
+        },
+        {
+          "id": 16,
+          "title": "Daily Routines",
+          "titleNL": "Dagelijkse Routine",
+          "icon": "⏰",
+          "description": "Learn to describe your daily activities and schedule",
+          "vocabularyTopics": ["daily-routine"],
+          "grammarTopics": ["separable-verbs"],
+          "dialogueIds": [],
+          "exerciseCount": 20,
+          "xpReward": 60
+        },
+        {
+          "id": 17,
+          "title": "Making Appointments",
+          "titleNL": "Afspraken Maken",
+          "icon": "📞",
+          "description": "Learn to make and manage appointments by phone and in person",
+          "vocabularyTopics": ["appointments"],
+          "grammarTopics": [],
+          "dialogueIds": ["phone-call"],
+          "exerciseCount": 18,
+          "xpReward": 60
+        },
+        {
+          "id": 18,
+          "title": "Hobbies & Free Time",
+          "titleNL": "Hobby's & Vrije Tijd",
+          "icon": "⚽",
+          "description": "Learn to talk about hobbies and leisure activities",
+          "vocabularyTopics": ["hobbies"],
+          "grammarTopics": [],
+          "dialogueIds": [],
+          "exerciseCount": 18,
+          "xpReward": 60
+        },
+        {
+          "id": 19,
+          "title": "Describing Things",
+          "titleNL": "Dingen Beschrijven",
+          "icon": "🎨",
+          "description": "Learn adjectives and how to describe objects and situations",
+          "vocabularyTopics": ["adjectives"],
+          "grammarTopics": ["adjectives", "comparatives"],
+          "dialogueIds": [],
+          "exerciseCount": 20,
+          "xpReward": 60
+        },
+        {
+          "id": 20,
+          "title": "Feelings & Opinions",
+          "titleNL": "Gevoelens & Meningen",
+          "icon": "💭",
+          "description": "Learn to express feelings and give your opinion",
+          "vocabularyTopics": ["feelings"],
+          "grammarTopics": ["conjunctions"],
+          "dialogueIds": [],
+          "exerciseCount": 20,
+          "xpReward": 70
+        }
+      ]
+    },
+    {
+      "id": "real-life",
+      "name": "Real Life",
+      "nameNL": "Het Echte Leven",
+      "lessons": [
+        {
+          "id": 21,
+          "title": "At the Municipality",
+          "titleNL": "Bij de Gemeente",
+          "icon": "🏛️",
+          "description": "Learn to handle official matters at the gemeente",
+          "vocabularyTopics": ["government"],
+          "grammarTopics": ["word-order"],
+          "dialogueIds": ["at-the-gemeente"],
+          "exerciseCount": 20,
+          "xpReward": 70
+        },
+        {
+          "id": 22,
+          "title": "Work & Job Applications",
+          "titleNL": "Werk & Solliciteren",
+          "icon": "💼",
+          "description": "Learn vocabulary for the workplace and job interviews",
+          "vocabularyTopics": ["work"],
+          "grammarTopics": [],
+          "dialogueIds": ["job-interview"],
+          "exerciseCount": 20,
+          "xpReward": 70
+        },
+        {
+          "id": 23,
+          "title": "Banking & Money",
+          "titleNL": "Bankzaken & Geld",
+          "icon": "🏦",
+          "description": "Learn to manage banking and financial matters in Dutch",
+          "vocabularyTopics": ["banking"],
+          "grammarTopics": [],
+          "dialogueIds": ["at-the-bank"],
+          "exerciseCount": 18,
+          "xpReward": 70
+        },
+        {
+          "id": 24,
+          "title": "Housing & Renting",
+          "titleNL": "Wonen & Huren",
+          "icon": "🔑",
+          "description": "Learn about finding housing and rental terms in the Netherlands",
+          "vocabularyTopics": ["housing"],
+          "grammarTopics": ["negation"],
+          "dialogueIds": [],
+          "exerciseCount": 20,
+          "xpReward": 70
+        },
+        {
+          "id": 25,
+          "title": "Social Life & Neighbors",
+          "titleNL": "Sociaal Leven & Buren",
+          "icon": "🤝",
+          "description": "Learn to make small talk, meet neighbors, and socialize",
+          "vocabularyTopics": ["social"],
+          "grammarTopics": [],
+          "dialogueIds": ["meeting-neighbors"],
+          "exerciseCount": 18,
+          "xpReward": 70
+        },
+        {
+          "id": 26,
+          "title": "School & Education",
+          "titleNL": "School & Onderwijs",
+          "icon": "🎓",
+          "description": "Learn about the Dutch school system and communicate with teachers",
+          "vocabularyTopics": ["education"],
+          "grammarTopics": [],
+          "dialogueIds": [],
+          "exerciseCount": 18,
+          "xpReward": 70
+        },
+        {
+          "id": 27,
+          "title": "Writing Letters & Emails",
+          "titleNL": "Brieven & E-mails Schrijven",
+          "icon": "✉️",
+          "description": "Learn formal and informal writing conventions in Dutch",
+          "vocabularyTopics": ["correspondence"],
+          "grammarTopics": ["word-order"],
+          "dialogueIds": [],
+          "exerciseCount": 20,
+          "xpReward": 70
+        },
+        {
+          "id": 28,
+          "title": "Dutch Culture & Traditions",
+          "titleNL": "Nederlandse Cultuur & Tradities",
+          "icon": "🧡",
+          "description": "Learn about Dutch holidays, traditions, and cultural norms",
+          "vocabularyTopics": ["culture"],
+          "grammarTopics": [],
+          "dialogueIds": [],
+          "exerciseCount": 18,
+          "xpReward": 70
+        },
+        {
+          "id": 29,
+          "title": "Future Plans",
+          "titleNL": "Toekomstplannen",
+          "icon": "🔮",
+          "description": "Learn to talk about the future and make plans",
+          "vocabularyTopics": ["future"],
+          "grammarTopics": ["modal-verbs"],
+          "dialogueIds": [],
+          "exerciseCount": 20,
+          "xpReward": 70
+        },
+        {
+          "id": 30,
+          "title": "Exam Preparation",
+          "titleNL": "Examenvoorbereiding",
+          "icon": "🎯",
+          "description": "Review and practice for the inburgeringsexamen",
+          "vocabularyTopics": ["exam"],
+          "grammarTopics": [],
+          "dialogueIds": ["at-the-gemeente", "at-the-doctor", "job-interview", "phone-call"],
+          "exerciseCount": 25,
+          "xpReward": 100
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,312 @@
+{
+  "prompts": [
+    {
+      "id": "prac_write_001",
+      "difficulty": 1,
+      "category": "school",
+      "situation": "Your child is sick and cannot go to school today. Write a note to the teacher to let them know.",
+      "prompt": "Uw kind is ziek en kan vandaag niet naar school. Schrijf een briefje aan de juf om dit te melden.",
+      "wordCount": { "min": 30, "max": 50 },
+      "tips": [
+        "Begin with a greeting to the teacher.",
+        "Explain that your child is sick.",
+        "Mention what illness or symptoms they have.",
+        "End with a polite closing."
+      ],
+      "usefulPhrases": [
+        { "dutch": "Ik wil u laten weten dat...", "english": "I want to let you know that..." },
+        { "dutch": "Hij/Zij is vandaag ziek.", "english": "He/She is sick today." },
+        { "dutch": "Ik hoop dat hij/zij morgen weer beter is.", "english": "I hope he/she will be better tomorrow." }
+      ],
+      "modelAnswer": "Beste juf Van Dam,\n\nIk wil u laten weten dat mijn zoon Ahmed vandaag niet naar school kan komen. Hij is ziek. Hij heeft koorts en hoest veel. Ik hoop dat hij morgen weer beter is en naar school kan komen.\n\nMet vriendelijke groet,\nFatima Yilmaz"
+    },
+    {
+      "id": "prac_write_002",
+      "difficulty": 1,
+      "category": "social",
+      "situation": "You want to invite your neighbor to come over for coffee this weekend. Write a short note.",
+      "prompt": "U wilt uw buurvrouw uitnodigen om dit weekend koffie te komen drinken. Schrijf een kort briefje.",
+      "wordCount": { "min": 30, "max": 50 },
+      "tips": [
+        "Begin with a friendly greeting.",
+        "Explain that you would like to invite them.",
+        "Suggest a day and time.",
+        "End with a warm closing."
+      ],
+      "usefulPhrases": [
+        { "dutch": "Ik wil u graag uitnodigen voor...", "english": "I would like to invite you for..." },
+        { "dutch": "Heeft u zin om...", "english": "Would you like to..." },
+        { "dutch": "Ik hoop dat u kunt komen.", "english": "I hope you can come." }
+      ],
+      "modelAnswer": "Beste mevrouw De Vries,\n\nIk wil u graag uitnodigen om zaterdag koffie bij mij te komen drinken. Heeft u zin om rond twee uur langs te komen? Ik heb ook lekkere koekjes. Ik hoop dat u kunt komen!\n\nVriendelijke groet,\nAmina Hassan"
+    },
+    {
+      "id": "prac_write_003",
+      "difficulty": 1,
+      "category": "health",
+      "situation": "You need to cancel your doctor's appointment because you have to work. Write a short message to the doctor's office.",
+      "prompt": "U moet uw afspraak bij de huisarts afzeggen omdat u moet werken. Schrijf een kort bericht aan de huisartsenpraktijk.",
+      "wordCount": { "min": 30, "max": 50 },
+      "tips": [
+        "Begin with a polite greeting.",
+        "State clearly which appointment you want to cancel.",
+        "Give the reason for cancellation.",
+        "Ask if you can make a new appointment."
+      ],
+      "usefulPhrases": [
+        { "dutch": "Ik wil graag mijn afspraak afzeggen.", "english": "I would like to cancel my appointment." },
+        { "dutch": "Helaas kan ik niet komen omdat...", "english": "Unfortunately I cannot come because..." },
+        { "dutch": "Kan ik een nieuwe afspraak maken?", "english": "Can I make a new appointment?" }
+      ],
+      "modelAnswer": "Geachte medewerker,\n\nIk wil graag mijn afspraak op dinsdag 10 maart om 14.00 uur afzeggen. Helaas kan ik niet komen omdat ik die dag moet werken. Kan ik een nieuwe afspraak maken voor een andere dag?\n\nMet vriendelijke groet,\nKarim Benali"
+    },
+    {
+      "id": "prac_write_004",
+      "difficulty": 1,
+      "category": "cancellation",
+      "situation": "You signed up for a Dutch language course but you cannot attend anymore. Write to the language school to cancel your registration.",
+      "prompt": "U heeft zich ingeschreven voor een cursus Nederlands, maar u kunt niet meer komen. Schrijf een bericht aan de taalschool om u af te melden.",
+      "wordCount": { "min": 30, "max": 50 },
+      "tips": [
+        "Begin with a formal greeting.",
+        "State clearly that you want to cancel.",
+        "Give a short reason.",
+        "Thank them and close politely."
+      ],
+      "usefulPhrases": [
+        { "dutch": "Ik wil mij graag afmelden voor...", "english": "I would like to unregister from..." },
+        { "dutch": "Dit is helaas niet meer mogelijk voor mij.", "english": "Unfortunately this is no longer possible for me." },
+        { "dutch": "Bedankt voor uw begrip.", "english": "Thank you for your understanding." }
+      ],
+      "modelAnswer": "Geachte mevrouw Jansen,\n\nIk wil mij graag afmelden voor de cursus Nederlands op maandagavond. Ik heb een nieuwe baan gevonden en moet 's avonds werken. Daarom kan ik helaas niet meer komen. Bedankt voor uw begrip.\n\nMet vriendelijke groet,\nSara Ahmadi"
+    },
+    {
+      "id": "prac_write_005",
+      "difficulty": 1,
+      "category": "school",
+      "situation": "Your child's school is organizing a trip and you need to give permission. Write a note to the teacher giving your permission.",
+      "prompt": "De school van uw kind organiseert een uitje. Schrijf een briefje aan de leerkracht om toestemming te geven.",
+      "wordCount": { "min": 30, "max": 50 },
+      "tips": [
+        "Begin with a greeting.",
+        "State clearly that you give permission.",
+        "Mention your child's name and class.",
+        "End with a polite closing."
+      ],
+      "usefulPhrases": [
+        { "dutch": "Hierbij geef ik toestemming voor...", "english": "I hereby give permission for..." },
+        { "dutch": "Mijn zoon/dochter zit in groep...", "english": "My son/daughter is in group..." },
+        { "dutch": "Als er vragen zijn, kunt u mij bellen.", "english": "If there are questions, you can call me." }
+      ],
+      "modelAnswer": "Beste meneer De Groot,\n\nHierbij geef ik toestemming voor het schooluitje op vrijdag 20 maart. Mijn dochter Yasmin zit in groep 5. Als er vragen zijn, kunt u mij bellen op 06-12345678.\n\nMet vriendelijke groet,\nNadia El Amrani"
+    },
+    {
+      "id": "prac_write_006",
+      "difficulty": 2,
+      "category": "work",
+      "situation": "You want to apply for a part-time cleaning job that you saw advertised in a supermarket. Write a short letter expressing your interest.",
+      "prompt": "U heeft een vacature gezien voor een schoonmaakbaan. Schrijf een korte brief om te solliciteren.",
+      "wordCount": { "min": 30, "max": 50 },
+      "tips": [
+        "Begin with a formal greeting.",
+        "State which job you are interested in.",
+        "Mention relevant experience briefly.",
+        "Say you are available for an interview."
+      ],
+      "usefulPhrases": [
+        { "dutch": "Ik schrijf u naar aanleiding van...", "english": "I am writing to you regarding..." },
+        { "dutch": "Ik heb ervaring met...", "english": "I have experience with..." },
+        { "dutch": "Ik ben beschikbaar voor een gesprek.", "english": "I am available for an interview." },
+        { "dutch": "Ik hoor graag van u.", "english": "I look forward to hearing from you." }
+      ],
+      "modelAnswer": "Geachte heer/mevrouw,\n\nIk schrijf u naar aanleiding van de vacature voor schoonmaker. Ik heb twee jaar ervaring met schoonmaakwerk. Ik kan op maandag, woensdag en vrijdag werken. Ik ben beschikbaar voor een gesprek. Ik hoor graag van u.\n\nMet vriendelijke groet,\nMohammed Al-Said"
+    },
+    {
+      "id": "prac_write_007",
+      "difficulty": 2,
+      "category": "housing",
+      "situation": "The heating in your apartment is broken. Write a letter to your landlord to report the problem and ask for it to be fixed.",
+      "prompt": "De verwarming in uw woning is kapot. Schrijf een brief aan uw verhuurder om het probleem te melden en te vragen om reparatie.",
+      "wordCount": { "min": 30, "max": 50 },
+      "tips": [
+        "Begin with a formal greeting.",
+        "Describe the problem clearly.",
+        "Say how long the problem has existed.",
+        "Ask politely for a quick repair."
+      ],
+      "usefulPhrases": [
+        { "dutch": "Ik schrijf u omdat er een probleem is met...", "english": "I am writing to you because there is a problem with..." },
+        { "dutch": "Het is al ... dagen kapot.", "english": "It has been broken for ... days." },
+        { "dutch": "Kunt u zo snel mogelijk iemand sturen?", "english": "Can you send someone as soon as possible?" },
+        { "dutch": "Het is erg koud in huis.", "english": "It is very cold in the house." }
+      ],
+      "modelAnswer": "Geachte meneer Bakker,\n\nIk schrijf u omdat de verwarming in mijn woning kapot is. Het is al vijf dagen koud in huis. Ik heb kleine kinderen en het is erg koud. Kunt u zo snel mogelijk iemand sturen om het te repareren?\n\nMet vriendelijke groet,\nFatou Diallo"
+    },
+    {
+      "id": "prac_write_008",
+      "difficulty": 2,
+      "category": "complaint",
+      "situation": "Your neighbors play loud music late at night. Write a polite note to ask them to be quieter.",
+      "prompt": "Uw buren maken 's avonds laat veel lawaai met luide muziek. Schrijf een beleefd briefje om te vragen of ze stiller willen zijn.",
+      "wordCount": { "min": 30, "max": 50 },
+      "tips": [
+        "Be polite but clear about the problem.",
+        "Explain how the noise affects you.",
+        "Suggest a solution or compromise.",
+        "End on a friendly note."
+      ],
+      "usefulPhrases": [
+        { "dutch": "Ik wil u vriendelijk vragen of...", "english": "I would like to kindly ask you if..." },
+        { "dutch": "Ik heb last van...", "english": "I am bothered by..." },
+        { "dutch": "Zou het mogelijk zijn om...", "english": "Would it be possible to..." },
+        { "dutch": "Ik hoop dat we er samen uitkomen.", "english": "I hope we can work it out together." }
+      ],
+      "modelAnswer": "Beste buren,\n\nIk wil u vriendelijk vragen of u 's avonds na tien uur de muziek wat zachter kunt zetten. Ik heb er veel last van omdat ik vroeg moet opstaan voor mijn werk. Ik hoop dat we er samen uitkomen.\n\nVriendelijke groet,\nuw buurman Ali"
+    },
+    {
+      "id": "prac_write_009",
+      "difficulty": 2,
+      "category": "work",
+      "situation": "You are sick and cannot go to work today. Write an email to your boss to let them know.",
+      "prompt": "U bent ziek en kunt vandaag niet werken. Schrijf een e-mail aan uw leidinggevende om u ziek te melden.",
+      "wordCount": { "min": 30, "max": 50 },
+      "tips": [
+        "Begin with a formal greeting.",
+        "Say clearly that you are sick.",
+        "Mention your symptoms briefly.",
+        "Say when you expect to be back."
+      ],
+      "usefulPhrases": [
+        { "dutch": "Ik wil mij graag ziek melden.", "english": "I would like to report in sick." },
+        { "dutch": "Ik ben helaas niet in staat om...", "english": "Unfortunately I am not able to..." },
+        { "dutch": "Ik hoop morgen weer te kunnen werken.", "english": "I hope to be able to work again tomorrow." }
+      ],
+      "modelAnswer": "Beste meneer Smit,\n\nIk wil mij graag ziek melden voor vandaag. Ik heb hoge koorts en hoofdpijn. Ik ben helaas niet in staat om te werken. Ik hoop morgen weer beter te zijn. Ik laat het u nog weten.\n\nMet vriendelijke groet,\nOmar Farhan"
+    },
+    {
+      "id": "prac_write_010",
+      "difficulty": 2,
+      "category": "invitation",
+      "situation": "You are organizing a birthday party for your child and want to invite a classmate. Write a note to the classmate's parents.",
+      "prompt": "U organiseert een verjaardagsfeestje voor uw kind. Schrijf een uitnodiging aan de ouders van een klasgenootje.",
+      "wordCount": { "min": 30, "max": 50 },
+      "tips": [
+        "Begin with a friendly greeting.",
+        "Say what the occasion is.",
+        "Give the date, time, and address.",
+        "Ask the parents to let you know if their child can come."
+      ],
+      "usefulPhrases": [
+        { "dutch": "Wij willen u en uw kind graag uitnodigen voor...", "english": "We would like to invite you and your child to..." },
+        { "dutch": "Het feestje is op ... om ... uur.", "english": "The party is on ... at ... o'clock." },
+        { "dutch": "Wilt u laten weten of ... kan komen?", "english": "Could you let us know if ... can come?" }
+      ],
+      "modelAnswer": "Beste ouders van Lucas,\n\nOnze dochter Layla wordt zaterdag 8 jaar! Wij willen Lucas graag uitnodigen voor haar verjaardagsfeestje. Het feestje is op zaterdag 15 maart van 14.00 tot 16.30 uur bij ons thuis. Wilt u laten weten of Lucas kan komen?\n\nVriendelijke groet,\nHanan en Youssef"
+    },
+    {
+      "id": "prac_write_011",
+      "difficulty": 2,
+      "category": "government",
+      "situation": "You have moved to a new address and need to inform the municipality. Write a letter to the gemeente to report your change of address.",
+      "prompt": "U bent verhuisd naar een nieuw adres. Schrijf een brief aan de gemeente om uw adreswijziging door te geven.",
+      "wordCount": { "min": 30, "max": 50 },
+      "tips": [
+        "Begin with a formal greeting.",
+        "State clearly that you have moved.",
+        "Include your old and new address.",
+        "Include your date of birth or BSN if needed."
+      ],
+      "usefulPhrases": [
+        { "dutch": "Hierbij wil ik u laten weten dat...", "english": "I hereby want to inform you that..." },
+        { "dutch": "Mijn oude adres was...", "english": "My old address was..." },
+        { "dutch": "Mijn nieuwe adres is...", "english": "My new address is..." },
+        { "dutch": "Mijn geboortedatum is...", "english": "My date of birth is..." }
+      ],
+      "modelAnswer": "Geachte mevrouw, heer,\n\nHierbij wil ik u laten weten dat ik ben verhuisd. Mijn oude adres was Kerkstraat 12 in Amsterdam. Mijn nieuwe adres is Molenweg 45 in Utrecht. Mijn geboortedatum is 5 juni 1990.\n\nMet vriendelijke groet,\nIbrahim Yilmaz"
+    },
+    {
+      "id": "prac_write_012",
+      "difficulty": 3,
+      "category": "complaint",
+      "situation": "You ordered a product online but received the wrong item. Write a formal complaint letter to the company asking for a replacement or refund.",
+      "prompt": "U heeft online iets besteld, maar u heeft een verkeerd product ontvangen. Schrijf een klachtbrief aan het bedrijf en vraag om een oplossing.",
+      "wordCount": { "min": 30, "max": 50 },
+      "tips": [
+        "Begin with a formal greeting.",
+        "State clearly what you ordered and what you received.",
+        "Include your order number if possible.",
+        "Ask for a specific solution: replacement or refund."
+      ],
+      "usefulPhrases": [
+        { "dutch": "Ik wil graag een klacht indienen over...", "english": "I would like to file a complaint about..." },
+        { "dutch": "Ik heb ... besteld, maar ik heb ... ontvangen.", "english": "I ordered ... but I received ..." },
+        { "dutch": "Ik wil graag mijn geld terug of een nieuw product.", "english": "I would like my money back or a new product." },
+        { "dutch": "Ik verwacht binnen ... dagen een reactie.", "english": "I expect a response within ... days." }
+      ],
+      "modelAnswer": "Geachte heer/mevrouw,\n\nIk wil graag een klacht indienen. Op 3 maart heb ik een blauwe jas besteld (bestelnummer 78234), maar ik heb een rode trui ontvangen. Ik wil graag het juiste product ontvangen of mijn geld terug. Ik verwacht binnen vijf dagen een reactie.\n\nMet vriendelijke groet,\nAisha Noor"
+    },
+    {
+      "id": "prac_write_013",
+      "difficulty": 3,
+      "category": "government",
+      "situation": "You received a letter from the municipality about a fine, but you believe it is a mistake. Write a formal letter to dispute the fine.",
+      "prompt": "U heeft een brief ontvangen van de gemeente over een boete, maar u denkt dat het een fout is. Schrijf een brief om bezwaar te maken.",
+      "wordCount": { "min": 30, "max": 50 },
+      "tips": [
+        "Begin with a very formal greeting.",
+        "Refer to the letter you received with the date.",
+        "Explain clearly why you think it is a mistake.",
+        "Ask them to reconsider the fine."
+      ],
+      "usefulPhrases": [
+        { "dutch": "Hierbij maak ik bezwaar tegen...", "english": "I hereby object to..." },
+        { "dutch": "Naar aanleiding van uw brief van...", "english": "In response to your letter of..." },
+        { "dutch": "Ik ben van mening dat dit een vergissing is.", "english": "I believe this is a mistake." },
+        { "dutch": "Ik verzoek u vriendelijk om...", "english": "I kindly request you to..." }
+      ],
+      "modelAnswer": "Geachte heer/mevrouw,\n\nNaar aanleiding van uw brief van 1 maart maak ik hierbij bezwaar tegen de boete van 95 euro. Op die dag was ik niet thuis, maar op mijn werk. Ik ben van mening dat dit een vergissing is. Ik verzoek u vriendelijk om de boete te annuleren.\n\nMet vriendelijke groet,\nYoussef El Bakali"
+    },
+    {
+      "id": "prac_write_014",
+      "difficulty": 3,
+      "category": "housing",
+      "situation": "You are moving out of your rental apartment and need to officially terminate your lease. Write a formal letter to your landlord giving notice.",
+      "prompt": "U gaat verhuizen en wilt uw huurcontract opzeggen. Schrijf een formele brief aan uw verhuurder om de huur op te zeggen.",
+      "wordCount": { "min": 30, "max": 50 },
+      "tips": [
+        "Begin with a formal greeting.",
+        "State clearly that you want to end the lease.",
+        "Mention the address and the desired end date.",
+        "Ask about the final inspection of the apartment."
+      ],
+      "usefulPhrases": [
+        { "dutch": "Hierbij zeg ik de huur op van...", "english": "I hereby give notice to terminate the lease of..." },
+        { "dutch": "Ik wil de huur beëindigen per...", "english": "I want to end the lease as of..." },
+        { "dutch": "Kunt u mij informeren over de oplevering?", "english": "Can you inform me about the final inspection?" },
+        { "dutch": "Ik woon op het adres...", "english": "I live at the address..." }
+      ],
+      "modelAnswer": "Geachte meneer Visser,\n\nHierbij zeg ik de huur op van mijn woning aan de Boslaan 22 in Den Haag. Ik wil de huur beëindigen per 1 mei 2026. Kunt u mij informeren over de datum van de oplevering? Ik dank u bij voorbaat.\n\nMet vriendelijke groet,\nMariam Touré"
+    },
+    {
+      "id": "prac_write_015",
+      "difficulty": 3,
+      "category": "health",
+      "situation": "You need to write to your child's school explaining that your child has a chronic illness and needs to take medication during school hours. Request a meeting to discuss arrangements.",
+      "prompt": "Uw kind heeft een chronische ziekte en moet op school medicijnen innemen. Schrijf een brief aan de school om dit uit te leggen en vraag om een gesprek.",
+      "wordCount": { "min": 30, "max": 50 },
+      "tips": [
+        "Begin with a formal greeting.",
+        "Explain the medical situation briefly.",
+        "State what your child needs during school hours.",
+        "Request a meeting to discuss the arrangements."
+      ],
+      "usefulPhrases": [
+        { "dutch": "Ik wil u graag informeren over...", "english": "I would like to inform you about..." },
+        { "dutch": "Mijn kind heeft ... en moet dagelijks medicijnen innemen.", "english": "My child has ... and needs to take medication daily." },
+        { "dutch": "Ik wil graag een afspraak maken om dit te bespreken.", "english": "I would like to make an appointment to discuss this." },
+        { "dutch": "Kunt u mij laten weten wanneer dit uitkomt?", "english": "Can you let me know when this suits you?" }
+      ],
+      "modelAnswer": "Geachte mevrouw Mulder,\n\nIk wil u graag informeren over de gezondheid van mijn zoon Amir in groep 6. Hij heeft diabetes en moet elke dag rond het middaguur medicijnen innemen. Ik wil graag een afspraak maken om dit te bespreken. Kunt u mij laten weten wanneer dit uitkomt?\n\nMet vriendelijke groet,\nLeila Haddad"
+    }
+  ]
+}

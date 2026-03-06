@@ -1,0 +1,118 @@
+{
+  "id": "at-the-gemeente",
+  "title": "Bij de gemeente",
+  "titleEN": "At the Municipality",
+  "context": "You have recently moved to the Netherlands and need to register at the gemeente (municipality) and ask about the inburgeringsexamen.",
+  "lines": [
+    {
+      "speaker": "Ambtenaar",
+      "dutch": "Goedemorgen. Welkom bij de gemeente. Heeft u een afspraak?",
+      "english": "Good morning. Welcome to the municipality. Do you have an appointment?"
+    },
+    {
+      "speaker": "Bewoner",
+      "dutch": "Ja, ik heb een afspraak om half elf. Ik wil mij graag inschrijven op mijn nieuwe adres.",
+      "english": "Yes, I have an appointment at half past ten. I would like to register at my new address.",
+      "note": "'Inschrijven' means 'to register'. 'Half elf' means 10:30 in Dutch."
+    },
+    {
+      "speaker": "Ambtenaar",
+      "dutch": "Prima. Dan heb ik een paar documenten van u nodig. Hebt u uw paspoort of identiteitsbewijs bij u?",
+      "english": "Great. Then I need a few documents from you. Do you have your passport or ID with you?",
+      "note": "'Bij u hebben' means 'to have with you'."
+    },
+    {
+      "speaker": "Bewoner",
+      "dutch": "Ja, hier is mijn paspoort. En ik heb ook mijn huurcontract meegenomen.",
+      "english": "Yes, here is my passport. And I have also brought my rental contract."
+    },
+    {
+      "speaker": "Ambtenaar",
+      "dutch": "Heel goed. Ik heb ook een geboorteakte nodig. Hebt u die bij u?",
+      "english": "Very good. I also need a birth certificate. Do you have that with you?"
+    },
+    {
+      "speaker": "Bewoner",
+      "dutch": "Ja, alstublieft. Het is vertaald en gelegaliseerd.",
+      "english": "Yes, here you are. It has been translated and legalized.",
+      "note": "Official documents from abroad usually need to be translated and legalized (apostilled)."
+    },
+    {
+      "speaker": "Ambtenaar",
+      "dutch": "Dank u wel. Ik schrijf u nu in bij de Basisregistratie Personen. Uw BSN-nummer ontvangt u binnen een week per post.",
+      "english": "Thank you. I will now register you in the Personal Records Database. You will receive your BSN number within a week by post.",
+      "note": "BSN (Burgerservicenummer) is the Dutch citizen service number, essential for work, healthcare, and taxes."
+    },
+    {
+      "speaker": "Bewoner",
+      "dutch": "Dank u wel. Ik heb ook een vraag over het inburgeringsexamen. Waar kan ik informatie vinden?",
+      "english": "Thank you. I also have a question about the civic integration exam. Where can I find information?"
+    },
+    {
+      "speaker": "Ambtenaar",
+      "dutch": "U kunt informatie vinden op de website van DUO. Daar staan ook de data voor de examens.",
+      "english": "You can find information on the DUO website. The exam dates are listed there as well.",
+      "note": "DUO (Dienst Uitvoering Onderwijs) manages the inburgeringsexamen."
+    },
+    {
+      "speaker": "Bewoner",
+      "dutch": "Hoeveel tijd heb ik om het examen te halen?",
+      "english": "How much time do I have to pass the exam?"
+    },
+    {
+      "speaker": "Ambtenaar",
+      "dutch": "Dat hangt af van uw situatie. Meestal hebt u drie jaar de tijd vanaf het moment dat uw inburgeringsplicht begint.",
+      "english": "That depends on your situation. Usually you have three years from the moment your civic integration obligation starts."
+    },
+    {
+      "speaker": "Bewoner",
+      "dutch": "Kan de gemeente mij helpen met een taalcursus?",
+      "english": "Can the municipality help me with a language course?"
+    },
+    {
+      "speaker": "Ambtenaar",
+      "dutch": "Ja, wij kunnen u doorverwijzen naar een taalschool in de buurt. U kunt ook een lening aanvragen bij DUO voor de kosten.",
+      "english": "Yes, we can refer you to a language school in the area. You can also apply for a loan from DUO for the costs.",
+      "note": "'Doorverwijzen' means 'to refer'. DUO offers loans for inburgering courses."
+    },
+    {
+      "speaker": "Bewoner",
+      "dutch": "Dat is fijn om te weten. Is er verder nog iets dat ik moet regelen?",
+      "english": "That's good to know. Is there anything else I need to arrange?"
+    },
+    {
+      "speaker": "Ambtenaar",
+      "dutch": "Vergeet niet om u aan te melden bij een zorgverzekeraar. Een basisverzekering is verplicht in Nederland. Verder wens ik u veel succes!",
+      "english": "Don't forget to sign up with a health insurer. Basic health insurance is mandatory in the Netherlands. I wish you good luck!",
+      "note": "'Verplicht' means 'mandatory/obligatory'."
+    }
+  ],
+  "keyPhrases": [
+    {
+      "dutch": "Ik wil mij graag inschrijven.",
+      "english": "I would like to register.",
+      "usage": "Use this when registering at the gemeente."
+    },
+    {
+      "dutch": "Hebt u uw identiteitsbewijs bij u?",
+      "english": "Do you have your ID with you?",
+      "usage": "You will hear this at many official appointments."
+    },
+    {
+      "dutch": "Waar kan ik informatie vinden over...?",
+      "english": "Where can I find information about...?",
+      "usage": "A polite way to ask for information."
+    },
+    {
+      "dutch": "Hoeveel tijd heb ik om...?",
+      "english": "How much time do I have to...?",
+      "usage": "Use this to ask about deadlines."
+    },
+    {
+      "dutch": "Is er verder nog iets dat ik moet regelen?",
+      "english": "Is there anything else I need to arrange?",
+      "usage": "A useful closing question at official appointments."
+    }
+  ],
+  "culturalNote": "The gemeente (municipality) is where you handle most official administrative matters in the Netherlands. When you move to a new city, you must register your address in the BRP (Basisregistratie Personen) within five days. Your BSN (Burgerservicenummer) is the most important number you will receive - you need it for everything from opening a bank account to visiting the doctor. Always bring original documents to the gemeente, and make an appointment online beforehand, as walk-in service is often not available."
+}

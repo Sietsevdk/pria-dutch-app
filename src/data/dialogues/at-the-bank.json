@@ -1,0 +1,118 @@
+{
+  "id": "at-the-bank",
+  "title": "Bij de bank",
+  "titleEN": "At the Bank",
+  "context": "You visit a bank to open a new bank account after recently moving to the Netherlands.",
+  "lines": [
+    {
+      "speaker": "Medewerker",
+      "dutch": "Goedemiddag. Welkom bij de bank. Heeft u een afspraak?",
+      "english": "Good afternoon. Welcome to the bank. Do you have an appointment?"
+    },
+    {
+      "speaker": "Klant",
+      "dutch": "Ja, ik heb een afspraak om twee uur. Ik wil graag een bankrekening openen.",
+      "english": "Yes, I have an appointment at two o'clock. I would like to open a bank account.",
+      "note": "'Een bankrekening openen' means 'to open a bank account'."
+    },
+    {
+      "speaker": "Medewerker",
+      "dutch": "Prima! Dan heb ik een aantal gegevens van u nodig. Heeft u uw paspoort en een bewijs van inschrijving bij de gemeente?",
+      "english": "Great! Then I need some details from you. Do you have your passport and proof of registration at the municipality?",
+      "note": "'Bewijs van inschrijving' is your proof of registration in the BRP."
+    },
+    {
+      "speaker": "Klant",
+      "dutch": "Ja, hier zijn mijn paspoort en mijn inschrijvingsbewijs. Ik heb ook mijn BSN-nummer.",
+      "english": "Yes, here are my passport and my registration proof. I also have my BSN number."
+    },
+    {
+      "speaker": "Medewerker",
+      "dutch": "Heel goed. Wilt u een betaalrekening of ook een spaarrekening?",
+      "english": "Very good. Would you like a checking account or also a savings account?",
+      "note": "'Betaalrekening' = checking/current account. 'Spaarrekening' = savings account."
+    },
+    {
+      "speaker": "Klant",
+      "dutch": "Voorlopig alleen een betaalrekening. Wat kost dat per maand?",
+      "english": "For now just a checking account. What does that cost per month?",
+      "note": "'Voorlopig' means 'for the time being'."
+    },
+    {
+      "speaker": "Medewerker",
+      "dutch": "Een betaalrekening kost twee euro vijftig per maand. Daar zit een pinpas bij en toegang tot internetbankieren.",
+      "english": "A checking account costs two euros fifty per month. That includes a debit card and access to internet banking."
+    },
+    {
+      "speaker": "Klant",
+      "dutch": "Dat is duidelijk. Hoe werkt internetbankieren?",
+      "english": "That's clear. How does internet banking work?"
+    },
+    {
+      "speaker": "Medewerker",
+      "dutch": "U kunt onze app downloaden op uw telefoon. Daarmee kunt u overschrijvingen doen, uw saldo bekijken en betalingen regelen.",
+      "english": "You can download our app on your phone. With it you can make transfers, check your balance, and manage payments.",
+      "note": "'Overschrijving' means 'transfer'. 'Saldo' means 'balance'."
+    },
+    {
+      "speaker": "Klant",
+      "dutch": "Kan ik ook met iDEAL betalen via de app?",
+      "english": "Can I also pay with iDEAL through the app?"
+    },
+    {
+      "speaker": "Medewerker",
+      "dutch": "Ja, iDEAL werkt automatisch als u internetbankieren hebt. U kunt er online mee betalen in Nederlandse webwinkels.",
+      "english": "Yes, iDEAL works automatically when you have internet banking. You can use it to pay online in Dutch web shops."
+    },
+    {
+      "speaker": "Klant",
+      "dutch": "Heel handig. Wanneer ontvang ik mijn pinpas?",
+      "english": "Very convenient. When will I receive my debit card?",
+      "note": "'Pinpas' is the Dutch term for a debit card."
+    },
+    {
+      "speaker": "Medewerker",
+      "dutch": "Uw pinpas wordt binnen vijf werkdagen thuisbezorgd. De pincode ontvangt u apart per post.",
+      "english": "Your debit card will be delivered to your home within five business days. You will receive the PIN code separately by mail.",
+      "note": "The PIN is always sent separately from the card for security."
+    },
+    {
+      "speaker": "Klant",
+      "dutch": "En kan ik ook geld overboeken naar het buitenland?",
+      "english": "And can I also transfer money abroad?"
+    },
+    {
+      "speaker": "Medewerker",
+      "dutch": "Ja, dat kan via de app of via internetbankieren. Voor overboekingen buiten Europa zijn er extra kosten. Heeft u nog andere vragen?",
+      "english": "Yes, you can do that through the app or through internet banking. For transfers outside Europe there are extra costs. Do you have any other questions?"
+    }
+  ],
+  "keyPhrases": [
+    {
+      "dutch": "Ik wil graag een bankrekening openen.",
+      "english": "I would like to open a bank account.",
+      "usage": "Use this when visiting a bank to set up a new account."
+    },
+    {
+      "dutch": "Wat kost dat per maand?",
+      "english": "What does that cost per month?",
+      "usage": "Ask about monthly fees for services."
+    },
+    {
+      "dutch": "Wanneer ontvang ik mijn pinpas?",
+      "english": "When will I receive my debit card?",
+      "usage": "Ask about delivery times for your bank card."
+    },
+    {
+      "dutch": "Hoe werkt internetbankieren?",
+      "english": "How does internet banking work?",
+      "usage": "Ask for explanation about digital banking services."
+    },
+    {
+      "dutch": "Kan ik geld overboeken naar het buitenland?",
+      "english": "Can I transfer money abroad?",
+      "usage": "Ask about international transfers."
+    }
+  ],
+  "culturalNote": "The Netherlands is one of the most cashless countries in Europe. iDEAL is the dominant online payment system, used by nearly all Dutch web shops. You need a Dutch bank account with internet banking to use iDEAL. The main banks are ING, ABN AMRO, and Rabobank. To open a bank account, you need your passport, BSN number, and proof of address (BRP registration). Most day-to-day banking is done through mobile apps. Tikkie, a popular app linked to your bank account, is widely used to split bills and request small payments between friends."
+}

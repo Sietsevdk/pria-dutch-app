@@ -1,0 +1,569 @@
+{
+  "passages": [
+    {
+      "id": "prac_read_001",
+      "title": "Bericht van de bibliotheek",
+      "difficulty": 1,
+      "category": "official-letters",
+      "text": "Beste mevrouw De Vries,\n\nWelkom bij de bibliotheek van Amstelveen! U bent nu lid. Uw pasnummer is 4523-8810. Met deze pas kunt u boeken, dvd's en tijdschriften lenen. U mag maximaal tien boeken tegelijk lenen. De boeken moet u binnen drie weken terugbrengen. Als u te laat bent, betaalt u vijftig cent per boek per dag. De bibliotheek is open van maandag tot en met zaterdag, van 10:00 tot 17:00 uur. Op woensdag zijn we tot 20:00 uur open. Op zondag zijn we gesloten. Heeft u vragen? Bel ons op 020-555-1234.\n\nMet vriendelijke groet,\nBibliotheek Amstelveen",
+      "textEN": "Dear Mrs. De Vries,\n\nWelcome to the Amstelveen library! You are now a member. Your card number is 4523-8810. With this card you can borrow books, DVDs, and magazines. You may borrow a maximum of ten books at a time. You must return the books within three weeks. If you are late, you pay fifty cents per book per day. The library is open from Monday through Saturday, from 10:00 to 17:00. On Wednesday we are open until 20:00. On Sunday we are closed. Do you have questions? Call us at 020-555-1234.\n\nKind regards,\nAmstelveen Library",
+      "keyVocabulary": [
+        { "dutch": "lid", "english": "member" },
+        { "dutch": "lenen", "english": "to borrow" },
+        { "dutch": "terugbrengen", "english": "to return (bring back)" },
+        { "dutch": "gesloten", "english": "closed" }
+      ],
+      "questions": [
+        {
+          "id": "pq1_1",
+          "question": "Hoeveel boeken mag mevrouw De Vries tegelijk lenen?",
+          "options": ["Vijf boeken", "Tien boeken", "Drie boeken", "Twintig boeken"],
+          "answer": "Tien boeken",
+          "explanation": "The letter states 'U mag maximaal tien boeken tegelijk lenen' (You may borrow a maximum of ten books at a time)."
+        },
+        {
+          "id": "pq1_2",
+          "question": "Wanneer is de bibliotheek tot 20:00 uur open?",
+          "options": ["Op maandag", "Op zaterdag", "Op woensdag", "Op zondag"],
+          "answer": "Op woensdag",
+          "explanation": "The letter says 'Op woensdag zijn we tot 20:00 uur open' (On Wednesday we are open until 20:00)."
+        },
+        {
+          "id": "pq1_3",
+          "question": "Hoeveel betaalt u als u een boek te laat terugbrengt?",
+          "options": ["Eén euro per dag", "Vijftig cent per boek per dag", "Twee euro per week", "Niets, het is gratis"],
+          "answer": "Vijftig cent per boek per dag",
+          "explanation": "The letter states 'betaalt u vijftig cent per boek per dag' (you pay fifty cents per book per day)."
+        }
+      ]
+    },
+    {
+      "id": "prac_read_002",
+      "title": "Brief van de huisarts",
+      "difficulty": 1,
+      "category": "health",
+      "text": "Beste patiënt,\n\nOnze huisartsenpraktijk verhuist op 1 april naar een nieuw adres. Het nieuwe adres is Parkstraat 12 in Utrecht. Het telefoonnummer blijft hetzelfde: 030-234-5678. U hoeft niets te doen. Uw gegevens blijven bij ons. Voor een afspraak kunt u bellen tussen 8:00 en 12:00 uur. U kunt ook online een afspraak maken via onze website: www.huisartspraktijkpark.nl. In noodgevallen belt u altijd 112. Voor spoed buiten kantooruren belt u de huisartsenpost: 030-300-1200.\n\nMet vriendelijke groet,\nDr. J. Bakker",
+      "textEN": "Dear patient,\n\nOur general practice is moving on April 1st to a new address. The new address is Parkstraat 12 in Utrecht. The phone number stays the same: 030-234-5678. You do not need to do anything. Your records remain with us. For an appointment you can call between 8:00 and 12:00. You can also make an appointment online via our website: www.huisartspraktijkpark.nl. In emergencies always call 112. For urgent matters outside office hours, call the after-hours GP service: 030-300-1200.\n\nKind regards,\nDr. J. Bakker",
+      "keyVocabulary": [
+        { "dutch": "huisartsenpraktijk", "english": "general practice (GP office)" },
+        { "dutch": "verhuizen", "english": "to move (relocate)" },
+        { "dutch": "afspraak", "english": "appointment" },
+        { "dutch": "noodgeval", "english": "emergency" },
+        { "dutch": "spoed", "english": "urgency" }
+      ],
+      "questions": [
+        {
+          "id": "pq2_1",
+          "question": "Waarom schrijft de huisarts deze brief?",
+          "options": ["De praktijk gaat dicht", "De praktijk verhuist", "De dokter gaat met pensioen", "Er is een nieuwe dokter"],
+          "answer": "De praktijk verhuist",
+          "explanation": "The letter explains 'Onze huisartsenpraktijk verhuist op 1 april naar een nieuw adres' (Our GP practice is moving on April 1st to a new address)."
+        },
+        {
+          "id": "pq2_2",
+          "question": "Wat moet de patiënt doen?",
+          "options": ["Naar het nieuwe adres gaan", "Een nieuw formulier invullen", "Niets, de gegevens blijven bewaard", "Een nieuw telefoonnummer noteren"],
+          "answer": "Niets, de gegevens blijven bewaard",
+          "explanation": "The letter says 'U hoeft niets te doen. Uw gegevens blijven bij ons' (You don't need to do anything. Your records remain with us)."
+        },
+        {
+          "id": "pq2_3",
+          "question": "Welk nummer bel je bij spoed buiten kantooruren?",
+          "options": ["030-234-5678", "112", "030-300-1200", "0800-1234"],
+          "answer": "030-300-1200",
+          "explanation": "The letter states 'Voor spoed buiten kantooruren belt u de huisartsenpost: 030-300-1200' (For urgent matters outside office hours, call the after-hours GP service)."
+        }
+      ]
+    },
+    {
+      "id": "prac_read_003",
+      "title": "Supermarktfolder: aanbiedingen deze week",
+      "difficulty": 1,
+      "category": "advertisements",
+      "text": "Aanbiedingen van de week bij Albert Heijn!\n\nAlleen deze week: verse aardbeien, 500 gram voor €2,49. Hollandse komkommers: drie voor €1,00. Kippenpoten: €3,99 per kilo. AH huismerk melk, halfvol, 1 liter: €0,89. Brood van de bakkerij: tweede brood halve prijs! Alle pakken koffie van Douwe Egberts: 1 + 1 gratis. Let op: deze aanbiedingen gelden van maandag 10 maart tot en met zondag 16 maart. Op is op! U vindt ons op de Marktstraat 45 in Den Haag. Wij zijn elke dag open van 8:00 tot 21:00 uur.",
+      "textEN": "Deals of the week at Albert Heijn!\n\nThis week only: fresh strawberries, 500 grams for €2.49. Dutch cucumbers: three for €1.00. Chicken legs: €3.99 per kilo. AH store-brand milk, semi-skimmed, 1 liter: €0.89. Bread from the bakery: second loaf half price! All Douwe Egberts coffee packs: buy 1 get 1 free. Note: these offers are valid from Monday March 10th through Sunday March 16th. While supplies last! You can find us at Marktstraat 45 in The Hague. We are open every day from 8:00 to 21:00.",
+      "keyVocabulary": [
+        { "dutch": "aanbieding", "english": "offer / deal" },
+        { "dutch": "halve prijs", "english": "half price" },
+        { "dutch": "gratis", "english": "free" },
+        { "dutch": "gelden", "english": "to be valid / apply" }
+      ],
+      "questions": [
+        {
+          "id": "pq3_1",
+          "question": "Hoeveel kosten drie komkommers?",
+          "options": ["€2,49", "€3,00", "€1,00", "€0,89"],
+          "answer": "€1,00",
+          "explanation": "The flyer states 'Hollandse komkommers: drie voor €1,00' (Dutch cucumbers: three for €1.00)."
+        },
+        {
+          "id": "pq3_2",
+          "question": "Wat is de aanbieding voor Douwe Egberts koffie?",
+          "options": ["Tweede halve prijs", "1 + 1 gratis", "Drie voor €5,00", "25% korting"],
+          "answer": "1 + 1 gratis",
+          "explanation": "The flyer says 'Alle pakken koffie van Douwe Egberts: 1 + 1 gratis' (All Douwe Egberts coffee packs: buy 1 get 1 free)."
+        },
+        {
+          "id": "pq3_3",
+          "question": "Tot wanneer gelden de aanbiedingen?",
+          "options": ["Tot zaterdag 15 maart", "Tot zondag 16 maart", "Tot vrijdag 14 maart", "Tot maandag 17 maart"],
+          "answer": "Tot zondag 16 maart",
+          "explanation": "The flyer says 'deze aanbiedingen gelden van maandag 10 maart tot en met zondag 16 maart' (these offers are valid through Sunday March 16th)."
+        }
+      ]
+    },
+    {
+      "id": "prac_read_004",
+      "title": "Treinreisinformatie",
+      "difficulty": 1,
+      "category": "schedules",
+      "text": "Reisinformatie NS\n\nLet op: van zaterdag 15 maart tot en met zondag 16 maart rijden er geen treinen tussen Amsterdam Centraal en Utrecht Centraal. Er is werk aan het spoor. U kunt gebruikmaken van bussen die de treinen vervangen. De bussen vertrekken vanaf de bushalte voor het station. De reistijd met de bus is ongeveer 45 minuten in plaats van de normale 27 minuten met de trein. De bussen rijden elke 15 minuten. Uw OV-chipkaart is geldig in de bus. Kijk voor meer informatie op ns.nl/reisinformatie of bel de NS-klantenservice: 030-751-5155.",
+      "textEN": "NS Travel Information\n\nAttention: from Saturday March 15th through Sunday March 16th, no trains will run between Amsterdam Centraal and Utrecht Centraal. There is work on the tracks. You can use buses that replace the trains. The buses depart from the bus stop in front of the station. Travel time by bus is approximately 45 minutes instead of the normal 27 minutes by train. The buses run every 15 minutes. Your OV-chipkaart is valid on the bus. Check ns.nl/reisinformatie for more information or call NS customer service: 030-751-5155.",
+      "keyVocabulary": [
+        { "dutch": "spoor", "english": "track / rail" },
+        { "dutch": "vervangen", "english": "to replace" },
+        { "dutch": "reistijd", "english": "travel time" },
+        { "dutch": "geldig", "english": "valid" }
+      ],
+      "questions": [
+        {
+          "id": "pq4_1",
+          "question": "Waarom rijden er geen treinen dit weekend?",
+          "options": ["Er is een staking", "Er is werk aan het spoor", "Het is een feestdag", "Er is slecht weer"],
+          "answer": "Er is werk aan het spoor",
+          "explanation": "The notice says 'Er is werk aan het spoor' (There is work on the tracks)."
+        },
+        {
+          "id": "pq4_2",
+          "question": "Hoe lang duurt de reis met de bus?",
+          "options": ["27 minuten", "30 minuten", "45 minuten", "60 minuten"],
+          "answer": "45 minuten",
+          "explanation": "The notice states 'De reistijd met de bus is ongeveer 45 minuten' (Travel time by bus is approximately 45 minutes)."
+        },
+        {
+          "id": "pq4_3",
+          "question": "Waar vertrekken de bussen?",
+          "options": ["Op het perron", "Bij de bushalte voor het station", "Op het parkeerterrein", "Bij de taxistandplaats"],
+          "answer": "Bij de bushalte voor het station",
+          "explanation": "The notice says 'De bussen vertrekken vanaf de bushalte voor het station' (The buses depart from the bus stop in front of the station)."
+        }
+      ]
+    },
+    {
+      "id": "prac_read_005",
+      "title": "Bericht van de school",
+      "difficulty": 1,
+      "category": "notices",
+      "text": "Beste ouders en verzorgers,\n\nOp vrijdag 21 maart is het Paasontbijt op school. Alle kinderen mogen die ochtend om 8:30 uur op school komen. Het ontbijt duurt tot 10:00 uur. Na het ontbijt gaan de kinderen paaseieren zoeken op het schoolplein. Wilt u een ei of brood meenemen? Dat mag! Er is ook thee, koffie en sap op school. De kinderen hoeven geen lunch mee te nemen. Om 12:00 uur is de school uit. Er is die middag geen les. Wilt u helpen met het ontbijt? Stuur dan een bericht naar juf Annemiek via de Parro-app.\n\nGroetjes,\nHet team van basisschool De Regenboog",
+      "textEN": "Dear parents and guardians,\n\nOn Friday March 21st, there is an Easter breakfast at school. All children may come to school that morning at 8:30. The breakfast lasts until 10:00. After breakfast, the children will search for Easter eggs in the schoolyard. Would you like to bring an egg or bread? That's fine! There is also tea, coffee, and juice at school. The children do not need to bring lunch. School ends at 12:00. There are no classes that afternoon. Would you like to help with the breakfast? Then send a message to teacher Annemiek via the Parro app.\n\nBest wishes,\nThe team of primary school De Regenboog",
+      "keyVocabulary": [
+        { "dutch": "verzorger", "english": "guardian / caretaker" },
+        { "dutch": "paaseieren zoeken", "english": "to search for Easter eggs" },
+        { "dutch": "meenemen", "english": "to bring along" },
+        { "dutch": "basisschool", "english": "primary school" }
+      ],
+      "questions": [
+        {
+          "id": "pq5_1",
+          "question": "Hoe laat begint het Paasontbijt?",
+          "options": ["Om 8:00 uur", "Om 8:30 uur", "Om 9:00 uur", "Om 10:00 uur"],
+          "answer": "Om 8:30 uur",
+          "explanation": "The notice says 'Alle kinderen mogen die ochtend om 8:30 uur op school komen' (All children may come to school at 8:30)."
+        },
+        {
+          "id": "pq5_2",
+          "question": "Wat doen de kinderen na het ontbijt?",
+          "options": ["Ze hebben les", "Ze gaan naar huis", "Ze zoeken paaseieren", "Ze gaan sporten"],
+          "answer": "Ze zoeken paaseieren",
+          "explanation": "The notice says 'Na het ontbijt gaan de kinderen paaseieren zoeken op het schoolplein' (After breakfast the children will search for Easter eggs)."
+        },
+        {
+          "id": "pq5_3",
+          "question": "Hoe laat is de school uit op deze dag?",
+          "options": ["Om 10:00 uur", "Om 12:00 uur", "Om 14:00 uur", "Om 15:00 uur"],
+          "answer": "Om 12:00 uur",
+          "explanation": "The notice says 'Om 12:00 uur is de school uit. Er is die middag geen les' (School ends at 12:00. There are no classes that afternoon)."
+        }
+      ]
+    },
+    {
+      "id": "prac_read_006",
+      "title": "Huurwoning te huur in Rotterdam",
+      "difficulty": 2,
+      "category": "housing",
+      "text": "Te huur: ruim appartement in Rotterdam-West\n\nDit gezellige appartement ligt op de tweede verdieping van een rustig woongebouw aan de Nieuwe Binnenweg. Het appartement heeft twee slaapkamers, een woonkamer met open keuken, een badkamer met douche en toilet, en een klein balkon. De woning is 65 vierkante meter groot. De huur is €1.050 per maand, exclusief gas, water en elektriciteit. De servicekosten zijn €75 per maand. Er is geen garage, maar er is een fietsenstalling in het gebouw. Huisdieren zijn niet toegestaan. De woning is beschikbaar vanaf 1 mei. Geïnteresseerd? Stuur een e-mail naar verhuur@woonstad.nl met een kopie van uw identiteitsbewijs en een recente loonstrook.",
+      "textEN": "For rent: spacious apartment in Rotterdam-West\n\nThis cozy apartment is located on the second floor of a quiet residential building on Nieuwe Binnenweg. The apartment has two bedrooms, a living room with an open kitchen, a bathroom with shower and toilet, and a small balcony. The property is 65 square meters. The rent is €1,050 per month, excluding gas, water, and electricity. The service costs are €75 per month. There is no garage, but there is a bicycle storage in the building. Pets are not allowed. The property is available from May 1st. Interested? Send an email to verhuur@woonstad.nl with a copy of your ID and a recent pay slip.",
+      "keyVocabulary": [
+        { "dutch": "te huur", "english": "for rent" },
+        { "dutch": "verdieping", "english": "floor / story" },
+        { "dutch": "exclusief", "english": "excluding" },
+        { "dutch": "huisdier", "english": "pet" },
+        { "dutch": "loonstrook", "english": "pay slip" }
+      ],
+      "questions": [
+        {
+          "id": "pq6_1",
+          "question": "Hoeveel slaapkamers heeft het appartement?",
+          "options": ["Eén slaapkamer", "Twee slaapkamers", "Drie slaapkamers", "Vier slaapkamers"],
+          "answer": "Twee slaapkamers",
+          "explanation": "The ad says 'Het appartement heeft twee slaapkamers' (The apartment has two bedrooms)."
+        },
+        {
+          "id": "pq6_2",
+          "question": "Zijn huisdieren toegestaan in deze woning?",
+          "options": ["Ja, alle huisdieren", "Ja, alleen katten", "Nee, huisdieren zijn niet toegestaan", "Alleen kleine huisdieren"],
+          "answer": "Nee, huisdieren zijn niet toegestaan",
+          "explanation": "The ad clearly states 'Huisdieren zijn niet toegestaan' (Pets are not allowed)."
+        },
+        {
+          "id": "pq6_3",
+          "question": "Wat moet je meesturen als je geïnteresseerd bent?",
+          "options": ["Alleen een e-mail", "Een identiteitsbewijs en een loonstrook", "Een bankafschrift", "Een brief van je werkgever"],
+          "answer": "Een identiteitsbewijs en een loonstrook",
+          "explanation": "The ad asks to send 'een kopie van uw identiteitsbewijs en een recente loonstrook' (a copy of your ID and a recent pay slip)."
+        }
+      ]
+    },
+    {
+      "id": "prac_read_007",
+      "title": "Vacature: medewerker klantenservice",
+      "difficulty": 2,
+      "category": "work",
+      "text": "Vacature: medewerker klantenservice (parttime)\n\nBij bol.com zoeken wij een vriendelijke medewerker voor onze klantenservice in Utrecht. Je helpt klanten per telefoon en e-mail met vragen over bestellingen, leveringen en retouren. Je werkt 24 uur per week, verdeeld over drie of vier dagen. De werktijden zijn tussen 9:00 en 18:00 uur. Het salaris is €14,50 bruto per uur. Je krijgt ook reiskostenvergoeding en 25 vakantiedagen per jaar. Wat vragen wij? Je spreekt goed Nederlands (minimaal B1). Je hebt ervaring met klantenservice of in een winkel. Je bent geduldig en kunt goed luisteren. Je kunt zelfstandig werken. Interesse? Solliciteer vóór 1 april via werkenbij.bol.com.",
+      "textEN": "Vacancy: customer service employee (part-time)\n\nAt bol.com we are looking for a friendly employee for our customer service in Utrecht. You help customers by phone and email with questions about orders, deliveries, and returns. You work 24 hours per week, spread over three or four days. Working hours are between 9:00 and 18:00. The salary is €14.50 gross per hour. You also receive travel expense compensation and 25 vacation days per year. What do we require? You speak good Dutch (minimum B1). You have experience in customer service or in a shop. You are patient and can listen well. You can work independently. Interested? Apply before April 1st via werkenbij.bol.com.",
+      "keyVocabulary": [
+        { "dutch": "vacature", "english": "vacancy / job opening" },
+        { "dutch": "bestelling", "english": "order" },
+        { "dutch": "reiskostenvergoeding", "english": "travel expense compensation" },
+        { "dutch": "solliciteren", "english": "to apply (for a job)" },
+        { "dutch": "zelfstandig", "english": "independently" }
+      ],
+      "questions": [
+        {
+          "id": "pq7_1",
+          "question": "Hoeveel uur per week is deze baan?",
+          "options": ["16 uur", "20 uur", "24 uur", "32 uur"],
+          "answer": "24 uur",
+          "explanation": "The ad says 'Je werkt 24 uur per week' (You work 24 hours per week)."
+        },
+        {
+          "id": "pq7_2",
+          "question": "Welk taalniveau Nederlands is minimaal nodig?",
+          "options": ["A1", "A2", "B1", "B2"],
+          "answer": "B1",
+          "explanation": "The ad states 'Je spreekt goed Nederlands (minimaal B1)' (You speak good Dutch, minimum B1)."
+        },
+        {
+          "id": "pq7_3",
+          "question": "Wanneer moet je uiterlijk solliciteren?",
+          "options": ["Vóór 15 maart", "Vóór 1 april", "Vóór 1 mei", "Er is geen deadline"],
+          "answer": "Vóór 1 april",
+          "explanation": "The ad says 'Solliciteer vóór 1 april via werkenbij.bol.com' (Apply before April 1st)."
+        }
+      ]
+    },
+    {
+      "id": "prac_read_008",
+      "title": "Recept: stamppot boerenkool",
+      "difficulty": 2,
+      "category": "recipes",
+      "text": "Stamppot boerenkool met rookworst (4 personen)\n\nIngrediënten: 1 kilo aardappelen, 500 gram boerenkool (gesneden), 1 rookworst, 100 ml melk, 50 gram boter, zout en peper. Bereiding: Schil de aardappelen en snijd ze in stukken. Doe ze in een grote pan met water en een snufje zout. Breng het water aan de kook en laat de aardappelen 15 minuten koken. Voeg dan de boerenkool toe en laat alles nog 5 minuten koken. Giet het water af. Voeg de melk en boter toe en stamp alles goed door elkaar. Breng op smaak met zout en peper. Verwarm de rookworst apart in heet water gedurende 10 minuten. Snijd de worst in plakken en serveer bij de stamppot. Eet smakelijk!",
+      "textEN": "Mashed potato kale (stamppot boerenkool) with smoked sausage (4 servings)\n\nIngredients: 1 kilo potatoes, 500 grams kale (chopped), 1 smoked sausage, 100 ml milk, 50 grams butter, salt and pepper. Preparation: Peel the potatoes and cut them into pieces. Put them in a large pot with water and a pinch of salt. Bring the water to a boil and let the potatoes cook for 15 minutes. Then add the kale and let everything cook for another 5 minutes. Drain the water. Add the milk and butter and mash everything together well. Season with salt and pepper. Heat the smoked sausage separately in hot water for 10 minutes. Cut the sausage into slices and serve with the stamppot. Enjoy your meal!",
+      "keyVocabulary": [
+        { "dutch": "schillen", "english": "to peel" },
+        { "dutch": "snijden", "english": "to cut" },
+        { "dutch": "koken", "english": "to boil / cook" },
+        { "dutch": "afgieten", "english": "to drain" },
+        { "dutch": "op smaak brengen", "english": "to season" }
+      ],
+      "questions": [
+        {
+          "id": "pq8_1",
+          "question": "Hoe lang moeten de aardappelen koken voordat je de boerenkool toevoegt?",
+          "options": ["5 minuten", "10 minuten", "15 minuten", "20 minuten"],
+          "answer": "15 minuten",
+          "explanation": "The recipe says 'laat de aardappelen 15 minuten koken. Voeg dan de boerenkool toe' (let the potatoes cook for 15 minutes. Then add the kale)."
+        },
+        {
+          "id": "pq8_2",
+          "question": "Wat doe je na het afgieten van het water?",
+          "options": ["De rookworst toevoegen", "Melk en boter toevoegen en stampen", "De boerenkool toevoegen", "Alles in de oven zetten"],
+          "answer": "Melk en boter toevoegen en stampen",
+          "explanation": "The recipe says 'Voeg de melk en boter toe en stamp alles goed door elkaar' (Add the milk and butter and mash everything together)."
+        },
+        {
+          "id": "pq8_3",
+          "question": "Voor hoeveel personen is dit recept?",
+          "options": ["2 personen", "3 personen", "4 personen", "6 personen"],
+          "answer": "4 personen",
+          "explanation": "The recipe title states '4 personen' (4 servings)."
+        }
+      ]
+    },
+    {
+      "id": "prac_read_009",
+      "title": "Brief van de gemeente over afval",
+      "difficulty": 2,
+      "category": "official-letters",
+      "text": "Gemeente Eindhoven – Afdeling Afvalbeheer\n\nBeste bewoner,\n\nVanaf 1 april veranderen de regels voor het scheiden van afval in uw wijk. U krijgt een extra container voor plastic, blik en drinkpakken (PMD). De grijze container is voor restafval. De groene container blijft voor gft-afval (groente, fruit en tuinafval). Papier en karton kunt u elke twee weken op woensdag aan de straat zetten. De PMD-container wordt elke twee weken op dinsdag geleegd. Zet uw containers vóór 7:30 uur buiten. Glas brengt u naar de glasbak in de buurt. Als u uw afval niet goed scheidt, kan de gemeente een boete geven van maximaal €95. Heeft u vragen? Kijk op eindhoven.nl/afval of bel 14 040.",
+      "textEN": "Municipality of Eindhoven – Waste Management Department\n\nDear resident,\n\nFrom April 1st, the rules for separating waste in your neighborhood are changing. You will receive an extra container for plastic, metal, and drink cartons (PMD). The gray container is for residual waste. The green container remains for organic waste (vegetables, fruit, and garden waste). Paper and cardboard can be put out on the street every two weeks on Wednesday. The PMD container will be emptied every two weeks on Tuesday. Put your containers outside before 7:30. Glass should be taken to the glass collection point nearby. If you do not separate your waste properly, the municipality can issue a fine of up to €95. Do you have questions? Visit eindhoven.nl/afval or call 14 040.",
+      "keyVocabulary": [
+        { "dutch": "afval scheiden", "english": "to separate waste" },
+        { "dutch": "container", "english": "bin / container" },
+        { "dutch": "restafval", "english": "residual waste" },
+        { "dutch": "gft-afval", "english": "organic waste (vegetables, fruit, garden)" },
+        { "dutch": "boete", "english": "fine / penalty" }
+      ],
+      "questions": [
+        {
+          "id": "pq9_1",
+          "question": "Waarvoor is de nieuwe extra container?",
+          "options": ["Voor glas", "Voor papier", "Voor plastic, blik en drinkpakken", "Voor gft-afval"],
+          "answer": "Voor plastic, blik en drinkpakken",
+          "explanation": "The letter says 'U krijgt een extra container voor plastic, blik en drinkpakken (PMD)' (You will receive an extra container for plastic, metal, and drink cartons)."
+        },
+        {
+          "id": "pq9_2",
+          "question": "Hoe hoog kan de boete zijn als je afval niet goed scheidt?",
+          "options": ["€25", "€50", "€75", "€95"],
+          "answer": "€95",
+          "explanation": "The letter states 'de gemeente een boete geven van maximaal €95' (the municipality can issue a fine of up to €95)."
+        },
+        {
+          "id": "pq9_3",
+          "question": "Wanneer wordt papier opgehaald?",
+          "options": ["Elke week op dinsdag", "Elke twee weken op woensdag", "Elke week op woensdag", "Elke twee weken op dinsdag"],
+          "answer": "Elke twee weken op woensdag",
+          "explanation": "The letter says 'Papier en karton kunt u elke twee weken op woensdag aan de straat zetten' (Paper and cardboard can be put out every two weeks on Wednesday)."
+        }
+      ]
+    },
+    {
+      "id": "prac_read_010",
+      "title": "Apotheek: bijsluiter medicijn",
+      "difficulty": 2,
+      "category": "health",
+      "text": "Paracetamol 500 mg – Informatie voor de patiënt\n\nGebruik: Paracetamol helpt tegen pijn en koorts. Neem maximaal 4 keer per dag 1 tot 2 tabletten met water. Wacht minimaal 4 uur tussen elke inname. Neem niet meer dan 8 tabletten per dag. Gebruik dit medicijn niet langer dan 3 dagen tegen koorts en niet langer dan 5 dagen tegen pijn zonder advies van uw arts. Mogelijke bijwerkingen: allergische reacties zoals huiduitslag of jeuk komen zelden voor. Neem bij ernstige bijwerkingen direct contact op met uw arts of apotheker. Bewaren: bewaar de tabletten op een droge plek, onder 25 graden Celsius. Houd buiten bereik van kinderen. Raadpleeg uw arts als u zwanger bent of andere medicijnen gebruikt.",
+      "textEN": "Paracetamol 500 mg – Patient Information\n\nUse: Paracetamol helps against pain and fever. Take a maximum of 4 times per day 1 to 2 tablets with water. Wait at least 4 hours between each intake. Do not take more than 8 tablets per day. Do not use this medicine for more than 3 days for fever and not more than 5 days for pain without advice from your doctor. Possible side effects: allergic reactions such as skin rash or itching occur rarely. In case of serious side effects, contact your doctor or pharmacist immediately. Storage: store the tablets in a dry place, below 25 degrees Celsius. Keep out of reach of children. Consult your doctor if you are pregnant or using other medicines.",
+      "keyVocabulary": [
+        { "dutch": "bijsluiter", "english": "package leaflet / patient information" },
+        { "dutch": "koorts", "english": "fever" },
+        { "dutch": "bijwerking", "english": "side effect" },
+        { "dutch": "bewaren", "english": "to store / keep" },
+        { "dutch": "bereik", "english": "reach" }
+      ],
+      "questions": [
+        {
+          "id": "pq10_1",
+          "question": "Hoeveel tabletten mag je maximaal per dag nemen?",
+          "options": ["4 tabletten", "6 tabletten", "8 tabletten", "10 tabletten"],
+          "answer": "8 tabletten",
+          "explanation": "The leaflet says 'Neem niet meer dan 8 tabletten per dag' (Do not take more than 8 tablets per day)."
+        },
+        {
+          "id": "pq10_2",
+          "question": "Hoe lang mag je paracetamol tegen koorts gebruiken zonder arts te raadplegen?",
+          "options": ["1 dag", "3 dagen", "5 dagen", "7 dagen"],
+          "answer": "3 dagen",
+          "explanation": "The leaflet says 'Gebruik dit medicijn niet langer dan 3 dagen tegen koorts' (Do not use this medicine for more than 3 days for fever)."
+        },
+        {
+          "id": "pq10_3",
+          "question": "Waar moet je de tabletten bewaren?",
+          "options": ["In de koelkast", "Op een droge plek onder 25 graden", "Bij kamertemperatuur in de badkamer", "In het vriesvak"],
+          "answer": "Op een droge plek onder 25 graden",
+          "explanation": "The leaflet says 'bewaar de tabletten op een droge plek, onder 25 graden Celsius' (store the tablets in a dry place, below 25 degrees Celsius)."
+        }
+      ]
+    },
+    {
+      "id": "prac_read_011",
+      "title": "Bericht over de buurtfeest",
+      "difficulty": 2,
+      "category": "notices",
+      "text": "Uitnodiging: Buurtfeest Koningsdag!\n\nBeste buren,\n\nOp zaterdag 26 april vieren we samen Koningsdag in onze straat! Het programma begint om 10:00 uur met een vrijmarkt voor kinderen en volwassenen. Om 12:00 uur is er een gezamenlijke lunch. Neem alstublieft een gerecht mee om te delen. Om 14:00 uur beginnen de spelletjes voor de kinderen: zaklopen, koekhappen en een stormbaan. Om 16:00 uur is er muziek van een dj en kunt u dansen op straat. We sluiten af om 20:00 uur. Heeft u een tafel of stoelen over? Die kunnen we goed gebruiken! Geef dit door aan Mohammed (nummer 34) of Linda (nummer 52). Draag oranje en neem uw goede humeur mee!",
+      "textEN": "Invitation: Neighborhood King's Day Party!\n\nDear neighbors,\n\nOn Saturday April 26th, we are celebrating King's Day together in our street! The program starts at 10:00 with a flea market for children and adults. At 12:00 there is a shared lunch. Please bring a dish to share. At 14:00 the games for children begin: sack races, cookie biting, and an obstacle course. At 16:00 there is music from a DJ and you can dance in the street. We wrap up at 20:00. Do you have a spare table or chairs? We could really use them! Let Mohammed (number 34) or Linda (number 52) know. Wear orange and bring your good mood!",
+      "keyVocabulary": [
+        { "dutch": "vrijmarkt", "english": "flea market (King's Day market)" },
+        { "dutch": "gerecht", "english": "dish (food)" },
+        { "dutch": "zaklopen", "english": "sack race" },
+        { "dutch": "afsluiten", "english": "to wrap up / close" }
+      ],
+      "questions": [
+        {
+          "id": "pq11_1",
+          "question": "Wat moeten de buren meenemen voor de lunch?",
+          "options": ["Drinken", "Geld", "Een gerecht om te delen", "Borden en bestek"],
+          "answer": "Een gerecht om te delen",
+          "explanation": "The notice says 'Neem alstublieft een gerecht mee om te delen' (Please bring a dish to share)."
+        },
+        {
+          "id": "pq11_2",
+          "question": "Hoe laat beginnen de kinderspelletjes?",
+          "options": ["Om 10:00 uur", "Om 12:00 uur", "Om 14:00 uur", "Om 16:00 uur"],
+          "answer": "Om 14:00 uur",
+          "explanation": "The notice says 'Om 14:00 uur beginnen de spelletjes voor de kinderen' (At 14:00 the games for children begin)."
+        },
+        {
+          "id": "pq11_3",
+          "question": "Aan wie kun je doorgeven dat je een tafel hebt?",
+          "options": ["Aan de gemeente", "Aan Mohammed of Linda", "Aan de dj", "Aan de school"],
+          "answer": "Aan Mohammed of Linda",
+          "explanation": "The notice says 'Geef dit door aan Mohammed (nummer 34) of Linda (nummer 52)' (Let Mohammed or Linda know)."
+        }
+      ]
+    },
+    {
+      "id": "prac_read_012",
+      "title": "Nieuwsbericht: nieuw park geopend",
+      "difficulty": 3,
+      "category": "news",
+      "text": "Nieuw stadspark geopend in Almere\n\nAfgelopen zaterdag heeft burgemeester Van der Laan het nieuwe Waterlandpark in Almere-Stad officieel geopend. Het park is 12 hectare groot en heeft een groot meer waar bezoekers kunnen zwemmen in de zomer. Er zijn ook wandelpaden, een speeltuin voor kinderen, een skatepark en een hondenlosloopgebied. De gemeente heeft ruim 8 miljoen euro geïnvesteerd in het project, dat drie jaar heeft geduurd. Bewoners uit de buurt hadden eerder geklaagd over het gebrek aan groen in hun wijk. Wethouder Jansen zei tijdens de opening: \"Dit park is er voor iedereen. We willen dat alle inwoners van Almere hier kunnen genieten van de natuur.\" Het park is gratis toegankelijk en elke dag geopend van zonsopgang tot zonsondergang. Er worden deze zomer ook gratis activiteiten georganiseerd, zoals yogalessen en buitenbioscoop.",
+      "textEN": "New city park opened in Almere\n\nLast Saturday, Mayor Van der Laan officially opened the new Waterlandpark in Almere-Stad. The park is 12 hectares and has a large lake where visitors can swim in the summer. There are also walking paths, a playground for children, a skate park, and an off-leash dog area. The municipality invested over 8 million euros in the project, which took three years. Residents from the neighborhood had previously complained about the lack of green space in their area. Alderman Jansen said during the opening: \"This park is for everyone. We want all residents of Almere to be able to enjoy nature here.\" The park is free to enter and open every day from sunrise to sunset. Free activities will also be organized this summer, such as yoga classes and outdoor cinema.",
+      "keyVocabulary": [
+        { "dutch": "burgemeester", "english": "mayor" },
+        { "dutch": "investeren", "english": "to invest" },
+        { "dutch": "gebrek aan", "english": "lack of" },
+        { "dutch": "inwoner", "english": "resident / inhabitant" },
+        { "dutch": "toegankelijk", "english": "accessible" }
+      ],
+      "questions": [
+        {
+          "id": "pq12_1",
+          "question": "Hoeveel heeft de gemeente geïnvesteerd in het park?",
+          "options": ["4 miljoen euro", "6 miljoen euro", "Ruim 8 miljoen euro", "10 miljoen euro"],
+          "answer": "Ruim 8 miljoen euro",
+          "explanation": "The article states 'De gemeente heeft ruim 8 miljoen euro geïnvesteerd in het project' (The municipality invested over 8 million euros)."
+        },
+        {
+          "id": "pq12_2",
+          "question": "Waarom wilden de bewoners een park?",
+          "options": ["Er was te veel verkeer", "Er was een gebrek aan groen", "De scholen waren te ver weg", "Er was geen zwembad"],
+          "answer": "Er was een gebrek aan groen",
+          "explanation": "The article says 'Bewoners uit de buurt hadden eerder geklaagd over het gebrek aan groen in hun wijk' (Residents had complained about the lack of green space)."
+        },
+        {
+          "id": "pq12_3",
+          "question": "Wanneer is het park open?",
+          "options": ["Van 8:00 tot 20:00 uur", "Van zonsopgang tot zonsondergang", "Alleen in het weekend", "Van 10:00 tot 18:00 uur"],
+          "answer": "Van zonsopgang tot zonsondergang",
+          "explanation": "The article states the park is 'elke dag geopend van zonsopgang tot zonsondergang' (open every day from sunrise to sunset)."
+        }
+      ]
+    },
+    {
+      "id": "prac_read_013",
+      "title": "Brief over inburgeringsexamen",
+      "difficulty": 3,
+      "category": "official-letters",
+      "text": "DUO – Dienst Uitvoering Onderwijs\n\nGeachte heer/mevrouw Ahmadi,\n\nU heeft zich aangemeld voor het inburgeringsexamen. Hierbij ontvangt u informatie over uw examendatum en locatie. Uw examen Kennis van de Nederlandse Maatschappij (KNM) is gepland op dinsdag 15 april om 13:00 uur in het examencentrum aan de Leidseveer 35 in Utrecht. Neem uw geldige identiteitsbewijs mee (paspoort of verblijfsvergunning). Zonder geldig identiteitsbewijs kunt u niet deelnemen aan het examen. Wij adviseren u om minimaal 30 minuten voor aanvang aanwezig te zijn. Het examen duurt 45 minuten en bestaat uit 40 meerkeuzevragen. De uitslag ontvangt u binnen 8 weken per post. Als u het examen niet haalt, kunt u zich opnieuw aanmelden. Houd er rekening mee dat u voor elk examen opnieuw moet betalen (€50 per examen). Als u uw examendatum wilt wijzigen, kan dat tot uiterlijk 4 weken van tevoren via inburgeren.nl.",
+      "textEN": "DUO – Education Executive Agency\n\nDear Mr./Mrs. Ahmadi,\n\nYou have registered for the civic integration exam. Hereby you receive information about your exam date and location. Your Knowledge of Dutch Society (KNM) exam is scheduled for Tuesday April 15th at 13:00 at the exam center at Leidseveer 35 in Utrecht. Bring your valid identification (passport or residence permit). Without valid identification you cannot participate in the exam. We advise you to be present at least 30 minutes before the start time. The exam lasts 45 minutes and consists of 40 multiple choice questions. You will receive the results within 8 weeks by mail. If you do not pass the exam, you can register again. Please note that you must pay again for each exam (€50 per exam). If you wish to change your exam date, you can do so up to 4 weeks in advance via inburgeren.nl.",
+      "keyVocabulary": [
+        { "dutch": "inburgeringsexamen", "english": "civic integration exam" },
+        { "dutch": "identiteitsbewijs", "english": "identification document" },
+        { "dutch": "deelnemen", "english": "to participate" },
+        { "dutch": "uitslag", "english": "result / outcome" },
+        { "dutch": "wijzigen", "english": "to change / modify" }
+      ],
+      "questions": [
+        {
+          "id": "pq13_1",
+          "question": "Wat moet je meenemen naar het examen?",
+          "options": ["Een pen en papier", "Een geldig identiteitsbewijs", "Een uitnodigingsbrief", "Een pasfoto"],
+          "answer": "Een geldig identiteitsbewijs",
+          "explanation": "The letter says 'Neem uw geldige identiteitsbewijs mee (paspoort of verblijfsvergunning)' (Bring your valid identification)."
+        },
+        {
+          "id": "pq13_2",
+          "question": "Hoeveel vragen heeft het examen?",
+          "options": ["20 vragen", "30 vragen", "40 vragen", "50 vragen"],
+          "answer": "40 vragen",
+          "explanation": "The letter states 'Het examen bestaat uit 40 meerkeuzevragen' (The exam consists of 40 multiple choice questions)."
+        },
+        {
+          "id": "pq13_3",
+          "question": "Wanneer kun je de examendatum uiterlijk wijzigen?",
+          "options": ["1 week van tevoren", "2 weken van tevoren", "4 weken van tevoren", "Je kunt niet wijzigen"],
+          "answer": "4 weken van tevoren",
+          "explanation": "The letter says 'dat kan tot uiterlijk 4 weken van tevoren' (you can do so up to 4 weeks in advance)."
+        }
+      ]
+    },
+    {
+      "id": "prac_read_014",
+      "title": "Nieuwsbericht: problemen op de woningmarkt",
+      "difficulty": 3,
+      "category": "news",
+      "text": "Woningtekort in Nederland blijft groeien\n\nVolgens een nieuw rapport van het Centraal Bureau voor de Statistiek (CBS) is het woningtekort in Nederland gestegen naar 390.000 woningen. Vooral starters en mensen met een middeninkomen hebben moeite om een betaalbare woning te vinden. De gemiddelde prijs van een koopwoning is inmiddels gestegen naar €430.000, wat voor veel Nederlanders onbereikbaar is geworden. De overheid heeft aangekondigd dat er de komende tien jaar 900.000 nieuwe woningen gebouwd moeten worden. Minister De Jonge van Volkshuisvesting heeft gemeenten opgeroepen om sneller bouwvergunningen af te geven. Verschillende gemeenten hebben al plannen gepresenteerd voor nieuwe woonwijken. Tegelijkertijd zijn er ook zorgen over de stijgende huurprijzen in de vrije sector. De Woonbond pleit voor strengere regels om huurders beter te beschermen tegen onredelijke huurverhogingen.",
+      "textEN": "Housing shortage in the Netherlands continues to grow\n\nAccording to a new report by Statistics Netherlands (CBS), the housing shortage in the Netherlands has risen to 390,000 homes. Especially first-time buyers and people with middle incomes are struggling to find an affordable home. The average price of a home for sale has now risen to €430,000, which has become unreachable for many Dutch people. The government has announced that 900,000 new homes must be built in the next ten years. Minister De Jonge of Housing has called on municipalities to issue building permits more quickly. Several municipalities have already presented plans for new residential areas. At the same time, there are also concerns about rising rental prices in the private sector. The Tenants' Union advocates for stricter rules to better protect tenants against unreasonable rent increases.",
+      "keyVocabulary": [
+        { "dutch": "woningtekort", "english": "housing shortage" },
+        { "dutch": "koopwoning", "english": "home for sale / owner-occupied home" },
+        { "dutch": "bouwvergunning", "english": "building permit" },
+        { "dutch": "huurverhoging", "english": "rent increase" },
+        { "dutch": "beschermen", "english": "to protect" }
+      ],
+      "questions": [
+        {
+          "id": "pq14_1",
+          "question": "Hoe groot is het woningtekort volgens het CBS?",
+          "options": ["200.000 woningen", "300.000 woningen", "390.000 woningen", "500.000 woningen"],
+          "answer": "390.000 woningen",
+          "explanation": "The article states 'het woningtekort in Nederland gestegen naar 390.000 woningen' (the housing shortage has risen to 390,000 homes)."
+        },
+        {
+          "id": "pq14_2",
+          "question": "Wie heeft vooral moeite om een woning te vinden?",
+          "options": ["Rijke mensen", "Starters en mensen met een middeninkomen", "Ouderen", "Studenten"],
+          "answer": "Starters en mensen met een middeninkomen",
+          "explanation": "The article says 'Vooral starters en mensen met een middeninkomen hebben moeite om een betaalbare woning te vinden' (Especially first-time buyers and middle-income people struggle)."
+        },
+        {
+          "id": "pq14_3",
+          "question": "Wat wil de Woonbond?",
+          "options": ["Meer koopwoningen bouwen", "Strengere regels om huurders te beschermen", "Lagere belastingen", "Meer sociale woningen"],
+          "answer": "Strengere regels om huurders te beschermen",
+          "explanation": "The article states 'De Woonbond pleit voor strengere regels om huurders beter te beschermen' (The Tenants' Union advocates for stricter rules to better protect tenants)."
+        }
+      ]
+    },
+    {
+      "id": "prac_read_015",
+      "title": "E-mail van de werkgever",
+      "difficulty": 3,
+      "category": "work",
+      "text": "Onderwerp: Wijzigingen in het werkrooster en nieuwe thuiswerkregeling\n\nBeste collega's,\n\nVanaf 1 mei gelden er nieuwe regels voor het werkrooster en thuiswerken. Na overleg met de ondernemingsraad hebben we besloten dat medewerkers voortaan maximaal twee dagen per week thuis mogen werken. Op dinsdag en donderdag verwachten we iedereen op kantoor voor teamvergaderingen en samenwerking. De overige dagen kunt u in overleg met uw leidinggevende zelf indelen. Daarnaast veranderen de kantooruren. Het kantoor is voortaan geopend van 7:30 tot 19:00 uur in plaats van 8:00 tot 18:00 uur. Uw contracturen blijven ongewijzigd. Medewerkers die thuiswerken ontvangen een vergoeding van €2,50 per thuiswerkdag voor internet- en energiekosten. U moet hiervoor een formulier invullen via het HR-portaal. Als u vragen heeft over deze wijzigingen, neem dan contact op met uw leidinggevende of met de afdeling HR via hr@bedrijf.nl.",
+      "textEN": "Subject: Changes to the work schedule and new remote work policy\n\nDear colleagues,\n\nFrom May 1st, new rules apply for the work schedule and working from home. After consultation with the works council, we have decided that employees may now work from home a maximum of two days per week. On Tuesday and Thursday, we expect everyone in the office for team meetings and collaboration. The remaining days you can arrange yourself in consultation with your supervisor. Additionally, office hours are changing. The office will now be open from 7:30 to 19:00 instead of 8:00 to 18:00. Your contracted hours remain unchanged. Employees who work from home receive a compensation of €2.50 per work-from-home day for internet and energy costs. You must fill out a form via the HR portal for this. If you have questions about these changes, contact your supervisor or the HR department at hr@bedrijf.nl.",
+      "keyVocabulary": [
+        { "dutch": "werkrooster", "english": "work schedule" },
+        { "dutch": "thuiswerken", "english": "to work from home" },
+        { "dutch": "ondernemingsraad", "english": "works council" },
+        { "dutch": "leidinggevende", "english": "supervisor / manager" },
+        { "dutch": "vergoeding", "english": "compensation / reimbursement" }
+      ],
+      "questions": [
+        {
+          "id": "pq15_1",
+          "question": "Hoeveel dagen per week mag je thuiswerken?",
+          "options": ["Eén dag", "Twee dagen", "Drie dagen", "Elke dag"],
+          "answer": "Twee dagen",
+          "explanation": "The email says 'medewerkers voortaan maximaal twee dagen per week thuis mogen werken' (employees may work from home a maximum of two days per week)."
+        },
+        {
+          "id": "pq15_2",
+          "question": "Op welke dagen moet iedereen op kantoor zijn?",
+          "options": ["Maandag en woensdag", "Dinsdag en donderdag", "Woensdag en vrijdag", "Maandag en vrijdag"],
+          "answer": "Dinsdag en donderdag",
+          "explanation": "The email says 'Op dinsdag en donderdag verwachten we iedereen op kantoor' (On Tuesday and Thursday we expect everyone in the office)."
+        },
+        {
+          "id": "pq15_3",
+          "question": "Hoeveel thuiswerkvergoeding ontvang je per dag?",
+          "options": ["€1,50", "€2,00", "€2,50", "€5,00"],
+          "answer": "€2,50",
+          "explanation": "The email states 'een vergoeding van €2,50 per thuiswerkdag' (a compensation of €2.50 per work-from-home day)."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "sections": [
+    {
+      "examNumber": 1,
+      "prompts": [
+        {
+          "id": "write_1_1",
+          "situation": "Your child is sick and cannot go to school today. Write a message to the teacher to inform them.",
+          "prompt": "Uw kind is ziek en kan vandaag niet naar school. Schrijf een bericht aan de leerkracht.",
+          "wordCount": { "min": 30, "max": 50 },
+          "tips": [
+            "Begin with a greeting (Beste/Geachte).",
+            "Explain what is wrong with your child.",
+            "Say when you think your child will be back.",
+            "End with a polite closing."
+          ],
+          "modelAnswer": "Beste juf Annemarie,\n\nIk schrijf u omdat mijn zoon Yusuf vandaag niet naar school kan komen. Hij heeft koorts en hoest veel. De dokter zegt dat hij een paar dagen thuis moet blijven. Ik hoop dat hij maandag weer naar school kan. Kunt u mij het huiswerk sturen?\n\nMet vriendelijke groet,\nFatima Bakir"
+        },
+        {
+          "id": "write_1_2",
+          "situation": "You want to sign up for a Dutch language course at a community center. Write an email to ask for information.",
+          "prompt": "U wilt zich inschrijven voor een cursus Nederlands bij het buurthuis. Schrijf een e-mail om informatie te vragen.",
+          "wordCount": { "min": 30, "max": 50 },
+          "tips": [
+            "Introduce yourself briefly.",
+            "Say what you are looking for.",
+            "Ask about days, times, and costs.",
+            "Ask how to sign up."
+          ],
+          "modelAnswer": "Geachte heer/mevrouw,\n\nMijn naam is Karim Osman. Ik woon sinds kort in Utrecht en ik wil graag mijn Nederlands verbeteren. Ik ben op zoek naar een cursus Nederlands. Kunt u mij vertellen wanneer de cursus is, hoeveel het kost en hoe ik mij kan inschrijven?\n\nMet vriendelijke groet,\nKarim Osman"
+        },
+        {
+          "id": "write_1_3",
+          "situation": "Your neighbor makes a lot of noise in the evening. Write a polite note asking them to be quieter.",
+          "prompt": "Uw buurman maakt 's avonds veel lawaai. Schrijf een vriendelijk briefje om te vragen of het stiller kan.",
+          "wordCount": { "min": 30, "max": 50 },
+          "tips": [
+            "Be polite and friendly.",
+            "Explain the problem clearly.",
+            "Suggest a solution.",
+            "Keep a good relationship with your neighbor."
+          ],
+          "modelAnswer": "Beste buurman,\n\nIk wil u iets vragen. De afgelopen weken hoor ik 's avonds na tien uur veel geluid uit uw appartement. Ik moet vroeg opstaan voor mijn werk en kan daardoor moeilijk slapen. Zou het mogelijk zijn om na tien uur het geluid wat zachter te zetten? Ik hoop dat u dit begrijpt.\n\nVriendelijke groet,\nUw buurvrouw op nummer 14"
+        }
+      ]
+    },
+    {
+      "examNumber": 2,
+      "prompts": [
+        {
+          "id": "write_2_1",
+          "situation": "You bought a product online but it arrived damaged. Write an email to the webshop to complain and ask for a solution.",
+          "prompt": "U hebt een product online gekocht, maar het is beschadigd aangekomen. Schrijf een e-mail naar de webwinkel.",
+          "wordCount": { "min": 30, "max": 50 },
+          "tips": [
+            "State what you ordered and when.",
+            "Describe the problem.",
+            "Say what solution you want (refund, replacement).",
+            "Include your order number."
+          ],
+          "modelAnswer": "Geachte heer/mevrouw,\n\nOp 3 maart heb ik een lamp besteld via uw webwinkel (bestelnummer 456789). Helaas was de lamp kapot toen ik het pakket opende. Het glas was gebroken. Ik wil graag een nieuw exemplaar ontvangen of mijn geld terugkrijgen. Kunt u mij laten weten wat de mogelijkheden zijn?\n\nMet vriendelijke groet,\nAnna de Vries"
+        },
+        {
+          "id": "write_2_2",
+          "situation": "You want to invite a friend to come to your house for dinner this Saturday. Write a message.",
+          "prompt": "U wilt een vriend(in) uitnodigen om zaterdag bij u te komen eten. Schrijf een bericht.",
+          "wordCount": { "min": 30, "max": 50 },
+          "tips": [
+            "Say when and where.",
+            "Tell them what you are going to cook.",
+            "Ask if they have allergies or special wishes.",
+            "Ask them to let you know if they can come."
+          ],
+          "modelAnswer": "Hoi Sarah,\n\nHoe gaat het? Ik wil je graag uitnodigen om zaterdag bij ons te komen eten. Ik ga Marokkaans koken: couscous met groenten en kip. We eten om zeven uur. Heb je allergieën of is er iets dat je niet eet? Laat je even weten of je kunt komen?\n\nGroetjes,\nFatima"
+        },
+        {
+          "id": "write_2_3",
+          "situation": "You cannot attend your Dutch class next week because you have a doctor's appointment. Write a message to your teacher.",
+          "prompt": "U kunt volgende week niet naar de les Nederlands komen vanwege een doktersafspraak. Schrijf een bericht aan uw docent.",
+          "wordCount": { "min": 30, "max": 50 },
+          "tips": [
+            "Explain why you cannot come.",
+            "Say which lesson you will miss.",
+            "Ask about homework or materials.",
+            "Apologize for the absence."
+          ],
+          "modelAnswer": "Beste meneer Van Dam,\n\nIk wil u laten weten dat ik volgende week dinsdag niet naar de les kan komen. Ik heb een afspraak bij de huisarts die ik niet kan verzetten. Kunt u mij het huiswerk sturen zodat ik thuis kan oefenen? Het spijt me dat ik er niet bij kan zijn.\n\nMet vriendelijke groet,\nKarim Osman"
+        }
+      ]
+    },
+    {
+      "examNumber": 3,
+      "prompts": [
+        {
+          "id": "write_3_1",
+          "situation": "You want to volunteer at a local organization. Write an email to introduce yourself and offer your help.",
+          "prompt": "U wilt vrijwilligerswerk doen bij een lokale organisatie. Schrijf een e-mail om u voor te stellen en uw hulp aan te bieden.",
+          "wordCount": { "min": 30, "max": 50 },
+          "tips": [
+            "Introduce yourself.",
+            "Explain why you want to volunteer.",
+            "Say what skills you have.",
+            "Ask about available opportunities."
+          ],
+          "modelAnswer": "Geachte heer/mevrouw,\n\nMijn naam is Elif Yilmaz en ik woon in Den Haag. Ik wil graag vrijwilligerswerk doen bij uw organisatie. Ik heb ervaring met het helpen van kinderen bij hun huiswerk en ik spreek Nederlands en Turks. Kunt u mij vertellen welke mogelijkheden er zijn?\n\nMet vriendelijke groet,\nElif Yilmaz"
+        },
+        {
+          "id": "write_3_2",
+          "situation": "You found a wallet on the street with some money and an ID card inside. Write a note to the owner.",
+          "prompt": "U hebt een portemonnee op straat gevonden met geld en een identiteitskaart erin. Schrijf een briefje aan de eigenaar.",
+          "wordCount": { "min": 30, "max": 50 },
+          "tips": [
+            "Say where and when you found it.",
+            "Describe what was inside.",
+            "Tell the owner how to contact you.",
+            "Be friendly and helpful."
+          ],
+          "modelAnswer": "Beste heer Jansen,\n\nVandaag, donderdag 10 maart, heb ik uw portemonnee gevonden op de Marktstraat, bij de bushalte. Er zat geld in en uw identiteitskaart. Ik heb de portemonnee afgegeven bij het politiebureau aan de Stationsweg. U kunt hem daar ophalen. Ik hoop dat u blij bent!\n\nVriendelijke groet,\nEen eerlijke vinder"
+        },
+        {
+          "id": "write_3_3",
+          "situation": "You are moving to a new city and need to cancel your gym membership. Write an email to the gym.",
+          "prompt": "U gaat verhuizen naar een andere stad en wilt uw sportschoolabonnement opzeggen. Schrijf een e-mail.",
+          "wordCount": { "min": 30, "max": 50 },
+          "tips": [
+            "State your membership number if you have one.",
+            "Explain why you are canceling.",
+            "Ask about the cancellation period.",
+            "Ask for confirmation."
+          ],
+          "modelAnswer": "Geachte heer/mevrouw,\n\nIk wil graag mijn abonnement opzeggen. Mijn naam is Ahmed Hassan en mijn lidmaatschapsnummer is 12345. Ik ga volgende maand verhuizen naar Groningen en kan daarom niet meer bij u sporten. Kunt u mij laten weten wanneer mijn abonnement eindigt en of ik een bevestiging kan krijgen?\n\nMet vriendelijke groet,\nAhmed Hassan"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "topic": "prepositions",
+  "topicNL": "Voorzetsels",
+  "explanation": {
+    "summary": "Voorzetsels (preposities) geven de relatie aan tussen woorden in een zin, vaak met betrekking tot plaats, richting, tijd of manier. In het Nederlands zijn er veel vaste combinaties van werkwoorden met voorzetsels die je uit je hoofd moet leren.",
+    "rules": [
+      "IN: plaats (in de kamer), tijd (in januari, in de zomer, in 2024), duur (in twee uur).",
+      "OP: oppervlak (op de tafel, op straat), dag/datum (op maandag, op 5 maart), medium (op televisie, op internet).",
+      "AAN: vastzittend (aan de muur, aan tafel), kust/water (aan zee, aan het meer).",
+      "BIJ: nabijheid (bij het station), persoon (bij mijn ouders), bedrijf (ik werk bij een bank).",
+      "NAAR: richting/bestemming (naar Amsterdam, naar huis, naar school, naar de dokter).",
+      "UIT: herkomst (uit Nederland, uit de kast), materiaal (uit hout).",
+      "MET: samen/instrument (met mijn vriend, met de trein, met een mes).",
+      "VOOR: doel/reden (voor jou, voor het examen), tijd (voor zessen), positie (voor het huis).",
+      "VAN: bezit/herkomst (van mijn vader, van Amsterdam), materiaal (van hout), tijd (van 9 tot 5).",
+      "OVER: onderwerp (over het weer praten), over iets heen (over de brug), tijd (over twee weken).",
+      "DOOR: middel/oorzaak (door de regen, door hard werken), door iets heen (door het bos).",
+      "OM: tijd (om 3 uur), rond (om het huis), reden (om die reden).",
+      "TUSSEN: positie (tussen de huizen), tijd (tussen 9 en 5), relatie (tussen ons).",
+      "ONDER: positie (onder de tafel), minder dan (onder de 18).",
+      "BOVEN: positie (boven de deur), meer dan (boven de 100).",
+      "ACHTER: positie (achter het huis).",
+      "NAAST: positie (naast de school).",
+      "TEGEN: tegenaan (tegen de muur), oppositie (tegen het plan), tijd (tegen de avond)."
+    ],
+    "exceptions": [
+      "NAAR HUIS (geen lidwoord): Ik ga naar huis (niet: naar het huis).",
+      "NAAR BED (geen lidwoord): Ik ga naar bed (niet: naar het bed).",
+      "AAN TAFEL (geen lidwoord): Wij zitten aan tafel (niet: aan de tafel, tenzij je een specifieke tafel bedoelt).",
+      "OP SCHOOL / OP KANTOOR / OP VAKANTIE: vaste uitdrukkingen zonder lidwoord.",
+      "MET DE TREIN / MET DE BUS / MET DE AUTO: vervoermiddelen met 'met' en lidwoord.",
+      "TE VOET / TE PAARD: oudere constructie met 'te'."
+    ],
+    "commonMistakes": [
+      "'Ik ga in Amsterdam' is fout als je richting bedoelt - gebruik 'naar': Ik ga naar Amsterdam. ('In Amsterdam' = je bent er al.)",
+      "'Ik werk in een bank' is ongebruikelijk - gebruik 'bij': Ik werk bij een bank.",
+      "'Ik denk over jou' is fout - gebruik 'aan': Ik denk aan jou. (Vaste combinatie: denken aan.)",
+      "'Ik wacht op de bus op maandag' is correct maar verwarrend - 'op' heeft hier twee verschillende betekenissen.",
+      "'Op de avond' is fout - gebruik 'in': in de avond / 's avonds.",
+      "'Naar het huis' is ongebruikelijk - gebruik 'naar huis' (vaste uitdrukking zonder lidwoord)."
+    ],
+    "tip": "Leer de vaste werkwoord-voorzetsel-combinaties! Deze zijn heel belangrijk voor het examen. Denken AAN, wachten OP, luisteren NAAR, praten OVER, houden VAN, beginnen MET, stoppen MET, zoeken NAAR, vragen OM/NAAR. Schrijf ze op kaartjes en oefen ze elke dag!",
+    "fixedCombinations": [
+      "denken aan (think about): Ik denk aan mijn familie.",
+      "wachten op (wait for): Ik wacht op de bus.",
+      "luisteren naar (listen to): Zij luistert naar muziek.",
+      "kijken naar (look at): Wij kijken naar de film.",
+      "praten over (talk about): Zij praten over het weer.",
+      "houden van (love): Ik houd van chocolade.",
+      "beginnen met (begin with): Wij beginnen met de les.",
+      "stoppen met (stop with): Hij stopt met roken.",
+      "zoeken naar (search for): Ik zoek naar mijn sleutels.",
+      "vragen om (ask for): Zij vraagt om hulp.",
+      "vragen naar (ask about): Hij vraagt naar je gezondheid.",
+      "trouwen met (marry): Zij trouwt met Jan.",
+      "feliciteren met (congratulate on): Ik feliciteer je met je verjaardag.",
+      "veranderen in (change into): De rups verandert in een vlinder.",
+      "bestaan uit (consist of): Het boek bestaat uit tien hoofdstukken."
+    ]
+  },
+  "exercises": [
+    {
+      "type": "fill_blank",
+      "sentence": "Ik ga morgen ___ Amsterdam.",
+      "answer": "naar",
+      "explanation": "Bij richting/bestemming gebruik je 'naar': Ik ga naar Amsterdam."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "Het boek ligt ___ de tafel.",
+      "options": ["in", "op", "aan", "bij"],
+      "answer": "op",
+      "explanation": "'Op' wordt gebruikt voor oppervlakken: het boek ligt op de tafel."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Ik wacht ___ de bus.",
+      "answer": "op",
+      "explanation": "Vaste combinatie: wachten OP. Ik wacht op de bus."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "Zij luistert ___ muziek.",
+      "options": ["aan", "op", "naar", "met"],
+      "answer": "naar",
+      "explanation": "Vaste combinatie: luisteren NAAR. Zij luistert naar muziek."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Ik ga ___ de trein naar Utrecht.",
+      "answer": "met",
+      "explanation": "Vervoermiddelen: met de trein, met de bus, met de auto."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Zij komt ___ Turkije.",
+      "answer": "uit",
+      "explanation": "Herkomst: 'uit' + land/stad. Zij komt uit Turkije."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "Ik denk ___ mijn familie.",
+      "options": ["over", "aan", "voor", "om"],
+      "answer": "aan",
+      "explanation": "Vaste combinatie: denken AAN. Ik denk aan mijn familie."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "De vergadering begint ___ 9 uur.",
+      "answer": "om",
+      "explanation": "Tijd (kloktijd): 'om' + tijdstip. De vergadering begint om 9 uur."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Wij praten ___ het weer.",
+      "answer": "over",
+      "explanation": "Vaste combinatie: praten OVER (een onderwerp). Wij praten over het weer."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "Ik werk ___ een ziekenhuis.",
+      "options": ["op", "in", "bij", "aan"],
+      "answer": "in",
+      "explanation": "Je werkt IN een gebouw (in een ziekenhuis, in een winkel). Je werkt BIJ een organisatie (bij een bank, bij de politie)."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "De kat zit ___ de tafel.",
+      "answer": "onder",
+      "explanation": "'Onder' geeft een positie aan: de kat zit onder de tafel."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "Ik houd ___ Nederlandse kaas.",
+      "options": ["van", "met", "aan", "voor"],
+      "answer": "van",
+      "explanation": "Vaste combinatie: houden VAN. Ik houd van Nederlandse kaas."
+    }
+  ]
+}

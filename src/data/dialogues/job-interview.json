@@ -1,0 +1,118 @@
+{
+  "id": "job-interview",
+  "title": "Het sollicitatiegesprek",
+  "titleEN": "The Job Interview",
+  "context": "You are attending a job interview for a part-time position at a supermarket. The manager asks about your experience and availability.",
+  "lines": [
+    {
+      "speaker": "Manager",
+      "dutch": "Goedemorgen, u bent vast mevrouw Yilmaz. Welkom! Komt u verder en gaat u zitten.",
+      "english": "Good morning, you must be Mrs. Yilmaz. Welcome! Come in and have a seat.",
+      "note": "'U bent vast...' is a polite way of saying 'you must be...'."
+    },
+    {
+      "speaker": "Sollicitant",
+      "dutch": "Goedemorgen. Dank u wel. Ik vind het fijn dat ik mocht langskomen voor een gesprek.",
+      "english": "Good morning. Thank you. I'm glad I was able to come in for an interview."
+    },
+    {
+      "speaker": "Manager",
+      "dutch": "Uiteraard. Kunt u zich even kort voorstellen?",
+      "english": "Of course. Could you briefly introduce yourself?",
+      "note": "'Zich voorstellen' means 'to introduce oneself'."
+    },
+    {
+      "speaker": "Sollicitant",
+      "dutch": "Natuurlijk. Mijn naam is Elif Yilmaz. Ik ben dertig jaar oud en ik woon sinds twee jaar in Amsterdam. Ik heb in mijn thuisland in een winkel gewerkt.",
+      "english": "Of course. My name is Elif Yilmaz. I am thirty years old and I have been living in Amsterdam for two years. I worked in a shop in my home country."
+    },
+    {
+      "speaker": "Manager",
+      "dutch": "Wat voor werkervaring hebt u in Nederland?",
+      "english": "What work experience do you have in the Netherlands?"
+    },
+    {
+      "speaker": "Sollicitant",
+      "dutch": "Ik heb als vrijwilliger gewerkt bij een buurthuis. Daar hielp ik met het organiseren van activiteiten en het ontvangen van bezoekers.",
+      "english": "I worked as a volunteer at a community center. There I helped with organizing activities and welcoming visitors.",
+      "note": "'Buurthuis' is a community center. Volunteering is valued on Dutch CVs."
+    },
+    {
+      "speaker": "Manager",
+      "dutch": "Dat klinkt goed. Hoe is uw Nederlands? Want u moet klanten kunnen helpen.",
+      "english": "That sounds good. How is your Dutch? Because you need to be able to help customers."
+    },
+    {
+      "speaker": "Sollicitant",
+      "dutch": "Ik volg een inburgeringscursus en mijn Nederlands wordt steeds beter. Ik kan goed met mensen omgaan.",
+      "english": "I'm taking a civic integration course and my Dutch is getting better all the time. I'm good with people.",
+      "note": "'Met mensen omgaan' means 'to deal/interact with people'."
+    },
+    {
+      "speaker": "Manager",
+      "dutch": "Mooi. De functie is voor vierentwintig uur per week. U zou op maandag, woensdag en vrijdag werken. Past dat?",
+      "english": "Great. The position is for twenty-four hours per week. You would work on Monday, Wednesday, and Friday. Does that work?"
+    },
+    {
+      "speaker": "Sollicitant",
+      "dutch": "Ja, dat past goed. Ik ben ook beschikbaar in het weekend als dat nodig is.",
+      "english": "Yes, that works well. I'm also available on weekends if needed.",
+      "note": "'Beschikbaar' means 'available'."
+    },
+    {
+      "speaker": "Manager",
+      "dutch": "Wat goed. Het salaris is veertien euro per uur. U krijgt ook vakantiegeld en een reiskostenvergoeding.",
+      "english": "Wonderful. The salary is fourteen euros per hour. You also receive holiday pay and a travel allowance.",
+      "note": "'Vakantiegeld' is holiday pay (8% of annual salary), paid in May. This is unique to the Netherlands."
+    },
+    {
+      "speaker": "Sollicitant",
+      "dutch": "Dat klinkt goed. Wanneer zou ik kunnen beginnen?",
+      "english": "That sounds good. When could I start?"
+    },
+    {
+      "speaker": "Manager",
+      "dutch": "We zoeken iemand die volgende maand kan beginnen. Is dat mogelijk?",
+      "english": "We're looking for someone who can start next month. Is that possible?"
+    },
+    {
+      "speaker": "Sollicitant",
+      "dutch": "Ja, dat is geen probleem. Ik kan volgende maand beginnen.",
+      "english": "Yes, that's no problem. I can start next month."
+    },
+    {
+      "speaker": "Manager",
+      "dutch": "Uitstekend. Wij laten u binnen een week iets weten. Heeft u nog vragen?",
+      "english": "Excellent. We'll let you know within a week. Do you have any questions?",
+      "note": "'Iets laten weten' means 'to let someone know'."
+    }
+  ],
+  "keyPhrases": [
+    {
+      "dutch": "Kunt u zich even voorstellen?",
+      "english": "Could you introduce yourself?",
+      "usage": "This is a standard opening question in Dutch job interviews."
+    },
+    {
+      "dutch": "Ik heb ervaring met...",
+      "english": "I have experience with...",
+      "usage": "Use this to talk about your work experience."
+    },
+    {
+      "dutch": "Ik ben beschikbaar op...",
+      "english": "I am available on...",
+      "usage": "Use this to discuss your schedule and availability."
+    },
+    {
+      "dutch": "Wanneer zou ik kunnen beginnen?",
+      "english": "When could I start?",
+      "usage": "A good question to ask at the end of an interview."
+    },
+    {
+      "dutch": "Wat is het salaris?",
+      "english": "What is the salary?",
+      "usage": "In the Netherlands, it is acceptable to ask about salary during the interview."
+    }
+  ],
+  "culturalNote": "The Dutch are known for their directness (directheid) in business and at work. It is perfectly normal to ask about salary, working hours, and holiday days during a job interview. Vakantiegeld (holiday pay) is a legal right in the Netherlands: you receive 8% of your gross annual salary, usually paid in May. Dutch workplaces tend to have a flat hierarchy, and colleagues often address each other with 'je' (informal you) rather than 'u' (formal you), even with managers."
+}

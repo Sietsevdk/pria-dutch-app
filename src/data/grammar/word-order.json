@@ -1,0 +1,157 @@
+{
+  "topic": "word-order",
+  "topicNL": "Woordvolgorde",
+  "explanation": {
+    "summary": "In het Nederlands staat het vervoegde werkwoord altijd op de tweede positie in de hoofdzin (de V2-regel). In bijzinnen gaat het werkwoord naar het einde. De volgorde van extra informatie volgt de regel: Tijd - Wijze - Plaats (wanneer - hoe - waar).",
+    "rules": [
+      "V2-REGEL: Het vervoegde werkwoord staat ALTIJD op de tweede positie in een hoofdzin (bevestigende zin).",
+      "Positie 1 kan gevuld worden door het onderwerp, maar ook door een tijdsbepaling, plaatsbepaling of ander zinsdeel.",
+      "INVERSIE: Als iets anders dan het onderwerp op positie 1 staat, komt het onderwerp NA het werkwoord: 'Morgen ga IK naar Amsterdam.' (niet: 'Morgen ik ga...')",
+      "BIJZIN: In bijzinnen (na omdat, dat, als, wanneer, etc.) gaat het vervoegde werkwoord naar het EINDE: 'Ik weet dat hij morgen komt.'",
+      "TIJD-WIJZE-PLAATS: De volgorde van bepalingen is: Tijd (wanneer), Wijze (hoe), Plaats (waar). 'Ik ga morgen (T) met de trein (W) naar Amsterdam (P).'",
+      "Bij twee werkwoorden: het vervoegde werkwoord op positie 2, het tweede werkwoord (infinitief/deelwoord) aan het einde: 'Ik wil morgen naar Amsterdam gaan.'",
+      "ONTKENNING: 'Niet' staat meestal aan het einde van de zin of voor het woord dat ontkend wordt.",
+      "In een bijzin met twee werkwoorden gaan beide werkwoorden naar het einde: '...omdat ik morgen naar Amsterdam wil gaan.'",
+      "Na coordinerende voegwoorden (en, maar, want, of, dus) verandert de woordvolgorde NIET.",
+      "Na subordinerende voegwoorden (omdat, dat, als, toen, terwijl, etc.) gaat het werkwoord naar het EINDE."
+    ],
+    "exceptions": [
+      "In ja/nee-vragen staat het werkwoord op positie 1: 'Ga jij morgen naar Amsterdam?'",
+      "In imperatieven (gebiedende wijs) staat het werkwoord op positie 1: 'Kom hier!'",
+      "Het woordje 'er' (existentieel) neemt vaak positie 1 in bij inversie: 'Er staat een man voor de deur.'",
+      "'Want' is een nevenschikkend voegwoord, maar sommige mensen behandelen het foutief als onderschikkend. Na 'want' verandert de woordvolgorde NIET: 'Ik ga niet, want ik ben ziek.' (niet: '...want ik ziek ben.')",
+      "In informele spreektaal wordt de woordvolgorde soms niet strikt gevolgd, maar voor het examen moet je de standaardregels kennen."
+    ],
+    "commonMistakes": [
+      "'Morgen ik ga naar school' is fout - bij inversie komt het onderwerp na het werkwoord: 'Morgen ga ik naar school.'",
+      "'Ik weet dat hij komt morgen' is fout - in de bijzin gaat het werkwoord naar het einde: 'Ik weet dat hij morgen komt.'",
+      "'Ik ga naar Amsterdam morgen met de trein' is fout - volg Tijd-Wijze-Plaats: 'Ik ga morgen met de trein naar Amsterdam.'",
+      "'Omdat ik ga niet naar school' is fout - in de bijzin gaat het werkwoord naar het einde: 'Omdat ik niet naar school ga.'",
+      "'Ik heb gegeten gisteren' is fout - het voltooid deelwoord staat aan het einde, maar tijdsbepalingen komen ervoor: 'Ik heb gisteren gegeten.'"
+    ],
+    "tip": "Denk aan de Nederlandse zin als een trein: het werkwoord is de locomotief en staat altijd op spoor 2 (positie 2). In een bijzin rijdt de locomotief naar het laatste spoor (het einde). Onthoud TMP: Tijd-Manier-Plaats (wanneer-hoe-waar) voor de volgorde van extra informatie."
+  },
+  "exercises": [
+    {
+      "type": "reorder",
+      "sentence": "Morgen ga ik naar de markt.",
+      "words": ["de", "ga", "ik", "Morgen", "markt", "naar"],
+      "answer": "Morgen ga ik naar de markt.",
+      "explanation": "'Morgen' staat op positie 1, dus het werkwoord 'ga' komt op positie 2, gevolgd door het onderwerp 'ik' (inversie)."
+    },
+    {
+      "type": "reorder",
+      "sentence": "Ik ga morgen met de fiets naar school.",
+      "words": ["school", "ga", "naar", "met", "de", "fiets", "morgen", "Ik"],
+      "answer": "Ik ga morgen met de fiets naar school.",
+      "explanation": "Woordvolgorde: onderwerp (Ik) + werkwoord (ga) + Tijd (morgen) + Wijze (met de fiets) + Plaats (naar school)."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Ik weet dat hij morgen ___. (komen)",
+      "answer": "komt",
+      "explanation": "In een bijzin (na 'dat') gaat het werkwoord naar het einde: '...dat hij morgen komt.'"
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "Welke zin is correct?",
+      "options": [
+        "Gisteren ik heb een film gezien.",
+        "Gisteren heb ik een film gezien.",
+        "Ik gisteren heb een film gezien.",
+        "Gisteren een film ik heb gezien."
+      ],
+      "answer": "Gisteren heb ik een film gezien.",
+      "explanation": "'Gisteren' staat op positie 1, dus het werkwoord 'heb' moet op positie 2 staan, gevolgd door het onderwerp 'ik' (inversie). Let op: 'gezien' is het voltooid deelwoord van 'zien'."
+    },
+    {
+      "type": "reorder",
+      "sentence": "Ik ga niet naar school omdat ik ziek ben.",
+      "words": ["ik", "ga", "naar", "niet", "omdat", "school", "ben", "ik", "ziek", "Ik"],
+      "answer": "Ik ga niet naar school omdat ik ziek ben.",
+      "explanation": "Hoofdzin: V2-regel (ga op positie 2). Bijzin na 'omdat': werkwoord 'ben' gaat naar het einde."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Zij vertelde dat zij in Amsterdam ___. (wonen, OVT)",
+      "answer": "woonde",
+      "explanation": "In de bijzin (na 'dat') gaat het werkwoord naar het einde: '...dat zij in Amsterdam woonde.'"
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "Welke zin is correct?",
+      "options": [
+        "Ik wil morgen naar Amsterdam gaan.",
+        "Ik wil gaan morgen naar Amsterdam.",
+        "Ik morgen wil naar Amsterdam gaan.",
+        "Ik gaan wil morgen naar Amsterdam."
+      ],
+      "answer": "Ik wil morgen naar Amsterdam gaan.",
+      "explanation": "Het modale werkwoord 'wil' staat op positie 2. De infinitief 'gaan' staat aan het einde. Daartussen: Tijd (morgen) + Plaats (naar Amsterdam)."
+    },
+    {
+      "type": "reorder",
+      "sentence": "Vandaag moet ik vroeg naar huis gaan.",
+      "words": ["naar", "moet", "ik", "vroeg", "gaan", "huis", "Vandaag"],
+      "answer": "Vandaag moet ik vroeg naar huis gaan.",
+      "explanation": "'Vandaag' op positie 1, werkwoord 'moet' op positie 2 (inversie), infinitief 'gaan' aan het einde."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Hij is blij, want hij ___ een nieuwe baan ___. (hebben, VTT)",
+      "answer": "heeft, gekregen",
+      "explanation": "Na 'want' (nevenschikkend voegwoord) verandert de woordvolgorde NIET. De hoofdzinvolgorde blijft: werkwoord op positie 2."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "Welke zin is correct?",
+      "options": [
+        "Als het regent morgen, blijf ik thuis.",
+        "Als het morgen regent, blijf ik thuis.",
+        "Als het morgen regent, ik blijf thuis.",
+        "Als morgen het regent, blijf ik thuis."
+      ],
+      "answer": "Als het morgen regent, blijf ik thuis.",
+      "explanation": "In de bijzin (als het morgen regent) gaat het werkwoord naar het einde. In de hoofdzin na de bijzin: inversie - werkwoord op positie 2: 'blijf ik'."
+    },
+    {
+      "type": "reorder",
+      "sentence": "In de zomer gaan wij altijd naar het strand.",
+      "words": ["strand", "In", "wij", "de", "het", "altijd", "gaan", "zomer", "naar"],
+      "answer": "In de zomer gaan wij altijd naar het strand.",
+      "explanation": "'In de zomer' op positie 1, werkwoord 'gaan' op positie 2, inversie: 'wij' na het werkwoord."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Ik eet nu een boterham, terwijl ik naar de radio ___.",
+      "answer": "luister",
+      "explanation": "In de bijzin (na 'terwijl') gaat het werkwoord naar het einde: '...terwijl ik naar de radio luister.'"
+    },
+    {
+      "type": "reorder",
+      "sentence": "Volgende week gaan wij met de auto naar Duitsland.",
+      "words": ["auto", "Volgende", "wij", "gaan", "de", "week", "naar", "Duitsland", "met"],
+      "answer": "Volgende week gaan wij met de auto naar Duitsland.",
+      "explanation": "Tijd (Volgende week) op positie 1, werkwoord (gaan) op positie 2, inversie, dan Wijze (met de auto) + Plaats (naar Duitsland)."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "Welke zin is correct?",
+      "options": [
+        "Omdat ik ben moe, ga ik slapen.",
+        "Omdat ik moe ben, ga ik slapen.",
+        "Omdat ik moe ben, ik ga slapen.",
+        "Ik ga slapen, omdat ben ik moe."
+      ],
+      "answer": "Omdat ik moe ben, ga ik slapen.",
+      "explanation": "Bijzin: werkwoord 'ben' naar het einde (omdat ik moe ben). Hoofdzin na de bijzin: inversie - werkwoord op positie 2 (ga ik slapen)."
+    },
+    {
+      "type": "reorder",
+      "sentence": "Ik heb gisteren de hele dag thuis gewerkt.",
+      "words": ["thuis", "heb", "gisteren", "hele", "de", "Ik", "gewerkt", "dag"],
+      "answer": "Ik heb gisteren de hele dag thuis gewerkt.",
+      "explanation": "Werkwoord 'heb' op positie 2, voltooid deelwoord 'gewerkt' aan het einde. Tijd (gisteren de hele dag) + Plaats (thuis) ertussen."
+    }
+  ]
+}

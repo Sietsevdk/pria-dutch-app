@@ -1,0 +1,688 @@
+{
+  "idioms": [
+    {
+      "dutch": "Nu komt de aap uit de mouw",
+      "english": "Now the monkey comes out of the sleeve",
+      "meaning": "Now the truth is revealed; the hidden motive becomes clear",
+      "example": "Hij zei dat hij wilde helpen, maar nu komt de aap uit de mouw: hij wil er geld voor."
+    },
+    {
+      "dutch": "Met de deur in huis vallen",
+      "english": "To fall into the house with the door",
+      "meaning": "To get straight to the point without small talk",
+      "example": "Sorry dat ik met de deur in huis val, maar ik heb je hulp nodig."
+    },
+    {
+      "dutch": "Doe maar normaal, dan doe je al gek genoeg",
+      "english": "Just act normal, that's crazy enough",
+      "meaning": "Don't show off or act extravagantly; a very Dutch saying about modesty",
+      "example": "Hij wilde een dure auto kopen, maar zijn moeder zei: doe maar normaal, dan doe je al gek genoeg."
+    },
+    {
+      "dutch": "De kat uit de boom kijken",
+      "english": "To watch the cat out of the tree",
+      "meaning": "To wait and see how things develop before taking action",
+      "example": "Ik ga eerst de kat uit de boom kijken voordat ik een beslissing neem."
+    },
+    {
+      "dutch": "Met iemand door het vuur gaan",
+      "english": "To go through the fire with someone",
+      "meaning": "To do anything for someone; to be completely loyal",
+      "example": "Ze is mijn beste vriendin. Ik zou voor haar door het vuur gaan."
+    },
+    {
+      "dutch": "Iets voor zoete koek slikken",
+      "english": "To swallow something like sweet cake",
+      "meaning": "To believe something without questioning it",
+      "example": "Je moet niet alles voor zoete koek slikken wat je op internet leest."
+    },
+    {
+      "dutch": "De knoop doorhakken",
+      "english": "To chop through the knot",
+      "meaning": "To make a difficult decision",
+      "example": "Na weken twijfelen heeft ze eindelijk de knoop doorgehakt en de baan aangenomen."
+    },
+    {
+      "dutch": "Het regent pijpenstelen",
+      "english": "It's raining pipe stems",
+      "meaning": "It's raining very heavily",
+      "example": "Neem een paraplu mee, het regent pijpenstelen buiten."
+    },
+    {
+      "dutch": "Iemand een oor aannaaien",
+      "english": "To sew an ear onto someone",
+      "meaning": "To cheat or trick someone",
+      "example": "Die verkoper heeft me een oor aangenaaid met die kapotte auto."
+    },
+    {
+      "dutch": "Op de koffie komen",
+      "english": "To come for coffee",
+      "meaning": "To visit someone casually at their home",
+      "example": "Kom je zaterdag op de koffie? Dan kunnen we bijpraten."
+    },
+    {
+      "dutch": "Helaas pindakaas",
+      "english": "Unfortunately peanut butter",
+      "meaning": "Too bad, tough luck (used humorously)",
+      "example": "De kaartjes zijn uitverkocht? Helaas pindakaas!"
+    },
+    {
+      "dutch": "Iets onder de knie krijgen",
+      "english": "To get something under the knee",
+      "meaning": "To master or learn something well",
+      "example": "Het duurde even, maar ik heb de Nederlandse grammatica onder de knie gekregen."
+    },
+    {
+      "dutch": "Een appeltje met iemand te schillen hebben",
+      "english": "To have a little apple to peel with someone",
+      "meaning": "To have an issue to settle with someone",
+      "example": "Ik heb nog een appeltje met je te schillen over wat je gisteren hebt gezegd."
+    },
+    {
+      "dutch": "De bal is rond",
+      "english": "The ball is round",
+      "meaning": "Anything can happen (often used about football)",
+      "example": "Ajax kan nog steeds winnen. De bal is rond."
+    },
+    {
+      "dutch": "Zijn neus voorbijlopen",
+      "english": "To walk past one's nose",
+      "meaning": "To miss an opportunity",
+      "example": "Als je niet snel reageert, loop je deze kans voorbij je neus."
+    },
+    {
+      "dutch": "Op een kluitje zitten",
+      "english": "To sit on a clump",
+      "meaning": "To be crowded together in a small space",
+      "example": "We zaten met zes personen in een klein kamertje, echt op een kluitje."
+    },
+    {
+      "dutch": "Dat slaat als een tang op een varken",
+      "english": "That hits like pliers on a pig",
+      "meaning": "That makes no sense; that's completely irrelevant",
+      "example": "Zijn antwoord sloeg als een tang op een varken."
+    },
+    {
+      "dutch": "De bloemetjes buitenzetten",
+      "english": "To put the flowers outside",
+      "meaning": "To go out and celebrate; to have a wild night out",
+      "example": "Na het examen gaan we de bloemetjes buitenzetten!"
+    },
+    {
+      "dutch": "Iets op de lange baan schuiven",
+      "english": "To push something onto the long track",
+      "meaning": "To postpone something indefinitely",
+      "example": "Schuif je belastingaangifte niet op de lange baan, je moet het voor april doen."
+    },
+    {
+      "dutch": "Met de neus in de boter vallen",
+      "english": "To fall with your nose in the butter",
+      "meaning": "To arrive at a lucky moment; to be fortunate",
+      "example": "Je valt met je neus in de boter, er is vandaag taart!"
+    },
+    {
+      "dutch": "Van een mug een olifant maken",
+      "english": "To make an elephant out of a mosquito",
+      "meaning": "To make a big deal out of nothing; to exaggerate",
+      "example": "Het is maar een klein foutje. Maak niet van een mug een olifant."
+    },
+    {
+      "dutch": "Over koetjes en kalfjes praten",
+      "english": "To talk about little cows and calves",
+      "meaning": "To make small talk; to chat about trivial things",
+      "example": "We hebben een uur over koetjes en kalfjes gepraat bij de koffie."
+    },
+    {
+      "dutch": "Iemand de oren wassen",
+      "english": "To wash someone's ears",
+      "meaning": "To give someone a stern talking-to",
+      "example": "De baas heeft hem flink de oren gewassen na die fout."
+    },
+    {
+      "dutch": "Ergens geen kaas van gegeten hebben",
+      "english": "To not have eaten cheese of something",
+      "meaning": "To know nothing about a subject",
+      "example": "Ik heb van computers geen kaas gegeten."
+    },
+    {
+      "dutch": "Op je tellen passen",
+      "english": "To watch your counting",
+      "meaning": "To be careful; to watch out",
+      "example": "Pas op je tellen in dat deel van de stad, het is niet zo veilig."
+    },
+    {
+      "dutch": "Het is koek en ei",
+      "english": "It's cake and egg",
+      "meaning": "Everything is fine; all is well (between people)",
+      "example": "Na hun ruzie is het nu weer koek en ei tussen die twee."
+    },
+    {
+      "dutch": "Iets met de mantel der liefde bedekken",
+      "english": "To cover something with the mantle of love",
+      "meaning": "To forgive and forget; to overlook someone's mistakes",
+      "example": "Laten we het maar met de mantel der liefde bedekken."
+    },
+    {
+      "dutch": "Een kat in het donker knijpen",
+      "english": "To pinch a cat in the dark",
+      "meaning": "To do something secretly or sneakily",
+      "example": "Hij deed net alsof hij niets wist, maar hij kneep een kat in het donker."
+    },
+    {
+      "dutch": "De hand in eigen boezem steken",
+      "english": "To put your hand in your own chest",
+      "meaning": "To examine your own conscience; to admit your own fault",
+      "example": "Voordat je anderen de schuld geeft, moet je eerst de hand in eigen boezem steken."
+    },
+    {
+      "dutch": "Wie het laatst lacht, lacht het best",
+      "english": "He who laughs last, laughs best",
+      "meaning": "The final outcome is what matters; patience will pay off",
+      "example": "Ze lachten me uit, maar wie het laatst lacht, lacht het best."
+    },
+    {
+      "dutch": "De koe bij de horens vatten",
+      "english": "To grab the cow by the horns",
+      "meaning": "To tackle a problem head-on",
+      "example": "Je moet de koe bij de horens vatten en met je baas praten."
+    },
+    {
+      "dutch": "Zo gezegd, zo gedaan",
+      "english": "So said, so done",
+      "meaning": "No sooner said than done",
+      "example": "Ze stelde voor om de muur te verven. Zo gezegd, zo gedaan!"
+    },
+    {
+      "dutch": "Door de zure appel heen bijten",
+      "english": "To bite through the sour apple",
+      "meaning": "To persevere through something unpleasant",
+      "example": "Het examen is moeilijk, maar je moet door de zure appel heen bijten."
+    },
+    {
+      "dutch": "Op twee gedachten hinken",
+      "english": "To limp on two thoughts",
+      "meaning": "To be undecided between two options",
+      "example": "Ik hink op twee gedachten: zal ik de rode of de blauwe jas kopen?"
+    },
+    {
+      "dutch": "Het paard achter de wagen spannen",
+      "english": "To hitch the horse behind the cart",
+      "meaning": "To do things in the wrong order",
+      "example": "Je spant het paard achter de wagen als je begint te schilderen voordat je de muur hebt geschuurd."
+    },
+    {
+      "dutch": "Oost west, thuis best",
+      "english": "East west, home best",
+      "meaning": "There's no place like home",
+      "example": "De vakantie was leuk, maar oost west, thuis best."
+    },
+    {
+      "dutch": "Wie niet waagt, die niet wint",
+      "english": "Who doesn't dare, doesn't win",
+      "meaning": "Nothing ventured, nothing gained",
+      "example": "Ik ga solliciteren voor die baan. Wie niet waagt, die niet wint."
+    },
+    {
+      "dutch": "Alle beetjes helpen",
+      "english": "Every little bit helps",
+      "meaning": "Small contributions add up",
+      "example": "Ik kan maar vijf euro doneren. Maar alle beetjes helpen!"
+    },
+    {
+      "dutch": "Iets voor het zeggen hebben",
+      "english": "To have something to say",
+      "meaning": "To be in charge; to have authority",
+      "example": "Op kantoor heeft de directeur het voor het zeggen."
+    },
+    {
+      "dutch": "Als de nood aan de man komt",
+      "english": "When the need comes to the man",
+      "meaning": "When push comes to shove; in a crisis",
+      "example": "Als de nood aan de man komt, helpen de buren altijd."
+    },
+    {
+      "dutch": "Het ijs breken",
+      "english": "To break the ice",
+      "meaning": "To make the first move in a social situation",
+      "example": "Met een grapje brak hij het ijs op het feestje."
+    },
+    {
+      "dutch": "Je hart op de tong dragen",
+      "english": "To wear your heart on your tongue",
+      "meaning": "To speak openly about your feelings",
+      "example": "Mijn oma draagt haar hart op de tong; ze zegt altijd precies wat ze denkt."
+    },
+    {
+      "dutch": "Veel honden zijn de haas zijn dood",
+      "english": "Many dogs are the death of the hare",
+      "meaning": "Many small problems together can become overwhelming",
+      "example": "Al die kleine kosten zijn een probleem. Veel honden zijn de haas zijn dood."
+    },
+    {
+      "dutch": "De beste stuurlui staan aan wal",
+      "english": "The best helmsmen stand on shore",
+      "meaning": "It's easy to criticize from the sidelines",
+      "example": "Iedereen had commentaar op de coach, maar de beste stuurlui staan aan wal."
+    },
+    {
+      "dutch": "Beter laat dan nooit",
+      "english": "Better late than never",
+      "meaning": "It's better to do something late than not at all",
+      "example": "Je verjaardagscadeau is een week te laat. Beter laat dan nooit!"
+    },
+    {
+      "dutch": "Dat is mosterd na de maaltijd",
+      "english": "That's mustard after the meal",
+      "meaning": "That comes too late to be useful",
+      "example": "Ze boden pas hulp aan toen alles al klaar was. Dat was mosterd na de maaltijd."
+    },
+    {
+      "dutch": "Het heeft geen zin om over gemorste melk te huilen",
+      "english": "There's no point crying over spilled milk",
+      "meaning": "Don't waste time regretting something that can't be undone",
+      "example": "Je kunt het niet meer veranderen. Het heeft geen zin om over gemorste melk te huilen."
+    },
+    {
+      "dutch": "Wie boter op zijn hoofd heeft, moet niet in de zon gaan staan",
+      "english": "He who has butter on his head shouldn't stand in the sun",
+      "meaning": "If you have something to hide, don't draw attention to yourself",
+      "example": "Hij beschuldigde anderen terwijl hij zelf schuldig was. Wie boter op zijn hoofd heeft, moet niet in de zon gaan staan."
+    },
+    {
+      "dutch": "Met de gebakken peren zitten",
+      "english": "To be stuck with the baked pears",
+      "meaning": "To be left with the consequences of a bad situation",
+      "example": "Iedereen ging weg en ik zat met de gebakken peren."
+    },
+    {
+      "dutch": "Het gras is altijd groener aan de andere kant",
+      "english": "The grass is always greener on the other side",
+      "meaning": "Other people's situations always seem better than your own",
+      "example": "Ze wil altijd wat een ander heeft. Het gras is altijd groener aan de andere kant."
+    },
+    {
+      "dutch": "Dat is een fluitje van een cent",
+      "english": "That's a whistle of a cent",
+      "meaning": "That's very easy; a piece of cake",
+      "example": "Die test was een fluitje van een cent. Ik had alles goed."
+    },
+    {
+      "dutch": "Er als de kippen bij zijn",
+      "english": "To be there like the chickens",
+      "meaning": "To be very quick to take an opportunity",
+      "example": "Toen de kaartjes online kwamen, was zij er als de kippen bij."
+    },
+    {
+      "dutch": "Geen blad voor de mond nemen",
+      "english": "Not to take a leaf before your mouth",
+      "meaning": "To speak frankly; not to mince words",
+      "example": "Zij neemt geen blad voor de mond en zegt precies wat ze denkt."
+    },
+    {
+      "dutch": "Het spreekwoord zegt: oefening baart kunst",
+      "english": "The proverb says: practice gives birth to art",
+      "meaning": "Practice makes perfect",
+      "example": "Blijf je Nederlands oefenen. Oefening baart kunst!"
+    },
+    {
+      "dutch": "Appeltje-eitje",
+      "english": "Little apple, little egg",
+      "meaning": "Very easy; a piece of cake",
+      "example": "Het was appeltje-eitje om die oefeningen te maken."
+    },
+    {
+      "dutch": "Daar kun je vergif op innemen",
+      "english": "You can take poison on that",
+      "meaning": "You can be absolutely sure about that",
+      "example": "Het gaat morgen regenen, daar kun je vergif op innemen."
+    },
+    {
+      "dutch": "Twee vliegen in een klap",
+      "english": "Two flies in one hit",
+      "meaning": "To accomplish two things at once; to kill two birds with one stone",
+      "example": "Als ik naar de stad ga, kan ik boodschappen doen en de post ophalen. Twee vliegen in een klap."
+    },
+    {
+      "dutch": "De kogel is door de kerk",
+      "english": "The bullet has gone through the church",
+      "meaning": "The decision has been made; there's no going back",
+      "example": "De kogel is door de kerk: we gaan verhuizen naar Amsterdam."
+    },
+    {
+      "dutch": "Het schip ingaan",
+      "english": "To go into the ship",
+      "meaning": "To fail or go wrong",
+      "example": "Mijn sollicitatie is het schip ingegaan. Ik heb de baan niet gekregen."
+    },
+    {
+      "dutch": "Tegen de lamp lopen",
+      "english": "To walk into the lamp",
+      "meaning": "To get caught doing something wrong",
+      "example": "De dief is tegen de lamp gelopen bij de politiecontrole."
+    },
+    {
+      "dutch": "Op eigen benen staan",
+      "english": "To stand on your own legs",
+      "meaning": "To be independent and self-reliant",
+      "example": "Na haar studie staat ze op eigen benen en woont ze alleen."
+    },
+    {
+      "dutch": "Het op een akkoordje gooien",
+      "english": "To throw it on a little chord",
+      "meaning": "To come to a compromise or shady deal",
+      "example": "Ze gooiden het op een akkoordje en deelden de kosten."
+    },
+    {
+      "dutch": "Er is geen land mee te bezeilen",
+      "english": "There's no land to sail with it",
+      "meaning": "Someone is impossible to deal with; unbearable",
+      "example": "Als hij moe is, is er geen land met hem te bezeilen."
+    },
+    {
+      "dutch": "Dat is een ander koekje van eigen deeg",
+      "english": "That's another cookie from your own dough",
+      "meaning": "To get a taste of your own medicine",
+      "example": "Hij bekritiseerde altijd anderen. Nu krijgt hij een koekje van eigen deeg."
+    },
+    {
+      "dutch": "De druppel die de emmer doet overlopen",
+      "english": "The drop that makes the bucket overflow",
+      "meaning": "The last straw; the final thing that pushes you over the edge",
+      "example": "Zijn late thuiskomst was de druppel die de emmer deed overlopen."
+    },
+    {
+      "dutch": "Op iemands lip gaan zitten",
+      "english": "To sit on someone's lip",
+      "meaning": "To be very close to someone; to invade personal space",
+      "example": "Ga niet op mijn lip zitten! Geef me wat ruimte."
+    },
+    {
+      "dutch": "Hoge bomen vangen veel wind",
+      "english": "Tall trees catch a lot of wind",
+      "meaning": "Prominent people attract more criticism",
+      "example": "Als directeur krijg je altijd commentaar. Hoge bomen vangen veel wind."
+    },
+    {
+      "dutch": "Iets uit je duim zuigen",
+      "english": "To suck something out of your thumb",
+      "meaning": "To make something up; to invent",
+      "example": "Dat verhaal klopt niet. Hij zuigt het uit zijn duim."
+    },
+    {
+      "dutch": "In het ootje nemen",
+      "english": "To take in the little eye",
+      "meaning": "To tease or fool someone",
+      "example": "Ze nam hem in het ootje door te zeggen dat het feest was afgelast."
+    },
+    {
+      "dutch": "Boter bij de vis",
+      "english": "Butter with the fish",
+      "meaning": "Pay immediately; cash on the nail",
+      "example": "Als je het product wilt, is het boter bij de vis: eerst betalen, dan krijg je het."
+    },
+    {
+      "dutch": "Zo klaar als een klontje",
+      "english": "As clear as a lump of sugar",
+      "meaning": "Absolutely obvious; crystal clear",
+      "example": "Het is zo klaar als een klontje dat hij liegt."
+    },
+    {
+      "dutch": "De spijker op de kop slaan",
+      "english": "To hit the nail on the head",
+      "meaning": "To be exactly right about something",
+      "example": "Je slaat de spijker op de kop: dat is precies het probleem."
+    },
+    {
+      "dutch": "Achter het net vissen",
+      "english": "To fish behind the net",
+      "meaning": "To arrive too late; to miss out",
+      "example": "De aanbieding was al voorbij. We visten achter het net."
+    },
+    {
+      "dutch": "Zich met een kluitje in het riet laten sturen",
+      "english": "To let yourself be sent into the reeds with a clump",
+      "meaning": "To be fobbed off; to accept a poor excuse",
+      "example": "Laat je niet met een kluitje in het riet sturen. Eis een duidelijk antwoord."
+    },
+    {
+      "dutch": "Een wit voetje halen",
+      "english": "To get a white foot",
+      "meaning": "To try to get on someone's good side; to curry favor",
+      "example": "Hij probeert altijd een wit voetje te halen bij de baas."
+    },
+    {
+      "dutch": "Met de noorderzon vertrekken",
+      "english": "To leave with the northern sun",
+      "meaning": "To disappear without a trace (often to avoid obligations)",
+      "example": "De oplichter is met de noorderzon vertrokken."
+    },
+    {
+      "dutch": "Het roer omgooien",
+      "english": "To throw the helm around",
+      "meaning": "To completely change course in life",
+      "example": "Na tien jaar in de IT heeft hij het roer omgegooid en is hij bakker geworden."
+    },
+    {
+      "dutch": "Water naar de zee dragen",
+      "english": "To carry water to the sea",
+      "meaning": "To do something completely pointless or unnecessary",
+      "example": "Bloemen meenemen naar een bloemist is water naar de zee dragen."
+    },
+    {
+      "dutch": "Niet alles is goud wat er blinkt",
+      "english": "Not everything that shines is gold",
+      "meaning": "Appearances can be deceiving",
+      "example": "Die baan leek perfect, maar niet alles is goud wat er blinkt."
+    },
+    {
+      "dutch": "Waar rook is, is vuur",
+      "english": "Where there's smoke, there's fire",
+      "meaning": "Rumors usually have some basis in truth",
+      "example": "Er gaan geruchten over de directeur. Waar rook is, is vuur."
+    },
+    {
+      "dutch": "Een storm in een glas water",
+      "english": "A storm in a glass of water",
+      "meaning": "Making a big fuss about nothing",
+      "example": "Het was maar een klein probleem, een storm in een glas water."
+    },
+    {
+      "type": "funFact",
+      "dutch": "Nederland heeft meer fietsen dan inwoners",
+      "english": "The Netherlands has more bicycles than inhabitants",
+      "meaning": "There are approximately 23 million bicycles in the Netherlands for about 17.8 million people. Cycling is the primary mode of transport for short distances.",
+      "example": "In Nederland zijn er meer fietsen dan inwoners: ongeveer 23 miljoen fietsen!"
+    },
+    {
+      "type": "funFact",
+      "dutch": "Hagelslag op je boterham is een Nederlands ontbijt",
+      "english": "Chocolate sprinkles on your bread is a Dutch breakfast",
+      "meaning": "The Dutch eat chocolate sprinkles (hagelslag) on buttered bread for breakfast. This is completely normal and not considered a dessert.",
+      "example": "Elke ochtend eet ik een boterham met hagelslag. Typisch Nederlands!"
+    },
+    {
+      "dutch": "De nacht van de paling",
+      "english": "The night of the eel",
+      "meaning": "Used when something happens in secret, out of sight",
+      "example": "Niemand weet wat er die nacht is gebeurd. Het was de nacht van de paling."
+    },
+    {
+      "type": "funFact",
+      "dutch": "Nederlanders zijn het langste volk ter wereld",
+      "english": "The Dutch are the tallest people in the world",
+      "meaning": "The average Dutch man is about 183 cm tall and the average Dutch woman about 170 cm. Scientists believe this is due to genetics, diet, and healthcare.",
+      "example": "Nederlanders zijn gemiddeld het langste volk ter wereld."
+    },
+    {
+      "dutch": "Op de fles gaan",
+      "english": "To go on the bottle",
+      "meaning": "To go bankrupt; to fail (a business)",
+      "example": "Het restaurant is na twee jaar op de fles gegaan."
+    },
+    {
+      "type": "funFact",
+      "dutch": "Het woord 'gezellig' is onvertaalbaar",
+      "english": "The word 'gezellig' is untranslatable",
+      "meaning": "Gezellig is the most Dutch word there is. It describes a warm, cozy, friendly atmosphere. It can mean fun, cozy, nice, sociable - but no English word fully captures it.",
+      "example": "Het was zo gezellig gisteravond met z'n allen bij het vuur!"
+    },
+    {
+      "dutch": "Zich het vuur uit de sloffen lopen",
+      "english": "To run the fire out of your slippers",
+      "meaning": "To work very hard for someone; to go the extra mile",
+      "example": "De verpleegkundigen lopen zich het vuur uit de sloffen voor hun patienten."
+    },
+    {
+      "dutch": "Er een potje van maken",
+      "english": "To make a pot of it",
+      "meaning": "To make a mess of things",
+      "example": "Hij heeft er echt een potje van gemaakt met dat project."
+    },
+    {
+      "type": "funFact",
+      "dutch": "Nederland is een van de laagst gelegen landen ter wereld",
+      "english": "The Netherlands is one of the lowest-lying countries in the world",
+      "meaning": "About one-third of the Netherlands lies below sea level. The lowest point is 6.76 meters below sea level. The Dutch have been fighting water for centuries with dikes, dams, and pumping stations.",
+      "example": "Bijna een derde van Nederland ligt onder zeeniveau."
+    },
+    {
+      "dutch": "Iets in de koelkast zetten",
+      "english": "To put something in the fridge",
+      "meaning": "To put something on hold or postpone it",
+      "example": "Laten we dat plan even in de koelkast zetten tot na de zomer."
+    },
+    {
+      "dutch": "Ergens een hard hoofd in hebben",
+      "english": "To have a hard head in something",
+      "meaning": "To have little confidence that something will succeed",
+      "example": "Ik heb er een hard hoofd in dat we op tijd klaar zijn."
+    },
+    {
+      "type": "funFact",
+      "dutch": "Nederlanders vieren twee keer Kerstmis",
+      "english": "The Dutch celebrate Christmas twice",
+      "meaning": "The Netherlands has Eerste Kerstdag (December 25) and Tweede Kerstdag (December 26), both official holidays. But the biggest gift-giving celebration is Sinterklaas on December 5.",
+      "example": "In Nederland vieren we Eerste en Tweede Kerstdag, op 25 en 26 december."
+    },
+    {
+      "dutch": "Het gaat niet over rozen",
+      "english": "It doesn't go over roses",
+      "meaning": "Things are not easy; it's a difficult time",
+      "example": "Het gaat niet altijd over rozen als je net in een nieuw land woont."
+    },
+    {
+      "dutch": "Met de pet naar iets gooien",
+      "english": "To throw a cap at something",
+      "meaning": "To do something carelessly or without effort",
+      "example": "Je kunt niet met de pet naar je examen gooien. Je moet studeren."
+    },
+    {
+      "type": "funFact",
+      "dutch": "Oranje is de nationale kleur, maar staat niet in de vlag",
+      "english": "Orange is the national color, but it's not in the flag",
+      "meaning": "The Dutch wear orange to celebrate their royal family (the House of Orange-Nassau), but the flag is red, white, and blue. On Koningsdag (King's Day, April 27), the whole country turns orange.",
+      "example": "Op Koningsdag draagt heel Nederland oranje kleding!"
+    },
+    {
+      "dutch": "Iets op het spel zetten",
+      "english": "To put something at stake",
+      "meaning": "To risk something important",
+      "example": "Je zet je carriere op het spel als je dat doet."
+    },
+    {
+      "dutch": "Aan de bak komen",
+      "english": "To get to the bin",
+      "meaning": "To find work; to get a job",
+      "example": "Na maanden zoeken is hij eindelijk aan de bak gekomen."
+    },
+    {
+      "type": "funFact",
+      "dutch": "Nederland heeft meer dan 1.000 windmolens",
+      "english": "The Netherlands has more than 1,000 windmills",
+      "meaning": "Historically, windmills were used to pump water and grind grain. Today about 1,000 traditional windmills still stand, and modern wind turbines generate a growing share of the country's electricity.",
+      "example": "In Nederland staan nog steeds meer dan duizend traditionele windmolens."
+    },
+    {
+      "dutch": "Het is geen weer om een hond naar buiten te sturen",
+      "english": "It's not weather to send a dog outside",
+      "meaning": "The weather is terrible",
+      "example": "Kijk eens naar die regen! Het is geen weer om een hond naar buiten te sturen."
+    },
+    {
+      "dutch": "Iemand het vuur na aan de schenen leggen",
+      "english": "To lay fire close to someone's shins",
+      "meaning": "To interrogate someone thoroughly; to put someone under pressure",
+      "example": "De journalist legde de politicus het vuur na aan de schenen."
+    },
+    {
+      "type": "funFact",
+      "dutch": "De Nederlandse taal heeft het langste woord van Europa",
+      "english": "The Dutch language has the longest word in Europe",
+      "meaning": "Dutch loves compound words. The longest official Dutch word in the Van Dale dictionary is 'meervoudigepersoonlijkheidsstoornis' (multiple personality disorder). In theory, Dutch compound words can be infinitely long.",
+      "example": "In het Nederlands kun je heel lange samengestelde woorden maken."
+    },
+    {
+      "dutch": "Daar zit een luchtje aan",
+      "english": "There's a smell to that",
+      "meaning": "Something seems suspicious or not quite right",
+      "example": "Dat aanbod is te mooi om waar te zijn. Daar zit een luchtje aan."
+    },
+    {
+      "dutch": "Op de blaren zitten",
+      "english": "To sit on the blisters",
+      "meaning": "To suffer the consequences of your own actions",
+      "example": "Je hebt niet geluisterd, en nu moet je op de blaren zitten."
+    },
+    {
+      "type": "funFact",
+      "dutch": "De Nederlandse verjaardag is anders dan in andere landen",
+      "english": "Dutch birthdays are different from other countries",
+      "meaning": "At Dutch birthday parties, guests sit in a circle (the 'kring') and congratulate not just the birthday person, but their family too: 'Gefeliciteerd met je moeder!' (Congratulations with your mother!). Coffee and cake are always served.",
+      "example": "Op een Nederlands verjaardagsfeest feliciteer je ook de familie van de jarige."
+    },
+    {
+      "dutch": "Stil water heeft diepe gronden",
+      "english": "Still water has deep grounds",
+      "meaning": "Quiet people often have great depth; still waters run deep",
+      "example": "Ze zegt niet veel, maar stil water heeft diepe gronden."
+    },
+    {
+      "dutch": "Een slag om de arm houden",
+      "english": "To keep a blow around the arm",
+      "meaning": "To not commit fully; to leave room for change",
+      "example": "Ik denk dat het lukt, maar ik houd een slag om de arm."
+    },
+    {
+      "type": "funFact",
+      "dutch": "Pinnen is de nationale sport van Nederland",
+      "english": "Debit card payment is the national sport of the Netherlands",
+      "meaning": "The Netherlands is one of the most cashless countries in Europe. Most Dutch people pay with their debit card (pinpas) for everything, even small amounts. Many shops don't accept cash anymore.",
+      "example": "In Nederland betaal je bijna overal met je pinpas, zelfs voor een kopje koffie."
+    },
+    {
+      "dutch": "Met twee maten meten",
+      "english": "To measure with two measures",
+      "meaning": "To apply double standards; to treat people unfairly",
+      "example": "De leraar meet met twee maten: hij is streng voor ons maar niet voor de andere klas."
+    },
+    {
+      "dutch": "Iets in kannen en kruiken hebben",
+      "english": "To have something in jugs and pitchers",
+      "meaning": "To have something all arranged; it's a done deal",
+      "example": "De verhuizing is in kannen en kruiken. We gaan volgende week verhuizen."
+    },
+    {
+      "type": "funFact",
+      "dutch": "Nederlanders eten gemiddeld 14,3 kilo kaas per jaar",
+      "english": "The Dutch eat an average of 14.3 kilograms of cheese per year",
+      "meaning": "The Netherlands is one of the world's largest cheese producers and exporters. Famous Dutch cheeses include Gouda, Edam, Leiden, and Maasdam. Cheese markets in Alkmaar and Gouda are popular tourist attractions.",
+      "example": "Nederlanders eten gemiddeld meer dan veertien kilo kaas per persoon per jaar."
+    },
+    {
+      "dutch": "Het wiel opnieuw uitvinden",
+      "english": "To reinvent the wheel",
+      "meaning": "To waste time doing something that has already been done",
+      "example": "Je hoeft het wiel niet opnieuw uit te vinden. Gebruik gewoon het bestaande systeem."
+    }
+  ]
+}

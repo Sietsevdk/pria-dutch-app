@@ -1,0 +1,309 @@
+{
+  "sounds": [
+    {
+      "id": "g-ch",
+      "name": "g/ch",
+      "dutchName": "De harde g",
+      "description": "The guttural Dutch g/ch sound",
+      "ipa": "\u0263 / x",
+      "difficulty": 5,
+      "tips": [
+        "Like clearing your throat gently",
+        "Vibrate the back of your throat for 'g', unvoiced for 'ch'",
+        "Think of the Scottish 'loch' but stronger",
+        "The voiced version (\u0263) is used at the start of words, the unvoiced (x) at the end"
+      ],
+      "commonMistake": "Making it too soft like English 'g'",
+      "practiceWords": [
+        { "word": "goed", "ipa": "\u0263ut", "meaning": "good", "audio_hint": "Start with throat friction" },
+        { "word": "nacht", "ipa": "n\u0251xt", "meaning": "night", "audio_hint": "Unvoiced at the end" },
+        { "word": "gracht", "ipa": "\u0263r\u0251xt", "meaning": "canal", "audio_hint": "Both g and ch in one word!" },
+        { "word": "acht", "ipa": "\u0251xt", "meaning": "eight", "audio_hint": "Strong ch at the end" },
+        { "word": "gezellig", "ipa": "\u0263\u0259\u02c8z\u025bl\u0259x", "meaning": "cozy/fun", "audio_hint": "Voiced g at start, unvoiced at end" },
+        { "word": "lachen", "ipa": "\u02c8l\u0251x\u0259n", "meaning": "to laugh", "audio_hint": "ch in the middle" },
+        { "word": "nog", "ipa": "n\u0254x", "meaning": "still/yet", "audio_hint": "Final g sounds like ch" },
+        { "word": "groot", "ipa": "\u0263rot", "meaning": "big/great", "audio_hint": "Voiced g followed by r" },
+        { "word": "geen", "ipa": "\u0263en", "meaning": "no/none", "audio_hint": "Sustained throat vibration" },
+        { "word": "lichaam", "ipa": "\u02c8l\u026axa\u02d0m", "meaning": "body", "audio_hint": "Unvoiced ch in the middle" }
+      ],
+      "minimalPairs": [
+        { "pair": ["geel", "heel"], "meaning": ["yellow", "whole/very"] },
+        { "pair": ["gat", "hat"], "meaning": ["hole", "(English) hat"] },
+        { "pair": ["weg", "we"], "meaning": ["road/away", "we"] }
+      ],
+      "sentences": [
+        { "text": "Goede morgen!", "meaning": "Good morning!" },
+        { "text": "De gracht is heel mooi.", "meaning": "The canal is very beautiful." },
+        { "text": "Acht nachten in een gezellig hotel.", "meaning": "Eight nights in a cozy hotel." },
+        { "text": "Geen groot probleem.", "meaning": "No big problem." }
+      ]
+    },
+    {
+      "id": "ui",
+      "name": "ui",
+      "dutchName": "De ui-klank",
+      "description": "The Dutch 'ui' diphthong - unique to Dutch",
+      "ipa": "\u0153y",
+      "difficulty": 4,
+      "tips": [
+        "Start with mouth open like 'ah', then round your lips forward",
+        "Think of starting with '\u00f6' and gliding to 'ee' with rounded lips",
+        "No English equivalent exists - this is uniquely Dutch",
+        "Your lips should move from open to very rounded"
+      ],
+      "commonMistake": "Pronouncing it like English 'ow' or 'oy'",
+      "practiceWords": [
+        { "word": "huis", "ipa": "h\u0153ys", "meaning": "house", "audio_hint": "Round lips at the end" },
+        { "word": "buiten", "ipa": "\u02c8b\u0153yt\u0259n", "meaning": "outside", "audio_hint": "Strong diphthong on first syllable" },
+        { "word": "fruit", "ipa": "fr\u0153yt", "meaning": "fruit", "audio_hint": "Not like English 'fruit'" },
+        { "word": "ui", "ipa": "\u0153y", "meaning": "onion", "audio_hint": "Pure diphthong, one syllable" },
+        { "word": "tuin", "ipa": "t\u0153yn", "meaning": "garden", "audio_hint": "Lips round forward at the end" },
+        { "word": "uitgang", "ipa": "\u02c8\u0153yt\u0263\u0251\u014b", "meaning": "exit", "audio_hint": "ui at the start" },
+        { "word": "kruiden", "ipa": "\u02c8kr\u0153yd\u0259n", "meaning": "herbs/spices", "audio_hint": "ui after consonant cluster" },
+        { "word": "geluid", "ipa": "\u0263\u0259\u02c8l\u0153yt", "meaning": "sound/noise", "audio_hint": "ui in the final syllable" },
+        { "word": "duim", "ipa": "d\u0153ym", "meaning": "thumb", "audio_hint": "Short word, focus on the diphthong" },
+        { "word": "ruiken", "ipa": "\u02c8r\u0153yk\u0259n", "meaning": "to smell", "audio_hint": "ui after r" }
+      ],
+      "minimalPairs": [
+        { "pair": ["huis", "hoes"], "meaning": ["house", "(no meaning - contrast sound)"] },
+        { "pair": ["muis", "moes"], "meaning": ["mouse", "puree"] },
+        { "pair": ["buit", "boot"], "meaning": ["loot", "boat"] }
+      ],
+      "sentences": [
+        { "text": "Ik ga naar buiten.", "meaning": "I'm going outside." },
+        { "text": "Het huis heeft een mooie tuin.", "meaning": "The house has a beautiful garden." },
+        { "text": "De uitgang is links.", "meaning": "The exit is on the left." },
+        { "text": "Ik ruik de kruiden in de keuken.", "meaning": "I smell the herbs in the kitchen." }
+      ]
+    },
+    {
+      "id": "eu",
+      "name": "eu",
+      "dutchName": "De eu-klank",
+      "description": "The Dutch rounded front vowel 'eu'",
+      "ipa": "\u00f8",
+      "difficulty": 4,
+      "tips": [
+        "Say 'ay' (as in 'say') but with rounded lips",
+        "Similar to French 'eu' in 'deux'",
+        "Keep your tongue in the 'e' position but round your lips like 'o'",
+        "Think of the 'u' in British English 'nurse' but more rounded"
+      ],
+      "commonMistake": "Pronouncing it like English 'oo' or unrounded 'ay'",
+      "practiceWords": [
+        { "word": "deur", "ipa": "d\u00f8r", "meaning": "door", "audio_hint": "Rounded lips throughout" },
+        { "word": "neus", "ipa": "n\u00f8s", "meaning": "nose", "audio_hint": "Sustained rounded vowel" },
+        { "word": "kleur", "ipa": "kl\u00f8r", "meaning": "color", "audio_hint": "eu after consonant cluster" },
+        { "word": "leuk", "ipa": "l\u00f8k", "meaning": "nice/fun", "audio_hint": "Very common word - practice often" },
+        { "word": "beurs", "ipa": "b\u00f8rs", "meaning": "stock exchange/purse", "audio_hint": "eu before r" },
+        { "word": "keuken", "ipa": "\u02c8k\u00f8k\u0259n", "meaning": "kitchen", "audio_hint": "eu in first syllable" },
+        { "word": "sleutel", "ipa": "\u02c8sl\u00f8t\u0259l", "meaning": "key", "audio_hint": "eu in first syllable" },
+        { "word": "reus", "ipa": "r\u00f8s", "meaning": "giant", "audio_hint": "Short word, focus on vowel" },
+        { "word": "deuren", "ipa": "\u02c8d\u00f8r\u0259n", "meaning": "doors", "audio_hint": "eu sustained before r" },
+        { "word": "beurt", "ipa": "b\u00f8rt", "meaning": "turn", "audio_hint": "eu before r and t" }
+      ],
+      "minimalPairs": [
+        { "pair": ["deur", "dier"], "meaning": ["door", "animal"] },
+        { "pair": ["neus", "nies"], "meaning": ["nose", "sneeze"] },
+        { "pair": ["leuk", "look"], "meaning": ["nice", "garlic"] }
+      ],
+      "sentences": [
+        { "text": "De deur is open.", "meaning": "The door is open." },
+        { "text": "Welke kleur vind je leuk?", "meaning": "Which color do you like?" },
+        { "text": "De sleutel ligt in de keuken.", "meaning": "The key is in the kitchen." },
+        { "text": "Het is mijn beurt.", "meaning": "It's my turn." }
+      ]
+    },
+    {
+      "id": "uu",
+      "name": "uu",
+      "dutchName": "De uu-klank",
+      "description": "The Dutch high front rounded vowel 'uu'",
+      "ipa": "y",
+      "difficulty": 3,
+      "tips": [
+        "Say 'ee' (as in 'see') but with very rounded lips",
+        "Similar to French 'u' in 'tu' or German '\u00fc'",
+        "Keep your tongue high and forward like 'ee', lips tight and rounded",
+        "Practice alternating between 'ee' and 'uu' to feel the lip difference"
+      ],
+      "commonMistake": "Pronouncing it like English 'oo' (too far back) or 'ee' (unrounded)",
+      "practiceWords": [
+        { "word": "uur", "ipa": "yr", "meaning": "hour", "audio_hint": "Tight rounded lips" },
+        { "word": "duur", "ipa": "dyr", "meaning": "expensive", "audio_hint": "Long vowel before r" },
+        { "word": "muur", "ipa": "myr", "meaning": "wall", "audio_hint": "Lips very rounded" },
+        { "word": "vuur", "ipa": "vyr", "meaning": "fire", "audio_hint": "v then tight uu" },
+        { "word": "buur", "ipa": "byr", "meaning": "neighbor", "audio_hint": "Short word, sustained vowel" },
+        { "word": "natuur", "ipa": "na\u02c8tyr", "meaning": "nature", "audio_hint": "Stress on the uu syllable" },
+        { "word": "minuut", "ipa": "mi\u02c8nyt", "meaning": "minute", "audio_hint": "uu at the end" },
+        { "word": "cultuur", "ipa": "k\u028bl\u02c8tyr", "meaning": "culture", "audio_hint": "uu in final syllable" },
+        { "word": "stuur", "ipa": "styr", "meaning": "steering wheel", "audio_hint": "st cluster before uu" },
+        { "word": "uur", "ipa": "yr", "meaning": "hour", "audio_hint": "Pure uu sound" }
+      ],
+      "minimalPairs": [
+        { "pair": ["muur", "moer"], "meaning": ["wall", "nut (hardware)"] },
+        { "pair": ["vuur", "voer"], "meaning": ["fire", "feed/lining"] },
+        { "pair": ["duur", "dor"], "meaning": ["expensive", "dry/barren"] }
+      ],
+      "sentences": [
+        { "text": "Het is te duur.", "meaning": "It is too expensive." },
+        { "text": "De muur is wit.", "meaning": "The wall is white." },
+        { "text": "Een uur en een minuut.", "meaning": "An hour and a minute." },
+        { "text": "De natuur is prachtig.", "meaning": "Nature is beautiful." }
+      ]
+    },
+    {
+      "id": "ij-ei",
+      "name": "ij/ei",
+      "dutchName": "De ij/ei-klank",
+      "description": "The Dutch diphthong ij/ei - both spelled differently but pronounced the same",
+      "ipa": "\u025bi",
+      "difficulty": 2,
+      "tips": [
+        "Similar to the 'ay' in English 'say' but starting more open",
+        "Start with mouth open like 'e' in 'bed', then glide to 'ee'",
+        "ij and ei are pronounced identically in standard Dutch",
+        "The 'ij' is sometimes considered a single letter in Dutch"
+      ],
+      "commonMistake": "Pronouncing 'ij' differently from 'ei', or like English 'eye'",
+      "practiceWords": [
+        { "word": "ijs", "ipa": "\u025bis", "meaning": "ice/ice cream", "audio_hint": "Starts with the diphthong" },
+        { "word": "wijn", "ipa": "\u028b\u025bin", "meaning": "wine", "audio_hint": "ij in the middle" },
+        { "word": "klein", "ipa": "kl\u025bin", "meaning": "small", "audio_hint": "ei after consonant cluster" },
+        { "word": "trein", "ipa": "tr\u025bin", "meaning": "train", "audio_hint": "ei after tr" },
+        { "word": "tijd", "ipa": "t\u025bit", "meaning": "time", "audio_hint": "ij between consonants" },
+        { "word": "rijden", "ipa": "\u02c8r\u025bd\u0259n", "meaning": "to drive", "audio_hint": "ij in first syllable" },
+        { "word": "schrijven", "ipa": "\u02c8sxr\u025bv\u0259n", "meaning": "to write", "audio_hint": "ij after consonant cluster" },
+        { "word": "mei", "ipa": "m\u025bi", "meaning": "May", "audio_hint": "ei at the end" },
+        { "word": "vrij", "ipa": "vr\u025bi", "meaning": "free", "audio_hint": "ij at the end" },
+        { "word": "eigenlijk", "ipa": "\u02c8\u025b\u0263\u0259nl\u0259k", "meaning": "actually", "audio_hint": "ei at the start of a longer word" }
+      ],
+      "minimalPairs": [
+        { "pair": ["wijn", "ween"], "meaning": ["wine", "crying/weeping"] },
+        { "pair": ["mijn", "meen"], "meaning": ["my/mine", "mean/think"] },
+        { "pair": ["bij", "bee"], "meaning": ["at/near/bee", "(English) bee"] }
+      ],
+      "sentences": [
+        { "text": "Wil je een ijsje?", "meaning": "Would you like an ice cream?" },
+        { "text": "De trein is op tijd.", "meaning": "The train is on time." },
+        { "text": "Ik schrijf een brief.", "meaning": "I'm writing a letter." },
+        { "text": "Het is klein maar fijn.", "meaning": "It's small but nice." }
+      ]
+    },
+    {
+      "id": "oe",
+      "name": "oe",
+      "dutchName": "De oe-klank",
+      "description": "The Dutch 'oe' sound - equivalent to English 'oo'",
+      "ipa": "u",
+      "difficulty": 2,
+      "tips": [
+        "Sounds like English 'oo' in 'boot'",
+        "This is the easiest Dutch vowel for English speakers",
+        "Remember: Dutch 'oe' = English 'oo', not 'ew'",
+        "Don't confuse with Dutch 'oo' which is a different sound"
+      ],
+      "commonMistake": "Confusing it with the Dutch 'oo' sound or English 'oe'",
+      "practiceWords": [
+        { "word": "boek", "ipa": "buk", "meaning": "book", "audio_hint": "Like English 'book' with a k" },
+        { "word": "goed", "ipa": "\u0263ut", "meaning": "good", "audio_hint": "oe in the middle" },
+        { "word": "doen", "ipa": "dun", "meaning": "to do", "audio_hint": "oe before n" },
+        { "word": "moeder", "ipa": "\u02c8mud\u0259r", "meaning": "mother", "audio_hint": "oe in first syllable" },
+        { "word": "groen", "ipa": "\u0263run", "meaning": "green", "audio_hint": "oe after consonant cluster" },
+        { "word": "bloed", "ipa": "blut", "meaning": "blood", "audio_hint": "oe after bl" },
+        { "word": "voet", "ipa": "vut", "meaning": "foot", "audio_hint": "oe between consonants" },
+        { "word": "zoeken", "ipa": "\u02c8zuk\u0259n", "meaning": "to search", "audio_hint": "oe in first syllable" },
+        { "word": "broer", "ipa": "brur", "meaning": "brother", "audio_hint": "oe before r" },
+        { "word": "koek", "ipa": "kuk", "meaning": "cake/cookie", "audio_hint": "oe between k sounds" }
+      ],
+      "minimalPairs": [
+        { "pair": ["boek", "beek"], "meaning": ["book", "creek/stream"] },
+        { "pair": ["voet", "vat"], "meaning": ["foot", "barrel"] },
+        { "pair": ["doen", "daan"], "meaning": ["to do", "(name) Daan"] }
+      ],
+      "sentences": [
+        { "text": "Ik lees een goed boek.", "meaning": "I'm reading a good book." },
+        { "text": "Mijn moeder draagt groene schoenen.", "meaning": "My mother wears green shoes." },
+        { "text": "Wat moet ik doen?", "meaning": "What should I do?" },
+        { "text": "Ik zoek mijn broer.", "meaning": "I'm looking for my brother." }
+      ]
+    },
+    {
+      "id": "aa-a",
+      "name": "aa/a",
+      "dutchName": "Lang en kort a",
+      "description": "The contrast between long 'aa' and short 'a' in Dutch",
+      "ipa": "a\u02d0 / \u0251",
+      "difficulty": 3,
+      "tips": [
+        "Long 'aa' is like 'ah' at the dentist - open and sustained",
+        "Short 'a' is more like the 'o' in British English 'hot'",
+        "The difference changes word meaning - pay attention!",
+        "In open syllables, a single 'a' is pronounced long (like 'aa')"
+      ],
+      "commonMistake": "Not distinguishing between the two lengths, or making short 'a' too much like English 'a' in 'cat'",
+      "practiceWords": [
+        { "word": "maan", "ipa": "ma\u02d0n", "meaning": "moon", "audio_hint": "Long aa - sustain it" },
+        { "word": "man", "ipa": "m\u0251n", "meaning": "man", "audio_hint": "Short a - quick and open" },
+        { "word": "raam", "ipa": "ra\u02d0m", "meaning": "window", "audio_hint": "Long aa before m" },
+        { "word": "ram", "ipa": "r\u0251m", "meaning": "ram (male sheep)", "audio_hint": "Short a - clipped" },
+        { "word": "baan", "ipa": "ba\u02d0n", "meaning": "job/lane", "audio_hint": "Long aa - important word" },
+        { "word": "ban", "ipa": "b\u0251n", "meaning": "ban/curse", "audio_hint": "Short a - brief" },
+        { "word": "naam", "ipa": "na\u02d0m", "meaning": "name", "audio_hint": "Long aa - sustain" },
+        { "word": "dam", "ipa": "d\u0251m", "meaning": "dam", "audio_hint": "Short a - like Amsterdam" },
+        { "word": "kaas", "ipa": "ka\u02d0s", "meaning": "cheese", "audio_hint": "Long aa - classic Dutch word" },
+        { "word": "kas", "ipa": "k\u0251s", "meaning": "greenhouse/cash register", "audio_hint": "Short a - brief and open" }
+      ],
+      "minimalPairs": [
+        { "pair": ["maan", "man"], "meaning": ["moon", "man"] },
+        { "pair": ["raam", "ram"], "meaning": ["window", "ram"] },
+        { "pair": ["baan", "ban"], "meaning": ["job", "ban/curse"] },
+        { "pair": ["naam", "dam"], "meaning": ["name", "dam"] }
+      ],
+      "sentences": [
+        { "text": "De man kijkt naar de maan.", "meaning": "The man looks at the moon." },
+        { "text": "Mijn naam is op het raam geschreven.", "meaning": "My name is written on the window." },
+        { "text": "Ik heb een nieuwe baan.", "meaning": "I have a new job." },
+        { "text": "Nederlandse kaas is de beste.", "meaning": "Dutch cheese is the best." }
+      ]
+    },
+    {
+      "id": "r",
+      "name": "r",
+      "dutchName": "De Nederlandse r",
+      "description": "The Dutch r - varies by region but typically uvular or rolling",
+      "ipa": "\u0280 / r",
+      "difficulty": 4,
+      "tips": [
+        "Multiple correct pronunciations exist in Dutch",
+        "The uvular R (\u0280) is common in the Randstad (west) - gargle-like",
+        "The rolling R (r) is common in the south and east",
+        "At the end of words, it often becomes softer or even silent in some dialects"
+      ],
+      "commonMistake": "Using the English 'r' which curls the tongue tip back",
+      "practiceWords": [
+        { "word": "rood", "ipa": "rot", "meaning": "red", "audio_hint": "R at the beginning" },
+        { "word": "groen", "ipa": "\u0263run", "meaning": "green", "audio_hint": "R after g - double challenge!" },
+        { "word": "drinken", "ipa": "\u02c8dr\u026a\u014bk\u0259n", "meaning": "to drink", "audio_hint": "R after d" },
+        { "word": "groot", "ipa": "\u0263rot", "meaning": "big/great", "audio_hint": "R between g and vowel" },
+        { "word": "reis", "ipa": "r\u025bis", "meaning": "trip/journey", "audio_hint": "R at the start before ei" },
+        { "word": "regen", "ipa": "\u02c8re\u0263\u0259n", "meaning": "rain", "audio_hint": "R at start, g in middle" },
+        { "word": "rechts", "ipa": "r\u025bxts", "meaning": "right (direction)", "audio_hint": "R before vowel" },
+        { "word": "rivier", "ipa": "ri\u02c8vir", "meaning": "river", "audio_hint": "R at start and end" },
+        { "word": "Rotterdam", "ipa": "\u02c8r\u0254t\u0259rd\u0251m", "meaning": "Rotterdam", "audio_hint": "Multiple r sounds" },
+        { "word": "restaurant", "ipa": "r\u025bsto\u02c8r\u0251nt", "meaning": "restaurant", "audio_hint": "R in multiple positions" }
+      ],
+      "minimalPairs": [
+        { "pair": ["rood", "lood"], "meaning": ["red", "lead (metal)"] },
+        { "pair": ["reis", "leis"], "meaning": ["trip", "(no standard meaning - contrast)"] },
+        { "pair": ["recht", "lecht"], "meaning": ["straight/right", "(no standard meaning - contrast)"] }
+      ],
+      "sentences": [
+        { "text": "De regen valt op de rivier.", "meaning": "The rain falls on the river." },
+        { "text": "Ga rechts bij het rode gebouw.", "meaning": "Go right at the red building." },
+        { "text": "We drinken water in het restaurant.", "meaning": "We drink water in the restaurant." },
+        { "text": "Rotterdam is een grote stad.", "meaning": "Rotterdam is a big city." }
+      ]
+    }
+  ]
+}

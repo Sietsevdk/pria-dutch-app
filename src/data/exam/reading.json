@@ -1,0 +1,406 @@
+{
+  "sections": [
+    {
+      "examNumber": 1,
+      "passages": [
+        {
+          "id": "read_1_1",
+          "title": "Brief van de gemeente",
+          "text": "Geachte heer/mevrouw,\n\nWij schrijven u omdat u zich onlangs hebt ingeschreven in onze gemeente. Welkom! Wij willen u graag informeren over een aantal belangrijke zaken.\n\nU moet zich binnen vijf werkdagen inschrijven bij een zorgverzekeraar. Een basisverzekering is verplicht in Nederland. Daarnaast nodigen wij u uit voor een kennismakingsgesprek op het gemeentehuis. Tijdens dit gesprek bespreken wij uw rechten en plichten.\n\nHet gesprek vindt plaats op donderdag 15 maart om 10:00 uur op het gemeentehuis, kamer 204. Neem alstublieft uw identiteitsbewijs en uw inschrijvingsbewijs mee.\n\nAls u deze datum niet kunt, bel dan naar 020-555-0123 om een nieuwe afspraak te maken.\n\nMet vriendelijke groet,\nGemeente Amsterdam",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Waarom schrijft de gemeente deze brief?",
+              "options": [
+                "Om de bewoner te verwelkomen en te informeren.",
+                "Om een boete te geven.",
+                "Om de bewoner uit te schrijven.",
+                "Om een feest te organiseren."
+              ],
+              "answer": "Om de bewoner te verwelkomen en te informeren.",
+              "explanation": "The letter says 'Welkom!' and 'Wij willen u graag informeren over een aantal belangrijke zaken.' This shows the purpose is to welcome and inform."
+            },
+            {
+              "id": "q2",
+              "question": "Wat moet de bewoner meenemen naar het gesprek?",
+              "options": [
+                "Een paspoort en een verzekeringspas.",
+                "Een identiteitsbewijs en een inschrijvingsbewijs.",
+                "Een rijbewijs en een bankpas.",
+                "Een geboorteakte en een huurcontract."
+              ],
+              "answer": "Een identiteitsbewijs en een inschrijvingsbewijs.",
+              "explanation": "The letter clearly states: 'Neem alstublieft uw identiteitsbewijs en uw inschrijvingsbewijs mee.'"
+            },
+            {
+              "id": "q3",
+              "question": "Wat moet de bewoner doen als de datum niet past?",
+              "options": [
+                "Een e-mail sturen.",
+                "Naar het gemeentehuis gaan.",
+                "Bellen naar 020-555-0123.",
+                "Niets doen."
+              ],
+              "answer": "Bellen naar 020-555-0123.",
+              "explanation": "The letter says: 'bel dan naar 020-555-0123 om een nieuwe afspraak te maken.'"
+            }
+          ]
+        },
+        {
+          "id": "read_1_2",
+          "title": "Vacature: Medewerker klantenservice",
+          "text": "Vacature: Medewerker klantenservice (parttime)\n\nSupermarkt PlusMarkt zoekt een vriendelijke medewerker voor de klantenservice.\n\nWat ga je doen?\n- Klanten helpen bij de servicebalie\n- Klachten afhandelen\n- Retouren verwerken\n- Telefonisch vragen beantwoorden\n\nWat vragen wij?\n- Je spreekt goed Nederlands\n- Je bent klantvriendelijk en geduldig\n- Je kunt in het weekend werken\n- Ervaring in de detailhandel is een pré\n\nWat bieden wij?\n- 20 uur per week\n- Salaris: €13,50 per uur\n- Reiskostenvergoeding\n- Gezellig team\n\nInteresse? Stuur je cv en motivatiebrief naar vacatures@plusmarkt.nl voor 1 april.",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Hoeveel uur per week is deze baan?",
+              "options": [
+                "40 uur per week.",
+                "30 uur per week.",
+                "20 uur per week.",
+                "10 uur per week."
+              ],
+              "answer": "20 uur per week.",
+              "explanation": "Under 'Wat bieden wij?' it says '20 uur per week'."
+            },
+            {
+              "id": "q2",
+              "question": "Wat is NIET een taak van de medewerker?",
+              "options": [
+                "Klanten helpen bij de servicebalie.",
+                "Eten koken in de keuken.",
+                "Klachten afhandelen.",
+                "Telefonisch vragen beantwoorden."
+              ],
+              "answer": "Eten koken in de keuken.",
+              "explanation": "Cooking is not mentioned in the job tasks. The tasks are: helping customers, handling complaints, processing returns, and answering phone questions."
+            },
+            {
+              "id": "q3",
+              "question": "Wat moet je doen als je interesse hebt?",
+              "options": [
+                "Naar de winkel gaan.",
+                "Bellen naar de manager.",
+                "Een cv en motivatiebrief sturen.",
+                "Een formulier invullen op de website."
+              ],
+              "answer": "Een cv en motivatiebrief sturen.",
+              "explanation": "The ad says: 'Stuur je cv en motivatiebrief naar vacatures@plusmarkt.nl.'"
+            }
+          ]
+        },
+        {
+          "id": "read_1_3",
+          "title": "Briefje van de huisarts",
+          "text": "Beste mevrouw Bakir,\n\nNaar aanleiding van uw bezoek van gisteren schrijf ik u dit bericht. Uw bloedonderzoek is klaar en de resultaten zijn goed. Uw bloeddruk is normaal en er zijn geen afwijkingen gevonden.\n\nWel adviseer ik u om meer te bewegen en minder zout te eten. Probeer minstens dertig minuten per dag te wandelen. Dit is goed voor uw gezondheid.\n\nU hoeft niet terug te komen, tenzij de klachten terugkomen. Als u weer hoofdpijn krijgt of duizelig wordt, maak dan een nieuwe afspraak.\n\nDe paracetamol kunt u gewoon blijven gebruiken als dat nodig is. Neem maximaal vier tabletten per dag.\n\nMet vriendelijke groet,\nDr. Van den Berg\nHuisartsenpraktijk De Linde",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Wat zijn de resultaten van het bloedonderzoek?",
+              "options": [
+                "Er is iets mis met het bloed.",
+                "De resultaten zijn nog niet klaar.",
+                "De resultaten zijn goed.",
+                "De dokter weet het niet."
+              ],
+              "answer": "De resultaten zijn goed.",
+              "explanation": "The letter clearly states: 'de resultaten zijn goed' and 'er zijn geen afwijkingen gevonden.'"
+            },
+            {
+              "id": "q2",
+              "question": "Wat adviseert de dokter?",
+              "options": [
+                "Meer slapen en minder werken.",
+                "Meer bewegen en minder zout eten.",
+                "Meer medicijnen nemen.",
+                "Naar een specialist gaan."
+              ],
+              "answer": "Meer bewegen en minder zout eten.",
+              "explanation": "The doctor advises: 'meer te bewegen en minder zout te eten.'"
+            },
+            {
+              "id": "q3",
+              "question": "Hoeveel paracetamol mag mevrouw Bakir per dag nemen?",
+              "options": [
+                "Twee tabletten.",
+                "Drie tabletten.",
+                "Vier tabletten.",
+                "Zes tabletten."
+              ],
+              "answer": "Vier tabletten.",
+              "explanation": "The letter says: 'Neem maximaal vier tabletten per dag.'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "examNumber": 2,
+      "passages": [
+        {
+          "id": "read_2_1",
+          "title": "Busdienstregeling",
+          "text": "Busdienstregeling Lijn 12: Station - Ziekenhuis - Winkelcentrum\n\nMaandag t/m vrijdag:\nEerste bus: 06:15 vanaf Station\nLaatste bus: 23:45 vanaf Station\nFrequentie: elke 15 minuten (spits), elke 30 minuten (dal)\nSpitsuren: 07:00 - 09:00 en 16:00 - 18:30\n\nZaterdag:\nEerste bus: 07:00\nLaatste bus: 00:30\nFrequentie: elke 20 minuten\n\nZondag en feestdagen:\nEerste bus: 08:30\nLaatste bus: 23:00\nFrequentie: elke 30 minuten\n\nLet op: Op Koningsdag (27 april) en Oud en Nieuw (31 december) geldt een aangepaste dienstregeling. Kijk op onze website voor meer informatie.\n\nReisinformatie: bel 0900-9292 of download de 9292-app.",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Hoe vaak rijdt de bus op zaterdag?",
+              "options": [
+                "Elke 15 minuten.",
+                "Elke 20 minuten.",
+                "Elke 30 minuten.",
+                "Elk uur."
+              ],
+              "answer": "Elke 20 minuten.",
+              "explanation": "Under 'Zaterdag' it says 'Frequentie: elke 20 minuten'."
+            },
+            {
+              "id": "q2",
+              "question": "Hoe laat vertrekt de eerste bus op zondag?",
+              "options": [
+                "Om 06:15.",
+                "Om 07:00.",
+                "Om 08:30.",
+                "Om 09:00."
+              ],
+              "answer": "Om 08:30.",
+              "explanation": "Under 'Zondag en feestdagen' it says 'Eerste bus: 08:30'."
+            },
+            {
+              "id": "q3",
+              "question": "Wat gebeurt er op Koningsdag?",
+              "options": [
+                "Er rijden geen bussen.",
+                "De bussen rijden normaal.",
+                "Er geldt een aangepaste dienstregeling.",
+                "De bussen zijn gratis."
+              ],
+              "answer": "Er geldt een aangepaste dienstregeling.",
+              "explanation": "The schedule states: 'Op Koningsdag geldt een aangepaste dienstregeling.'"
+            }
+          ]
+        },
+        {
+          "id": "read_2_2",
+          "title": "Recept: Erwtensoep",
+          "text": "Recept: Hollandse erwtensoep (voor 6 personen)\n\nIngredienten:\n- 500 gram spliterwten\n- 1 rookworst\n- 2 prei, in ringen gesneden\n- 3 aardappelen, in blokjes\n- 2 winterpenen, in plakjes\n- 1 ui, gesnipperd\n- 1,5 liter water\n- Zout en peper naar smaak\n\nBereiding:\nWas de spliterwten en doe ze in een grote pan met het water. Breng het aan de kook. Voeg de ui, aardappelen en winterpenen toe. Laat het een uur koken op laag vuur. Voeg daarna de prei toe en laat het nog een halfuur koken. Snijd de rookworst in plakjes en voeg die toe. Breng op smaak met zout en peper.\n\nTip: Erwtensoep is het lekkerst als je hem een dag van tevoren maakt. De soep wordt dan dikker en de smaken trekken beter in.\n\nBereidingstijd: ongeveer 1,5 uur",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Voor hoeveel personen is dit recept?",
+              "options": [
+                "Voor 2 personen.",
+                "Voor 4 personen.",
+                "Voor 6 personen.",
+                "Voor 8 personen."
+              ],
+              "answer": "Voor 6 personen.",
+              "explanation": "The title says 'voor 6 personen'."
+            },
+            {
+              "id": "q2",
+              "question": "Wanneer voeg je de prei toe?",
+              "options": [
+                "Aan het begin.",
+                "Na een halfuur.",
+                "Na een uur.",
+                "Aan het eind."
+              ],
+              "answer": "Na een uur.",
+              "explanation": "The recipe says: 'Laat het een uur koken op laag vuur. Voeg daarna de prei toe.'"
+            },
+            {
+              "id": "q3",
+              "question": "Wat is de tip bij dit recept?",
+              "options": [
+                "Je moet de soep snel eten.",
+                "Je moet veel zout toevoegen.",
+                "Je kunt de soep het best een dag van tevoren maken.",
+                "Je moet de soep koud serveren."
+              ],
+              "answer": "Je kunt de soep het best een dag van tevoren maken.",
+              "explanation": "The tip says: 'Erwtensoep is het lekkerst als je hem een dag van tevoren maakt.'"
+            }
+          ]
+        },
+        {
+          "id": "read_2_3",
+          "title": "Nieuwsbericht",
+          "text": "Meer fietspaden in Amsterdam\n\nDe gemeente Amsterdam gaat dit jaar twintig kilometer aan nieuwe fietspaden aanleggen. Het project kost vijf miljoen euro en duurt tot eind volgend jaar.\n\n\"We willen dat het veiliger wordt om te fietsen in de stad,\" zegt wethouder De Jong. \"Er gebeuren te veel ongelukken op drukke wegen waar fietsers en auto's de weg delen.\"\n\nDe nieuwe fietspaden komen vooral in de wijken Oost en Zuid. Daar zijn de afgelopen twee jaar de meeste fietsongelukken gebeurd. De gemeente wil ook meer fietsenstallingen bouwen bij treinstations.\n\nBewoners reageren positief. \"Ik fiets elke dag naar mijn werk en het is soms gevaarlijk,\" zegt een bewoner uit Oost. \"Dit is goed nieuws.\"\n\nDe werkzaamheden beginnen in april. Tijdens de werkzaamheden kunnen er omleidingen zijn.",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Hoeveel kilometer aan fietspaden wordt er aangelegd?",
+              "options": [
+                "Vijf kilometer.",
+                "Tien kilometer.",
+                "Twintig kilometer.",
+                "Vijftig kilometer."
+              ],
+              "answer": "Twintig kilometer.",
+              "explanation": "The article states: 'twintig kilometer aan nieuwe fietspaden aanleggen'."
+            },
+            {
+              "id": "q2",
+              "question": "Waarom worden de fietspaden aangelegd?",
+              "options": [
+                "Omdat er te weinig auto's zijn.",
+                "Omdat het veiliger moet worden voor fietsers.",
+                "Omdat de burgemeester graag fietst.",
+                "Omdat het verplicht is van de overheid."
+              ],
+              "answer": "Omdat het veiliger moet worden voor fietsers.",
+              "explanation": "The alderman says: 'We willen dat het veiliger wordt om te fietsen in de stad.'"
+            },
+            {
+              "id": "q3",
+              "question": "In welke wijken komen de meeste nieuwe fietspaden?",
+              "options": [
+                "In Noord en West.",
+                "In Oost en Zuid.",
+                "In het centrum.",
+                "In alle wijken."
+              ],
+              "answer": "In Oost en Zuid.",
+              "explanation": "The article says: 'De nieuwe fietspaden komen vooral in de wijken Oost en Zuid.'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "examNumber": 3,
+      "passages": [
+        {
+          "id": "read_3_1",
+          "title": "Huuradvertentie",
+          "text": "Te huur: Appartement in Rotterdam-West\n\nRuim 2-kamerappartement op de tweede verdieping.\n\nKenmerken:\n- Woonoppervlakte: 65 m2\n- Slaapkamer: 1 (12 m2)\n- Woonkamer met open keuken\n- Badkamer met douche en toilet\n- Balkon op het zuiden\n- Gemeenschappelijke tuin\n\nHuurprijs: €1.150 per maand (exclusief gas, water en licht)\nBorg: 2 maanden huur\nIngangsdatum: 1 mei\nMinimale huurperiode: 12 maanden\n\nVoorwaarden:\n- Inkomen minimaal 3x de huurprijs\n- Geen huisdieren toegestaan\n- Niet-rokers\n\nGeinteresseerd? Stuur een e-mail naar verhuur@wonen-rdam.nl met uw naam, telefoonnummer en een kopie van uw loonstrook.",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Hoeveel kost het appartement per maand?",
+              "options": [
+                "€850 per maand.",
+                "€1.000 per maand.",
+                "€1.150 per maand.",
+                "€1.300 per maand."
+              ],
+              "answer": "€1.150 per maand.",
+              "explanation": "The ad states: 'Huurprijs: €1.150 per maand (exclusief gas, water en licht).'"
+            },
+            {
+              "id": "q2",
+              "question": "Wat is NIET toegestaan in dit appartement?",
+              "options": [
+                "Koken.",
+                "Huisdieren houden.",
+                "Bezoek ontvangen.",
+                "Op het balkon zitten."
+              ],
+              "answer": "Huisdieren houden.",
+              "explanation": "Under conditions it says: 'Geen huisdieren toegestaan.'"
+            },
+            {
+              "id": "q3",
+              "question": "Wat moet je meesturen als je interesse hebt?",
+              "options": [
+                "Een foto en een cv.",
+                "Een naam, telefoonnummer en loonstrook.",
+                "Een paspoort en een bankafschrift.",
+                "Een motivatiebrief."
+              ],
+              "answer": "Een naam, telefoonnummer en loonstrook.",
+              "explanation": "The ad says: 'Stuur een e-mail met uw naam, telefoonnummer en een kopie van uw loonstrook.'"
+            }
+          ]
+        },
+        {
+          "id": "read_3_2",
+          "title": "Brief van de school",
+          "text": "Beste ouders/verzorgers,\n\nOver twee weken is het zover: de jaarlijkse schoolreis! Dit jaar gaan wij met groep 5 en 6 naar Efteling.\n\nDatum: vrijdag 14 juni\nVertrek: 08:30 uur vanaf school\nTerugkomst: ongeveer 17:00 uur bij school\nKosten: €25,- per leerling (inclusief entree en lunch)\n\nUw kind heeft nodig:\n- Comfortabele schoenen\n- Een regenjas (voor het geval dat)\n- Zonnebrand\n- Een klein beetje zakgeld (maximaal €5,-)\n- Geen telefoon of tablet\n\nWilt u als begeleider mee? Wij zoeken nog drie ouders. Begeleiders hoeven geen entree te betalen.\n\nVul het toestemmingsformulier in en lever het voor 1 juni in bij de leerkracht.\n\nMet vriendelijke groet,\nJuf Annemarie en Meester Pieter",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Waar gaat de schoolreis naartoe?",
+              "options": [
+                "Naar het strand.",
+                "Naar een museum.",
+                "Naar de Efteling.",
+                "Naar een boerderij."
+              ],
+              "answer": "Naar de Efteling.",
+              "explanation": "The letter states: 'Dit jaar gaan wij met groep 5 en 6 naar Efteling.'"
+            },
+            {
+              "id": "q2",
+              "question": "Wat mogen de kinderen NIET meenemen?",
+              "options": [
+                "Zonnebrand.",
+                "Een regenjas.",
+                "Zakgeld.",
+                "Een telefoon of tablet."
+              ],
+              "answer": "Een telefoon of tablet.",
+              "explanation": "The list of needed items specifically says 'Geen telefoon of tablet'."
+            },
+            {
+              "id": "q3",
+              "question": "Wat moeten ouders doen voor 1 juni?",
+              "options": [
+                "€25,- betalen.",
+                "Het toestemmingsformulier inleveren.",
+                "De kinderen inschrijven.",
+                "Een regenjas kopen."
+              ],
+              "answer": "Het toestemmingsformulier inleveren.",
+              "explanation": "The letter says: 'Vul het toestemmingsformulier in en lever het voor 1 juni in bij de leerkracht.'"
+            }
+          ]
+        },
+        {
+          "id": "read_3_3",
+          "title": "Instructies van de apotheek",
+          "text": "Apotheek De Brug - Medicijninformatie\n\nMedicijn: Amoxicilline 500 mg\nVoorgeschreven door: Dr. Jansen\nPatient: Dhr. K. Osman\n\nGebruiksaanwijzing:\nNeem drie keer per dag een capsule in, bij de maaltijd. Neem het medicijn met een vol glas water. Maak de kuur altijd helemaal af, ook als u zich beter voelt.\n\nBehandelduur: 7 dagen (21 capsules in totaal)\n\nBelangrijke waarschuwingen:\n- Niet gebruiken in combinatie met alcohol\n- Kan duizeligheid veroorzaken; wees voorzichtig in het verkeer\n- Bewaar op kamertemperatuur, uit het zonlicht\n- Buiten bereik van kinderen houden\n\nMogelijke bijwerkingen: misselijkheid, diarree, huiduitslag. Neem bij ernstige bijwerkingen direct contact op met uw huisarts.\n\nVragen? Bel de apotheek: 010-555-0456\nOpeningstijden: maandag t/m vrijdag 08:30 - 17:30, zaterdag 09:00 - 13:00",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Hoe vaak per dag moet het medicijn worden ingenomen?",
+              "options": [
+                "Een keer per dag.",
+                "Twee keer per dag.",
+                "Drie keer per dag.",
+                "Vier keer per dag."
+              ],
+              "answer": "Drie keer per dag.",
+              "explanation": "The instructions say: 'Neem drie keer per dag een capsule in.'"
+            },
+            {
+              "id": "q2",
+              "question": "Wat moet je doen als je je beter voelt?",
+              "options": [
+                "Stoppen met het medicijn.",
+                "Minder capsules nemen.",
+                "De kuur helemaal afmaken.",
+                "De dokter bellen."
+              ],
+              "answer": "De kuur helemaal afmaken.",
+              "explanation": "The instructions clearly state: 'Maak de kuur altijd helemaal af, ook als u zich beter voelt.'"
+            },
+            {
+              "id": "q3",
+              "question": "Wanneer moet je de huisarts bellen?",
+              "options": [
+                "Als je de capsules niet lekker vindt.",
+                "Als je ernstige bijwerkingen hebt.",
+                "Als je het medicijn vergeet.",
+                "Na zeven dagen."
+              ],
+              "answer": "Als je ernstige bijwerkingen hebt.",
+              "explanation": "It says: 'Neem bij ernstige bijwerkingen direct contact op met uw huisarts.'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

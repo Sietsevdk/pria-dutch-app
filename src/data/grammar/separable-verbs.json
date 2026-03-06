@@ -1,0 +1,135 @@
+{
+  "topic": "separable-verbs",
+  "topicNL": "Scheidbare werkwoorden",
+  "explanation": {
+    "summary": "Scheidbare werkwoorden bestaan uit een voorvoegsel en een werkwoord. In de hoofdzin worden ze gesplitst: het werkwoord staat op positie 2 en het voorvoegsel gaat naar het einde van de zin. Voorbeeld: opstaan → Ik sta elke dag om 7 uur op.",
+    "rules": [
+      "In een hoofdzin met de tegenwoordige of verleden tijd: het werkwoord staat op positie 2, het voorvoegsel gaat naar het einde. Ik bel mijn moeder op.",
+      "In een bijzin (met omdat, dat, als, etc.): het werkwoord blijft aan elkaar. ...omdat ik mijn moeder opbel.",
+      "In het perfectum: ge- komt TUSSEN het voorvoegsel en het werkwoord: opgebeld, aangemaakt, uitgenodigd.",
+      "Met 'te' (bij infinitief): 'te' komt TUSSEN het voorvoegsel en het werkwoord: Ik probeer mijn moeder op te bellen.",
+      "Met een modaal werkwoord: het scheidbare werkwoord blijft aan elkaar als infinitief aan het einde: Ik moet mijn moeder opbellen.",
+      "Veelvoorkomende scheidbare voorvoegsels: aan-, af-, bij-, in-, mee-, na-, op-, om-, onder-, over- (met klemtoon), uit-, terug-, vast-, voor- (met klemtoon), weg-.",
+      "Je herkent een scheidbaar werkwoord aan de KLEMTOON: bij scheidbare werkwoorden ligt de klemtoon op het voorvoegsel: OPstaan, AANkomen, UITgaan.",
+      "Bij onscheidbare werkwoorden ligt de klemtoon op het werkwoord: beSTAAN, verSTAAN, ontSTAAN.",
+      "Sommige voorvoegsels kunnen zowel scheidbaar als onscheidbaar zijn, afhankelijk van de betekenis: doorLOPEN (doorgaan) versus DOORlopen (door iets heen lopen)."
+    ],
+    "exceptions": [
+      "Voorvoegsels die ALTIJD onscheidbaar zijn: be-, er-, ge-, her-, ont-, ver-. Deze krijgen ook geen ge- in het voltooid deelwoord.",
+      "Sommige werkwoorden met 'over-' zijn scheidbaar (oversteken: ik steek over) en sommige onscheidbaar (overleven: ik overleef).",
+      "Sommige werkwoorden met 'door-' zijn scheidbaar (doorgaan: het gaat door) en sommige onscheidbaar (doorkruisen: ik doorkruis).",
+      "Sommige werkwoorden met 'onder-' zijn scheidbaar (ondergaan: de zon gaat onder) en sommige onscheidbaar (ondervinden: ik ondervind).",
+      "'Meedoen' is scheidbaar: Ik doe mee, maar: Ik wil meedoen."
+    ],
+    "commonMistakes": [
+      "'Ik opsta om 7 uur' is fout - het werkwoord moet op positie 2: Ik sta om 7 uur op.",
+      "'Ik heb geopbeld' is fout - ge- komt TUSSEN het voorvoegsel en het werkwoord: opgebeld.",
+      "'Ik probeer opbellen mijn moeder' is fout - 'te' moet ertussen: Ik probeer mijn moeder op te bellen.",
+      "'...omdat ik sta op om 7 uur' is fout - in de bijzin blijft het werkwoord aan elkaar: ...omdat ik om 7 uur opsta.",
+      "Het scheidbare werkwoord splitsen bij een modaal werkwoord: 'Ik moet op staan' is fout - bij een modaal werkwoord blijft het bij elkaar: Ik moet opstaan."
+    ],
+    "tip": "Denk aan het scheidbare werkwoord als een boemerang: in de hoofdzin gooi je het voorvoegsel naar het einde van de zin (Ik bel op), maar in de bijzin en bij infinitieven blijft alles bij elkaar (omdat ik opbel / ik moet opbellen). Bij het voltooid deelwoord: het ge- gaat ertussen, als vulling in een sandwich (op-ge-beld).",
+    "commonSeparableVerbs": [
+      "aankomen (arrive) - Ik kom om 3 uur aan.",
+      "aantrekken (put on) - Ik trek mijn jas aan.",
+      "afdoen (take off) - Zij doet haar bril af.",
+      "afspreken (make appointment) - Wij spreken om 5 uur af.",
+      "afwassen (do dishes) - Hij wast af.",
+      "binnenkomen (come in) - De leerlingen komen binnen.",
+      "doorgaan (continue) - De les gaat door.",
+      "kennismaken (get acquainted) - Ik maak kennis met de buren.",
+      "meebrengen (bring along) - Zij brengt haar zus mee.",
+      "meedoen (participate) - De kinderen doen mee.",
+      "meenemen (take along) - Neem je paraplu mee.",
+      "nakijken (check/correct) - De leraar kijkt de toets na.",
+      "opbellen (call) - Ik bel mijn vriend op.",
+      "opruimen (tidy up) - Wij ruimen de kamer op.",
+      "opstaan (get up) - Ik sta om 7 uur op.",
+      "terugkomen (come back) - Zij komt morgen terug.",
+      "uitgaan (go out) - Wij gaan vanavond uit.",
+      "uitnodigen (invite) - Ik nodig mijn vrienden uit.",
+      "uittrekken (take off) - Hij trekt zijn schoenen uit.",
+      "weggaan (leave) - De bus gaat om 9 uur weg."
+    ]
+  },
+  "exercises": [
+    {
+      "type": "fill_blank",
+      "sentence": "Ik ___ elke dag om 7 uur ___. (opstaan)",
+      "answer": "sta, op",
+      "explanation": "'Opstaan' is scheidbaar. In de hoofdzin: het werkwoord 'sta' op positie 2, het voorvoegsel 'op' aan het einde."
+    },
+    {
+      "type": "reorder",
+      "sentence": "Zij trekt haar jas aan.",
+      "words": ["haar", "aan", "jas", "trekt", "Zij"],
+      "answer": "Zij trekt haar jas aan.",
+      "explanation": "'Aantrekken' is scheidbaar: 'trekt' op positie 2, 'aan' aan het einde."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Ik heb mijn vriend ___. (opbellen, voltooid deelwoord)",
+      "answer": "opgebeld",
+      "explanation": "Bij het voltooid deelwoord komt ge- tussen het voorvoegsel en het werkwoord: op-ge-beld."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "...omdat hij vroeg ___. (opstaan)",
+      "options": ["op staat", "staat op", "opstaat", "opgestaan"],
+      "answer": "opstaat",
+      "explanation": "In een bijzin (na 'omdat') blijft het scheidbare werkwoord aan elkaar: opstaat."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Ik probeer mijn kamer ___ ___ ___. (opruimen, met te)",
+      "answer": "op te ruimen",
+      "explanation": "Bij een infinitief met 'te' komt 'te' tussen het voorvoegsel en het werkwoord: op te ruimen."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "Wij ___ vanavond ___. (uitgaan)",
+      "options": ["gaan, uit", "uit, gaan", "uitgaan, -", "gaan, uitgaan"],
+      "answer": "gaan, uit",
+      "explanation": "'Uitgaan' is scheidbaar. In de hoofdzin: 'gaan' op positie 2, 'uit' aan het einde."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "De trein ___ om 9 uur ___. (aankomen)",
+      "answer": "komt, aan",
+      "explanation": "'Aankomen' is scheidbaar: 'komt' op positie 2, 'aan' aan het einde."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Ik moet morgen vroeg ___. (opstaan)",
+      "answer": "opstaan",
+      "explanation": "Na een modaal werkwoord (moet) blijft het scheidbare werkwoord aan elkaar als infinitief: opstaan."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "Zij heeft haar vrienden ___. (uitnodigen)",
+      "options": ["uitnodigd", "uitgenodigd", "genodigd uit", "uitnodigen"],
+      "answer": "uitgenodigd",
+      "explanation": "Voltooid deelwoord van 'uitnodigen': uit-ge-nodigd. Ge- komt tussen het voorvoegsel en het werkwoord."
+    },
+    {
+      "type": "reorder",
+      "sentence": "De kinderen doen altijd mee.",
+      "words": ["altijd", "kinderen", "mee", "De", "doen"],
+      "answer": "De kinderen doen altijd mee.",
+      "explanation": "'Meedoen' is scheidbaar: 'doen' op positie 2, 'mee' aan het einde."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "...dat zij haar schoenen ___. (uittrekken)",
+      "answer": "uittrekt",
+      "explanation": "In een bijzin (na 'dat') blijft het scheidbare werkwoord aan elkaar: uittrekt."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "Wij zijn gisteren om 6 uur ___. (weggaan)",
+      "options": ["weggegeaan", "weggegaan", "gegaan weg", "geweggaan"],
+      "answer": "weggegaan",
+      "explanation": "Voltooid deelwoord van 'weggaan': weg-ge-gaan. 'Gaan' is sterk: gegaan."
+    }
+  ]
+}

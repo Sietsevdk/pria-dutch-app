@@ -1,0 +1,122 @@
+{
+  "id": "at-the-doctor",
+  "title": "Bij de huisarts",
+  "titleEN": "At the Doctor",
+  "context": "You have a persistent headache and visit your huisarts (GP) to discuss your symptoms and get advice.",
+  "lines": [
+    {
+      "speaker": "Receptionist",
+      "dutch": "Goedemorgen, met de praktijk van dokter Van den Berg. Wat kan ik voor u doen?",
+      "english": "Good morning, this is Dr. Van den Berg's practice. What can I do for you?"
+    },
+    {
+      "speaker": "Patient",
+      "dutch": "Goedemorgen, ik heb een afspraak om tien uur. Mijn naam is Anna de Vries.",
+      "english": "Good morning, I have an appointment at ten o'clock. My name is Anna de Vries."
+    },
+    {
+      "speaker": "Receptionist",
+      "dutch": "Ja, ik zie het. U kunt plaatsnemen in de wachtkamer. De dokter roept u zo op.",
+      "english": "Yes, I see it. You can take a seat in the waiting room. The doctor will call you shortly."
+    },
+    {
+      "speaker": "Dokter",
+      "dutch": "Mevrouw De Vries? Komt u binnen. Gaat u zitten. Wat kan ik voor u doen?",
+      "english": "Mrs. De Vries? Come in. Have a seat. What can I do for you?",
+      "note": "'Komt u' is the polite/formal imperative form using 'u'."
+    },
+    {
+      "speaker": "Patient",
+      "dutch": "Ik heb al een week lang hoofdpijn. Het wordt steeds erger en het gaat niet over.",
+      "english": "I've had a headache for a week now. It keeps getting worse and it won't go away.",
+      "note": "'Al een week lang' means 'for a week already'. 'Steeds' means 'increasingly/each time'."
+    },
+    {
+      "speaker": "Dokter",
+      "dutch": "Dat klinkt vervelend. Waar voelt u de pijn precies? Aan de voorkant, de zijkant of de achterkant van uw hoofd?",
+      "english": "That sounds unpleasant. Where exactly do you feel the pain? At the front, the side, or the back of your head?"
+    },
+    {
+      "speaker": "Patient",
+      "dutch": "Vooral aan de voorkant en achter mijn ogen. Soms zie ik ook wazig.",
+      "english": "Mainly at the front and behind my eyes. Sometimes I also see blurry."
+    },
+    {
+      "speaker": "Dokter",
+      "dutch": "Hebt u ook last van misselijkheid of duizeligheid?",
+      "english": "Do you also suffer from nausea or dizziness?",
+      "note": "'Last hebben van' means 'to suffer from / to be bothered by'."
+    },
+    {
+      "speaker": "Patient",
+      "dutch": "Een beetje duizelig, maar niet misselijk. Ik slaap ook slecht de laatste tijd.",
+      "english": "A little dizzy, but not nauseous. I've also been sleeping poorly lately."
+    },
+    {
+      "speaker": "Dokter",
+      "dutch": "Ik ga even uw bloeddruk meten. Gebruikt u op dit moment medicijnen?",
+      "english": "I'm going to measure your blood pressure. Are you currently taking any medication?",
+      "note": "'Medicijnen gebruiken' is how the Dutch say 'to take medication'."
+    },
+    {
+      "speaker": "Patient",
+      "dutch": "Nee, ik gebruik geen medicijnen. Alleen soms een paracetamol tegen de pijn.",
+      "english": "No, I don't take any medication. Only sometimes a paracetamol for the pain."
+    },
+    {
+      "speaker": "Dokter",
+      "dutch": "Uw bloeddruk is een beetje hoog. Ik denk dat u spanningshoofdpijn hebt. Ik schrijf een licht pijnstillend middel voor.",
+      "english": "Your blood pressure is a bit high. I think you have tension headaches. I'll prescribe a mild painkiller."
+    },
+    {
+      "speaker": "Patient",
+      "dutch": "Hoe vaak moet ik dat innemen?",
+      "english": "How often should I take it?",
+      "note": "'Innemen' means 'to take' (medication). 'Hoe vaak' means 'how often'."
+    },
+    {
+      "speaker": "Dokter",
+      "dutch": "Twee keer per dag, bij het ontbijt en voor het slapengaan. En probeer ook meer te ontspannen.",
+      "english": "Twice a day, at breakfast and before bedtime. And try to relax more as well."
+    },
+    {
+      "speaker": "Patient",
+      "dutch": "Dank u wel, dokter. Moet ik een vervolgafspraak maken?",
+      "english": "Thank you, doctor. Should I make a follow-up appointment?"
+    },
+    {
+      "speaker": "Dokter",
+      "dutch": "Ja, komt u over twee weken terug. Als het erger wordt, bel dan eerder. U kunt het recept bij de apotheek ophalen.",
+      "english": "Yes, come back in two weeks. If it gets worse, call sooner. You can pick up the prescription at the pharmacy.",
+      "note": "'Recept ophalen bij de apotheek' means 'to pick up a prescription at the pharmacy'."
+    }
+  ],
+  "keyPhrases": [
+    {
+      "dutch": "Ik heb last van...",
+      "english": "I'm suffering from...",
+      "usage": "Use this to describe any health complaint to a doctor."
+    },
+    {
+      "dutch": "Hoe vaak moet ik dat innemen?",
+      "english": "How often should I take it?",
+      "usage": "Ask this when prescribed medication."
+    },
+    {
+      "dutch": "Het wordt steeds erger.",
+      "english": "It keeps getting worse.",
+      "usage": "Use this to describe worsening symptoms."
+    },
+    {
+      "dutch": "Kan ik een vervolgafspraak maken?",
+      "english": "Can I make a follow-up appointment?",
+      "usage": "Use this to schedule a return visit."
+    },
+    {
+      "dutch": "Ik gebruik geen medicijnen.",
+      "english": "I don't take any medication.",
+      "usage": "Use this when asked about current medication."
+    }
+  ],
+  "culturalNote": "In the Netherlands, the huisarts (general practitioner/GP) is the central figure in healthcare. You cannot go directly to a specialist; you always need a verwijzing (referral) from your huisarts first. Dutch doctors are known for a 'wait and see' approach (afwachtend beleid) and may not immediately prescribe medication. Paracetamol is considered the standard first remedy for many complaints. Everyone in the Netherlands must have a basisverzekering (basic health insurance)."
+}

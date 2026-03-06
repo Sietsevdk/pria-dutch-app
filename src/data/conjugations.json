@@ -1,0 +1,1194 @@
+{
+  "verbs": [
+    {
+      "infinitive": "zijn",
+      "meaning": "to be",
+      "type": "irregular",
+      "auxiliary": "zijn",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "ben",
+          "jij": "bent",
+          "hij/zij": "is",
+          "wij": "zijn",
+          "jullie": "zijn",
+          "zij_plural": "zijn",
+          "u": "bent/is"
+        },
+        "past": {
+          "ik": "was",
+          "jij": "was",
+          "hij/zij": "was",
+          "wij": "waren",
+          "jullie": "waren",
+          "zij_plural": "waren",
+          "u": "was"
+        },
+        "perfect": {
+          "participle": "geweest",
+          "example": "Ik ben geweest"
+        }
+      },
+      "examples": [
+        { "nl": "Ik ben student.", "en": "I am a student." },
+        { "nl": "Zij is mijn moeder.", "en": "She is my mother." }
+      ]
+    },
+    {
+      "infinitive": "hebben",
+      "meaning": "to have",
+      "type": "irregular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "heb",
+          "jij": "hebt",
+          "hij/zij": "heeft",
+          "wij": "hebben",
+          "jullie": "hebben",
+          "zij_plural": "hebben",
+          "u": "hebt/heeft"
+        },
+        "past": {
+          "ik": "had",
+          "jij": "had",
+          "hij/zij": "had",
+          "wij": "hadden",
+          "jullie": "hadden",
+          "zij_plural": "hadden",
+          "u": "had"
+        },
+        "perfect": {
+          "participle": "gehad",
+          "example": "Ik heb gehad"
+        }
+      },
+      "examples": [
+        { "nl": "Ik heb een hond.", "en": "I have a dog." },
+        { "nl": "Heb jij een vraag?", "en": "Do you have a question?" }
+      ]
+    },
+    {
+      "infinitive": "gaan",
+      "meaning": "to go",
+      "type": "irregular",
+      "auxiliary": "zijn",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "ga",
+          "jij": "gaat",
+          "hij/zij": "gaat",
+          "wij": "gaan",
+          "jullie": "gaan",
+          "zij_plural": "gaan",
+          "u": "gaat"
+        },
+        "past": {
+          "ik": "ging",
+          "jij": "ging",
+          "hij/zij": "ging",
+          "wij": "gingen",
+          "jullie": "gingen",
+          "zij_plural": "gingen",
+          "u": "ging"
+        },
+        "perfect": {
+          "participle": "gegaan",
+          "example": "Ik ben gegaan"
+        }
+      },
+      "examples": [
+        { "nl": "Ik ga naar school.", "en": "I go to school." },
+        { "nl": "Waar gaan jullie naartoe?", "en": "Where are you all going?" }
+      ]
+    },
+    {
+      "infinitive": "komen",
+      "meaning": "to come",
+      "type": "irregular",
+      "auxiliary": "zijn",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "kom",
+          "jij": "komt",
+          "hij/zij": "komt",
+          "wij": "komen",
+          "jullie": "komen",
+          "zij_plural": "komen",
+          "u": "komt"
+        },
+        "past": {
+          "ik": "kwam",
+          "jij": "kwam",
+          "hij/zij": "kwam",
+          "wij": "kwamen",
+          "jullie": "kwamen",
+          "zij_plural": "kwamen",
+          "u": "kwam"
+        },
+        "perfect": {
+          "participle": "gekomen",
+          "example": "Ik ben gekomen"
+        }
+      },
+      "examples": [
+        { "nl": "Waar kom je vandaan?", "en": "Where are you from?" },
+        { "nl": "Hij komt morgen.", "en": "He is coming tomorrow." }
+      ]
+    },
+    {
+      "infinitive": "doen",
+      "meaning": "to do",
+      "type": "irregular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "doe",
+          "jij": "doet",
+          "hij/zij": "doet",
+          "wij": "doen",
+          "jullie": "doen",
+          "zij_plural": "doen",
+          "u": "doet"
+        },
+        "past": {
+          "ik": "deed",
+          "jij": "deed",
+          "hij/zij": "deed",
+          "wij": "deden",
+          "jullie": "deden",
+          "zij_plural": "deden",
+          "u": "deed"
+        },
+        "perfect": {
+          "participle": "gedaan",
+          "example": "Ik heb gedaan"
+        }
+      },
+      "examples": [
+        { "nl": "Wat doe je?", "en": "What are you doing?" },
+        { "nl": "Ik doe mijn best.", "en": "I'm doing my best." }
+      ]
+    },
+    {
+      "infinitive": "zien",
+      "meaning": "to see",
+      "type": "irregular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "zie",
+          "jij": "ziet",
+          "hij/zij": "ziet",
+          "wij": "zien",
+          "jullie": "zien",
+          "zij_plural": "zien",
+          "u": "ziet"
+        },
+        "past": {
+          "ik": "zag",
+          "jij": "zag",
+          "hij/zij": "zag",
+          "wij": "zagen",
+          "jullie": "zagen",
+          "zij_plural": "zagen",
+          "u": "zag"
+        },
+        "perfect": {
+          "participle": "gezien",
+          "example": "Ik heb gezien"
+        }
+      },
+      "examples": [
+        { "nl": "Ik zie een vogel.", "en": "I see a bird." },
+        { "nl": "Heb je de film gezien?", "en": "Have you seen the movie?" }
+      ]
+    },
+    {
+      "infinitive": "eten",
+      "meaning": "to eat",
+      "type": "irregular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "eet",
+          "jij": "eet",
+          "hij/zij": "eet",
+          "wij": "eten",
+          "jullie": "eten",
+          "zij_plural": "eten",
+          "u": "eet"
+        },
+        "past": {
+          "ik": "at",
+          "jij": "at",
+          "hij/zij": "at",
+          "wij": "aten",
+          "jullie": "aten",
+          "zij_plural": "aten",
+          "u": "at"
+        },
+        "perfect": {
+          "participle": "gegeten",
+          "example": "Ik heb gegeten"
+        }
+      },
+      "examples": [
+        { "nl": "Ik eet een boterham.", "en": "I'm eating a sandwich." },
+        { "nl": "Hebben jullie al gegeten?", "en": "Have you all eaten already?" }
+      ]
+    },
+    {
+      "infinitive": "drinken",
+      "meaning": "to drink",
+      "type": "irregular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "drink",
+          "jij": "drinkt",
+          "hij/zij": "drinkt",
+          "wij": "drinken",
+          "jullie": "drinken",
+          "zij_plural": "drinken",
+          "u": "drinkt"
+        },
+        "past": {
+          "ik": "dronk",
+          "jij": "dronk",
+          "hij/zij": "dronk",
+          "wij": "dronken",
+          "jullie": "dronken",
+          "zij_plural": "dronken",
+          "u": "dronk"
+        },
+        "perfect": {
+          "participle": "gedronken",
+          "example": "Ik heb gedronken"
+        }
+      },
+      "examples": [
+        { "nl": "Ik drink koffie.", "en": "I'm drinking coffee." },
+        { "nl": "Wil je iets drinken?", "en": "Would you like something to drink?" }
+      ]
+    },
+    {
+      "infinitive": "slapen",
+      "meaning": "to sleep",
+      "type": "irregular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "slaap",
+          "jij": "slaapt",
+          "hij/zij": "slaapt",
+          "wij": "slapen",
+          "jullie": "slapen",
+          "zij_plural": "slapen",
+          "u": "slaapt"
+        },
+        "past": {
+          "ik": "sliep",
+          "jij": "sliep",
+          "hij/zij": "sliep",
+          "wij": "sliepen",
+          "jullie": "sliepen",
+          "zij_plural": "sliepen",
+          "u": "sliep"
+        },
+        "perfect": {
+          "participle": "geslapen",
+          "example": "Ik heb geslapen"
+        }
+      },
+      "examples": [
+        { "nl": "Ik slaap acht uur per nacht.", "en": "I sleep eight hours per night." },
+        { "nl": "Heb je goed geslapen?", "en": "Did you sleep well?" }
+      ]
+    },
+    {
+      "infinitive": "geven",
+      "meaning": "to give",
+      "type": "irregular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "geef",
+          "jij": "geeft",
+          "hij/zij": "geeft",
+          "wij": "geven",
+          "jullie": "geven",
+          "zij_plural": "geven",
+          "u": "geeft"
+        },
+        "past": {
+          "ik": "gaf",
+          "jij": "gaf",
+          "hij/zij": "gaf",
+          "wij": "gaven",
+          "jullie": "gaven",
+          "zij_plural": "gaven",
+          "u": "gaf"
+        },
+        "perfect": {
+          "participle": "gegeven",
+          "example": "Ik heb gegeven"
+        }
+      },
+      "examples": [
+        { "nl": "Ik geef jou een cadeau.", "en": "I give you a present." },
+        { "nl": "Zij gaf mij een boek.", "en": "She gave me a book." }
+      ]
+    },
+    {
+      "infinitive": "nemen",
+      "meaning": "to take",
+      "type": "irregular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "neem",
+          "jij": "neemt",
+          "hij/zij": "neemt",
+          "wij": "nemen",
+          "jullie": "nemen",
+          "zij_plural": "nemen",
+          "u": "neemt"
+        },
+        "past": {
+          "ik": "nam",
+          "jij": "nam",
+          "hij/zij": "nam",
+          "wij": "namen",
+          "jullie": "namen",
+          "zij_plural": "namen",
+          "u": "nam"
+        },
+        "perfect": {
+          "participle": "genomen",
+          "example": "Ik heb genomen"
+        }
+      },
+      "examples": [
+        { "nl": "Ik neem de trein.", "en": "I take the train." },
+        { "nl": "Neem je suiker in je koffie?", "en": "Do you take sugar in your coffee?" }
+      ]
+    },
+    {
+      "infinitive": "lezen",
+      "meaning": "to read",
+      "type": "irregular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "lees",
+          "jij": "leest",
+          "hij/zij": "leest",
+          "wij": "lezen",
+          "jullie": "lezen",
+          "zij_plural": "lezen",
+          "u": "leest"
+        },
+        "past": {
+          "ik": "las",
+          "jij": "las",
+          "hij/zij": "las",
+          "wij": "lazen",
+          "jullie": "lazen",
+          "zij_plural": "lazen",
+          "u": "las"
+        },
+        "perfect": {
+          "participle": "gelezen",
+          "example": "Ik heb gelezen"
+        }
+      },
+      "examples": [
+        { "nl": "Ik lees een boek.", "en": "I'm reading a book." },
+        { "nl": "Heb je de krant gelezen?", "en": "Have you read the newspaper?" }
+      ]
+    },
+    {
+      "infinitive": "schrijven",
+      "meaning": "to write",
+      "type": "irregular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "schrijf",
+          "jij": "schrijft",
+          "hij/zij": "schrijft",
+          "wij": "schrijven",
+          "jullie": "schrijven",
+          "zij_plural": "schrijven",
+          "u": "schrijft"
+        },
+        "past": {
+          "ik": "schreef",
+          "jij": "schreef",
+          "hij/zij": "schreef",
+          "wij": "schreven",
+          "jullie": "schreven",
+          "zij_plural": "schreven",
+          "u": "schreef"
+        },
+        "perfect": {
+          "participle": "geschreven",
+          "example": "Ik heb geschreven"
+        }
+      },
+      "examples": [
+        { "nl": "Ik schrijf een e-mail.", "en": "I'm writing an email." },
+        { "nl": "Hij heeft een brief geschreven.", "en": "He has written a letter." }
+      ]
+    },
+    {
+      "infinitive": "rijden",
+      "meaning": "to drive/ride",
+      "type": "irregular",
+      "auxiliary": "hebben/zijn",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "rijd",
+          "jij": "rijdt",
+          "hij/zij": "rijdt",
+          "wij": "rijden",
+          "jullie": "rijden",
+          "zij_plural": "rijden",
+          "u": "rijdt"
+        },
+        "past": {
+          "ik": "reed",
+          "jij": "reed",
+          "hij/zij": "reed",
+          "wij": "reden",
+          "jullie": "reden",
+          "zij_plural": "reden",
+          "u": "reed"
+        },
+        "perfect": {
+          "participle": "gereden",
+          "example": "Ik heb gereden / Ik ben gereden"
+        }
+      },
+      "examples": [
+        { "nl": "Ik rijd elke dag naar mijn werk.", "en": "I drive to work every day." },
+        { "nl": "We zijn naar Amsterdam gereden.", "en": "We drove to Amsterdam." }
+      ]
+    },
+    {
+      "infinitive": "spreken",
+      "meaning": "to speak",
+      "type": "irregular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "spreek",
+          "jij": "spreekt",
+          "hij/zij": "spreekt",
+          "wij": "spreken",
+          "jullie": "spreken",
+          "zij_plural": "spreken",
+          "u": "spreekt"
+        },
+        "past": {
+          "ik": "sprak",
+          "jij": "sprak",
+          "hij/zij": "sprak",
+          "wij": "spraken",
+          "jullie": "spraken",
+          "zij_plural": "spraken",
+          "u": "sprak"
+        },
+        "perfect": {
+          "participle": "gesproken",
+          "example": "Ik heb gesproken"
+        }
+      },
+      "examples": [
+        { "nl": "Spreek je Nederlands?", "en": "Do you speak Dutch?" },
+        { "nl": "Ik heb met hem gesproken.", "en": "I spoke with him." }
+      ]
+    },
+    {
+      "infinitive": "willen",
+      "meaning": "to want",
+      "type": "modal",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "wil",
+          "jij": "wilt/wil",
+          "hij/zij": "wil",
+          "wij": "willen",
+          "jullie": "willen",
+          "zij_plural": "willen",
+          "u": "wilt"
+        },
+        "past": {
+          "ik": "wilde/wou",
+          "jij": "wilde/wou",
+          "hij/zij": "wilde/wou",
+          "wij": "wilden/wouden",
+          "jullie": "wilden/wouden",
+          "zij_plural": "wilden/wouden",
+          "u": "wilde/wou"
+        },
+        "perfect": {
+          "participle": "gewild",
+          "example": "Ik heb gewild"
+        }
+      },
+      "examples": [
+        { "nl": "Ik wil water, alsjeblieft.", "en": "I want water, please." },
+        { "nl": "Wil je mee naar het feest?", "en": "Do you want to come to the party?" }
+      ]
+    },
+    {
+      "infinitive": "kunnen",
+      "meaning": "to be able to / can",
+      "type": "modal",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "kan",
+          "jij": "kunt/kan",
+          "hij/zij": "kan",
+          "wij": "kunnen",
+          "jullie": "kunnen",
+          "zij_plural": "kunnen",
+          "u": "kunt/kan"
+        },
+        "past": {
+          "ik": "kon",
+          "jij": "kon",
+          "hij/zij": "kon",
+          "wij": "konden",
+          "jullie": "konden",
+          "zij_plural": "konden",
+          "u": "kon"
+        },
+        "perfect": {
+          "participle": "gekund",
+          "example": "Ik heb gekund"
+        }
+      },
+      "examples": [
+        { "nl": "Ik kan fietsen.", "en": "I can ride a bike." },
+        { "nl": "Kun je me helpen?", "en": "Can you help me?" }
+      ]
+    },
+    {
+      "infinitive": "moeten",
+      "meaning": "to have to / must",
+      "type": "modal",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "moet",
+          "jij": "moet",
+          "hij/zij": "moet",
+          "wij": "moeten",
+          "jullie": "moeten",
+          "zij_plural": "moeten",
+          "u": "moet"
+        },
+        "past": {
+          "ik": "moest",
+          "jij": "moest",
+          "hij/zij": "moest",
+          "wij": "moesten",
+          "jullie": "moesten",
+          "zij_plural": "moesten",
+          "u": "moest"
+        },
+        "perfect": {
+          "participle": "gemoeten",
+          "example": "Ik heb gemoeten"
+        }
+      },
+      "examples": [
+        { "nl": "Ik moet om acht uur beginnen.", "en": "I have to start at eight o'clock." },
+        { "nl": "Je moet je huiswerk maken.", "en": "You have to do your homework." }
+      ]
+    },
+    {
+      "infinitive": "mogen",
+      "meaning": "to be allowed to / may",
+      "type": "modal",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "mag",
+          "jij": "mag",
+          "hij/zij": "mag",
+          "wij": "mogen",
+          "jullie": "mogen",
+          "zij_plural": "mogen",
+          "u": "mag"
+        },
+        "past": {
+          "ik": "mocht",
+          "jij": "mocht",
+          "hij/zij": "mocht",
+          "wij": "mochten",
+          "jullie": "mochten",
+          "zij_plural": "mochten",
+          "u": "mocht"
+        },
+        "perfect": {
+          "participle": "gemogen",
+          "example": "Ik heb gemogen"
+        }
+      },
+      "examples": [
+        { "nl": "Mag ik hier zitten?", "en": "May I sit here?" },
+        { "nl": "Je mag niet roken.", "en": "You are not allowed to smoke." }
+      ]
+    },
+    {
+      "infinitive": "zullen",
+      "meaning": "will / shall",
+      "type": "modal",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "zal",
+          "jij": "zult/zal",
+          "hij/zij": "zal",
+          "wij": "zullen",
+          "jullie": "zullen",
+          "zij_plural": "zullen",
+          "u": "zult/zal"
+        },
+        "past": {
+          "ik": "zou",
+          "jij": "zou",
+          "hij/zij": "zou",
+          "wij": "zouden",
+          "jullie": "zouden",
+          "zij_plural": "zouden",
+          "u": "zou"
+        },
+        "perfect": {
+          "participle": "-",
+          "example": "(rarely used in perfect)"
+        }
+      },
+      "examples": [
+        { "nl": "Ik zal je helpen.", "en": "I will help you." },
+        { "nl": "Zullen we gaan?", "en": "Shall we go?" }
+      ]
+    },
+    {
+      "infinitive": "werken",
+      "meaning": "to work",
+      "type": "regular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "werk",
+          "jij": "werkt",
+          "hij/zij": "werkt",
+          "wij": "werken",
+          "jullie": "werken",
+          "zij_plural": "werken",
+          "u": "werkt"
+        },
+        "past": {
+          "ik": "werkte",
+          "jij": "werkte",
+          "hij/zij": "werkte",
+          "wij": "werkten",
+          "jullie": "werkten",
+          "zij_plural": "werkten",
+          "u": "werkte"
+        },
+        "perfect": {
+          "participle": "gewerkt",
+          "example": "Ik heb gewerkt"
+        }
+      },
+      "examples": [
+        { "nl": "Ik werk bij een bank.", "en": "I work at a bank." },
+        { "nl": "Zij heeft hard gewerkt.", "en": "She has worked hard." }
+      ]
+    },
+    {
+      "infinitive": "wonen",
+      "meaning": "to live (reside)",
+      "type": "regular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "woon",
+          "jij": "woont",
+          "hij/zij": "woont",
+          "wij": "wonen",
+          "jullie": "wonen",
+          "zij_plural": "wonen",
+          "u": "woont"
+        },
+        "past": {
+          "ik": "woonde",
+          "jij": "woonde",
+          "hij/zij": "woonde",
+          "wij": "woonden",
+          "jullie": "woonden",
+          "zij_plural": "woonden",
+          "u": "woonde"
+        },
+        "perfect": {
+          "participle": "gewoond",
+          "example": "Ik heb gewoond"
+        }
+      },
+      "examples": [
+        { "nl": "Ik woon in Amsterdam.", "en": "I live in Amsterdam." },
+        { "nl": "Waar woon je?", "en": "Where do you live?" }
+      ]
+    },
+    {
+      "infinitive": "leren",
+      "meaning": "to learn / to teach",
+      "type": "regular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "leer",
+          "jij": "leert",
+          "hij/zij": "leert",
+          "wij": "leren",
+          "jullie": "leren",
+          "zij_plural": "leren",
+          "u": "leert"
+        },
+        "past": {
+          "ik": "leerde",
+          "jij": "leerde",
+          "hij/zij": "leerde",
+          "wij": "leerden",
+          "jullie": "leerden",
+          "zij_plural": "leerden",
+          "u": "leerde"
+        },
+        "perfect": {
+          "participle": "geleerd",
+          "example": "Ik heb geleerd"
+        }
+      },
+      "examples": [
+        { "nl": "Ik leer Nederlands.", "en": "I'm learning Dutch." },
+        { "nl": "Zij heeft me fietsen geleerd.", "en": "She taught me to ride a bike." }
+      ]
+    },
+    {
+      "infinitive": "praten",
+      "meaning": "to talk",
+      "type": "regular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "praat",
+          "jij": "praat",
+          "hij/zij": "praat",
+          "wij": "praten",
+          "jullie": "praten",
+          "zij_plural": "praten",
+          "u": "praat"
+        },
+        "past": {
+          "ik": "praatte",
+          "jij": "praatte",
+          "hij/zij": "praatte",
+          "wij": "praatten",
+          "jullie": "praatten",
+          "zij_plural": "praatten",
+          "u": "praatte"
+        },
+        "perfect": {
+          "participle": "gepraat",
+          "example": "Ik heb gepraat"
+        }
+      },
+      "examples": [
+        { "nl": "We praten over het weer.", "en": "We're talking about the weather." },
+        { "nl": "Ik heb lang met haar gepraat.", "en": "I talked with her for a long time." }
+      ]
+    },
+    {
+      "infinitive": "betalen",
+      "meaning": "to pay",
+      "type": "regular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "betaal",
+          "jij": "betaalt",
+          "hij/zij": "betaalt",
+          "wij": "betalen",
+          "jullie": "betalen",
+          "zij_plural": "betalen",
+          "u": "betaalt"
+        },
+        "past": {
+          "ik": "betaalde",
+          "jij": "betaalde",
+          "hij/zij": "betaalde",
+          "wij": "betaalden",
+          "jullie": "betaalden",
+          "zij_plural": "betaalden",
+          "u": "betaalde"
+        },
+        "perfect": {
+          "participle": "betaald",
+          "example": "Ik heb betaald"
+        }
+      },
+      "examples": [
+        { "nl": "Ik betaal met pin.", "en": "I pay by card." },
+        { "nl": "Heb je al betaald?", "en": "Have you paid already?" }
+      ]
+    },
+    {
+      "infinitive": "koken",
+      "meaning": "to cook",
+      "type": "regular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "kook",
+          "jij": "kookt",
+          "hij/zij": "kookt",
+          "wij": "koken",
+          "jullie": "koken",
+          "zij_plural": "koken",
+          "u": "kookt"
+        },
+        "past": {
+          "ik": "kookte",
+          "jij": "kookte",
+          "hij/zij": "kookte",
+          "wij": "kookten",
+          "jullie": "kookten",
+          "zij_plural": "kookten",
+          "u": "kookte"
+        },
+        "perfect": {
+          "participle": "gekookt",
+          "example": "Ik heb gekookt"
+        }
+      },
+      "examples": [
+        { "nl": "Ik kook vanavond.", "en": "I'm cooking tonight." },
+        { "nl": "Zij kookt heel lekker.", "en": "She cooks very well." }
+      ]
+    },
+    {
+      "infinitive": "fietsen",
+      "meaning": "to cycle",
+      "type": "regular",
+      "auxiliary": "hebben/zijn",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "fiets",
+          "jij": "fietst",
+          "hij/zij": "fietst",
+          "wij": "fietsen",
+          "jullie": "fietsen",
+          "zij_plural": "fietsen",
+          "u": "fietst"
+        },
+        "past": {
+          "ik": "fietste",
+          "jij": "fietste",
+          "hij/zij": "fietste",
+          "wij": "fietsten",
+          "jullie": "fietsten",
+          "zij_plural": "fietsten",
+          "u": "fietste"
+        },
+        "perfect": {
+          "participle": "gefietst",
+          "example": "Ik heb gefietst / Ik ben naar school gefietst"
+        }
+      },
+      "examples": [
+        { "nl": "Ik fiets elke dag naar school.", "en": "I cycle to school every day." },
+        { "nl": "Nederlanders fietsen veel.", "en": "Dutch people cycle a lot." }
+      ]
+    },
+    {
+      "infinitive": "wandelen",
+      "meaning": "to walk / to hike",
+      "type": "regular",
+      "auxiliary": "hebben/zijn",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "wandel",
+          "jij": "wandelt",
+          "hij/zij": "wandelt",
+          "wij": "wandelen",
+          "jullie": "wandelen",
+          "zij_plural": "wandelen",
+          "u": "wandelt"
+        },
+        "past": {
+          "ik": "wandelde",
+          "jij": "wandelde",
+          "hij/zij": "wandelde",
+          "wij": "wandelden",
+          "jullie": "wandelden",
+          "zij_plural": "wandelden",
+          "u": "wandelde"
+        },
+        "perfect": {
+          "participle": "gewandeld",
+          "example": "Ik heb gewandeld / Ik ben naar huis gewandeld"
+        }
+      },
+      "examples": [
+        { "nl": "Ik wandel graag in het bos.", "en": "I like to walk in the forest." },
+        { "nl": "We hebben de hele dag gewandeld.", "en": "We walked the whole day." }
+      ]
+    },
+    {
+      "infinitive": "bellen",
+      "meaning": "to call (phone)",
+      "type": "regular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "bel",
+          "jij": "belt",
+          "hij/zij": "belt",
+          "wij": "bellen",
+          "jullie": "bellen",
+          "zij_plural": "bellen",
+          "u": "belt"
+        },
+        "past": {
+          "ik": "belde",
+          "jij": "belde",
+          "hij/zij": "belde",
+          "wij": "belden",
+          "jullie": "belden",
+          "zij_plural": "belden",
+          "u": "belde"
+        },
+        "perfect": {
+          "participle": "gebeld",
+          "example": "Ik heb gebeld"
+        }
+      },
+      "examples": [
+        { "nl": "Ik bel je morgen.", "en": "I'll call you tomorrow." },
+        { "nl": "Heb je de dokter gebeld?", "en": "Have you called the doctor?" }
+      ]
+    },
+    {
+      "infinitive": "maken",
+      "meaning": "to make",
+      "type": "regular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "maak",
+          "jij": "maakt",
+          "hij/zij": "maakt",
+          "wij": "maken",
+          "jullie": "maken",
+          "zij_plural": "maken",
+          "u": "maakt"
+        },
+        "past": {
+          "ik": "maakte",
+          "jij": "maakte",
+          "hij/zij": "maakte",
+          "wij": "maakten",
+          "jullie": "maakten",
+          "zij_plural": "maakten",
+          "u": "maakte"
+        },
+        "perfect": {
+          "participle": "gemaakt",
+          "example": "Ik heb gemaakt"
+        }
+      },
+      "examples": [
+        { "nl": "Ik maak het eten klaar.", "en": "I'm preparing the food." },
+        { "nl": "Zij heeft een taart gemaakt.", "en": "She made a cake." }
+      ]
+    },
+    {
+      "infinitive": "wachten",
+      "meaning": "to wait",
+      "type": "regular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "wacht",
+          "jij": "wacht",
+          "hij/zij": "wacht",
+          "wij": "wachten",
+          "jullie": "wachten",
+          "zij_plural": "wachten",
+          "u": "wacht"
+        },
+        "past": {
+          "ik": "wachtte",
+          "jij": "wachtte",
+          "hij/zij": "wachtte",
+          "wij": "wachtten",
+          "jullie": "wachtten",
+          "zij_plural": "wachtten",
+          "u": "wachtte"
+        },
+        "perfect": {
+          "participle": "gewacht",
+          "example": "Ik heb gewacht"
+        }
+      },
+      "examples": [
+        { "nl": "Wacht even, alsjeblieft.", "en": "Wait a moment, please." },
+        { "nl": "Ik heb lang gewacht.", "en": "I waited a long time." }
+      ]
+    },
+    {
+      "infinitive": "huren",
+      "meaning": "to rent",
+      "type": "regular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "huur",
+          "jij": "huurt",
+          "hij/zij": "huurt",
+          "wij": "huren",
+          "jullie": "huren",
+          "zij_plural": "huren",
+          "u": "huurt"
+        },
+        "past": {
+          "ik": "huurde",
+          "jij": "huurde",
+          "hij/zij": "huurde",
+          "wij": "huurden",
+          "jullie": "huurden",
+          "zij_plural": "huurden",
+          "u": "huurde"
+        },
+        "perfect": {
+          "participle": "gehuurd",
+          "example": "Ik heb gehuurd"
+        }
+      },
+      "examples": [
+        { "nl": "Ik huur een appartement.", "en": "I rent an apartment." },
+        { "nl": "We hebben een auto gehuurd.", "en": "We rented a car." }
+      ]
+    },
+    {
+      "infinitive": "studeren",
+      "meaning": "to study",
+      "type": "regular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "studeer",
+          "jij": "studeert",
+          "hij/zij": "studeert",
+          "wij": "studeren",
+          "jullie": "studeren",
+          "zij_plural": "studeren",
+          "u": "studeert"
+        },
+        "past": {
+          "ik": "studeerde",
+          "jij": "studeerde",
+          "hij/zij": "studeerde",
+          "wij": "studeerden",
+          "jullie": "studeerden",
+          "zij_plural": "studeerden",
+          "u": "studeerde"
+        },
+        "perfect": {
+          "participle": "gestudeerd",
+          "example": "Ik heb gestudeerd"
+        }
+      },
+      "examples": [
+        { "nl": "Ik studeer geneeskunde.", "en": "I study medicine." },
+        { "nl": "Zij heeft in Leiden gestudeerd.", "en": "She studied in Leiden." }
+      ]
+    },
+    {
+      "infinitive": "spelen",
+      "meaning": "to play",
+      "type": "regular",
+      "auxiliary": "hebben",
+      "separable": false,
+      "conjugations": {
+        "present": {
+          "ik": "speel",
+          "jij": "speelt",
+          "hij/zij": "speelt",
+          "wij": "spelen",
+          "jullie": "spelen",
+          "zij_plural": "spelen",
+          "u": "speelt"
+        },
+        "past": {
+          "ik": "speelde",
+          "jij": "speelde",
+          "hij/zij": "speelde",
+          "wij": "speelden",
+          "jullie": "speelden",
+          "zij_plural": "speelden",
+          "u": "speelde"
+        },
+        "perfect": {
+          "participle": "gespeeld",
+          "example": "Ik heb gespeeld"
+        }
+      },
+      "examples": [
+        { "nl": "De kinderen spelen buiten.", "en": "The children are playing outside." },
+        { "nl": "Ik heb gitaar gespeeld.", "en": "I played guitar." }
+      ]
+    }
+  ]
+}

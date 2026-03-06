@@ -1,0 +1,120 @@
+{
+  "id": "public-transport",
+  "title": "Met het openbaar vervoer",
+  "titleEN": "Using Public Transport",
+  "context": "You need to travel by train from Amsterdam to Utrecht and need help buying an OV-chipkaart and finding the right connection.",
+  "lines": [
+    {
+      "speaker": "Reiziger",
+      "dutch": "Pardon, kunt u mij helpen? Ik wil een OV-chipkaart kopen.",
+      "english": "Excuse me, can you help me? I want to buy an OV-chipkaart.",
+      "note": "'Pardon' is the polite way to get someone's attention in Dutch."
+    },
+    {
+      "speaker": "Medewerker",
+      "dutch": "Natuurlijk! U kunt een anonieme OV-chipkaart kopen bij de automaat daar, of een persoonlijke kaart aanvragen online.",
+      "english": "Of course! You can buy an anonymous OV-chipkaart at the machine over there, or apply for a personal card online.",
+      "note": "There are two types: 'anoniem' (anonymous) and 'persoonlijk' (personal, linked to your name)."
+    },
+    {
+      "speaker": "Reiziger",
+      "dutch": "Wat is het verschil tussen een anonieme en een persoonlijke kaart?",
+      "english": "What is the difference between an anonymous and a personal card?"
+    },
+    {
+      "speaker": "Medewerker",
+      "dutch": "Met een persoonlijke kaart kunt u een abonnement nemen en krijgt u korting. Een anonieme kaart is handig als u af en toe reist.",
+      "english": "With a personal card you can get a subscription and receive a discount. An anonymous card is convenient if you travel occasionally.",
+      "note": "'Abonnement' means 'subscription'. 'Af en toe' means 'now and then'."
+    },
+    {
+      "speaker": "Reiziger",
+      "dutch": "Ik neem voorlopig een anonieme kaart. Hoeveel saldo moet ik opladen?",
+      "english": "I'll take an anonymous card for now. How much credit should I load?",
+      "note": "'Saldo opladen' means 'to top up credit'."
+    },
+    {
+      "speaker": "Medewerker",
+      "dutch": "Voor de trein moet u minimaal twintig euro saldo op uw kaart hebben. U kunt opladen bij de automaat.",
+      "english": "For the train you need at least twenty euros credit on your card. You can top up at the machine."
+    },
+    {
+      "speaker": "Reiziger",
+      "dutch": "Dank u wel. Ik wil ook graag weten hoe ik naar Utrecht kom. Welke trein moet ik nemen?",
+      "english": "Thank you. I also want to know how to get to Utrecht. Which train do I need to take?"
+    },
+    {
+      "speaker": "Medewerker",
+      "dutch": "Er gaat elke tien minuten een intercity van Amsterdam Centraal naar Utrecht Centraal. De reis duurt ongeveer een halfuur.",
+      "english": "An intercity train goes every ten minutes from Amsterdam Centraal to Utrecht Centraal. The journey takes about half an hour.",
+      "note": "'Intercity' is a direct fast train. 'Sprinter' is a slower train that stops at every station."
+    },
+    {
+      "speaker": "Reiziger",
+      "dutch": "Moet ik overstappen?",
+      "english": "Do I have to transfer?",
+      "note": "'Overstappen' means 'to transfer/change trains'."
+    },
+    {
+      "speaker": "Medewerker",
+      "dutch": "Nee, de intercity gaat rechtstreeks. U hoeft niet over te stappen. Vergeet niet om in en uit te checken met uw OV-chipkaart!",
+      "english": "No, the intercity goes directly. You don't need to transfer. Don't forget to check in and check out with your OV-chipkaart!",
+      "note": "'In- en uitchecken' is essential! Forgetting costs you extra."
+    },
+    {
+      "speaker": "Reiziger",
+      "dutch": "Op welk spoor vertrekt de trein?",
+      "english": "From which platform does the train depart?",
+      "note": "'Spoor' means 'platform/track'."
+    },
+    {
+      "speaker": "Medewerker",
+      "dutch": "Dat staat op het bord bij de hal. Op dit moment vertrekt hij van spoor acht. Maar check altijd het bord, want het kan veranderen.",
+      "english": "That's shown on the board in the hall. Right now it departs from platform eight. But always check the board, because it can change."
+    },
+    {
+      "speaker": "Reiziger",
+      "dutch": "En als de trein vertraging heeft? Hoe weet ik dat?",
+      "english": "And if the train is delayed? How do I know?",
+      "note": "'Vertraging' means 'delay'. NS (Dutch Railways) shows delays on their app and screens."
+    },
+    {
+      "speaker": "Medewerker",
+      "dutch": "U kunt de NS-app downloaden. Daar ziet u alle actuele vertrektijden en vertragingen. Er zijn ook schermen op het perron.",
+      "english": "You can download the NS app. There you can see all current departure times and delays. There are also screens on the platform."
+    },
+    {
+      "speaker": "Reiziger",
+      "dutch": "Heel erg bedankt voor uw hulp. Fijne dag!",
+      "english": "Thank you so much for your help. Have a nice day!"
+    }
+  ],
+  "keyPhrases": [
+    {
+      "dutch": "Welke trein moet ik nemen?",
+      "english": "Which train do I need to take?",
+      "usage": "Ask this when you're unsure about which train to board."
+    },
+    {
+      "dutch": "Moet ik overstappen?",
+      "english": "Do I have to transfer?",
+      "usage": "An essential question when planning a train journey."
+    },
+    {
+      "dutch": "Op welk spoor vertrekt de trein?",
+      "english": "From which platform does the train depart?",
+      "usage": "Ask this to find the right platform at the station."
+    },
+    {
+      "dutch": "Hoeveel saldo moet ik opladen?",
+      "english": "How much credit should I load?",
+      "usage": "Ask this when topping up your OV-chipkaart."
+    },
+    {
+      "dutch": "Heeft de trein vertraging?",
+      "english": "Is the train delayed?",
+      "usage": "Use this to ask about delays."
+    }
+  ],
+  "culturalNote": "The OV-chipkaart is the electronic payment card for all public transport in the Netherlands: trains (NS), buses, trams, and metro. You must always check in when boarding and check out when leaving, even when transferring. Forgetting to check out will result in a higher charge. The NS (Nederlandse Spoorwegen) operates most train services. The Dutch railway network is one of the busiest in Europe. The app '9292' is useful for planning journeys across all types of public transport. Trains generally run frequently but delays do occur, especially during bad weather or 'storingen' (disruptions)."
+}

@@ -1,0 +1,114 @@
+{
+  "id": "meeting-neighbors",
+  "title": "Kennismaken met de buren",
+  "titleEN": "Meeting the Neighbors",
+  "context": "You have just moved into a new apartment and meet your neighbors for the first time. You introduce yourself and have a friendly conversation.",
+  "lines": [
+    {
+      "speaker": "Buurvrouw",
+      "dutch": "Hallo! Ik zag dat er iemand aan het verhuizen was. Bent u de nieuwe buurman?",
+      "english": "Hello! I saw someone was moving in. Are you the new neighbor?",
+      "note": "'Buurman' (male neighbor) / 'buurvrouw' (female neighbor). 'Aan het verhuizen' = in the process of moving."
+    },
+    {
+      "speaker": "Nieuwe bewoner",
+      "dutch": "Ja, klopt! Ik ben Ahmed. Ik ben gisteren verhuisd. Aangenaam kennis te maken!",
+      "english": "Yes, that's right! I'm Ahmed. I moved in yesterday. Nice to meet you!",
+      "note": "'Aangenaam kennis te maken' is the formal way to say 'nice to meet you'."
+    },
+    {
+      "speaker": "Buurvrouw",
+      "dutch": "Welkom in de buurt! Ik ben Marieke en ik woon hier al vijf jaar. Hoe bevalt het appartement?",
+      "english": "Welcome to the neighborhood! I'm Marieke and I've lived here for five years. How do you like the apartment?",
+      "note": "'Hoe bevalt het?' means 'How do you like it?' or 'How is it going?'."
+    },
+    {
+      "speaker": "Nieuwe bewoner",
+      "dutch": "Het is een fijn appartement. Licht en ruim. Ik ben er erg blij mee.",
+      "english": "It's a nice apartment. Bright and spacious. I'm very happy with it."
+    },
+    {
+      "speaker": "Buurvrouw",
+      "dutch": "Wat fijn! De buurt is heel gezellig. Er is een leuk park om de hoek en de supermarkt is op loopafstand.",
+      "english": "How nice! The neighborhood is very cozy. There's a nice park around the corner and the supermarket is within walking distance.",
+      "note": "'Op loopafstand' means 'within walking distance'. 'Om de hoek' means 'around the corner'."
+    },
+    {
+      "speaker": "Nieuwe bewoner",
+      "dutch": "Dat klinkt goed. Is er ook een markt in de buurt?",
+      "english": "That sounds good. Is there also a market nearby?"
+    },
+    {
+      "speaker": "Buurvrouw",
+      "dutch": "Ja, op zaterdag is er een weekmarkt op het plein. Daar kun je verse groente en kaas kopen.",
+      "english": "Yes, on Saturday there's a weekly market in the square. You can buy fresh vegetables and cheese there."
+    },
+    {
+      "speaker": "Nieuwe bewoner",
+      "dutch": "Dat is fijn om te weten. Overigens, het weer is vandaag lekker, he?",
+      "english": "That's good to know. By the way, the weather is nice today, isn't it?",
+      "note": "'He?' at the end of a sentence is a very common Dutch tag question, like 'right?' or 'isn't it?'."
+    },
+    {
+      "speaker": "Buurvrouw",
+      "dutch": "Ja, eindelijk een beetje zon! Het heeft de hele week geregend. Typisch Nederlands weer!",
+      "english": "Yes, finally a bit of sun! It has been raining all week. Typical Dutch weather!"
+    },
+    {
+      "speaker": "Nieuwe bewoner",
+      "dutch": "Ha, ja, daar moet ik nog aan wennen! Ik kom uit een land met meer zon.",
+      "english": "Ha, yes, I still have to get used to that! I come from a country with more sun.",
+      "note": "'Ergens aan wennen' means 'to get used to something'."
+    },
+    {
+      "speaker": "Buurvrouw",
+      "dutch": "Heb je zin in een kopje koffie? Dan kan ik je meer over de buurt vertellen.",
+      "english": "Would you like a cup of coffee? Then I can tell you more about the neighborhood.",
+      "note": "'Zin hebben in' means 'to feel like / to want'. Notice the switch from 'u' to 'je' (informal)."
+    },
+    {
+      "speaker": "Nieuwe bewoner",
+      "dutch": "Ja, graag! Dat is heel aardig van je. Zal ik iets meenemen?",
+      "english": "Yes, please! That's very kind of you. Shall I bring something?"
+    },
+    {
+      "speaker": "Buurvrouw",
+      "dutch": "Nee hoor, dat hoeft niet. Kom maar gewoon langs. Ik woon op nummer tweeentwintig, recht tegenover jou.",
+      "english": "No, that's not necessary. Just come over. I live at number twenty-two, right across from you.",
+      "note": "'Langskomen' means 'to come over/visit'. 'Dat hoeft niet' means 'that's not necessary'."
+    },
+    {
+      "speaker": "Nieuwe bewoner",
+      "dutch": "Wat gezellig! Ik kom zo langs. Dank je wel, Marieke!",
+      "english": "How nice! I'll come over shortly. Thank you, Marieke!"
+    }
+  ],
+  "keyPhrases": [
+    {
+      "dutch": "Aangenaam kennis te maken!",
+      "english": "Nice to meet you!",
+      "usage": "A polite way to greet someone when meeting them for the first time."
+    },
+    {
+      "dutch": "Hoe bevalt het?",
+      "english": "How do you like it?",
+      "usage": "Use this to ask someone how they like their new home, job, etc."
+    },
+    {
+      "dutch": "Heb je zin in een kopje koffie?",
+      "english": "Would you like a cup of coffee?",
+      "usage": "A very common Dutch way to invite someone for a casual visit."
+    },
+    {
+      "dutch": "Ik moet er nog aan wennen.",
+      "english": "I still have to get used to it.",
+      "usage": "Use this when something is new to you."
+    },
+    {
+      "dutch": "De buurt is heel gezellig.",
+      "english": "The neighborhood is very cozy/pleasant.",
+      "usage": "Use 'gezellig' to describe a pleasant atmosphere."
+    }
+  ],
+  "culturalNote": "Gezelligheid is one of the most important concepts in Dutch culture. It describes a warm, convivial atmosphere with good company. There is no exact English translation. The Dutch love their coffee - a 'bakje koffie' (cup of coffee) is central to social life. When you move to a new home, it is common to introduce yourself to your neighbors. Dutch people often switch quickly from formal 'u' to informal 'je' once they feel comfortable, especially between neighbors. Talking about the weather is the most popular small talk topic in the Netherlands."
+}

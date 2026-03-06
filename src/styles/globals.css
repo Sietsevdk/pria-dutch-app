@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #FF6B2B;
+  --color-primary-light: #FF8F5C;
+  --color-primary-dark: #E55A1B;
+  --color-cream: #FFF8F0;
+  --color-cream-dark: #F5EDE3;
+  --color-charcoal: #2D2D2D;
+  --color-charcoal-light: #4A4A4A;
+  --color-success: #7FB069;
+  --color-success-light: #A8D494;
+  --color-error: #E85D5D;
+  --color-error-light: #F09090;
+  --color-warning: #F5A623;
+  --color-info: #5B9BD5;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
+}
+
+/* Safe area padding for mobile */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.safe-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1c7b8;
+  border-radius: 2px;
+}
+
+/* Fraunces for headings */
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+}
+
+/* Card base styles */
+.card {
+  @apply bg-white rounded-2xl shadow-sm border border-cream-dark/50;
+}
+
+/* Pulse animation for current lesson */
+@keyframes gentle-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 43, 0.3); }
+  50% { box-shadow: 0 0 0 8px rgba(255, 107, 43, 0); }
+}
+
+.pulse-orange {
+  animation: gentle-pulse 2s ease-in-out infinite;
+}
+
+/* Flip card */
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}

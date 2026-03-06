@@ -1,0 +1,1392 @@
+{
+  "categories": [
+    {
+      "id": "werk-en-inkomen",
+      "name": "Work & Income",
+      "nameNl": "Werk en inkomen",
+      "icon": "\ud83d\udcbc",
+      "description": "Finding work, employment rights, taxes, and income support in the Netherlands",
+      "questions": [
+        {
+          "id": 1,
+          "question": "Wat is het BSN?",
+          "questionEn": "What is the BSN?",
+          "options": [
+            "Een bankrekeningnummer",
+            "Een burgerservicenummer",
+            "Een belastingnummer voor bedrijven",
+            "Een bewijs van Nederlanderschap"
+          ],
+          "correct": 1,
+          "explanation": "The BSN (Burgerservicenummer) is the citizen service number. It is a unique personal number assigned to everyone registered in the Netherlands. You need it for work, healthcare, and dealings with the government.",
+          "explanationNl": "Het BSN (Burgerservicenummer) is een uniek persoonsnummer dat aan iedereen wordt toegekend die in Nederland is geregistreerd. Je hebt het nodig voor werk, zorg en contact met de overheid."
+        },
+        {
+          "id": 2,
+          "question": "Wat is het wettelijk minimumloon in Nederland gebaseerd op?",
+          "questionEn": "What is the legal minimum wage in the Netherlands based on?",
+          "options": [
+            "Het aantal jaren werkervaring",
+            "De leeftijd van de werknemer",
+            "Het type beroep",
+            "De grootte van het bedrijf"
+          ],
+          "correct": 1,
+          "explanation": "The statutory minimum wage in the Netherlands depends on age. Workers aged 21 and over receive the full minimum wage. Younger workers receive a percentage of the full minimum wage (the minimum youth wage).",
+          "explanationNl": "Het wettelijk minimumloon in Nederland is afhankelijk van de leeftijd. Werknemers van 21 jaar en ouder ontvangen het volledige minimumloon. Jongere werknemers ontvangen een percentage (het minimumjeugdloon)."
+        },
+        {
+          "id": 3,
+          "question": "Wat is het UWV?",
+          "questionEn": "What is the UWV?",
+          "options": [
+            "Een uitzendbureauketen",
+            "De organisatie die uitkeringen en werk regelt",
+            "Een vakbond voor werknemers",
+            "Een opleiding voor werkzoekenden"
+          ],
+          "correct": 1,
+          "explanation": "The UWV (Uitvoeringsinstituut Werknemersverzekeringen) is the Employee Insurance Agency. It manages unemployment benefits (WW-uitkering), helps people find work, and handles employee insurances.",
+          "explanationNl": "Het UWV (Uitvoeringsinstituut Werknemersverzekeringen) regelt werknemersverzekeringen, zoals de WW-uitkering, en helpt mensen bij het vinden van werk."
+        },
+        {
+          "id": 4,
+          "question": "Hoeveel vakantiedagen heeft een werknemer in Nederland minimaal recht op per jaar?",
+          "questionEn": "How many vacation days is an employee in the Netherlands minimally entitled to per year?",
+          "options": [
+            "10 dagen",
+            "15 dagen",
+            "20 dagen (bij fulltime)",
+            "25 dagen"
+          ],
+          "correct": 2,
+          "explanation": "By law, a full-time employee in the Netherlands is entitled to a minimum of 4 times the number of working days per week in vacation days. For a 5-day working week, that is 20 vacation days per year. Many employers offer more.",
+          "explanationNl": "Wettelijk heeft een fulltime werknemer recht op minimaal 4 keer het aantal werkdagen per week aan vakantiedagen. Bij een werkweek van 5 dagen zijn dat 20 vakantiedagen per jaar. Veel werkgevers bieden meer."
+        },
+        {
+          "id": 5,
+          "question": "Wat is een sollicitatiebrief?",
+          "questionEn": "What is a sollicitatiebrief?",
+          "options": [
+            "Een brief om ontslag te nemen",
+            "Een brief waarmee je reageert op een vacature",
+            "Een brief van je werkgever over je salaris",
+            "Een brief aan de Belastingdienst"
+          ],
+          "correct": 1,
+          "explanation": "A sollicitatiebrief is a cover letter or application letter that you write when applying for a job. Together with your CV, it forms the basis of a job application in the Netherlands.",
+          "explanationNl": "Een sollicitatiebrief is een brief waarmee je reageert op een vacature. Samen met je CV vormt het de basis van een sollicitatie in Nederland."
+        },
+        {
+          "id": 6,
+          "question": "Wat is DigiD?",
+          "questionEn": "What is DigiD?",
+          "options": [
+            "Een digitale identiteitskaart",
+            "Een digitaal inlogmiddel voor overheidsdiensten",
+            "Een app voor online bankieren",
+            "Een digitaal diploma"
+          ],
+          "correct": 1,
+          "explanation": "DigiD (Digitale Identiteit) is a digital login system that allows you to identify yourself on websites of the Dutch government and other organizations, such as the Belastingdienst (Tax Authority), DUO, and your health insurer.",
+          "explanationNl": "DigiD (Digitale Identiteit) is een digitaal inlogmiddel waarmee je je kunt identificeren op websites van de overheid en andere organisaties, zoals de Belastingdienst, DUO en je zorgverzekeraar."
+        },
+        {
+          "id": 7,
+          "question": "Wat moet je doen als je ziek bent en niet kunt werken?",
+          "questionEn": "What should you do if you are sick and cannot work?",
+          "options": [
+            "Meteen naar het ziekenhuis gaan",
+            "Je ziek melden bij je werkgever",
+            "Een brief schrijven aan het UWV",
+            "Wachten tot je beter bent en dan weer gaan werken"
+          ],
+          "correct": 1,
+          "explanation": "If you are sick and cannot work, you must report this to your employer as soon as possible (ziek melden). Your employer continues to pay at least 70% of your salary during illness, for a maximum of 2 years.",
+          "explanationNl": "Als je ziek bent en niet kunt werken, moet je je zo snel mogelijk ziek melden bij je werkgever. Je werkgever betaalt minimaal 70% van je loon door tijdens ziekte, voor maximaal 2 jaar."
+        },
+        {
+          "id": 8,
+          "question": "Welk type arbeidscontract biedt de meeste zekerheid?",
+          "questionEn": "Which type of employment contract offers the most security?",
+          "options": [
+            "Een nulurencontract",
+            "Een contract voor bepaalde tijd",
+            "Een contract voor onbepaalde tijd",
+            "Een uitzendcontract"
+          ],
+          "correct": 2,
+          "explanation": "A contract for an indefinite period (contract voor onbepaalde tijd / vast contract) provides the most job security. The employer cannot easily terminate it. Temporary contracts, zero-hour contracts, and temping contracts offer less security.",
+          "explanationNl": "Een contract voor onbepaalde tijd (vast contract) biedt de meeste zekerheid. De werkgever kan het niet zomaar beëindigen. Tijdelijke contracten, nulurencontracten en uitzendcontracten bieden minder zekerheid."
+        },
+        {
+          "id": 9,
+          "question": "Wie moet in Nederland belasting betalen?",
+          "questionEn": "Who must pay taxes in the Netherlands?",
+          "options": [
+            "Alleen Nederlanders",
+            "Alleen mensen met een vast contract",
+            "Iedereen die in Nederland woont of werkt",
+            "Alleen mensen die meer dan €30.000 verdienen"
+          ],
+          "correct": 2,
+          "explanation": "Everyone who lives or works in the Netherlands must pay taxes. This applies regardless of nationality, type of contract, or income level. You file your tax return annually with the Belastingdienst.",
+          "explanationNl": "Iedereen die in Nederland woont of werkt, moet belasting betalen. Dit geldt ongeacht nationaliteit, type contract of inkomensniveau. Je doet jaarlijks aangifte bij de Belastingdienst."
+        },
+        {
+          "id": 10,
+          "question": "Wat is vakantiegeld?",
+          "questionEn": "What is vacation allowance (vakantiegeld)?",
+          "options": [
+            "Geld dat je krijgt als je op vakantie gaat naar het buitenland",
+            "Een extra uitbetaling van minimaal 8% van je bruto jaarsalaris",
+            "Een vergoeding voor niet-opgenomen vakantiedagen",
+            "Een bonus die alleen grote bedrijven uitbetalen"
+          ],
+          "correct": 1,
+          "explanation": "Vakantiegeld (holiday allowance) is a legal right for all employees in the Netherlands. It is at least 8% of your gross annual salary and is usually paid out once a year in May or June.",
+          "explanationNl": "Vakantiegeld is een wettelijk recht voor alle werknemers in Nederland. Het is minimaal 8% van je bruto jaarsalaris en wordt meestal één keer per jaar uitbetaald, in mei of juni."
+        },
+        {
+          "id": 11,
+          "question": "Waar kun je vacatures vinden in Nederland?",
+          "questionEn": "Where can you find job vacancies in the Netherlands?",
+          "options": [
+            "Alleen via het UWV",
+            "Alleen via uitzendbureaus",
+            "Via werk.nl, vacaturesites, uitzendbureaus en je netwerk",
+            "Alleen in de krant"
+          ],
+          "correct": 2,
+          "explanation": "In the Netherlands, you can find vacancies through many channels: werk.nl (UWV's website), job websites like Indeed, recruitment agencies (uitzendbureaus), LinkedIn, newspapers, and through your personal network. Networking is very important in Dutch job culture.",
+          "explanationNl": "In Nederland kun je vacatures vinden via veel kanalen: werk.nl (UWV), vacaturesites zoals Indeed, uitzendbureaus, LinkedIn, kranten en via je netwerk. Netwerken is heel belangrijk in de Nederlandse werkcultuur."
+        },
+        {
+          "id": 12,
+          "question": "Wat is een proeftijd?",
+          "questionEn": "What is a proeftijd (probation period)?",
+          "options": [
+            "Een verplichte cursus voor nieuwe werknemers",
+            "Een periode waarin werkgever en werknemer het contract direct kunnen opzeggen",
+            "Een periode waarin je geen salaris ontvangt",
+            "Een extra vakantieperiode voor nieuwe werknemers"
+          ],
+          "correct": 1,
+          "explanation": "A proeftijd (probation period) is a trial period at the start of an employment contract during which both employer and employee can terminate the contract immediately without a notice period. For indefinite contracts, it is a maximum of 2 months.",
+          "explanationNl": "Een proeftijd is een periode aan het begin van een arbeidscontract waarin zowel werkgever als werknemer het contract direct kunnen opzeggen zonder opzegtermijn. Bij een vast contract is het maximaal 2 maanden."
+        }
+      ]
+    },
+    {
+      "id": "onderwijs",
+      "name": "Education",
+      "nameNl": "Onderwijs",
+      "icon": "\ud83c\udf93",
+      "description": "The Dutch school system, compulsory education, and school types",
+      "questions": [
+        {
+          "id": 13,
+          "question": "Vanaf welke leeftijd is een kind in Nederland leerplichtig?",
+          "questionEn": "From what age is a child in the Netherlands required to attend school?",
+          "options": [
+            "4 jaar",
+            "5 jaar",
+            "6 jaar",
+            "7 jaar"
+          ],
+          "correct": 1,
+          "explanation": "In the Netherlands, compulsory education (leerplicht) starts at age 5. However, most children start school at age 4 because primary schools accept children from their 4th birthday. Compulsory education continues until age 18 (or 16 for full-time, with partial compulsory education until 18).",
+          "explanationNl": "In Nederland begint de leerplicht op 5 jaar. De meeste kinderen gaan echter al naar school als ze 4 jaar zijn, omdat basisscholen kinderen vanaf hun 4e verjaardag toelaten. De leerplicht duurt tot 18 jaar."
+        },
+        {
+          "id": 14,
+          "question": "Hoeveel jaar duurt de basisschool in Nederland?",
+          "questionEn": "How many years does primary school last in the Netherlands?",
+          "options": [
+            "6 jaar",
+            "7 jaar",
+            "8 jaar",
+            "9 jaar"
+          ],
+          "correct": 2,
+          "explanation": "Primary school (basisschool) in the Netherlands lasts 8 years: group 1 through group 8. Children start around age 4 and leave around age 12. After primary school, they go to secondary school (middelbare school).",
+          "explanationNl": "De basisschool in Nederland duurt 8 jaar: groep 1 tot en met groep 8. Kinderen beginnen rond 4 jaar en verlaten de basisschool rond 12 jaar. Daarna gaan ze naar de middelbare school."
+        },
+        {
+          "id": 15,
+          "question": "Welke toets maken kinderen aan het einde van de basisschool?",
+          "questionEn": "What test do children take at the end of primary school?",
+          "options": [
+            "Het staatsexamen",
+            "De doorstroomtoets",
+            "Het toelatingsexamen",
+            "De IQ-test"
+          ],
+          "correct": 1,
+          "explanation": "At the end of primary school (group 8), children take the doorstroomtoets (previously known as Eindtoets/CITO-toets). This test, together with the school's advice (schooladvies), helps determine which level of secondary education is appropriate.",
+          "explanationNl": "Aan het einde van de basisschool (groep 8) maken kinderen de doorstroomtoets (voorheen Eindtoets/CITO-toets). Deze toets helpt, samen met het schooladvies, om te bepalen welk niveau voortgezet onderwijs geschikt is."
+        },
+        {
+          "id": 16,
+          "question": "Wat zijn de drie hoofdniveaus van het voortgezet onderwijs (middelbare school)?",
+          "questionEn": "What are the three main levels of secondary education?",
+          "options": [
+            "MBO, HBO, WO",
+            "VMBO, HAVO, VWO",
+            "Groep 1, Groep 2, Groep 3",
+            "Basisschool, middelbare school, universiteit"
+          ],
+          "correct": 1,
+          "explanation": "The three main levels of secondary education are: VMBO (4 years, prepares for MBO), HAVO (5 years, prepares for HBO), and VWO (6 years, prepares for university/WO). The level is determined by school advice and the doorstroomtoets.",
+          "explanationNl": "De drie hoofdniveaus van het voortgezet onderwijs zijn: VMBO (4 jaar, voorbereiding op MBO), HAVO (5 jaar, voorbereiding op HBO) en VWO (6 jaar, voorbereiding op universiteit/WO)."
+        },
+        {
+          "id": 17,
+          "question": "Wat is het verschil tussen HBO en WO?",
+          "questionEn": "What is the difference between HBO and WO?",
+          "options": [
+            "HBO is gratis, WO is betaald",
+            "HBO is beroepsgericht, WO is wetenschappelijk",
+            "HBO duurt langer dan WO",
+            "Er is geen verschil"
+          ],
+          "correct": 1,
+          "explanation": "HBO (Hoger Beroepsonderwijs) is higher professional education, focused on practical and applied learning at hogescholen. WO (Wetenschappelijk Onderwijs) is academic/scientific education at universities (universiteiten), focused on theory and research.",
+          "explanationNl": "HBO (Hoger Beroepsonderwijs) is beroepsgericht onderwijs aan hogescholen. WO (Wetenschappelijk Onderwijs) is academisch onderwijs aan universiteiten, gericht op theorie en onderzoek."
+        },
+        {
+          "id": 18,
+          "question": "Wat is MBO?",
+          "questionEn": "What is MBO?",
+          "options": [
+            "Middelbaar Beroepsonderwijs - beroepsgericht onderwijs na het VMBO",
+            "Middelbaar Basis Onderwijs - een type basisschool",
+            "Maximaal Beschikbaar Onderwijs - gratis onderwijs",
+            "Maatschappelijk Begeleid Onderwijs - speciaal onderwijs"
+          ],
+          "correct": 0,
+          "explanation": "MBO stands for Middelbaar Beroepsonderwijs (secondary vocational education). It offers practical training for specific professions and has 4 levels. Students typically enter MBO after VMBO. MBO is an important part of the Dutch education system.",
+          "explanationNl": "MBO staat voor Middelbaar Beroepsonderwijs. Het biedt praktische opleidingen voor specifieke beroepen en heeft 4 niveaus. Leerlingen gaan meestal naar het MBO na het VMBO."
+        },
+        {
+          "id": 19,
+          "question": "Mogen ouders in Nederland zelf een school kiezen voor hun kind?",
+          "questionEn": "Can parents in the Netherlands choose a school for their child?",
+          "options": [
+            "Nee, de gemeente wijst een school toe",
+            "Ja, ouders hebben vrijheid van schoolkeuze",
+            "Alleen als het kind hoge cijfers heeft",
+            "Alleen voor de middelbare school"
+          ],
+          "correct": 1,
+          "explanation": "In the Netherlands, parents have freedom of school choice (vrijheid van schoolkeuze). They can choose between public schools (openbare scholen), religious schools, or schools with a specific educational philosophy (like Montessori or Dalton).",
+          "explanationNl": "In Nederland hebben ouders vrijheid van schoolkeuze. Ze kunnen kiezen tussen openbare scholen, religieuze scholen of scholen met een bepaalde onderwijsvisie (zoals Montessori of Dalton)."
+        },
+        {
+          "id": 20,
+          "question": "Wat staat er op het rapport van een basisschoolleerling?",
+          "questionEn": "What is on the report card of a primary school pupil?",
+          "options": [
+            "Alleen cijfers van 1 tot 10",
+            "Cijfers en/of beoordelingen over de ontwikkeling van het kind",
+            "Alleen een advies voor de middelbare school",
+            "Alleen de score van de CITO-toets"
+          ],
+          "correct": 1,
+          "explanation": "A primary school report card contains grades and/or assessments about the child's development in various subjects (such as reading, math, writing) as well as social-emotional development. The format varies by school. Children usually receive a report 2-3 times per year.",
+          "explanationNl": "Een rapport van de basisschool bevat cijfers en/of beoordelingen over de ontwikkeling van het kind in verschillende vakken (zoals lezen, rekenen, schrijven) en sociaal-emotionele ontwikkeling. Kinderen krijgen meestal 2-3 keer per jaar een rapport."
+        },
+        {
+          "id": 21,
+          "question": "Wat moet je doen als je kind ziek is en niet naar school kan?",
+          "questionEn": "What should you do if your child is sick and cannot go to school?",
+          "options": [
+            "Niets, het kind kan gewoon thuisblijven",
+            "De school bellen om je kind ziek te melden",
+            "Een brief schrijven aan de gemeente",
+            "Een doktersverklaring naar school sturen"
+          ],
+          "correct": 1,
+          "explanation": "If your child is sick, you must notify the school (ziek melden) as soon as possible, usually by phone or through the school's app/system. Due to compulsory education law (leerplicht), unexplained absence can lead to a visit from the leerplichtambtenaar (truancy officer).",
+          "explanationNl": "Als je kind ziek is, moet je de school zo snel mogelijk informeren (ziek melden), meestal telefonisch of via de app van de school. Door de leerplicht kan onverklaard verzuim leiden tot een bezoek van de leerplichtambtenaar."
+        },
+        {
+          "id": 22,
+          "question": "Tot welke leeftijd geldt de leerplicht in Nederland?",
+          "questionEn": "Until what age does compulsory education apply in the Netherlands?",
+          "options": [
+            "14 jaar",
+            "16 jaar",
+            "18 jaar",
+            "21 jaar"
+          ],
+          "correct": 2,
+          "explanation": "Compulsory education (leerplicht) applies until age 18 in the Netherlands. From age 5 to 16, there is full-time compulsory education. From 16 to 18, there is a qualification obligation (kwalificatieplicht): young people must attend school until they have a basic qualification (startkwalificatie) or turn 18.",
+          "explanationNl": "De leerplicht geldt tot 18 jaar in Nederland. Van 5 tot 16 jaar geldt de volledige leerplicht. Van 16 tot 18 jaar geldt de kwalificatieplicht: jongeren moeten naar school tot ze een startkwalificatie hebben of 18 worden."
+        },
+        {
+          "id": 23,
+          "question": "Wat is passend onderwijs?",
+          "questionEn": "What is passend onderwijs (inclusive education)?",
+          "options": [
+            "Onderwijs dat past bij het inkomen van de ouders",
+            "Onderwijs dat is aangepast aan de behoeften van leerlingen met extra ondersteuning",
+            "Onderwijs dat alleen voor hoogbegaafde kinderen is",
+            "Onderwijs in de eigen taal van het kind"
+          ],
+          "correct": 1,
+          "explanation": "Passend onderwijs means that every child receives education that fits their needs. Schools have a duty to offer an appropriate place for every student, including those who need extra support. This can be in regular schools with extra help or in special education (speciaal onderwijs).",
+          "explanationNl": "Passend onderwijs betekent dat elk kind onderwijs krijgt dat bij zijn of haar behoeften past. Scholen hebben de plicht om elke leerling een geschikte plek te bieden, ook leerlingen die extra ondersteuning nodig hebben."
+        },
+        {
+          "id": 24,
+          "question": "Hoeveel jaar duurt het VWO?",
+          "questionEn": "How many years does VWO last?",
+          "options": [
+            "4 jaar",
+            "5 jaar",
+            "6 jaar",
+            "7 jaar"
+          ],
+          "correct": 2,
+          "explanation": "VWO (Voorbereidend Wetenschappelijk Onderwijs) lasts 6 years and prepares students for university (WO). VMBO lasts 4 years, HAVO lasts 5 years, and VWO lasts 6 years.",
+          "explanationNl": "VWO (Voorbereidend Wetenschappelijk Onderwijs) duurt 6 jaar en bereidt leerlingen voor op de universiteit (WO). VMBO duurt 4 jaar, HAVO duurt 5 jaar en VWO duurt 6 jaar."
+        }
+      ]
+    },
+    {
+      "id": "gezondheidszorg",
+      "name": "Healthcare",
+      "nameNl": "Gezondheidszorg",
+      "icon": "\ud83c\udfe5",
+      "description": "The Dutch healthcare system, health insurance, doctors, and emergency care",
+      "questions": [
+        {
+          "id": 25,
+          "question": "Wat moet je doen voordat je naar een huisarts kunt gaan?",
+          "questionEn": "What must you do before you can visit a GP (huisarts)?",
+          "options": [
+            "Een verwijsbrief van het ziekenhuis halen",
+            "Je inschrijven bij een huisartsenpraktijk",
+            "Een afspraak maken bij de gemeente",
+            "Je BSN-nummer aanvragen"
+          ],
+          "correct": 1,
+          "explanation": "In the Netherlands, you must first register (inschrijven) with a GP practice before you can make an appointment. You cannot simply walk into any GP. You choose a practice near your home and register there. After registration, you can make appointments.",
+          "explanationNl": "In Nederland moet je je eerst inschrijven bij een huisartsenpraktijk voordat je een afspraak kunt maken. Je kunt niet zomaar naar elke huisarts gaan. Je kiest een praktijk bij je in de buurt en schrijft je daar in."
+        },
+        {
+          "id": 26,
+          "question": "Is een zorgverzekering verplicht in Nederland?",
+          "questionEn": "Is health insurance mandatory in the Netherlands?",
+          "options": [
+            "Nee, het is vrijwillig",
+            "Alleen als je werkt",
+            "Ja, voor iedereen van 18 jaar en ouder",
+            "Alleen voor mensen met een Nederlands paspoort"
+          ],
+          "correct": 2,
+          "explanation": "Health insurance (zorgverzekering) is mandatory for everyone aged 18 and older living or working in the Netherlands. The basic package (basispakket) is legally defined and covers essential care. Children under 18 are insured for free through their parents.",
+          "explanationNl": "Een zorgverzekering is verplicht voor iedereen van 18 jaar en ouder die in Nederland woont of werkt. Het basispakket is wettelijk vastgelegd. Kinderen tot 18 jaar zijn gratis meeverzekerd via hun ouders."
+        },
+        {
+          "id": 27,
+          "question": "Wat is het eigen risico bij de zorgverzekering?",
+          "questionEn": "What is the eigen risico (deductible) in health insurance?",
+          "options": [
+            "Het bedrag dat je altijd uit eigen zak betaalt voor alle zorg",
+            "Het verplichte bedrag dat je zelf betaalt voordat de verzekering kosten vergoedt",
+            "De maandelijkse premie van je zorgverzekering",
+            "Een extra verzekering voor tandarts en fysiotherapie"
+          ],
+          "correct": 1,
+          "explanation": "The eigen risico (deductible) is the amount you must pay yourself before the insurance covers costs. In 2024 it is \u20ac385 per year. It applies to most care but NOT to GP visits, maternity care, or care for children under 18. You can choose a higher deductible for a lower premium.",
+          "explanationNl": "Het eigen risico is het bedrag dat je zelf betaalt voordat de verzekering kosten vergoedt. In 2024 is het \u20ac385 per jaar. Het geldt niet voor huisartsbezoeken, verloskundige zorg of zorg voor kinderen tot 18 jaar."
+        },
+        {
+          "id": 28,
+          "question": "Wat is de huisartsenpost (HAP)?",
+          "questionEn": "What is the huisartsenpost (HAP)?",
+          "options": [
+            "Een apotheek die ook op zondag open is",
+            "Een huisartsenpraktijk voor dringende zorg buiten kantooruren",
+            "Een afdeling in het ziekenhuis",
+            "Een centrum voor preventieve gezondheidszorg"
+          ],
+          "correct": 1,
+          "explanation": "The huisartsenpost (HAP) provides urgent GP care outside of regular office hours: in the evenings, nights, weekends, and holidays. You should call first before going. For life-threatening emergencies, always call 112.",
+          "explanationNl": "De huisartsenpost (HAP) biedt dringende huisartsenzorg buiten kantooruren: 's avonds, 's nachts, in het weekend en op feestdagen. Je moet eerst bellen voordat je gaat. Bij levensbedreigende situaties bel je altijd 112."
+        },
+        {
+          "id": 29,
+          "question": "Welk telefoonnummer bel je bij een levensbedreigende situatie?",
+          "questionEn": "What number do you call in a life-threatening situation?",
+          "options": [
+            "0800-0113",
+            "0900-1515",
+            "112",
+            "144"
+          ],
+          "correct": 2,
+          "explanation": "112 is the European emergency number. In the Netherlands, you call 112 for immediate, life-threatening emergencies requiring police, fire brigade, or ambulance. For urgent but not life-threatening situations, call the HAP or police non-emergency number (0900-8844).",
+          "explanationNl": "112 is het Europese alarmnummer. In Nederland bel je 112 bij levensbedreigende noodsituaties waarvoor politie, brandweer of ambulance nodig is. Voor dringende maar niet-levensbedreigende situaties bel je de HAP of politie (0900-8844)."
+        },
+        {
+          "id": 30,
+          "question": "Hoe kom je bij een specialist in het ziekenhuis?",
+          "questionEn": "How do you get to see a specialist at the hospital?",
+          "options": [
+            "Je kunt zelf direct een afspraak maken",
+            "Je hebt een verwijzing van de huisarts nodig",
+            "Je moet een brief schrijven aan het ziekenhuis",
+            "Je gaat naar de Eerste Hulp"
+          ],
+          "correct": 1,
+          "explanation": "In the Dutch healthcare system, the GP (huisarts) acts as a gatekeeper. To see a specialist at the hospital, you need a referral (verwijzing) from your GP. Without a referral, the insurance usually does not cover the costs.",
+          "explanationNl": "In het Nederlandse zorgsysteem is de huisarts de poortwachter. Om naar een specialist in het ziekenhuis te gaan, heb je een verwijzing van je huisarts nodig. Zonder verwijzing vergoedt de verzekering de kosten meestal niet."
+        },
+        {
+          "id": 31,
+          "question": "Wat is zorgtoeslag?",
+          "questionEn": "What is zorgtoeslag (healthcare allowance)?",
+          "options": [
+            "Een korting bij de apotheek",
+            "Een bijdrage van de overheid om de zorgverzekeringspremie te betalen",
+            "Gratis zorg voor ouderen",
+            "Een toeslag voor extra tandartszorg"
+          ],
+          "correct": 1,
+          "explanation": "Zorgtoeslag is a government contribution to help people with lower incomes pay their health insurance premium. You can apply for it at the Belastingdienst/Toeslagen. The amount depends on your income and that of your toeslagpartner.",
+          "explanationNl": "Zorgtoeslag is een bijdrage van de overheid om mensen met een lager inkomen te helpen de zorgverzekeringspremie te betalen. Je kunt het aanvragen bij de Belastingdienst/Toeslagen. Het bedrag hangt af van je inkomen."
+        },
+        {
+          "id": 32,
+          "question": "Wat is de GGD?",
+          "questionEn": "What is the GGD?",
+          "options": [
+            "De Gemeentelijke Gezondheidsdienst, verantwoordelijk voor publieke gezondheid",
+            "Een privé-ziekenhuis",
+            "Een verzekeringsmaatschappij",
+            "Een organisatie voor geestelijke gezondheidszorg"
+          ],
+          "correct": 0,
+          "explanation": "The GGD (Gemeentelijke Gezondheidsdienst / Municipal Health Service) is responsible for public health in a region. It provides youth healthcare (jeugdgezondheidszorg), vaccinations, infectious disease control, health promotion, and hygiene inspections.",
+          "explanationNl": "De GGD (Gemeentelijke Gezondheidsdienst) is verantwoordelijk voor de publieke gezondheid in een regio. De GGD verzorgt jeugdgezondheidszorg, vaccinaties, infectieziektebestrijding en gezondheidsbevordering."
+        },
+        {
+          "id": 33,
+          "question": "Wordt tandartsbehandeling vergoed door de basisverzekering voor volwassenen?",
+          "questionEn": "Is dental treatment covered by basic health insurance for adults?",
+          "options": [
+            "Ja, alle tandheelkundige zorg is vergoed",
+            "Nee, alleen een aanvullende verzekering vergoedt tandartskosten",
+            "Ja, maar alleen controles, geen behandelingen",
+            "Alleen in noodgevallen"
+          ],
+          "correct": 1,
+          "explanation": "For adults (18+), dental care is NOT covered by the basic health insurance, except for specialized dental surgery. Regular dental checkups and treatments must be paid out of pocket or through supplementary insurance (aanvullende verzekering). For children under 18, most dental care IS covered.",
+          "explanationNl": "Voor volwassenen (18+) wordt tandartsbehandeling NIET vergoed door de basisverzekering, behalve bijzondere tandheelkunde. Je moet het zelf betalen of een aanvullende verzekering afsluiten. Voor kinderen tot 18 jaar wordt de meeste tandheelkundige zorg wél vergoed."
+        },
+        {
+          "id": 34,
+          "question": "Wanneer kun je van zorgverzekeraar wisselen?",
+          "questionEn": "When can you switch health insurers?",
+          "options": [
+            "Op elk moment van het jaar",
+            "Elk jaar vóór 1 januari, je meldt je aan in november of december",
+            "Alleen als je van baan verandert",
+            "Alleen bij een verhuizing"
+          ],
+          "correct": 1,
+          "explanation": "You can switch health insurers once a year. You must do so before January 1st, typically by signing up with a new insurer in November or December. The new insurance then starts on January 1st. You can compare insurers each year to find the best deal.",
+          "explanationNl": "Je kunt elk jaar vóór 1 januari van zorgverzekeraar wisselen. Je meldt je aan bij een nieuwe verzekeraar in november of december. De nieuwe verzekering gaat dan in op 1 januari."
+        },
+        {
+          "id": 35,
+          "question": "Wat doet het consultatiebureau?",
+          "questionEn": "What does the consultatiebureau do?",
+          "options": [
+            "Het geeft advies over belastingen",
+            "Het volgt de groei en ontwikkeling van baby's en jonge kinderen",
+            "Het helpt bij het vinden van een woning",
+            "Het geeft juridisch advies"
+          ],
+          "correct": 1,
+          "explanation": "The consultatiebureau monitors the growth and development of babies and young children (0-4 years). It provides vaccinations according to the national immunization program (Rijksvaccinatieprogramma), health check-ups, and advice for parents. This service is free and provided by the GGD or thuiszorgorganisatie.",
+          "explanationNl": "Het consultatiebureau volgt de groei en ontwikkeling van baby's en jonge kinderen (0-4 jaar). Het geeft vaccinaties, gezondheidscontroles en advies aan ouders. Deze dienst is gratis en wordt verzorgd door de GGD."
+        },
+        {
+          "id": 36,
+          "question": "Wat moet je meenemen naar een afspraak bij de huisarts?",
+          "questionEn": "What should you bring to a GP appointment?",
+          "options": [
+            "Alleen je zorgverzekeringspas",
+            "Je identiteitsbewijs en zorgverzekeringspas",
+            "Alleen een verwijsbrief",
+            "Je paspoort en werkvergunning"
+          ],
+          "correct": 1,
+          "explanation": "When visiting the GP, you should bring your ID (identiteitsbewijs) and your health insurance card (zorgverzekeringspas). The GP needs these to verify your identity and insurance. If you take medication, it's also useful to bring a list of your medicines.",
+          "explanationNl": "Bij een bezoek aan de huisarts neem je je identiteitsbewijs en zorgverzekeringspas mee. De huisarts heeft deze nodig om je identiteit en verzekering te controleren. Als je medicijnen gebruikt, is het ook handig om een lijst mee te nemen."
+        }
+      ]
+    },
+    {
+      "id": "wonen",
+      "name": "Housing",
+      "nameNl": "Wonen",
+      "icon": "\ud83c\udfe0",
+      "description": "Finding housing, renting, buying, registration, and neighborhood rules in the Netherlands",
+      "questions": [
+        {
+          "id": 37,
+          "question": "Wat is het verschil tussen een huurwoning en een koopwoning?",
+          "questionEn": "What is the difference between a rental home and a purchased home?",
+          "options": [
+            "Een huurwoning is altijd kleiner",
+            "Bij een huurwoning betaal je huur, bij een koopwoning ben je eigenaar",
+            "Een koopwoning is altijd duurder per maand",
+            "Er is geen verschil"
+          ],
+          "correct": 1,
+          "explanation": "In a rental home (huurwoning), you pay monthly rent to the landlord or housing corporation. In a purchased home (koopwoning), you are the owner and typically pay a mortgage (hypotheek). In the Netherlands, both renting and buying are common.",
+          "explanationNl": "Bij een huurwoning betaal je maandelijks huur aan de verhuurder of woningcorporatie. Bij een koopwoning ben je eigenaar en betaal je meestal een hypotheek. In Nederland zijn zowel huren als kopen gebruikelijk."
+        },
+        {
+          "id": 38,
+          "question": "Wat is een woningcorporatie?",
+          "questionEn": "What is a woningcorporatie (housing corporation)?",
+          "options": [
+            "Een bedrijf dat huizen bouwt en verkoopt",
+            "Een organisatie die betaalbare sociale huurwoningen aanbiedt",
+            "Een overheidsinstelling die hypotheken verstrekt",
+            "Een makelaarskantoor"
+          ],
+          "correct": 1,
+          "explanation": "A woningcorporatie is a non-profit organization that provides affordable social housing (sociale huurwoningen). To rent from a housing corporation, you usually need to register and wait, sometimes for years, especially in cities like Amsterdam.",
+          "explanationNl": "Een woningcorporatie is een organisatie zonder winstoogmerk die betaalbare sociale huurwoningen aanbiedt. Om van een corporatie te huren, moet je je inschrijven en wachten, soms jarenlang, vooral in steden als Amsterdam."
+        },
+        {
+          "id": 39,
+          "question": "Wat is huurtoeslag?",
+          "questionEn": "What is huurtoeslag (housing benefit)?",
+          "options": [
+            "Een lening om een huis te kopen",
+            "Een bijdrage van de overheid voor huurders met een laag inkomen",
+            "Een verzekering voor huurwoningen",
+            "Een toeslag die de verhuurder betaalt"
+          ],
+          "correct": 1,
+          "explanation": "Huurtoeslag is a government allowance that helps people with lower incomes pay their rent. You can apply for it at Belastingdienst/Toeslagen. Conditions include income limits, rent limits, and age (18+). It only applies to independent rental homes.",
+          "explanationNl": "Huurtoeslag is een bijdrage van de overheid om mensen met een lager inkomen te helpen de huur te betalen. Je kunt het aanvragen bij de Belastingdienst/Toeslagen. Er gelden voorwaarden voor inkomen, huurprijs en leeftijd (18+)."
+        },
+        {
+          "id": 40,
+          "question": "Waar moet je je inschrijven als je in een nieuwe gemeente gaat wonen?",
+          "questionEn": "Where must you register when you move to a new municipality?",
+          "options": [
+            "Bij het UWV",
+            "Bij de gemeente (BRP/basisregistratie personen)",
+            "Bij de politie",
+            "Bij de Belastingdienst"
+          ],
+          "correct": 1,
+          "explanation": "When you move to a new municipality in the Netherlands, you must register at the new municipality within 5 days. Your data is recorded in the BRP (Basisregistratie Personen, formerly GBA). This registration is essential for receiving government services, voting, and more.",
+          "explanationNl": "Als je naar een nieuwe gemeente verhuist, moet je je binnen 5 dagen inschrijven bij de nieuwe gemeente. Je gegevens worden opgenomen in de BRP (Basisregistratie Personen, voorheen GBA). Deze inschrijving is essentieel voor overheidsdiensten."
+        },
+        {
+          "id": 41,
+          "question": "Hoe wordt afval gescheiden in Nederland?",
+          "questionEn": "How is waste separated in the Netherlands?",
+          "options": [
+            "Alles gaat in één container",
+            "In categorieën: restafval, papier, glas, plastic, GFT (groente-, fruit- en tuinafval)",
+            "Alleen plastic wordt apart ingezameld",
+            "Afvalscheiding is niet verplicht"
+          ],
+          "correct": 1,
+          "explanation": "In the Netherlands, waste must be separated into categories: restafval (residual waste), papier (paper), glas (glass), plastic/blik/drinkpakken (PMD), and GFT (organic waste: vegetables, fruit, garden waste). The exact system varies by municipality but separation is generally required.",
+          "explanationNl": "In Nederland moet afval gescheiden worden: restafval, papier, glas, plastic/blik/drinkpakken (PMD) en GFT (groente-, fruit- en tuinafval). Het systeem verschilt per gemeente, maar afvalscheiding is over het algemeen verplicht."
+        },
+        {
+          "id": 42,
+          "question": "Wat is een borgsom (waarborgsom) bij het huren van een woning?",
+          "questionEn": "What is a deposit (borgsom) when renting a home?",
+          "options": [
+            "De eerste maand huur die je vooruit betaalt",
+            "Een bedrag dat je betaalt als zekerheid en terugkrijgt bij vertrek als er geen schade is",
+            "Een verplichte verzekeringspremie",
+            "Een bijdrage aan de vereniging van eigenaren"
+          ],
+          "correct": 1,
+          "explanation": "A borgsom (waarborgsom / deposit) is an amount you pay to the landlord as security when you start renting. It is usually 1-2 months' rent. You get it back when you leave, provided there is no damage beyond normal wear and tear.",
+          "explanationNl": "Een borgsom (waarborgsom) is een bedrag dat je aan de verhuurder betaalt als zekerheid bij aanvang van de huur. Het is meestal 1-2 maanden huur. Je krijgt het terug als je vertrekt, mits er geen schade is bovenop normale slijtage."
+        },
+        {
+          "id": 43,
+          "question": "Wat zijn de rechten van huurders in Nederland?",
+          "questionEn": "What are tenants' rights in the Netherlands?",
+          "options": [
+            "Huurders hebben weinig rechten; de verhuurder beslist alles",
+            "Huurders hebben huurbescherming en de verhuurder kan niet zomaar de huur opzeggen",
+            "Huurders mogen de woning altijd onderverhuren",
+            "Huurders hoeven geen huur te betalen als er gebreken zijn"
+          ],
+          "correct": 1,
+          "explanation": "Tenants in the Netherlands have strong protection (huurbescherming). A landlord cannot simply terminate the rental agreement or raise rent unlimitedly. Tenants can go to the Huurcommissie (Rent Tribunal) if they have disputes about rent prices or maintenance issues.",
+          "explanationNl": "Huurders in Nederland hebben sterke huurbescherming. Een verhuurder kan niet zomaar het huurcontract opzeggen of de huur onbeperkt verhogen. Huurders kunnen naar de Huurcommissie stappen bij geschillen over huurprijs of onderhoud."
+        },
+        {
+          "id": 44,
+          "question": "Wat is de Huurcommissie?",
+          "questionEn": "What is the Huurcommissie (Rent Tribunal)?",
+          "options": [
+            "Een overheidsdienst die woningen toewijst",
+            "Een onafhankelijke organisatie die geschillen tussen huurder en verhuurder behandelt",
+            "Een verzekeringsmaatschappij voor huurwoningen",
+            "Een afdeling van de gemeente die huurprijzen vaststelt"
+          ],
+          "correct": 1,
+          "explanation": "The Huurcommissie is an independent organization that handles disputes between tenants and landlords, mainly about rent prices, service costs, and maintenance. It can assess whether the rent is reasonable and can lower rent if it's too high.",
+          "explanationNl": "De Huurcommissie is een onafhankelijke organisatie die geschillen tussen huurders en verhuurders behandelt, vooral over huurprijzen, servicekosten en onderhoud. Ze kan beoordelen of de huur redelijk is."
+        },
+        {
+          "id": 45,
+          "question": "Hoe moet je omgaan met je buren in Nederland?",
+          "questionEn": "How should you deal with your neighbors in the Netherlands?",
+          "options": [
+            "Je hoeft geen contact te hebben met buren",
+            "Je moet rekening houden met buren: niet te veel lawaai maken, op tijd stilte respecteren",
+            "Je buren regelen alles via de woningcorporatie",
+            "Je kunt zo veel lawaai maken als je wilt in je eigen huis"
+          ],
+          "correct": 1,
+          "explanation": "In the Netherlands, it is important to be considerate of your neighbors. This includes keeping noise down, especially after 22:00, not placing items in shared spaces, and maintaining your garden/balcony. Many housing contracts include 'huisregels' (house rules) about this.",
+          "explanationNl": "In Nederland is het belangrijk om rekening te houden met je buren. Dit betekent niet te veel lawaai maken, vooral na 22:00 uur, geen spullen in gemeenschappelijke ruimtes plaatsen en je tuin/balkon onderhouden."
+        },
+        {
+          "id": 46,
+          "question": "Wat moet je regelen als je een woning gaat huren?",
+          "questionEn": "What do you need to arrange when renting a home?",
+          "options": [
+            "Alleen het huurcontract tekenen",
+            "Huurcontract, inschrijving bij gemeente, nutsvoorzieningen (gas/water/licht) en verzekering",
+            "Alleen de sleutel ophalen",
+            "Alleen een bankrekening openen"
+          ],
+          "correct": 1,
+          "explanation": "When renting a home, you need to: sign the rental contract, register at the municipality (gemeente), arrange utilities (gas, water, electricity), take out home contents insurance (inboedelverzekering), and usually pay a deposit. You should also notify various organizations of your new address.",
+          "explanationNl": "Bij het huren van een woning moet je: het huurcontract tekenen, je inschrijven bij de gemeente, nutsvoorzieningen regelen (gas, water, elektriciteit), een inboedelverzekering afsluiten en meestal een borgsom betalen."
+        }
+      ]
+    },
+    {
+      "id": "normen-en-waarden",
+      "name": "Norms & Values",
+      "nameNl": "Normen en waarden",
+      "icon": "\ud83e\udd1d",
+      "description": "Dutch social norms, values, customs, traditions, and cultural expectations",
+      "questions": [
+        {
+          "id": 47,
+          "question": "Wat is een belangrijk grondrecht in Nederland?",
+          "questionEn": "What is an important fundamental right in the Netherlands?",
+          "options": [
+            "Iedereen moet dezelfde religie hebben",
+            "Gelijkheid: discriminatie is verboden",
+            "Mannen hebben meer rechten dan vrouwen",
+            "Alleen Nederlanders hebben vrijheid van meningsuiting"
+          ],
+          "correct": 1,
+          "explanation": "Equality (gelijkheid) is a fundamental right in the Netherlands. Article 1 of the Dutch Constitution (Grondwet) states that discrimination on grounds of religion, belief, political opinion, race, gender, or any other ground is prohibited.",
+          "explanationNl": "Gelijkheid is een grondrecht in Nederland. Artikel 1 van de Grondwet bepaalt dat discriminatie op grond van godsdienst, levensovertuiging, politieke gezindheid, ras, geslacht of welke grond dan ook, verboden is."
+        },
+        {
+          "id": 48,
+          "question": "Hoe staat Nederland tegenover LHBTI+-rechten?",
+          "questionEn": "What is the Netherlands' stance on LGBTQ+ rights?",
+          "options": [
+            "LHBTI+-rechten zijn niet wettelijk beschermd",
+            "Nederland was het eerste land ter wereld dat het homohuwelijk legaliseerde",
+            "Alleen geregistreerd partnerschap is toegestaan",
+            "Er zijn geen speciale rechten voor LHBTI+-personen"
+          ],
+          "correct": 1,
+          "explanation": "The Netherlands was the first country in the world to legalize same-sex marriage, in 2001. LGBTQ+ rights are legally protected, and discrimination based on sexual orientation is prohibited. Same-sex couples also have the right to adopt children.",
+          "explanationNl": "Nederland was in 2001 het eerste land ter wereld dat het homohuwelijk legaliseerde. LHBTI+-rechten zijn wettelijk beschermd en discriminatie op basis van seksuele geaardheid is verboden. Paren van gelijk geslacht mogen ook kinderen adopteren."
+        },
+        {
+          "id": 49,
+          "question": "Wat is een 'verjaardagskring'?",
+          "questionEn": "What is a 'verjaardagskring' (birthday circle)?",
+          "options": [
+            "Een kring van kaarsen op een verjaardagstaart",
+            "De gewoonte om in een kring te zitten en alle aanwezigen te feliciteren",
+            "Een speciale dansceremonie op verjaardagen",
+            "Een kring van cadeaus rond de jarige"
+          ],
+          "correct": 1,
+          "explanation": "The verjaardagskring is a typical Dutch tradition where guests sit in a circle at a birthday party. It is customary to congratulate not only the birthday person but also their family and friends (\"Gefeliciteerd met je moeder/vader/vrouw/man!\"). Guests are served coffee, cake, and snacks.",
+          "explanationNl": "De verjaardagskring is een typisch Nederlandse traditie waarbij gasten in een kring zitten op een verjaardag. Het is gebruikelijk om niet alleen de jarige maar ook familie en vrienden te feliciteren. Gasten krijgen koffie, taart en hapjes."
+        },
+        {
+          "id": 50,
+          "question": "Wat betekent 'going Dutch' of 'de rekening delen'?",
+          "questionEn": "What does 'going Dutch' or splitting the bill mean?",
+          "options": [
+            "De oudste persoon betaalt altijd",
+            "Iedereen betaalt zijn eigen deel van de rekening",
+            "De gastheer betaalt altijd alles",
+            "Vrouwen betalen nooit"
+          ],
+          "correct": 1,
+          "explanation": "In Dutch culture, it is very common to split the bill (de rekening delen) when going out. Everyone pays for their own consumption. This reflects the Dutch value of equality and self-reliance. It is not considered rude; it is simply the norm.",
+          "explanationNl": "In de Nederlandse cultuur is het heel gebruikelijk om de rekening te delen als je uit eten gaat. Iedereen betaalt voor zijn eigen consumptie. Dit weerspiegelt de Nederlandse waarden van gelijkheid en zelfredzaamheid."
+        },
+        {
+          "id": 51,
+          "question": "Hoe worden Nederlanders vaak beschreven in hun communicatiestijl?",
+          "questionEn": "How are Dutch people often described in their communication style?",
+          "options": [
+            "Heel formeel en afstandelijk",
+            "Direct en eerlijk",
+            "Heel beleefd en indirect",
+            "Stil en terughoudend"
+          ],
+          "correct": 1,
+          "explanation": "Dutch people are known for being direct (direct/rechtdoorzee) in their communication. They say what they think honestly and expect the same from others. This directness is not meant to be rude; it is valued as honest and efficient communication.",
+          "explanationNl": "Nederlanders staan bekend om hun directe communicatiestijl (direct/rechtdoorzee). Ze zeggen eerlijk wat ze denken en verwachten dat ook van anderen. Deze directheid is niet onbeleefd bedoeld; het wordt gezien als eerlijke en efficiënte communicatie."
+        },
+        {
+          "id": 52,
+          "question": "Wat is Koningsdag?",
+          "questionEn": "What is King's Day?",
+          "options": [
+            "De dag waarop de koning wordt gekozen",
+            "De verjaardag van de koning, gevierd op 27 april",
+            "Een religieuze feestdag in december",
+            "De dag waarop Nederland onafhankelijk werd"
+          ],
+          "correct": 1,
+          "explanation": "Koningsdag (King's Day) is celebrated on April 27th, the birthday of King Willem-Alexander. It is a national holiday with vrijmarkten (free markets), festivals, and orange-themed celebrations throughout the country. If April 27 falls on a Sunday, it is celebrated on April 26.",
+          "explanationNl": "Koningsdag wordt gevierd op 27 april, de verjaardag van Koning Willem-Alexander. Het is een nationale feestdag met vrijmarkten, festivals en oranje feesten door het hele land. Als 27 april op een zondag valt, wordt het op 26 april gevierd."
+        },
+        {
+          "id": 53,
+          "question": "Wat is Sinterklaas?",
+          "questionEn": "What is Sinterklaas?",
+          "options": [
+            "De Nederlandse naam voor de Kerstman",
+            "Een traditie voor kinderen op 5 december met cadeaus en gedichten",
+            "Een religieuze ceremonie op 6 januari",
+            "Een carnavalsfeest in februari"
+          ],
+          "correct": 1,
+          "explanation": "Sinterklaas is a traditional Dutch celebration primarily for children. On the evening of December 5th (Sinterklaasavond/Pakjesavond), children receive gifts, often accompanied by poems (gedichten) and chocolate letters. Sinterklaas arrives in the Netherlands by boat from Spain in mid-November.",
+          "explanationNl": "Sinterklaas is een traditioneel Nederlands feest, vooral voor kinderen. Op de avond van 5 december (Sinterklaasavond/Pakjesavond) krijgen kinderen cadeaus, vaak met gedichten en chocoladeletters. Sinterklaas komt halverwege november per boot uit Spanje."
+        },
+        {
+          "id": 54,
+          "question": "Wat is 'gedogen' in de Nederlandse context?",
+          "questionEn": "What does 'gedogen' (tolerance policy) mean in the Dutch context?",
+          "options": [
+            "Alles is volledig legaal in Nederland",
+            "Iets is officieel verboden maar wordt onder bepaalde voorwaarden niet vervolgd",
+            "De overheid geeft altijd toestemming",
+            "Het is een ander woord voor vrijheid van meningsuiting"
+          ],
+          "correct": 1,
+          "explanation": "Gedogen is a uniquely Dutch concept meaning that something is technically illegal but is tolerated under certain conditions and not actively prosecuted. The most well-known example is the coffeeshop policy regarding cannabis: selling small amounts is tolerated but not technically legal.",
+          "explanationNl": "Gedogen is een typisch Nederlands concept dat betekent dat iets officieel verboden is maar onder bepaalde voorwaarden wordt getolereerd en niet actief wordt vervolgd. Het bekendste voorbeeld is het coffeeshopbeleid rond cannabis."
+        },
+        {
+          "id": 55,
+          "question": "Is het gebruikelijk om handen te schudden in Nederland?",
+          "questionEn": "Is it customary to shake hands in the Netherlands?",
+          "options": [
+            "Nee, Nederlanders raken elkaar nooit aan",
+            "Ja, bij een eerste ontmoeting en in zakelijke situaties is een handdruk gebruikelijk",
+            "Alleen mannen schudden handen",
+            "Je geeft altijd drie zoenen"
+          ],
+          "correct": 1,
+          "explanation": "Shaking hands is customary in the Netherlands, especially at first meetings and in professional situations. Among friends and family, three kisses on the cheek (drie zoenen) are common. The exact customs can vary by region and generation.",
+          "explanationNl": "Handen schudden is gebruikelijk in Nederland, vooral bij een eerste ontmoeting en in professionele situaties. Onder vrienden en familie zijn drie zoenen op de wang gebruikelijk. De exacte gewoonten variëren per regio en generatie."
+        },
+        {
+          "id": 56,
+          "question": "Wat is een belangrijke Nederlandse waarde in het dagelijks leven?",
+          "questionEn": "What is an important Dutch value in daily life?",
+          "options": [
+            "Hiërarchie en gehoorzaamheid",
+            "Doe maar normaal, dan doe je al gek genoeg",
+            "Opscheppen over je succes",
+            "Altijd de duurste optie kiezen"
+          ],
+          "correct": 1,
+          "explanation": "The Dutch saying 'Doe maar normaal, dan doe je al gek genoeg' (Just act normal, that's crazy enough) reflects the important value of normality and modesty. Showing off (opscheppen) is generally frowned upon in Dutch culture. Being down-to-earth (nuchter) is highly valued.",
+          "explanationNl": "'Doe maar normaal, dan doe je al gek genoeg' weerspiegelt de Nederlandse waarde van normaliteit en bescheidenheid. Opscheppen wordt over het algemeen afgekeurd. Nuchter zijn (down-to-earth) wordt zeer gewaardeerd."
+        },
+        {
+          "id": 57,
+          "question": "Is er in Nederland vrijheid van godsdienst?",
+          "questionEn": "Is there freedom of religion in the Netherlands?",
+          "options": [
+            "Nee, Nederland heeft een staatsreligie",
+            "Ja, iedereen mag zijn eigen geloof belijden of niet-gelovig zijn",
+            "Alleen christelijke religies zijn toegestaan",
+            "Ja, maar alleen thuis, niet in het openbaar"
+          ],
+          "correct": 1,
+          "explanation": "The Netherlands has full freedom of religion, guaranteed by the Constitution. Everyone may practice their own religion or choose not to be religious. There is no state religion. The separation of church and state (scheiding van kerk en staat) is an important principle.",
+          "explanationNl": "Nederland heeft volledige godsdienstvrijheid, gegarandeerd door de Grondwet. Iedereen mag zijn eigen religie belijden of ervoor kiezen niet-religieus te zijn. Er is geen staatsreligie. De scheiding van kerk en staat is een belangrijk principe."
+        },
+        {
+          "id": 58,
+          "question": "Wat wordt er verwacht als je op bezoek gaat bij Nederlanders thuis?",
+          "questionEn": "What is expected when visiting Dutch people at home?",
+          "options": [
+            "Je kunt altijd onaangekondigd langskomen",
+            "Je maakt meestal van tevoren een afspraak",
+            "Je neemt altijd een duur cadeau mee",
+            "Je blijft altijd eten"
+          ],
+          "correct": 1,
+          "explanation": "In Dutch culture, it is customary to make an appointment (afspraak) before visiting someone, even friends and family. Dropping by unannounced is generally not appreciated. Dutch people plan their time carefully using agendas and appreciate punctuality.",
+          "explanationNl": "In de Nederlandse cultuur is het gebruikelijk om van tevoren een afspraak te maken voordat je bij iemand langskomt, zelfs bij vrienden en familie. Onaangekondigd langskomen wordt over het algemeen niet gewaardeerd."
+        }
+      ]
+    },
+    {
+      "id": "politiek-en-recht",
+      "name": "Politics & Law",
+      "nameNl": "Politiek en recht",
+      "icon": "\u2696\ufe0f",
+      "description": "Dutch government structure, political system, laws, and citizen rights",
+      "questions": [
+        {
+          "id": 59,
+          "question": "Wat voor staatsvorm heeft Nederland?",
+          "questionEn": "What form of government does the Netherlands have?",
+          "options": [
+            "Een republiek",
+            "Een constitutionele monarchie met een parlementaire democratie",
+            "Een absolute monarchie",
+            "Een federale staat"
+          ],
+          "correct": 1,
+          "explanation": "The Netherlands is a constitutional monarchy with a parliamentary democracy. The King is the head of state but has a mainly ceremonial role. The real political power lies with the parliament (Staten-Generaal) and the government (ministers).",
+          "explanationNl": "Nederland is een constitutionele monarchie met een parlementaire democratie. De Koning is het staatshoofd maar heeft voornamelijk een ceremoniële rol. De echte politieke macht ligt bij het parlement (Staten-Generaal) en de regering (ministers)."
+        },
+        {
+          "id": 60,
+          "question": "Wat is de Tweede Kamer?",
+          "questionEn": "What is the Tweede Kamer (House of Representatives)?",
+          "options": [
+            "Het kantoor van de minister-president",
+            "De rechtstreeks gekozen volksvertegenwoordiging met 150 leden",
+            "De senaat die wetten goedkeurt",
+            "Het gebouw waar de koning woont"
+          ],
+          "correct": 1,
+          "explanation": "The Tweede Kamer (House of Representatives) is the directly elected lower house of the Dutch parliament. It has 150 members (Kamerleden) who are elected every 4 years. The Tweede Kamer debates and votes on new laws, the government budget, and monitors the government.",
+          "explanationNl": "De Tweede Kamer is de rechtstreeks gekozen volksvertegenwoordiging. Ze heeft 150 leden (Kamerleden) die elke 4 jaar worden gekozen. De Tweede Kamer debatteert en stemt over wetten, de begroting en controleert de regering."
+        },
+        {
+          "id": 61,
+          "question": "Wat is de Eerste Kamer?",
+          "questionEn": "What is the Eerste Kamer (Senate)?",
+          "options": [
+            "De belangrijkste kamer die wetten maakt",
+            "De senaat met 75 leden die wetten goedkeurt of verwerpt",
+            "Het kabinet van de minister-president",
+            "De vergaderzaal van de gemeenteraad"
+          ],
+          "correct": 1,
+          "explanation": "The Eerste Kamer (Senate) has 75 members who are indirectly elected by the members of the Provinciale Staten (provincial councils). The Senate reviews and can approve or reject laws, but cannot amend them. Together with the Tweede Kamer, it forms the Staten-Generaal.",
+          "explanationNl": "De Eerste Kamer (Senaat) heeft 75 leden die indirect worden gekozen door de leden van de Provinciale Staten. De Senaat beoordeelt wetten en kan ze goedkeuren of verwerpen, maar niet wijzigen. Samen met de Tweede Kamer vormt zij de Staten-Generaal."
+        },
+        {
+          "id": 62,
+          "question": "Op welke bestuursniveaus is Nederland georganiseerd?",
+          "questionEn": "At which administrative levels is the Netherlands organized?",
+          "options": [
+            "Alleen landelijk en gemeentelijk",
+            "Landelijk (Rijk), provinciaal en gemeentelijk",
+            "Alleen landelijk",
+            "Landelijk, regionaal, wijk en buurt"
+          ],
+          "correct": 1,
+          "explanation": "The Netherlands has three levels of government: national (Rijk/landelijk), provincial (provinciaal - 12 provinces), and municipal (gemeentelijk - around 342 municipalities). Each level has its own elected council and executive board. There are also waterschappen (water boards).",
+          "explanationNl": "Nederland heeft drie bestuursniveaus: landelijk (Rijk), provinciaal (12 provincies) en gemeentelijk (circa 342 gemeenten). Elk niveau heeft een eigen gekozen raad en bestuur. Daarnaast zijn er waterschappen."
+        },
+        {
+          "id": 63,
+          "question": "Wie mag stemmen bij de Tweede Kamerverkiezingen?",
+          "questionEn": "Who may vote in the elections for the Tweede Kamer?",
+          "options": [
+            "Alle inwoners van Nederland",
+            "Alle Nederlanders van 18 jaar en ouder",
+            "Iedereen met een verblijfsvergunning",
+            "Alleen mensen die belasting betalen"
+          ],
+          "correct": 1,
+          "explanation": "Only Dutch nationals aged 18 and over may vote in national elections (Tweede Kamer). For municipal elections (gemeenteraad), non-Dutch residents who have lived in the Netherlands for at least 5 years may also vote. EU citizens can vote in municipal and European elections.",
+          "explanationNl": "Alleen Nederlanders van 18 jaar en ouder mogen stemmen bij landelijke verkiezingen (Tweede Kamer). Bij gemeenteraadsverkiezingen mogen ook niet-Nederlandse inwoners stemmen als ze minimaal 5 jaar in Nederland wonen. EU-burgers mogen stemmen bij gemeente- en Europese verkiezingen."
+        },
+        {
+          "id": 64,
+          "question": "Wat staat er in Artikel 1 van de Nederlandse Grondwet?",
+          "questionEn": "What is stated in Article 1 of the Dutch Constitution?",
+          "options": [
+            "Nederland is een koninkrijk",
+            "Allen die zich in Nederland bevinden, worden in gelijke gevallen gelijk behandeld. Discriminatie is verboden.",
+            "De koning is het staatshoofd",
+            "Iedereen heeft recht op een woning"
+          ],
+          "correct": 1,
+          "explanation": "Article 1 of the Dutch Constitution (Grondwet) states that all persons in the Netherlands shall be treated equally in equal circumstances. Discrimination on the grounds of religion, belief, political opinion, race, sex, or any other ground whatsoever shall not be permitted.",
+          "explanationNl": "Artikel 1 van de Grondwet bepaalt dat allen die zich in Nederland bevinden, in gelijke gevallen gelijk worden behandeld. Discriminatie wegens godsdienst, levensovertuiging, politieke gezindheid, ras, geslacht of op welke grond dan ook, is niet toegestaan."
+        },
+        {
+          "id": 65,
+          "question": "Wat is de scheiding van kerk en staat?",
+          "questionEn": "What is the separation of church and state?",
+          "options": [
+            "Kerken mogen geen belasting betalen",
+            "De overheid en religieuze organisaties zijn gescheiden; de overheid is neutraal",
+            "Religieuze leiders mogen niet stemmen",
+            "Kerken mogen niet in de buurt van overheidsgebouwen staan"
+          ],
+          "correct": 1,
+          "explanation": "The separation of church and state (scheiding van kerk en staat) means that the government does not favor any religion and makes decisions based on secular principles, not religious ones. Religious organizations do not have authority over government decisions, and the government does not interfere in religious matters.",
+          "explanationNl": "De scheiding van kerk en staat betekent dat de overheid geen religie bevoorrecht en beslissingen neemt op basis van seculiere principes. Religieuze organisaties hebben geen zeggenschap over overheidsbeslissingen en de overheid bemoeit zich niet met religieuze zaken."
+        },
+        {
+          "id": 66,
+          "question": "Wat is de rol van de burgemeester in Nederland?",
+          "questionEn": "What is the role of the mayor (burgemeester) in the Netherlands?",
+          "options": [
+            "De burgemeester wordt rechtstreeks gekozen door de inwoners",
+            "De burgemeester wordt benoemd en is voorzitter van het college van B&W en de gemeenteraad",
+            "De burgemeester is alleen verantwoordelijk voor de politie",
+            "De burgemeester is een lid van de Tweede Kamer"
+          ],
+          "correct": 1,
+          "explanation": "The burgemeester (mayor) in the Netherlands is not directly elected by citizens but is appointed through a process involving the gemeenteraad (municipal council) and the Commissaris van de Koning. The mayor chairs both the college van B&W (executive board) and the gemeenteraad, and is responsible for public order and safety.",
+          "explanationNl": "De burgemeester in Nederland wordt niet rechtstreeks gekozen maar benoemd via een procedure met de gemeenteraad en de Commissaris van de Koning. De burgemeester is voorzitter van het college van B&W en de gemeenteraad, en verantwoordelijk voor openbare orde en veiligheid."
+        },
+        {
+          "id": 67,
+          "question": "Welke vrijheden beschermt de Nederlandse Grondwet?",
+          "questionEn": "Which freedoms does the Dutch Constitution protect?",
+          "options": [
+            "Alleen vrijheid van meningsuiting",
+            "Vrijheid van meningsuiting, godsdienst, vergadering, vereniging en onderwijs",
+            "Alleen het recht op werk",
+            "Alleen het recht op een woning"
+          ],
+          "correct": 1,
+          "explanation": "The Dutch Constitution protects multiple fundamental rights and freedoms, including: freedom of expression, freedom of religion, freedom of assembly, freedom of association, freedom of education, right to privacy, and protection against discrimination (Article 1).",
+          "explanationNl": "De Nederlandse Grondwet beschermt meerdere grondrechten en vrijheden, waaronder: vrijheid van meningsuiting, godsdienstvrijheid, vrijheid van vergadering, vrijheid van vereniging, vrijheid van onderwijs, recht op privacy en bescherming tegen discriminatie."
+        },
+        {
+          "id": 68,
+          "question": "Wat is de minister-president?",
+          "questionEn": "What is the minister-president (prime minister)?",
+          "options": [
+            "Het staatshoofd van Nederland",
+            "De voorzitter van de ministerraad en leider van de regering",
+            "De voorzitter van de Tweede Kamer",
+            "De rechterlijke macht"
+          ],
+          "correct": 1,
+          "explanation": "The minister-president (prime minister) is the chairman of the Council of Ministers (ministerraad) and leads the government. The prime minister is not the head of state (that is the King) but is the political leader. The PM is usually the leader of the largest party in the coalition government.",
+          "explanationNl": "De minister-president is de voorzitter van de ministerraad en leidt de regering. De minister-president is niet het staatshoofd (dat is de Koning) maar wel de politieke leider. De premier is meestal de leider van de grootste partij in de coalitieregering."
+        },
+        {
+          "id": 69,
+          "question": "Wat gebeurt er bij verkiezingen in Nederland?",
+          "questionEn": "What happens during elections in the Netherlands?",
+          "options": [
+            "Je stemt op een partij en de partij met de meeste stemmen regeert alleen",
+            "Je stemt op een kandidaat of partij en er wordt een coalitie gevormd",
+            "De koning kiest de regering",
+            "Stemmen is verplicht voor alle inwoners"
+          ],
+          "correct": 1,
+          "explanation": "In Dutch elections, you vote for a candidate on a party list. The Netherlands uses proportional representation (evenredige vertegenwoordiging), meaning seats are divided proportionally. Since no party usually wins a majority, parties form a coalition (coalitie) to govern together.",
+          "explanationNl": "Bij Nederlandse verkiezingen stem je op een kandidaat op een partijlijst. Nederland gebruikt evenredige vertegenwoordiging, waardoor zetels proportioneel worden verdeeld. Omdat geen partij meestal een meerderheid haalt, vormen partijen een coalitie om samen te regeren."
+        }
+      ]
+    },
+    {
+      "id": "geschiedenis",
+      "name": "History & Geography",
+      "nameNl": "Geschiedenis en aardrijkskunde",
+      "icon": "\ud83d\udcdc",
+      "description": "Dutch history, geography, provinces, and the Netherlands' place in Europe",
+      "questions": [
+        {
+          "id": 70,
+          "question": "Wat was de Gouden Eeuw?",
+          "questionEn": "What was the Golden Age (Gouden Eeuw)?",
+          "options": [
+            "De 18e eeuw, toen Nederland veel goud vond",
+            "De 17e eeuw, toen Nederland een wereldmacht was in handel, kunst en wetenschap",
+            "De 19e eeuw, toen Nederland geïndustrialiseerd werd",
+            "De 20e eeuw, na de Tweede Wereldoorlog"
+          ],
+          "correct": 1,
+          "explanation": "The Golden Age (Gouden Eeuw) refers to the 17th century, when the Dutch Republic became a world leader in trade, science, military, and art. Famous painters like Rembrandt and Vermeer worked during this period. The VOC (Dutch East India Company) was the world's first multinational corporation.",
+          "explanationNl": "De Gouden Eeuw verwijst naar de 17e eeuw, toen de Republiek der Zeven Verenigde Nederlanden een wereldleider was in handel, wetenschap, leger en kunst. Beroemde schilders als Rembrandt en Vermeer werkten in deze periode."
+        },
+        {
+          "id": 71,
+          "question": "Wat was de VOC?",
+          "questionEn": "What was the VOC?",
+          "options": [
+            "Een Nederlandse voetbalclub",
+            "De Verenigde Oost-Indische Compagnie, een handelsmaatschappij",
+            "Een politieke partij uit de 17e eeuw",
+            "Een militaire organisatie"
+          ],
+          "correct": 1,
+          "explanation": "The VOC (Vereenigde Oost-Indische Compagnie / Dutch East India Company) was founded in 1602 and is often considered the world's first multinational corporation and first company to issue stocks. It traded in spices and goods from Asia and played a major role in Dutch colonial history.",
+          "explanationNl": "De VOC (Vereenigde Oost-Indische Compagnie) werd opgericht in 1602 en wordt beschouwd als 's werelds eerste multinational en eerste bedrijf dat aandelen uitgaf. De VOC handelde in specerijen uit Azië en speelde een grote rol in de Nederlandse koloniale geschiedenis."
+        },
+        {
+          "id": 72,
+          "question": "Hoeveel provincies heeft Nederland?",
+          "questionEn": "How many provinces does the Netherlands have?",
+          "options": [
+            "10",
+            "12",
+            "14",
+            "16"
+          ],
+          "correct": 1,
+          "explanation": "The Netherlands has 12 provinces: Groningen, Friesland, Drenthe, Overijssel, Flevoland, Gelderland, Utrecht, Noord-Holland, Zuid-Holland, Zeeland, Noord-Brabant, and Limburg. Each province has its own provincial council (Provinciale Staten) and executive (Gedeputeerde Staten).",
+          "explanationNl": "Nederland heeft 12 provincies: Groningen, Friesland, Drenthe, Overijssel, Flevoland, Gelderland, Utrecht, Noord-Holland, Zuid-Holland, Zeeland, Noord-Brabant en Limburg."
+        },
+        {
+          "id": 73,
+          "question": "Wat zijn de Deltawerken?",
+          "questionEn": "What are the Delta Works (Deltawerken)?",
+          "options": [
+            "Een reeks windmolenparken in de Noordzee",
+            "Een systeem van dammen en stormvloedkeringen ter bescherming tegen overstromingen",
+            "Een netwerk van kanalen voor scheepvaart",
+            "Een reeks bruggen tussen de Waddeneilanden"
+          ],
+          "correct": 1,
+          "explanation": "The Deltawerken (Delta Works) is a series of dams, sluices, locks, dykes, and storm surge barriers built to protect the Netherlands from flooding, especially after the devastating North Sea flood of 1953 (Watersnoodramp). It is considered one of the modern engineering wonders of the world.",
+          "explanationNl": "De Deltawerken zijn een reeks dammen, sluizen, dijken en stormvloedkeringen gebouwd om Nederland te beschermen tegen overstromingen, vooral na de Watersnoodramp van 1953. Het wordt beschouwd als een van de moderne wereldwonderen van de techniek."
+        },
+        {
+          "id": 74,
+          "question": "Wat is een polder?",
+          "questionEn": "What is a polder?",
+          "options": [
+            "Een type windmolen",
+            "Een stuk land dat is drooggelegd en onder zeeniveau ligt",
+            "Een dijktype uit de middeleeuwen",
+            "Een vissershaven"
+          ],
+          "correct": 1,
+          "explanation": "A polder is a low-lying piece of land that has been reclaimed from water and is maintained dry by pumping water out using pumps (originally windmills). Much of the Netherlands is below sea level and consists of polders. The expression 'God created the world, but the Dutch created the Netherlands' refers to this.",
+          "explanationNl": "Een polder is een stuk laaggelegen land dat is drooggelegd en droog wordt gehouden door water weg te pompen. Veel van Nederland ligt onder zeeniveau en bestaat uit polders. De uitdrukking 'God schiep de wereld, maar de Nederlanders schiepen Nederland' verwijst hiernaar."
+        },
+        {
+          "id": 75,
+          "question": "Wat is de hoofdstad van Nederland?",
+          "questionEn": "What is the capital of the Netherlands?",
+          "options": [
+            "Den Haag",
+            "Amsterdam",
+            "Rotterdam",
+            "Utrecht"
+          ],
+          "correct": 1,
+          "explanation": "Amsterdam is the official capital of the Netherlands, as stated in the Constitution. However, the government, parliament, and most embassies are located in The Hague (Den Haag). This unique situation often confuses people.",
+          "explanationNl": "Amsterdam is de officiële hoofdstad van Nederland, zoals vastgelegd in de Grondwet. Echter, de regering, het parlement en de meeste ambassades zijn gevestigd in Den Haag. Deze unieke situatie zorgt vaak voor verwarring."
+        },
+        {
+          "id": 76,
+          "question": "Wat gebeurde er op 5 mei 1945?",
+          "questionEn": "What happened on May 5th, 1945?",
+          "options": [
+            "Nederland werd onafhankelijk van Spanje",
+            "Nederland werd bevrijd van de Duitse bezetting",
+            "De Grondwet werd aangenomen",
+            "Het Koninkrijk der Nederlanden werd opgericht"
+          ],
+          "correct": 1,
+          "explanation": "On May 5, 1945, the Netherlands was liberated from the German occupation during World War II. This day is commemorated annually as Bevrijdingsdag (Liberation Day). The day before, May 4, is Dodenherdenking (Remembrance Day), when the Dutch remember all victims of WWII and later conflicts.",
+          "explanationNl": "Op 5 mei 1945 werd Nederland bevrijd van de Duitse bezetting tijdens de Tweede Wereldoorlog. Deze dag wordt jaarlijks herdacht als Bevrijdingsdag. Op 4 mei is Dodenherdenking, wanneer alle oorlogsslachtoffers worden herdacht."
+        },
+        {
+          "id": 77,
+          "question": "Wie was Willem van Oranje?",
+          "questionEn": "Who was William of Orange (Willem van Oranje)?",
+          "options": [
+            "De eerste president van Nederland",
+            "De leider van de opstand tegen Spanje, beschouwd als vader des vaderlands",
+            "De eerste Nederlandse koning in de 19e eeuw",
+            "Een beroemde Nederlandse schilder"
+          ],
+          "correct": 1,
+          "explanation": "William of Orange (Willem van Oranje, 1533-1584) led the Dutch revolt against Spanish rule and is considered the 'Father of the Fatherland' (Vader des Vaderlands). His role was crucial in the eventual independence of the Dutch Republic. The House of Orange-Nassau still forms the Dutch royal family.",
+          "explanationNl": "Willem van Oranje (1533-1584) leidde de Nederlandse opstand tegen Spanje en wordt beschouwd als de 'Vader des Vaderlands'. Zijn rol was cruciaal voor de uiteindelijke onafhankelijkheid van de Republiek. Het Huis van Oranje-Nassau vormt nog steeds de koninklijke familie."
+        },
+        {
+          "id": 78,
+          "question": "Is Nederland een oprichtend lid van de Europese Unie?",
+          "questionEn": "Is the Netherlands a founding member of the European Union?",
+          "options": [
+            "Nee, Nederland trad later toe",
+            "Ja, Nederland was een van de zes oprichtende landen",
+            "Nederland is geen lid van de EU",
+            "Nederland was het eerste lid van de EU"
+          ],
+          "correct": 1,
+          "explanation": "The Netherlands was one of the six founding members of what eventually became the EU. In 1951, Belgium, France, West Germany, Italy, Luxembourg, and the Netherlands established the European Coal and Steel Community (EGKS), which evolved into the European Economic Community and later the European Union.",
+          "explanationNl": "Nederland was een van de zes oprichtende leden van wat uiteindelijk de EU werd. In 1951 richtten België, Frankrijk, West-Duitsland, Italië, Luxemburg en Nederland de Europese Gemeenschap voor Kolen en Staal (EGKS) op, die later de EU werd."
+        },
+        {
+          "id": 79,
+          "question": "Wat zijn de BES-eilanden?",
+          "questionEn": "What are the BES islands?",
+          "options": [
+            "Eilanden in de Noordzee",
+            "Bonaire, Sint Eustatius en Saba, bijzondere gemeenten van Nederland in het Caribisch gebied",
+            "Een eilandengroep in de Middellandse Zee",
+            "De Waddeneilanden"
+          ],
+          "correct": 1,
+          "explanation": "The BES islands (Bonaire, Sint Eustatius, and Saba) are special municipalities (bijzondere gemeenten) of the Netherlands in the Caribbean. Since 2010, they are directly part of the Netherlands. Aruba, Curaçao, and Sint Maarten are separate countries within the Kingdom of the Netherlands.",
+          "explanationNl": "De BES-eilanden (Bonaire, Sint Eustatius en Saba) zijn bijzondere gemeenten van Nederland in het Caribisch gebied. Sinds 2010 zijn ze direct onderdeel van Nederland. Aruba, Curaçao en Sint Maarten zijn aparte landen binnen het Koninkrijk der Nederlanden."
+        },
+        {
+          "id": 80,
+          "question": "Welke stad heeft de grootste haven van Europa?",
+          "questionEn": "Which city has the largest port in Europe?",
+          "options": [
+            "Amsterdam",
+            "Rotterdam",
+            "Antwerpen",
+            "Hamburg"
+          ],
+          "correct": 1,
+          "explanation": "Rotterdam has the largest port in Europe and was the world's busiest port until it was surpassed by Asian ports in the 2000s. The Port of Rotterdam is crucial for European trade and handles a significant share of goods entering and leaving Europe.",
+          "explanationNl": "Rotterdam heeft de grootste haven van Europa en was de drukste haven ter wereld tot het in de jaren 2000 werd ingehaald door Aziatische havens. De haven van Rotterdam is cruciaal voor de Europese handel."
+        },
+        {
+          "id": 81,
+          "question": "Wat is de jongste provincie van Nederland?",
+          "questionEn": "What is the youngest province of the Netherlands?",
+          "options": [
+            "Noord-Holland",
+            "Flevoland",
+            "Utrecht",
+            "Limburg"
+          ],
+          "correct": 1,
+          "explanation": "Flevoland is the youngest (newest) province of the Netherlands, established in 1986. It was created on land reclaimed from the former Zuiderzee (now IJsselmeer). The main city is Lelystad (the provincial capital) and Almere is the largest city.",
+          "explanationNl": "Flevoland is de jongste provincie van Nederland, opgericht in 1986. Het is aangelegd op land dat is drooggelegd uit de voormalige Zuiderzee (nu IJsselmeer). De hoofdstad is Lelystad en de grootste stad is Almere."
+        }
+      ]
+    },
+    {
+      "id": "dagelijks-leven",
+      "name": "Daily Life",
+      "nameNl": "Dagelijks leven",
+      "icon": "\ud83d\udeb2",
+      "description": "Everyday life in the Netherlands: transportation, holidays, customs, and practical matters",
+      "questions": [
+        {
+          "id": 82,
+          "question": "Wat is een OV-chipkaart?",
+          "questionEn": "What is an OV-chipkaart?",
+          "options": [
+            "Een pasje om te parkeren",
+            "Een betaalpas voor het openbaar vervoer (bus, tram, trein, metro)",
+            "Een kortingskaart voor winkels",
+            "Een identiteitskaart voor studenten"
+          ],
+          "correct": 1,
+          "explanation": "The OV-chipkaart is the electronic payment card for all public transport in the Netherlands: buses, trams, metro, and trains. You check in and out (in- en uitchecken) with the card. There are personal, anonymous, and disposable versions available.",
+          "explanationNl": "De OV-chipkaart is de elektronische betaalpas voor al het openbaar vervoer in Nederland: bussen, trams, metro en treinen. Je checkt in en uit met de kaart. Er zijn persoonlijke, anonieme en wegwerpversies."
+        },
+        {
+          "id": 83,
+          "question": "Welk vervoermiddel gebruiken veel Nederlanders dagelijks?",
+          "questionEn": "Which means of transport do many Dutch people use daily?",
+          "options": [
+            "De auto",
+            "De fiets",
+            "De scooter",
+            "De bus"
+          ],
+          "correct": 1,
+          "explanation": "The bicycle (fiets) is the most iconic Dutch means of transport. The Netherlands has approximately 23 million bicycles for about 18 million people. There is excellent cycling infrastructure with dedicated bike paths (fietspaden). Cycling is used for commuting, school, shopping, and recreation.",
+          "explanationNl": "De fiets is het meest iconische Nederlandse vervoermiddel. Nederland heeft ongeveer 23 miljoen fietsen voor circa 18 miljoen inwoners. Er is uitstekende fietsinfrastructuur met speciale fietspaden. De fiets wordt gebruikt voor woon-werkverkeer, school, boodschappen en recreatie."
+        },
+        {
+          "id": 84,
+          "question": "Wanneer wordt Bevrijdingsdag gevierd?",
+          "questionEn": "When is Liberation Day (Bevrijdingsdag) celebrated?",
+          "options": [
+            "4 mei",
+            "5 mei",
+            "27 april",
+            "15 augustus"
+          ],
+          "correct": 1,
+          "explanation": "Liberation Day (Bevrijdingsdag) is celebrated on May 5th, commemorating the end of the German occupation of the Netherlands in 1945. The day before, May 4th (Dodenherdenking), is the national day of remembrance for war victims. Bevrijdingsdag is a national holiday, though not everyone has a day off every year.",
+          "explanationNl": "Bevrijdingsdag wordt gevierd op 5 mei, ter herdenking van het einde van de Duitse bezetting in 1945. De dag ervoor, 4 mei (Dodenherdenking), is de nationale herdenkingsdag voor oorlogsslachtoffers."
+        },
+        {
+          "id": 85,
+          "question": "Wat is de afspraakcultuur in Nederland?",
+          "questionEn": "What is the appointment culture in the Netherlands?",
+          "options": [
+            "Je kunt altijd onaangekondigd langskomen",
+            "Nederlanders plannen bijna alles van tevoren en gebruiken een agenda",
+            "Afspraken zijn niet belangrijk in Nederland",
+            "Alleen zakelijke afspraken worden gepland"
+          ],
+          "correct": 1,
+          "explanation": "The Netherlands has a strong appointment culture (afspraakcultuur). Dutch people plan almost everything in their agenda, including social visits to friends and family. Arriving on time (stiptheid/punctualiteit) is very important. Being late without notice is considered rude.",
+          "explanationNl": "Nederland heeft een sterke afspraakcultuur. Nederlanders plannen bijna alles in hun agenda, ook sociale bezoeken aan vrienden en familie. Op tijd komen (stiptheid/punctualiteit) is heel belangrijk. Te laat komen zonder bericht wordt als onbeleefd beschouwd."
+        },
+        {
+          "id": 86,
+          "question": "Hoe werkt het fooiensysteem in Nederland?",
+          "questionEn": "How does tipping work in the Netherlands?",
+          "options": [
+            "Fooi geven is verplicht, minimaal 20%",
+            "Fooi is niet verplicht maar wordt wel gewaardeerd; een kleine fooi van 5-10% is gebruikelijk",
+            "Je geeft nooit fooi in Nederland",
+            "Fooi geven is verboden"
+          ],
+          "correct": 1,
+          "explanation": "Tipping (fooi geven) in the Netherlands is not mandatory because service is included in the price. However, it is appreciated to leave a small tip (usually 5-10%) for good service in restaurants. It is common to round up the bill. Dutch service staff earn a regular salary, so tips are a bonus, not their main income.",
+          "explanationNl": "Fooi geven is niet verplicht in Nederland omdat service bij de prijs is inbegrepen. Het wordt wel gewaardeerd om een kleine fooi te geven (meestal 5-10%) bij goed restaurant-service. Het is gebruikelijk om het bedrag af te ronden."
+        },
+        {
+          "id": 87,
+          "question": "Wat zijn de openingstijden van winkels in Nederland?",
+          "questionEn": "What are the opening hours of shops in the Netherlands?",
+          "options": [
+            "Winkels zijn altijd 24 uur per dag open",
+            "Winkels zijn meestal open van 9/10 tot 17/18 uur, met koopavond op donderdag of vrijdag",
+            "Winkels zijn alleen open op werkdagen",
+            "Alle winkels zijn op zondag gesloten"
+          ],
+          "correct": 1,
+          "explanation": "Most shops in the Netherlands are open from around 9/10 AM to 5/6 PM. Many shops have an extended shopping evening (koopavond) on Thursday or Friday until 9 PM. Supermarkets often have longer hours. Many shops are also open on Sundays, especially in larger cities, though hours may vary.",
+          "explanationNl": "De meeste winkels zijn open van circa 9/10 tot 17/18 uur. Veel winkels hebben een koopavond op donderdag of vrijdag tot 21 uur. Supermarkten zijn vaak langer open. Veel winkels zijn ook op zondag open, vooral in grotere steden."
+        },
+        {
+          "id": 88,
+          "question": "Welke feestdagen zijn officiële vrije dagen in Nederland?",
+          "questionEn": "Which holidays are official days off in the Netherlands?",
+          "options": [
+            "Alleen Kerst en Nieuwjaar",
+            "Nieuwjaar, Koningsdag, Bevrijdingsdag, Hemelvaartsdag, Pasen, Pinksteren en Kerst",
+            "Alleen Koningsdag",
+            "Er zijn geen officiële feestdagen in Nederland"
+          ],
+          "correct": 1,
+          "explanation": "Official public holidays in the Netherlands include: Nieuwjaarsdag (Jan 1), Goede Vrijdag (not always a day off), Pasen (Easter, 2 days), Koningsdag (Apr 27), Bevrijdingsdag (May 5, not every year a day off), Hemelvaartsdag (Ascension), Pinksteren (Whitsun, 2 days), and Kerstmis (Christmas, Dec 25 & 26).",
+          "explanationNl": "Officiële feestdagen in Nederland zijn: Nieuwjaarsdag (1 jan), Pasen (2 dagen), Koningsdag (27 apr), Bevrijdingsdag (5 mei), Hemelvaartsdag, Pinksteren (2 dagen) en Kerstmis (25 en 26 dec). Goede Vrijdag is niet altijd een vrije dag."
+        },
+        {
+          "id": 89,
+          "question": "Hoe ga je om met het weer in Nederland?",
+          "questionEn": "How do you deal with the weather in the Netherlands?",
+          "options": [
+            "Het weer in Nederland is altijd hetzelfde",
+            "Het weer wisselt vaak; Nederlanders hebben altijd een regenjas of paraplu bij zich",
+            "Het regent nooit in Nederland",
+            "Het is altijd koud in Nederland"
+          ],
+          "correct": 1,
+          "explanation": "The Netherlands has a maritime climate with changeable weather. Rain is common and the weather can change quickly within a day. Dutch people are prepared for this and often carry a rain jacket or umbrella. The saying 'Er is geen slecht weer, alleen verkeerde kleding' (There's no bad weather, only wrong clothing) is popular.",
+          "explanationNl": "Nederland heeft een zeeklimaat met wisselvallig weer. Regen komt vaak voor en het weer kan snel veranderen op een dag. Nederlanders zijn hierop voorbereid en hebben vaak een regenjas of paraplu bij zich."
+        },
+        {
+          "id": 90,
+          "question": "Wat is statiegeld?",
+          "questionEn": "What is statiegeld (deposit)?",
+          "options": [
+            "Een belasting op plastic tassen",
+            "Een bedrag dat je betaalt bij aankoop van een fles en terugkrijgt bij inlevering",
+            "Een boete voor het weggooien van afval",
+            "De prijs van een recyclingcontainer"
+          ],
+          "correct": 1,
+          "explanation": "Statiegeld is a deposit system where you pay a small amount extra when buying certain bottles and cans. You get this money back when you return the empty container to a collection point (usually at supermarkets). Since 2023, this also applies to cans (blikjes). It encourages recycling and reduces litter.",
+          "explanationNl": "Statiegeld is een systeem waarbij je bij aankoop van bepaalde flessen en blikjes een klein bedrag extra betaalt. Dit krijg je terug bij het inleveren bij een innamepunt (meestal supermarkten). Sinds 2023 geldt dit ook voor blikjes."
+        },
+        {
+          "id": 91,
+          "question": "Wat is de NS?",
+          "questionEn": "What is the NS?",
+          "options": [
+            "De Nationale Snelweg (highway authority)",
+            "De Nederlandse Spoorwegen (de nationale treinmaatschappij)",
+            "Het Nationaal Sportfonds",
+            "De Nederlandse Staat"
+          ],
+          "correct": 1,
+          "explanation": "NS stands for Nederlandse Spoorwegen (Dutch Railways), the main railway operator in the Netherlands. NS operates most intercity and sprinter trains. The Dutch rail network is one of the busiest and most dense in Europe. You travel with an OV-chipkaart or e-ticket.",
+          "explanationNl": "NS staat voor Nederlandse Spoorwegen, de belangrijkste treinmaatschappij van Nederland. NS rijdt de meeste intercity- en sprintertreinen. Het Nederlandse spoornetwerk is een van de drukste en dichtste in Europa."
+        },
+        {
+          "id": 92,
+          "question": "Hoe haal je medicijnen in Nederland?",
+          "questionEn": "How do you get medication in the Netherlands?",
+          "options": [
+            "Je koopt ze bij de supermarkt",
+            "De huisarts schrijft een recept voor en je haalt de medicijnen bij de apotheek",
+            "Je bestelt ze online zonder recept",
+            "Je krijgt ze bij het ziekenhuis"
+          ],
+          "correct": 1,
+          "explanation": "In the Netherlands, prescription medication (receptmedicijnen) is obtained from the pharmacy (apotheek) with a prescription from your GP (huisarts) or specialist. Basic over-the-counter medication like paracetamol can be bought at drugstores (drogisterij) or supermarkets.",
+          "explanationNl": "In Nederland haal je receptmedicijnen bij de apotheek met een recept van je huisarts of specialist. Basisgeneesmiddelen zonder recept, zoals paracetamol, kun je kopen bij de drogisterij of supermarkt."
+        },
+        {
+          "id": 93,
+          "question": "Wat is een kentekenplaat?",
+          "questionEn": "What is a kentekenplaat (license plate)?",
+          "options": [
+            "Een bewijs dat je een rijbewijs hebt",
+            "Het gele nummerbord op een auto dat geregistreerd staat bij de RDW",
+            "Een parkeerbewijs",
+            "Een verzekeringsbewijs"
+          ],
+          "correct": 1,
+          "explanation": "A kentekenplaat (license plate) is the yellow number plate on vehicles in the Netherlands, registered with the RDW (Rijksdienst voor het Wegverkeer). Dutch license plates are linked to the vehicle (not the owner, as in some countries). You can check vehicle information with the license plate number.",
+          "explanationNl": "Een kentekenplaat is het gele nummerbord op voertuigen in Nederland, geregistreerd bij de RDW (Rijksdienst voor het Wegverkeer). Nederlandse kentekens zijn gekoppeld aan het voertuig (niet aan de eigenaar, zoals in sommige landen)."
+        },
+        {
+          "id": 94,
+          "question": "Wat is Kerstmis in Nederland?",
+          "questionEn": "What is Christmas in the Netherlands?",
+          "options": [
+            "Een feest op 25 december waarbij kinderen cadeaus krijgen van de Kerstman",
+            "Twee feestdagen (25 en 26 december) met familiebijeenkomsten en kerstdiner",
+            "Een feest dat niet wordt gevierd in Nederland",
+            "Hetzelfde als Sinterklaas"
+          ],
+          "correct": 1,
+          "explanation": "Christmas (Kerstmis) in the Netherlands is celebrated on December 25th and 26th (Eerste en Tweede Kerstdag, both public holidays). It is primarily a time for family gatherings and a festive dinner (kerstdiner). The main gift-giving tradition in the Netherlands is Sinterklaas (December 5), not Christmas, though Christmas gifts are becoming more common.",
+          "explanationNl": "Kerstmis wordt in Nederland gevierd op 25 en 26 december (Eerste en Tweede Kerstdag, beide vrije dagen). Het is vooral een tijd voor familiebijeenkomsten en kerstdiner. De belangrijkste cadeau-traditie is Sinterklaas (5 december), al worden kerstcadeaus steeds gebruikelijker."
+        }
+      ]
+    }
+  ]
+}

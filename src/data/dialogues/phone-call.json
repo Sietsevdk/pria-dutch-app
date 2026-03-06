@@ -1,0 +1,119 @@
+{
+  "id": "phone-call",
+  "title": "Een telefonische afspraak maken",
+  "titleEN": "Making a Phone Appointment",
+  "context": "You call the dentist's office to make an appointment because you have a toothache.",
+  "lines": [
+    {
+      "speaker": "Assistente",
+      "dutch": "Goedemorgen, tandartspraktijk De Molen. U spreekt met Sandra. Waarmee kan ik u helpen?",
+      "english": "Good morning, dental practice De Molen. You are speaking with Sandra. How can I help you?",
+      "note": "'U spreekt met...' is the standard Dutch phone greeting."
+    },
+    {
+      "speaker": "Beller",
+      "dutch": "Goedemorgen. U spreekt met Fatima Bakir. Ik wil graag een afspraak maken bij de tandarts.",
+      "english": "Good morning. You are speaking with Fatima Bakir. I would like to make an appointment with the dentist.",
+      "note": "Always state your full name when calling for an appointment."
+    },
+    {
+      "speaker": "Assistente",
+      "dutch": "Natuurlijk. Bent u al patient bij ons?",
+      "english": "Of course. Are you already a patient with us?"
+    },
+    {
+      "speaker": "Beller",
+      "dutch": "Ja, ik ben al een jaar patient. Mijn geboortedatum is vijf maart negentienhonderdnegentig.",
+      "english": "Yes, I've been a patient for a year. My date of birth is March fifth, nineteen ninety.",
+      "note": "You are often asked for your geboortedatum (date of birth) for verification."
+    },
+    {
+      "speaker": "Assistente",
+      "dutch": "Dank u wel, ik heb u gevonden. Wat is de reden van uw bezoek?",
+      "english": "Thank you, I've found you. What is the reason for your visit?"
+    },
+    {
+      "speaker": "Beller",
+      "dutch": "Ik heb al een paar dagen kiespijn. Het doet vooral pijn als ik iets kouds drink.",
+      "english": "I've had a toothache for a few days. It especially hurts when I drink something cold.",
+      "note": "'Kiespijn' means 'toothache'. 'Het doet pijn' means 'it hurts'."
+    },
+    {
+      "speaker": "Assistente",
+      "dutch": "Dat klinkt vervelend. Ik zal kijken of we snel een plekje voor u hebben. Kunt u aanstaande donderdag om twee uur?",
+      "english": "That sounds unpleasant. I'll see if we can fit you in soon. Can you come this Thursday at two o'clock?",
+      "note": "'Aanstaande' means 'this coming' (e.g., this Thursday)."
+    },
+    {
+      "speaker": "Beller",
+      "dutch": "Donderdag lukt helaas niet. Ik werk tot vijf uur. Hebt u iets op vrijdag?",
+      "english": "Thursday doesn't work, unfortunately. I work until five. Do you have anything on Friday?",
+      "note": "'Dat lukt niet' is a common way to say something doesn't work for you."
+    },
+    {
+      "speaker": "Assistente",
+      "dutch": "Op vrijdag heb ik om negen uur 's ochtends een plek vrij. Schikt dat?",
+      "english": "On Friday I have a spot free at nine in the morning. Does that suit you?",
+      "note": "'Schikt dat?' means 'Does that suit you?'. Very common for scheduling."
+    },
+    {
+      "speaker": "Beller",
+      "dutch": "Ja, vrijdagochtend om negen uur past prima. Dat is goed.",
+      "english": "Yes, Friday morning at nine works great. That's good."
+    },
+    {
+      "speaker": "Assistente",
+      "dutch": "Dan heb ik u ingepland op vrijdag de tiende om negen uur bij dokter Jansen. Kunt u een kwartier van tevoren aanwezig zijn?",
+      "english": "Then I've scheduled you for Friday the tenth at nine o'clock with Dr. Jansen. Can you be present fifteen minutes early?",
+      "note": "'Van tevoren' means 'in advance/beforehand'. 'Een kwartier' means 'a quarter of an hour'."
+    },
+    {
+      "speaker": "Beller",
+      "dutch": "Ja, dat is geen probleem. Moet ik nog iets meenemen?",
+      "english": "Yes, that's no problem. Do I need to bring anything?"
+    },
+    {
+      "speaker": "Assistente",
+      "dutch": "Neemt u alstublieft uw identiteitsbewijs en uw verzekeringspas mee.",
+      "english": "Please bring your ID and your insurance card."
+    },
+    {
+      "speaker": "Beller",
+      "dutch": "Dat is duidelijk. Dank u wel voor de afspraak!",
+      "english": "That's clear. Thank you for the appointment!"
+    },
+    {
+      "speaker": "Assistente",
+      "dutch": "Graag gedaan. Tot vrijdag, mevrouw Bakir. Goedendag!",
+      "english": "You're welcome. See you Friday, Mrs. Bakir. Good day!"
+    }
+  ],
+  "keyPhrases": [
+    {
+      "dutch": "U spreekt met...",
+      "english": "You are speaking with...",
+      "usage": "The standard way to identify yourself on the phone in Dutch."
+    },
+    {
+      "dutch": "Ik wil graag een afspraak maken.",
+      "english": "I would like to make an appointment.",
+      "usage": "Use this to request an appointment by phone."
+    },
+    {
+      "dutch": "Dat lukt helaas niet.",
+      "english": "That doesn't work, unfortunately.",
+      "usage": "A polite way to decline a proposed time."
+    },
+    {
+      "dutch": "Schikt dat?",
+      "english": "Does that suit you?",
+      "usage": "Used when suggesting a time or date."
+    },
+    {
+      "dutch": "Moet ik nog iets meenemen?",
+      "english": "Do I need to bring anything?",
+      "usage": "A useful question before any appointment."
+    }
+  ],
+  "culturalNote": "When making phone calls in Dutch, it is polite to always state your name at the beginning: 'U spreekt met [name]' or 'Met [name]'. This is different from many other cultures where you might start with 'hello'. Dutch phone conversations tend to be direct and efficient. At the end, saying 'goedendag' (good day) or 'dag!' (bye) is standard. Most Dutch medical offices require you to make an appointment by phone, and you should always have your BSN and insurance card ready."
+}

@@ -1,0 +1,111 @@
+{
+  "topic": "adjectives",
+  "topicNL": "Bijvoeglijke naamwoorden",
+  "explanation": {
+    "summary": "Bijvoeglijke naamwoorden in het Nederlands krijgen meestal de uitgang -e als ze voor een zelfstandig naamwoord staan. De belangrijkste uitzondering: bij een het-woord in het enkelvoud met 'een' (of zonder lidwoord) krijgt het bijvoeglijk naamwoord GEEN -e.",
+    "rules": [
+      "HOOFDREGEL: een bijvoeglijk naamwoord VOOR een zelfstandig naamwoord krijgt -e: de grote auto, het grote huis, de grote huizen.",
+      "UITZONDERING: het-woord + enkelvoud + een/geen/elk/ieder/welk/zo'n + bijvoeglijk naamwoord = GEEN -e: een groot huis, geen klein kind, elk nieuw boek.",
+      "Bij de-woorden krijgt het bijvoeglijk naamwoord ALTIJD -e: een grote auto, de grote auto, grote auto's.",
+      "Bij meervouden krijgt het bijvoeglijk naamwoord ALTIJD -e: grote huizen, de grote huizen, nieuwe boeken.",
+      "Bij het-woorden met 'de/het/dit/dat/mijn/jouw/etc.' krijgt het bijvoeglijk naamwoord WEL -e: het grote huis, dit kleine kind, mijn nieuwe boek.",
+      "Als het bijvoeglijk naamwoord NA het zelfstandig naamwoord staat (predicatief), krijgt het NOOIT -e: Het huis is groot. De auto is rood.",
+      "Bijvoeglijke naamwoorden op -en krijgen NOOIT extra -e: een gouden ring (niet: een goudene ring), een houten tafel.",
+      "Bijvoeglijke naamwoorden op -a krijgen NOOIT -e: een prima idee, een extra taak."
+    ],
+    "exceptions": [
+      "Bijvoeglijke naamwoorden die eindigen op -en: gouden, zilveren, houten, stenen, ijzeren - krijgen nooit -e.",
+      "Sommige vaste uitdrukkingen volgen de regels niet: 'in goed overleg', 'van groot belang'.",
+      "Het bijvoeglijk naamwoord 'rechter-' en 'linker-' krijgen altijd -e: de rechterhand, het linkeroog.",
+      "Bij eigennamen en titels zijn er uitzonderingen: 'het Koninklijk Paleis' (geen -e, vaste naam).",
+      "Woorden als 'prima', 'gratis', 'roze', 'oranje', 'lila', 'paars' krijgen soms geen -e in informeel taalgebruik, maar officieel wel: een roze jurk."
+    ],
+    "commonMistakes": [
+      "'Een grote huis' is fout - 'huis' is een het-woord met 'een', dus GEEN -e: een groot huis.",
+      "'Het groot huis' is fout - met het bepaalde lidwoord 'het' krijgt het bijvoeglijk naamwoord WEL -e: het grote huis.",
+      "'De groot auto' is fout - bij de-woorden krijgt het bijvoeglijk naamwoord ALTIJD -e: de grote auto.",
+      "'Een groot auto' is fout - 'auto' is een de-woord, dus het bijvoeglijk naamwoord krijgt ALTIJD -e: een grote auto.",
+      "'Het huis is grote' is fout - predicatief (na het werkwoord) krijgt het bijvoeglijk naamwoord NOOIT -e: Het huis is groot.",
+      "'Een goudene ring' is fout - bijvoeglijke naamwoorden op -en krijgen geen extra -e: een gouden ring."
+    ],
+    "tip": "De truc is simpel: ALTIJD -e, BEHALVE in deze ene situatie: het-woord + enkelvoud + een/geen = geen -e. Denk aan: 'een groot HUIS' (het huis, enkelvoud, met 'een' → geen -e) maar 'een grote AUTO' (de auto, dus altijd -e). Als je twijfelt: is het een het-woord met 'een'? Nee? Dan altijd -e!"
+  },
+  "exercises": [
+    {
+      "type": "fill_blank",
+      "sentence": "Dat is een ___ huis. (mooi)",
+      "answer": "mooi",
+      "explanation": "'Huis' is een het-woord, enkelvoud, met 'een' → het bijvoeglijk naamwoord krijgt GEEN -e: een mooi huis."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "De ___ auto staat voor de deur. (rood)",
+      "answer": "rode",
+      "explanation": "'Auto' is een de-woord → het bijvoeglijk naamwoord krijgt ALTIJD -e: de rode auto."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "Het ___ kind speelt buiten.",
+      "options": ["kleine", "klein", "kleins", "kleinen"],
+      "answer": "kleine",
+      "explanation": "'Kind' is een het-woord, maar met het bepaalde lidwoord 'het' → het bijvoeglijk naamwoord krijgt WEL -e: het kleine kind."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Zij draagt een ___ jurk. (nieuw)",
+      "answer": "nieuwe",
+      "explanation": "'Jurk' is een de-woord → het bijvoeglijk naamwoord krijgt ALTIJD -e, ook met 'een': een nieuwe jurk."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "Wij wonen in een ___ appartement. (klein)",
+      "options": ["kleine", "klein", "kleins", "kleinen"],
+      "answer": "klein",
+      "explanation": "'Appartement' is een het-woord, enkelvoud, met 'een' → GEEN -e: een klein appartement."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "De ___ boeken liggen op tafel. (dik)",
+      "answer": "dikke",
+      "explanation": "Meervoud → het bijvoeglijk naamwoord krijgt ALTIJD -e: de dikke boeken. Let op de verdubbeling van de k."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Het weer is ___. (slecht)",
+      "answer": "slecht",
+      "explanation": "Predicatief gebruik (na 'is') → het bijvoeglijk naamwoord krijgt NOOIT -e: Het weer is slecht."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "Mijn ___ boek is heel interessant. (nieuw)",
+      "options": ["nieuw", "nieuwe", "nieuwen", "nieuws"],
+      "answer": "nieuwe",
+      "explanation": "'Boek' is een het-woord, maar met het bezittelijk voornaamwoord 'mijn' → het bijvoeglijk naamwoord krijgt WEL -e: mijn nieuwe boek."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Zij heeft ___ ogen. (blauw)",
+      "answer": "blauwe",
+      "explanation": "Meervoud ('ogen') → het bijvoeglijk naamwoord krijgt ALTIJD -e: blauwe ogen."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Er staat een ___ tafel in de keuken. (houten)",
+      "answer": "houten",
+      "explanation": "Bijvoeglijke naamwoorden op -en krijgen NOOIT extra -e. Het blijft: een houten tafel."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "Dit is een ___ idee! (goed)",
+      "options": ["goede", "goed", "goeden", "goeds"],
+      "answer": "goed",
+      "explanation": "'Idee' is een het-woord, enkelvoud, met 'een' → GEEN -e: een goed idee."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "De ___ man loopt door het park. (oud)",
+      "answer": "oude",
+      "explanation": "'Man' is een de-woord → het bijvoeglijk naamwoord krijgt ALTIJD -e: de oude man."
+    }
+  ]
+}

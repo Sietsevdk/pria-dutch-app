@@ -1,0 +1,406 @@
+{
+  "sections": [
+    {
+      "examNumber": 1,
+      "passages": [
+        {
+          "id": "listen_1_1",
+          "title": "Op het station",
+          "text": "Dames en heren, de intercity naar Rotterdam Centraal van kwart over drie heeft helaas een vertraging van tien minuten. De trein vertrekt nu om vijf voor half vier van spoor vijf. Wij bieden onze excuses aan voor het ongemak. Reizigers die willen overstappen op de sprinter naar Delft, kunnen de volgende sprinter nemen om tien voor vier op spoor twee. Vergeet niet om uit te checken en opnieuw in te checken als u overstapt.",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Hoeveel minuten vertraging heeft de trein naar Rotterdam?",
+              "options": [
+                "Vijf minuten.",
+                "Tien minuten.",
+                "Vijftien minuten.",
+                "Twintig minuten."
+              ],
+              "answer": "Tien minuten.",
+              "explanation": "The announcement says: 'een vertraging van tien minuten'."
+            },
+            {
+              "id": "q2",
+              "question": "Van welk spoor vertrekt de trein naar Rotterdam nu?",
+              "options": [
+                "Spoor twee.",
+                "Spoor drie.",
+                "Spoor vier.",
+                "Spoor vijf."
+              ],
+              "answer": "Spoor vijf.",
+              "explanation": "The announcement says the train departs from 'spoor vijf'."
+            },
+            {
+              "id": "q3",
+              "question": "Wat moeten reizigers doen als ze overstappen?",
+              "options": [
+                "Een nieuw kaartje kopen.",
+                "Uitchecken en opnieuw inchecken.",
+                "Naar de balie gaan.",
+                "Op het perron wachten."
+              ],
+              "answer": "Uitchecken en opnieuw inchecken.",
+              "explanation": "The announcement says: 'Vergeet niet om uit te checken en opnieuw in te checken als u overstapt.'"
+            }
+          ]
+        },
+        {
+          "id": "listen_1_2",
+          "title": "Voicemail van de tandarts",
+          "text": "Goedemiddag, u spreekt met de assistente van tandartspraktijk Smit. Dit bericht is voor meneer Osman. Uw afspraak van morgen, woensdag elf maart om half drie, moet helaas worden verzet. De tandarts is ziek. Wij willen u graag een nieuwe afspraak aanbieden op donderdag twaalf maart om kwart over tien. Belt u alstublieft terug om te bevestigen? Ons telefoonnummer is 030-555-0789. Wij zijn bereikbaar van acht uur 's ochtends tot vijf uur 's middags. Nogmaals onze excuses. Goedendag.",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Waarom wordt de afspraak verzet?",
+              "options": [
+                "De praktijk is gesloten.",
+                "De tandarts is ziek.",
+                "De patient heeft afgezegd.",
+                "Er is een noodgeval."
+              ],
+              "answer": "De tandarts is ziek.",
+              "explanation": "The voicemail says: 'De tandarts is ziek.'"
+            },
+            {
+              "id": "q2",
+              "question": "Wanneer is de nieuwe afspraak?",
+              "options": [
+                "Woensdag om half drie.",
+                "Donderdag om kwart over tien.",
+                "Vrijdag om tien uur.",
+                "Donderdag om half drie."
+              ],
+              "answer": "Donderdag om kwart over tien.",
+              "explanation": "The voicemail says: 'donderdag twaalf maart om kwart over tien'."
+            },
+            {
+              "id": "q3",
+              "question": "Wat moet meneer Osman doen?",
+              "options": [
+                "Naar de praktijk gaan.",
+                "Een e-mail sturen.",
+                "Terugbellen om te bevestigen.",
+                "Een nieuwe tandarts zoeken."
+              ],
+              "answer": "Terugbellen om te bevestigen.",
+              "explanation": "The voicemail says: 'Belt u alstublieft terug om te bevestigen?'"
+            }
+          ]
+        },
+        {
+          "id": "listen_1_3",
+          "title": "Gesprek bij de bakker",
+          "text": "Goedemorgen! Wat mag het zijn? Ik wil graag een bruin brood, gesneden. En heeft u ook nog verse croissants? Ja, die zijn net uit de oven gekomen. Hoeveel wilt u er? Twee alstublieft. En doet u er ook maar drie appelgebakjes bij. Goeie keuze! Dat is dan: een gesneden bruin brood, twee croissants en drie appelgebakjes. Dat wordt samen acht euro vijftig. Kan ik pinnen? Ja hoor, u kunt pinnen. Alstublieft, de bon. Dank u wel. Fijne dag! U ook, dag!",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Hoeveel croissants koopt de klant?",
+              "options": [
+                "Een.",
+                "Twee.",
+                "Drie.",
+                "Vier."
+              ],
+              "answer": "Twee.",
+              "explanation": "The customer says: 'Twee alstublieft' when asked how many croissants they want."
+            },
+            {
+              "id": "q2",
+              "question": "Hoeveel moet de klant betalen?",
+              "options": [
+                "Zes euro vijftig.",
+                "Zeven euro vijftig.",
+                "Acht euro vijftig.",
+                "Negen euro vijftig."
+              ],
+              "answer": "Acht euro vijftig.",
+              "explanation": "The baker says: 'Dat wordt samen acht euro vijftig.'"
+            },
+            {
+              "id": "q3",
+              "question": "Hoe betaalt de klant?",
+              "options": [
+                "Contant.",
+                "Met een creditcard.",
+                "Met pin.",
+                "Met een cadeaubon."
+              ],
+              "answer": "Met pin.",
+              "explanation": "The customer asks 'Kan ik pinnen?' and the baker says 'Ja hoor, u kunt pinnen.'"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "examNumber": 2,
+      "passages": [
+        {
+          "id": "listen_2_1",
+          "title": "Weerbericht",
+          "text": "Het weerbericht voor vandaag, dinsdag twintig november. Vanochtend is het bewolkt met af en toe regen. De temperatuur is rond de acht graden. Vanmiddag klaart het op en komt de zon af en toe door. De temperatuur stijgt naar tien graden. Vanavond wordt het kouder, rond de vier graden, met kans op mist. Morgen is het overwegend droog met een temperatuur van negen graden. De wind waait matig uit het zuidwesten. Het weekend ziet er beter uit: zonnig met temperaturen tot veertien graden.",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Hoe is het weer vanochtend?",
+              "options": [
+                "Zonnig en warm.",
+                "Bewolkt met regen.",
+                "Koud met sneeuw.",
+                "Mistig."
+              ],
+              "answer": "Bewolkt met regen.",
+              "explanation": "The weather report says: 'Vanochtend is het bewolkt met af en toe regen.'"
+            },
+            {
+              "id": "q2",
+              "question": "Wat is de temperatuur vanmiddag?",
+              "options": [
+                "Vier graden.",
+                "Acht graden.",
+                "Tien graden.",
+                "Veertien graden."
+              ],
+              "answer": "Tien graden.",
+              "explanation": "The report says: 'De temperatuur stijgt naar tien graden' for the afternoon."
+            },
+            {
+              "id": "q3",
+              "question": "Hoe wordt het weer in het weekend?",
+              "options": [
+                "Koud en regenachtig.",
+                "Bewolkt met wind.",
+                "Zonnig met veertien graden.",
+                "Mistig en koud."
+              ],
+              "answer": "Zonnig met veertien graden.",
+              "explanation": "The report says: 'Het weekend ziet er beter uit: zonnig met temperaturen tot veertien graden.'"
+            }
+          ]
+        },
+        {
+          "id": "listen_2_2",
+          "title": "Telefoongesprek met de verhuurder",
+          "text": "Hallo, u spreekt met Jan de Wit van woningbeheer. Ik bel over uw melding van gisteren. U had een probleem met de verwarming, klopt dat? Ja, dat klopt. De verwarming doet het niet meer sinds maandag. Het is erg koud in het appartement. Dat begrijp ik, dat is heel vervelend. Ik kan een monteur sturen. De eerste mogelijkheid is morgen, donderdagmiddag tussen twee en vier. Bent u dan thuis? Ja, donderdagmiddag ben ik thuis. Dat is prima. Dan stuur ik morgen een monteur langs. Als het probleem niet opgelost kan worden, nemen wij een kachel voor u mee. Dat is erg aardig. Dank u wel. Graag gedaan. Tot morgen.",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Wat is het probleem?",
+              "options": [
+                "Het dak lekt.",
+                "De verwarming werkt niet.",
+                "De deur is kapot.",
+                "Er is geen warm water."
+              ],
+              "answer": "De verwarming werkt niet.",
+              "explanation": "The tenant says: 'De verwarming doet het niet meer sinds maandag.'"
+            },
+            {
+              "id": "q2",
+              "question": "Wanneer komt de monteur?",
+              "options": [
+                "Vandaag.",
+                "Morgenochtend.",
+                "Donderdagmiddag.",
+                "Vrijdag."
+              ],
+              "answer": "Donderdagmiddag.",
+              "explanation": "The landlord says: 'De eerste mogelijkheid is morgen, donderdagmiddag tussen twee en vier.'"
+            },
+            {
+              "id": "q3",
+              "question": "Wat doet de verhuurder als het probleem niet opgelost kan worden?",
+              "options": [
+                "Hij geeft korting op de huur.",
+                "Hij stuurt een andere monteur.",
+                "Hij neemt een kachel mee.",
+                "Hij biedt een ander appartement aan."
+              ],
+              "answer": "Hij neemt een kachel mee.",
+              "explanation": "The landlord says: 'nemen wij een kachel voor u mee.'"
+            }
+          ]
+        },
+        {
+          "id": "listen_2_3",
+          "title": "Aankondiging in de supermarkt",
+          "text": "Beste klanten, welkom bij Albert Heijn. Wij willen u graag wijzen op onze weekaanbiedingen. Deze week zijn alle zuivelproducten in de aanbieding: melk, yoghurt en kaas met twintig procent korting. Bij de groente- en fruitafdeling vindt u verse aardbeien voor maar twee euro per bakje. Let op: de sluitingstijd is vandaag gewijzigd. Wij sluiten vandaag om acht uur in plaats van negen uur vanwege een personeelsbijeenkomst. Morgen zijn wij weer open op de normale tijden, van acht uur 's ochtends tot negen uur 's avonds. Bedankt voor uw aandacht en fijn winkelen!",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Hoeveel korting is er op zuivelproducten?",
+              "options": [
+                "Tien procent.",
+                "Vijftien procent.",
+                "Twintig procent.",
+                "Dertig procent."
+              ],
+              "answer": "Twintig procent.",
+              "explanation": "The announcement says: 'melk, yoghurt en kaas met twintig procent korting'."
+            },
+            {
+              "id": "q2",
+              "question": "Hoe laat sluit de winkel vandaag?",
+              "options": [
+                "Om zeven uur.",
+                "Om acht uur.",
+                "Om negen uur.",
+                "Om tien uur."
+              ],
+              "answer": "Om acht uur.",
+              "explanation": "The announcement says: 'Wij sluiten vandaag om acht uur in plaats van negen uur.'"
+            },
+            {
+              "id": "q3",
+              "question": "Waarom sluit de winkel eerder?",
+              "options": [
+                "Vanwege een verbouwing.",
+                "Vanwege een personeelsbijeenkomst.",
+                "Vanwege slecht weer.",
+                "Vanwege een feestdag."
+              ],
+              "answer": "Vanwege een personeelsbijeenkomst.",
+              "explanation": "The announcement says: 'vanwege een personeelsbijeenkomst'."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "examNumber": 3,
+      "passages": [
+        {
+          "id": "listen_3_1",
+          "title": "Instructie bij de sportschool",
+          "text": "Welkom bij Sportcentrum Fit en Gezond! Ik ga u even rondleiden. Hier links ziet u de grote sportzaal. Daar worden groepslessen gegeven, zoals yoga, spinning en zumba. De groepslessen staan op het bord bij de ingang. U moet zich van tevoren aanmelden via de app. Rechtdoor is de fitnesszaal met alle apparaten. Daar kunt u altijd terecht zonder afspraak. De kleedkamers zijn aan het einde van de gang. In de kleedkamers vindt u gratis kluisjes. U hebt wel een eigen hangslot nodig. De sportschool is open van maandag tot en met vrijdag van zeven tot tweeentwintig uur, en in het weekend van negen tot achttien uur.",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Hoe kunt u zich aanmelden voor groepslessen?",
+              "options": [
+                "Aan de balie.",
+                "Via de app.",
+                "Per e-mail.",
+                "Per telefoon."
+              ],
+              "answer": "Via de app.",
+              "explanation": "The instructor says: 'U moet zich van tevoren aanmelden via de app.'"
+            },
+            {
+              "id": "q2",
+              "question": "Wat hebt u nodig voor de kluisjes?",
+              "options": [
+                "Een sleutel van de sportschool.",
+                "Geld.",
+                "Een eigen hangslot.",
+                "Een pasje."
+              ],
+              "answer": "Een eigen hangslot.",
+              "explanation": "The instructor says: 'U hebt wel een eigen hangslot nodig.'"
+            },
+            {
+              "id": "q3",
+              "question": "Hoe laat gaat de sportschool open in het weekend?",
+              "options": [
+                "Om zeven uur.",
+                "Om acht uur.",
+                "Om negen uur.",
+                "Om tien uur."
+              ],
+              "answer": "Om negen uur.",
+              "explanation": "The instructor says: 'in het weekend van negen tot achttien uur'."
+            }
+          ]
+        },
+        {
+          "id": "listen_3_2",
+          "title": "Bericht op school",
+          "text": "Goedemorgen, ouders en verzorgers. Ik wil graag iets vertellen over de komende ouderavond. De ouderavond is op dinsdag vijftien april om half acht 's avonds in de aula van de school. Tijdens de ouderavond bespreken wij de voortgang van uw kind en kunt u vragen stellen aan de leerkracht. Elk gesprek duurt tien minuten. U kunt zich inschrijven via de website van de school. Kies een tijdslot dat u het beste uitkomt. Als u niet kunt komen, kunt u ook een telefonisch gesprek aanvragen. Wij vinden het belangrijk dat alle ouders betrokken zijn bij de school. Tot dinsdag!",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Wanneer is de ouderavond?",
+              "options": [
+                "Maandag vijftien april.",
+                "Dinsdag vijftien april.",
+                "Woensdag vijftien april.",
+                "Donderdag vijftien april."
+              ],
+              "answer": "Dinsdag vijftien april.",
+              "explanation": "The announcement says: 'De ouderavond is op dinsdag vijftien april.'"
+            },
+            {
+              "id": "q2",
+              "question": "Hoe lang duurt elk gesprek?",
+              "options": [
+                "Vijf minuten.",
+                "Tien minuten.",
+                "Vijftien minuten.",
+                "Twintig minuten."
+              ],
+              "answer": "Tien minuten.",
+              "explanation": "The announcement says: 'Elk gesprek duurt tien minuten.'"
+            },
+            {
+              "id": "q3",
+              "question": "Wat kunt u doen als u niet kunt komen?",
+              "options": [
+                "Een brief schrijven.",
+                "Iemand anders sturen.",
+                "Een telefonisch gesprek aanvragen.",
+                "Niets, u moet komen."
+              ],
+              "answer": "Een telefonisch gesprek aanvragen.",
+              "explanation": "The announcement says: 'kunt u ook een telefonisch gesprek aanvragen.'"
+            }
+          ]
+        },
+        {
+          "id": "listen_3_3",
+          "title": "Boodschappenlijst aan de telefoon",
+          "text": "Hoi schat, ik ben nog op mijn werk maar ik bel even snel. Kun je na je werk nog even naar de Albert Heijn gaan? We hebben een paar dingen nodig voor vanavond. Ik wil pasta maken. We hebben spaghetti nodig, een pot pastasaus, en verse champignons. Oh, en koop ook een zakje geraspte kaas. En we hebben geen melk meer, dus neem ook een pak halfvolle melk mee. En als ze verse basilicum hebben, neem dat ook mee. Verder hebben we nog brood nodig voor morgenochtend, een volkoren brood graag. Hoeveel denk je dat het kost? Ik denk rond de vijftien euro. Ik heb een tientje in de la liggen, de rest pin je maar. Dank je! Tot vanavond!",
+          "questions": [
+            {
+              "id": "q1",
+              "question": "Wat gaat de spreker vanavond koken?",
+              "options": [
+                "Rijst met groenten.",
+                "Pasta.",
+                "Soep.",
+                "Pannenkoeken."
+              ],
+              "answer": "Pasta.",
+              "explanation": "The speaker says: 'Ik wil pasta maken.'"
+            },
+            {
+              "id": "q2",
+              "question": "Welk brood moet er gekocht worden?",
+              "options": [
+                "Wit brood.",
+                "Bruin brood.",
+                "Volkoren brood.",
+                "Roggebrood."
+              ],
+              "answer": "Volkoren brood.",
+              "explanation": "The speaker says: 'een volkoren brood graag'."
+            },
+            {
+              "id": "q3",
+              "question": "Hoeveel geld ligt er in de la?",
+              "options": [
+                "Vijf euro.",
+                "Tien euro.",
+                "Vijftien euro.",
+                "Twintig euro."
+              ],
+              "answer": "Tien euro.",
+              "explanation": "The speaker says: 'Ik heb een tientje in de la liggen.' A 'tientje' is ten euros."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

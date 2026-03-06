@@ -1,0 +1,115 @@
+{
+  "topic": "pronouns",
+  "topicNL": "Voornaamwoorden",
+  "explanation": {
+    "summary": "Het Nederlands heeft persoonlijke voornaamwoorden (onderwerp en lijdend/meewerkend voorwerp), bezittelijke voornaamwoorden en aanwijzende voornaamwoorden. Veel voornaamwoorden hebben een volle (benadrukte) en een gereduceerde (onbenadrukte) vorm.",
+    "rules": [
+      "PERSOONLIJKE VOORNAAMWOORDEN (onderwerp, vol/gereduceerd): ik/-, jij/je, u/-, hij/-ie, zij/ze, het/'t, wij/we, jullie/-, zij/ze.",
+      "PERSOONLIJKE VOORNAAMWOORDEN (lijdend voorwerp, vol/gereduceerd): mij/me, jou/je, u/-, hem/'m, haar/d'r of ze, het/'t, ons/-, jullie/-, hen of hun/ze.",
+      "PERSOONLIJKE VOORNAAMWOORDEN (meewerkend voorwerp, vol/gereduceerd): mij/me, jou/je, u/-, hem/'m, haar/d'r, het/'t, ons/-, jullie/-, hun/ze.",
+      "BEZITTELIJKE VOORNAAMWOORDEN: mijn (m'n), jouw (je), uw, zijn (z'n), haar (d'r), ons/onze, jullie (je), hun.",
+      "'Ons' wordt gebruikt bij het-woorden enkelvoud: ons huis. 'Onze' wordt gebruikt bij de-woorden en meervouden: onze auto, onze kinderen.",
+      "AANWIJZENDE VOORNAAMWOORDEN: deze/dit (dichtbij), die/dat (ver weg). 'Deze' en 'die' bij de-woorden en meervouden. 'Dit' en 'dat' bij het-woorden enkelvoud.",
+      "'U' is de beleefde vorm (formeel). Het wordt gebruikt als onderwerp, lijdend voorwerp en meewerkend voorwerp.",
+      "'Hen' is officieel het lijdend voorwerp, 'hun' het meewerkend voorwerp. In de spreektaal wordt dit verschil vaak niet gemaakt en gebruiken veel Nederlanders 'hun' of 'ze' voor beide.",
+      "De gereduceerde vormen (je, ze, me, 'm, 't, d'r, m'n, z'n) worden veel gebruikt in de spreektaal.",
+      "'Het' als onderwerp verwijst naar het-woorden of naar een hele situatie: Het regent. Het is moeilijk."
+    ],
+    "exceptions": [
+      "'Hun' als onderwerp ('Hun hebben dat gedaan') wordt NIET geaccepteerd in standaard Nederlands. Gebruik 'Zij hebben dat gedaan'.",
+      "'Hen/hun'-onderscheid: officieel is 'hen' lijdend voorwerp (Ik zie hen) en 'hun' meewerkend voorwerp (Ik geef hun een boek). In de praktijk gebruiken veel mensen 'ze' voor beide.",
+      "Bij dingen (niet-personen) gebruik je 'het', 'hem' of 'er' in plaats van 'hij/zij': Het boek? Ik heb het gelezen. (niet: Ik heb hem gelezen, hoewel dit in de spreektaal wel voorkomt).",
+      "'Er' wordt vaak gebruikt als verwijzing naar een plaats of als voorlopig onderwerp: Ik woon er al 5 jaar. Er zijn veel mensen.",
+      "Bij voorzetsel + voornaamwoord voor dingen: gebruik 'er' + voorzetsel: Ik denk eraan (niet: Ik denk aan het)."
+    ],
+    "commonMistakes": [
+      "'Hun hebben dat gezegd' is fout in standaard Nederlands - gebruik 'Zij hebben dat gezegd'.",
+      "'Jou auto' is fout - 'jou' is het lijdend voorwerp. Het bezittelijk voornaamwoord is 'jouw': jouw auto.",
+      "'Ik geef het aan zij' is fout - na een voorzetsel gebruik je de objectvorm: Ik geef het aan haar.",
+      "'Mijn en jouw huis' - let op: 'mijn' (bezittelijk) is niet hetzelfde als 'mij' (objectvorm).",
+      "Verwarring tussen 'zijn' (bezittelijk voornaamwoord) en 'zijn' (werkwoord): 'Zijn auto is rood' versus 'Hij is rood'.",
+      "'Dit auto' is fout - 'auto' is een de-woord, dus: 'deze auto'. 'Dit' alleen bij het-woorden enkelvoud."
+    ],
+    "tip": "Onthoud: de volle vormen (mij, jou, hij, zij, wij) gebruik je als je NADRUK wilt leggen: 'IK heb dat gedaan, niet hij!' De gereduceerde vormen (me, je, ie, ze, we) gebruik je in gewone, neutrale zinnen: 'Heb je dat gedaan?' Oefen met beide vormen!"
+  },
+  "exercises": [
+    {
+      "type": "fill_blank",
+      "sentence": "Ik zie ___. (hij, lijdend voorwerp)",
+      "answer": "hem",
+      "explanation": "Het lijdend voorwerp van 'hij' is 'hem': Ik zie hem."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "___ fiets staat voor de deur. (bezittelijk, jij)",
+      "options": ["Jou", "Jouw", "Je", "Jij"],
+      "answer": "Jouw",
+      "explanation": "Het bezittelijk voornaamwoord van 'jij' is 'jouw' (vol) of 'je' (gereduceerd). 'Jou' is de objectvorm, niet bezittelijk."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Wij geven ___ een cadeau. (zij, meervoud, meewerkend voorwerp)",
+      "answer": "hun",
+      "explanation": "Het meewerkend voorwerp van 'zij' (meervoud) is 'hun': Wij geven hun een cadeau."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "Dat is ___ huis. (wij, bezittelijk, het-woord)",
+      "options": ["onze", "ons", "onzen", "wij"],
+      "answer": "ons",
+      "explanation": "'Huis' is een het-woord enkelvoud, dus gebruiken we 'ons' (niet 'onze'): ons huis."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "___ kinderen zijn lief. (wij, bezittelijk)",
+      "answer": "Onze",
+      "explanation": "'Kinderen' is meervoud, dus gebruiken we 'onze' (niet 'ons'): onze kinderen."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "Ken jij ___ vrouw? (hij, bezittelijk)",
+      "options": ["hem", "hij", "zijn", "haar"],
+      "answer": "zijn",
+      "explanation": "Het bezittelijk voornaamwoord van 'hij' is 'zijn': zijn vrouw."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Ik bel ___ morgen. (jij, lijdend voorwerp)",
+      "answer": "je",
+      "explanation": "Het lijdend voorwerp van 'jij' is 'jou' (vol) of 'je' (gereduceerd). In een neutrale zin is 'je' gebruikelijk."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "___ boek is heel interessant. (dichtbij, het-woord)",
+      "options": ["Deze", "Dit", "Die", "Dat"],
+      "answer": "Dit",
+      "explanation": "'Boek' is een het-woord enkelvoud. Dichtbij = 'dit': dit boek."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "___ schoenen zijn van mij. (ver weg, meervoud)",
+      "answer": "Die",
+      "explanation": "Meervoud + ver weg = 'die': die schoenen."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "De leraar geeft ___ de boeken. (wij, meewerkend voorwerp)",
+      "options": ["wij", "onze", "ons", "we"],
+      "answer": "ons",
+      "explanation": "Het meewerkend voorwerp van 'wij' is 'ons': De leraar geeft ons de boeken."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Ik heb ___ gisteren gezien. (zij, enkelvoud, lijdend voorwerp)",
+      "answer": "haar",
+      "explanation": "Het lijdend voorwerp van 'zij' (enkelvoud) is 'haar': Ik heb haar gisteren gezien."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "___ auto is blauw. (zij, enkelvoud, bezittelijk)",
+      "options": ["Zij", "Ze", "Haar", "Hun"],
+      "answer": "Haar",
+      "explanation": "Het bezittelijk voornaamwoord van 'zij' (enkelvoud) is 'haar': haar auto."
+    }
+  ]
+}

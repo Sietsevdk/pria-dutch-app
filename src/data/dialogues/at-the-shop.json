@@ -1,0 +1,118 @@
+{
+  "id": "at-the-shop",
+  "title": "In de kledingwinkel",
+  "titleEN": "At the Clothing Shop",
+  "context": "You are shopping for new clothes at a clothing store and need help finding the right size and color.",
+  "lines": [
+    {
+      "speaker": "Verkoper",
+      "dutch": "Goedemiddag! Kan ik u ergens mee helpen?",
+      "english": "Good afternoon! Can I help you with anything?",
+      "note": "'Ergens mee helpen' means 'to help with something'."
+    },
+    {
+      "speaker": "Klant",
+      "dutch": "Ja, graag. Ik zoek een winterjas. Hebt u iets in maat M?",
+      "english": "Yes, please. I'm looking for a winter coat. Do you have anything in size M?"
+    },
+    {
+      "speaker": "Verkoper",
+      "dutch": "Natuurlijk! Wij hebben deze jassen in verschillende kleuren. Heeft u een voorkeur?",
+      "english": "Of course! We have these coats in different colors. Do you have a preference?",
+      "note": "'Een voorkeur hebben' means 'to have a preference'."
+    },
+    {
+      "speaker": "Klant",
+      "dutch": "Ik wil graag iets in het donkerblauw of zwart. Wat kost deze jas?",
+      "english": "I'd like something in dark blue or black. What does this coat cost?"
+    },
+    {
+      "speaker": "Verkoper",
+      "dutch": "Deze is negenentachtig euro. Hij is nu in de aanbieding; de originele prijs was honderdtwintig euro.",
+      "english": "This one is eighty-nine euros. It's on sale now; the original price was one hundred and twenty euros.",
+      "note": "'In de aanbieding' means 'on sale/special offer'."
+    },
+    {
+      "speaker": "Klant",
+      "dutch": "Dat is een mooie prijs. Kan ik hem passen?",
+      "english": "That's a nice price. Can I try it on?",
+      "note": "'Passen' means 'to try on' or 'to fit'."
+    },
+    {
+      "speaker": "Verkoper",
+      "dutch": "Ja, de paskamers zijn daar achterin, aan de linkerkant.",
+      "english": "Yes, the fitting rooms are back there, on the left side."
+    },
+    {
+      "speaker": "Klant",
+      "dutch": "Hij past goed, maar hebt u hem misschien een maatje kleiner? Deze is een beetje te groot.",
+      "english": "It fits well, but do you perhaps have it one size smaller? This one is a bit too big.",
+      "note": "'Een maatje kleiner' is a common way to ask for one size down."
+    },
+    {
+      "speaker": "Verkoper",
+      "dutch": "Ik zal even voor u kijken. Ja, hier is maat S in het donkerblauw.",
+      "english": "I'll have a look for you. Yes, here is size S in dark blue."
+    },
+    {
+      "speaker": "Klant",
+      "dutch": "Ja, deze past perfect! Ik neem hem. Kan ik met pin betalen?",
+      "english": "Yes, this one fits perfectly! I'll take it. Can I pay by debit card?",
+      "note": "'Pinnen' or 'met pin betalen' means to pay with a debit card."
+    },
+    {
+      "speaker": "Verkoper",
+      "dutch": "Ja, u kunt pinnen. Contant betalen kan ook. Wilt u de bon erbij?",
+      "english": "Yes, you can pay by debit card. Cash is also possible. Would you like the receipt?",
+      "note": "'De bon' means 'the receipt'. Always keep it for returns."
+    },
+    {
+      "speaker": "Klant",
+      "dutch": "Ja, graag. Kan ik de jas ruilen als hij toch niet goed is?",
+      "english": "Yes, please. Can I exchange the coat if it doesn't work out?"
+    },
+    {
+      "speaker": "Verkoper",
+      "dutch": "U kunt hem binnen dertig dagen ruilen of terugbrengen met de bon. Aanbiedingsartikelen kunnen niet worden teruggebracht.",
+      "english": "You can exchange or return it within thirty days with the receipt. Sale items cannot be returned."
+    },
+    {
+      "speaker": "Klant",
+      "dutch": "Goed, dat is duidelijk. Dank u wel voor uw hulp!",
+      "english": "Good, that's clear. Thank you for your help!"
+    },
+    {
+      "speaker": "Verkoper",
+      "dutch": "Graag gedaan! Fijne dag verder!",
+      "english": "You're welcome! Have a nice rest of the day!"
+    }
+  ],
+  "keyPhrases": [
+    {
+      "dutch": "Hebt u dit in maat...?",
+      "english": "Do you have this in size...?",
+      "usage": "Use this to ask for a specific size in a shop."
+    },
+    {
+      "dutch": "Kan ik het passen?",
+      "english": "Can I try it on?",
+      "usage": "Ask this before going to the fitting room."
+    },
+    {
+      "dutch": "Wat kost dit?",
+      "english": "What does this cost?",
+      "usage": "A direct way to ask the price of something."
+    },
+    {
+      "dutch": "Kan ik met pin betalen?",
+      "english": "Can I pay by debit card?",
+      "usage": "Use this at any cash register in the Netherlands."
+    },
+    {
+      "dutch": "Kan ik het ruilen?",
+      "english": "Can I exchange it?",
+      "usage": "Ask about the return and exchange policy."
+    }
+  ],
+  "culturalNote": "In the Netherlands, pinnen (paying by debit card) is the most common way to pay. Many shops, especially smaller ones, do not accept credit cards and some no longer accept cash at all. The Dutch debit card system is very widely used, and you will often see 'pin only' signs. It is always wise to ask 'Kan ik met pin betalen?' or 'Accepteert u contant geld?' (Do you accept cash?). Keep your bon (receipt) for returns."
+}

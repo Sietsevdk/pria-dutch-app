@@ -1,0 +1,143 @@
+{
+  "topic": "perfect-tense",
+  "topicNL": "Voltooid tegenwoordige tijd (VTT)",
+  "explanation": {
+    "summary": "De voltooid tegenwoordige tijd (het perfectum) gebruik je om te praten over het verleden in de spreektaal. Je vormt het met een hulpwerkwoord (hebben of zijn) + een voltooid deelwoord. Voorbeeld: Ik heb gewerkt. Zij is gekomen.",
+    "rules": [
+      "Structuur: hulpwerkwoord (hebben/zijn) + voltooid deelwoord.",
+      "Het hulpwerkwoord staat op de tweede positie (V2), het voltooid deelwoord staat aan het eind van de zin.",
+      "Voltooid deelwoord van zwakke werkwoorden: ge- + stam + -t (als de stam eindigt op een 't kofschip'-letter) of ge- + stam + -d (anders).",
+      "Voorbeeld zwak: werken → ge + werk + t = gewerkt. Wonen → ge + woon + d = gewoond.",
+      "Voltooid deelwoord van sterke werkwoorden: ge- + veranderde stam + -en. Voorbeeld: schrijven → geschreven, rijden → gereden.",
+      "De 't kofschip-regel geldt ook hier voor zwakke werkwoorden: stam eindigt op t, k, f, s, ch, p → -t, anders → -d.",
+      "Bij v→f en z→s in de stam: kijk naar de oorspronkelijke klank. 'Leven' → geleefd (d, want oorspronkelijk v). 'Reizen' → gereisd (d, want oorspronkelijk z).",
+      "Onscheidbare voorvoegsels (be-, er-, ge-, her-, ont-, ver-) krijgen GEEN extra ge-: betalen → betaald (niet gebetaald), vertellen → verteld (niet geverteld).",
+      "Werkwoorden op -eren krijgen geen ge-: studeren → gestudeerd. Maar: repareren → gerepareerd.",
+      "Scheidbare werkwoorden: ge- komt TUSSEN het voorvoegsel en het werkwoord: opbellen → opgebeld, aankomen → aangekomen.",
+      "Hebben als hulpwerkwoord: de meeste werkwoorden gebruiken 'hebben'.",
+      "Zijn als hulpwerkwoord: werkwoorden van beweging met richting (gaan, komen, rijden, lopen, vliegen, vertrekken, aankomen) en verandering van toestand (worden, beginnen, stoppen, groeien, sterven, veranderen).",
+      "Ook 'zijn' en 'blijven' gebruiken 'zijn' als hulpwerkwoord: ik ben geweest, ik ben gebleven.",
+      "Vergelijking: 'Ik heb gefietst' (fietsen zonder richting) versus 'Ik ben naar huis gefietst' (fietsen met richting)."
+    ],
+    "exceptions": [
+      "Zijn → geweest (sterk, onregelmatig). Hulpwerkwoord: zijn. Ik ben geweest.",
+      "Hebben → gehad (onregelmatig). Hulpwerkwoord: hebben. Ik heb gehad.",
+      "Gaan → gegaan (onregelmatig). Hulpwerkwoord: zijn. Ik ben gegaan.",
+      "Doen → gedaan (onregelmatig). Hulpwerkwoord: hebben. Ik heb gedaan.",
+      "Komen → gekomen (sterk). Hulpwerkwoord: zijn. Ik ben gekomen.",
+      "Zien → gezien (onregelmatig). Hulpwerkwoord: hebben. Ik heb gezien.",
+      "Kopen → gekocht (onregelmatig). Hulpwerkwoord: hebben. Ik heb gekocht.",
+      "Denken → gedacht (onregelmatig). Hulpwerkwoord: hebben. Ik heb gedacht.",
+      "Brengen → gebracht (onregelmatig). Hulpwerkwoord: hebben. Ik heb gebracht.",
+      "Eten → gegeten (sterk). Hulpwerkwoord: hebben. Ik heb gegeten.",
+      "Sommige werkwoorden kunnen zowel hebben als zijn krijgen afhankelijk van betekenis: 'Ik heb gelopen' (ik was aan het wandelen) versus 'Ik ben naar huis gelopen' (richting)."
+    ],
+    "commonMistakes": [
+      "'Ik heb gekomen' is fout - 'komen' gebruikt 'zijn': ik ben gekomen.",
+      "'Ik heb gegaan' is fout - 'gaan' gebruikt 'zijn': ik ben gegaan.",
+      "'Ik heb gewerked' is fout - het voltooid deelwoord van 'werken' is 'gewerkt' (niet -ed zoals in het Engels).",
+      "'Ik heb gebetaald' is fout - 'betalen' heeft het onscheidbare voorvoegsel be-, dus geen extra ge-: ik heb betaald.",
+      "'Ik heb geverteld' is fout - 'vertellen' heeft het onscheidbare voorvoegsel ver-, dus: ik heb verteld.",
+      "'Ik heb opgebellen' is fout - het voltooid deelwoord is 'opgebeld', niet de infinitief.",
+      "Vergeten om 'ge-' tussen het voorvoegsel te plaatsen bij scheidbare werkwoorden: 'opgebeld' (niet 'geopbeld')."
+    ],
+    "tip": "Onthoud voor hebben/zijn: beweging met RICHTING = zijn (ik ben naar huis gelopen), beweging zonder richting = hebben (ik heb gelopen). Verandering van toestand = zijn (hij is gestorven, het is begonnen). Bij twijfel: de meeste werkwoorden gebruiken 'hebben'."
+  },
+  "exercises": [
+    {
+      "type": "fill_blank",
+      "sentence": "Ik ___ gisteren hard ___. (werken)",
+      "answer": "heb, gewerkt",
+      "explanation": "'Werken' is een zwak werkwoord. Stam 'werk' eindigt op k ('t kofschip) → gewerkt. Hulpwerkwoord: hebben."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Zij ___ naar Amsterdam ___. (reizen)",
+      "answer": "is, gereisd",
+      "explanation": "'Reizen' met richting → hulpwerkwoord 'zijn'. Stam 'reis' (z→s), maar oorspronkelijke klank is z → gereisd."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "Wij ___ een film ___. (kijken)",
+      "options": ["hebben, gekijkt", "zijn, gekeken", "hebben, gekeken", "zijn, gekijkt"],
+      "answer": "hebben, gekeken",
+      "explanation": "'Kijken' is een sterk werkwoord: gekeken. Het is geen bewegings- of veranderingswerkwoord, dus: hebben."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Hij ___ de rekening ___. (betalen)",
+      "answer": "heeft, betaald",
+      "explanation": "'Betalen' heeft het onscheidbare voorvoegsel be-, dus geen ge-. Stam 'betaal', l is niet in 't kofschip → betaald."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "De kinderen ___ naar school ___. (lopen)",
+      "options": ["hebben, geloopt", "zijn, gelopen", "hebben, gelopen", "zijn, geloopt"],
+      "answer": "zijn, gelopen",
+      "explanation": "'Lopen' is een sterk werkwoord (gelopen) en hier is er sprake van beweging met richting (naar school), dus: zijn."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Ik ___ mijn moeder ___. (opbellen)",
+      "answer": "heb, opgebeld",
+      "explanation": "'Opbellen' is scheidbaar. Het ge- komt tussen op- en -beld: opgebeld. Hulpwerkwoord: hebben."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Wij ___ Nederlands ___. (studeren)",
+      "answer": "hebben, gestudeerd",
+      "explanation": "'Studeren' is een zwak werkwoord op -eren: gestudeerd. Hulpwerkwoord: hebben."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "Zij ___ gisteren vroeg ___. (vertrekken)",
+      "options": ["heeft, vertrokken", "is, vertrokken", "heeft, gevertrokken", "is, gevertrokken"],
+      "answer": "is, vertrokken",
+      "explanation": "'Vertrekken' is een sterk werkwoord (vertrokken) met onscheidbaar voorvoegsel ver- (geen ge-). Beweging met richting → zijn."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "De leraar ___ alles goed ___. (uitleggen)",
+      "answer": "heeft, uitgelegd",
+      "explanation": "'Uitleggen' is scheidbaar. Ge- komt tussen uit- en -legd: uitgelegd. Stam 'leg', g niet in 't kofschip → -d."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Ik ___ een boek ___. (lezen)",
+      "answer": "heb, gelezen",
+      "explanation": "'Lezen' is een sterk werkwoord: gelezen. Hulpwerkwoord: hebben."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "Het kind ___ snel ___. (groeien)",
+      "options": ["heeft, gegroeid", "is, gegroeid", "heeft, gegroed", "is, gegroeien"],
+      "answer": "is, gegroeid",
+      "explanation": "'Groeien' is een verandering van toestand → hulpwerkwoord 'zijn'. Voltooid deelwoord: gegroeid."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Mijn zus ___ in Parijs ___. (wonen)",
+      "answer": "heeft, gewoond",
+      "explanation": "'Wonen' is een zwak werkwoord. Stam 'woon', n niet in 't kofschip → gewoond. Hulpwerkwoord: hebben."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Jullie ___ goed ___! (doen)",
+      "answer": "hebben, gedaan",
+      "explanation": "'Doen' is onregelmatig: gedaan. Hulpwerkwoord: hebben."
+    },
+    {
+      "type": "multiple_choice",
+      "sentence": "Ik ___ de hele dag thuis ___. (blijven)",
+      "options": ["heb, gebleven", "ben, gebleven", "heb, geblijfd", "ben, geblijven"],
+      "answer": "ben, gebleven",
+      "explanation": "'Blijven' is een sterk werkwoord (gebleven) en gebruikt altijd 'zijn' als hulpwerkwoord."
+    },
+    {
+      "type": "fill_blank",
+      "sentence": "Wij ___ het verhaal niet ___. (begrijpen)",
+      "answer": "hebben, begrepen",
+      "explanation": "'Begrijpen' is sterk (begrepen) met onscheidbaar voorvoegsel be- (geen extra ge-). Hulpwerkwoord: hebben."
+    }
+  ]
+}
