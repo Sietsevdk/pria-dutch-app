@@ -4,16 +4,33 @@ import { useState, useCallback, useRef, useEffect } from 'react';
  * Hook for Text-to-Speech and Speech Recognition
  *
  * TTS strategy:
- *   1. Primary: Google Translate TTS via <audio> — natural-sounding Dutch
- *   2. Fallback: Browser SpeechSynthesis with optimised voice selection
+ *   - iOS/mobile: Browser SpeechSynthesis ONLY (must be synchronous from tap)
+ *   - Desktop: Try Google Translate TTS first, fall back to SpeechSynthesis
  *
- * Speech Recognition: Web Speech API for Dutch (nl-NL)
+ * iOS Safari requires speechSynthesis.speak() to be called synchronously
+ * within a user gesture handler. Any async gap (await, setTimeout, fetch)
+ * will cause iOS to silently block the audio.
  */
+
+// Detect iOS / mobile Safari
+const IS_IOS =
+  typeof navigator !== 'undefined' &&
+  (/iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1));
+
+const IS_MOBILE =
+  typeof navigator !== 'undefined' &&
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
+
 export function useSpeech() {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [transcript, setTranscript] = useState('');
-  const [speechSupported, setSpeechSupported] = useState(() => typeof window !== 'undefined' && 'speechSynthesis' in window);
+  const [speechSupported, setSpeechSupported] = useState(
+    () => typeof window !== 'undefined' && 'speechSynthesis' in window
+  );
   const [recognitionSupported, setRecognitionSupported] = useState(true);
   const recognitionRef = useRef(null);
   const audioRef = useRef(null);
@@ -21,8 +38,9 @@ export function useSpeech() {
   const voicesLoadedRef = useRef(false);
   const recognitionTimeoutRef = useRef(null);
   const gotResultRef = useRef(false);
+  const iosUnlockedRef = useRef(false);
 
-  // ── Voice selection for SpeechSynthesis fallback ──
+  // ── Voice selection for SpeechSynthesis ──
 
   const rankDutchVoice = useCallback((voice) => {
     let score = 0;
@@ -58,6 +76,7 @@ export function useSpeech() {
   }, []);
 
   const selectBestDutchVoice = useCallback(() => {
+    if (typeof window === 'undefined' || !('speechSynthesis' in window)) return;
     const voices = window.speechSynthesis.getVoices();
     const dutchVoices = voices.filter(
       (v) => v.lang === 'nl-NL' || v.lang.startsWith('nl')
@@ -72,33 +91,124 @@ export function useSpeech() {
   }, [rankDutchVoice]);
 
   useEffect(() => {
-    setSpeechSupported('speechSynthesis' in window);
+    const supported = 'speechSynthesis' in window;
+    setSpeechSupported(supported);
     setRecognitionSupported(
       'SpeechRecognition' in window || 'webkitSpeechRecognition' in window
     );
 
-    if ('speechSynthesis' in window) {
+    if (supported) {
       selectBestDutchVoice();
       const handleVoicesChanged = () => selectBestDutchVoice();
-      window.speechSynthesis.addEventListener('voiceschanged', handleVoicesChanged);
+      window.speechSynthesis.addEventListener(
+        'voiceschanged',
+        handleVoicesChanged
+      );
       return () => {
-        window.speechSynthesis.removeEventListener('voiceschanged', handleVoicesChanged);
+        window.speechSynthesis.removeEventListener(
+          'voiceschanged',
+          handleVoicesChanged
+        );
       };
     }
   }, [selectBestDutchVoice]);
 
-  // ── Google Translate TTS (primary — more natural) ──
+  // ── iOS unlock hack ──
+  // iOS Safari requires a speechSynthesis.speak() call during a user gesture
+  // to "unlock" the audio context. We do this once on the first tap anywhere.
+  useEffect(() => {
+    if (!IS_IOS) return;
+
+    const unlock = () => {
+      if (iosUnlockedRef.current) return;
+      iosUnlockedRef.current = true;
+
+      // Speak a silent/empty utterance to unlock iOS audio
+      const utterance = new SpeechSynthesisUtterance('');
+      utterance.volume = 0;
+      utterance.lang = 'nl-NL';
+      window.speechSynthesis.speak(utterance);
+
+      document.removeEventListener('touchstart', unlock, true);
+      document.removeEventListener('click', unlock, true);
+    };
+
+    document.addEventListener('touchstart', unlock, true);
+    document.addEventListener('click', unlock, true);
+
+    return () => {
+      document.removeEventListener('touchstart', unlock, true);
+      document.removeEventListener('click', unlock, true);
+    };
+  }, []);
+
+  // ── Browser SpeechSynthesis (primary on iOS, fallback on desktop) ──
+  // IMPORTANT: This must be called synchronously from a user gesture on iOS
+
+  const speakWithBrowserTTS = useCallback(
+    (text, options = {}) => {
+      if (!('speechSynthesis' in window)) return;
+
+      window.speechSynthesis.cancel();
+
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'nl-NL';
+      utterance.rate = options.slow ? 0.55 : 0.85;
+      utterance.pitch = 1.05;
+      utterance.volume = 1;
+
+      if (selectedVoiceRef.current) {
+        utterance.voice = selectedVoiceRef.current;
+      }
+
+      utterance.onstart = () => setIsSpeaking(true);
+      utterance.onend = () => setIsSpeaking(false);
+      utterance.onerror = (e) => {
+        // 'interrupted' and 'canceled' are expected when stop/cancel is called
+        if (e.error !== 'interrupted' && e.error !== 'canceled') {
+          console.warn('TTS error:', e.error);
+        }
+        setIsSpeaking(false);
+      };
+
+      // On iOS, there's a known bug where speech stops after ~15s.
+      // We work around it by keeping speechSynthesis "alive" with resume calls.
+      if (IS_IOS) {
+        const iosKeepAlive = setInterval(() => {
+          if (window.speechSynthesis.speaking) {
+            window.speechSynthesis.pause();
+            window.speechSynthesis.resume();
+          } else {
+            clearInterval(iosKeepAlive);
+          }
+        }, 5000);
+
+        const origOnEnd = utterance.onend;
+        utterance.onend = (e) => {
+          clearInterval(iosKeepAlive);
+          if (origOnEnd) origOnEnd(e);
+        };
+        const origOnError = utterance.onerror;
+        utterance.onerror = (e) => {
+          clearInterval(iosKeepAlive);
+          if (origOnError) origOnError(e);
+        };
+      }
+
+      window.speechSynthesis.speak(utterance);
+    },
+    []
+  );
+
+  // ── Google Translate TTS (desktop only — more natural) ──
 
   const speakWithGoogleTTS = useCallback((text, slow = false) => {
     return new Promise((resolve, reject) => {
-      // Google Translate TTS endpoint — works via <audio> element
       const encoded = encodeURIComponent(text);
-      // For longer text, Google limits to ~200 chars per request
       if (text.length > 200) {
         reject(new Error('text-too-long'));
         return;
       }
-      // ttsspeed: 1.0 = natural conversational speed, 0.5 = learner-friendly slow
       const speed = slow ? 0.5 : 1.0;
       const url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=nl&client=tw-ob&q=${encoded}&ttsspeed=${speed}`;
 
@@ -114,7 +224,6 @@ export function useSpeech() {
         reject(new Error('google-tts-failed'));
       };
 
-      // Short timeout — if Google doesn't respond, fall back quickly
       const timeout = setTimeout(() => {
         audio.pause();
         reject(new Error('google-tts-timeout'));
@@ -125,52 +234,19 @@ export function useSpeech() {
         setIsSpeaking(true);
       };
 
-      audio.play()
-        .catch((err) => {
-          clearTimeout(timeout);
-          reject(err);
-        });
+      audio.play().catch((err) => {
+        clearTimeout(timeout);
+        reject(err);
+      });
     });
   }, []);
 
-  // ── Browser SpeechSynthesis (fallback) ──
-
-  const speakWithBrowserTTS = useCallback(
-    (text, options = {}) => {
-      return new Promise((resolve) => {
-        window.speechSynthesis.cancel();
-
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = 'nl-NL';
-        // 1.0 = browser default speed; 0.85 sounds natural, 0.55 for learner-slow
-        utterance.rate = options.slow ? 0.55 : 0.85;
-        utterance.pitch = 1.05;
-        utterance.volume = 1;
-
-        if (selectedVoiceRef.current) {
-          utterance.voice = selectedVoiceRef.current;
-        }
-
-        utterance.onstart = () => setIsSpeaking(true);
-        utterance.onend = () => {
-          setIsSpeaking(false);
-          resolve();
-        };
-        utterance.onerror = () => {
-          setIsSpeaking(false);
-          resolve();
-        };
-
-        window.speechSynthesis.speak(utterance);
-      });
-    },
-    []
-  );
-
-  // ── Public speak function — tries Google first, then browser ──
+  // ── Public speak function ──
+  // On iOS/mobile: uses browser TTS synchronously (preserves user gesture)
+  // On desktop: tries Google TTS first, falls back to browser TTS
 
   const speak = useCallback(
-    async (text, options = {}) => {
+    (text, options = {}) => {
       if (!text) return;
 
       // Cancel any ongoing speech
@@ -178,20 +254,23 @@ export function useSpeech() {
         audioRef.current.pause();
         audioRef.current = null;
       }
-      if (speechSupported) {
+      if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
       }
 
-      try {
-        await speakWithGoogleTTS(text, options.slow);
-      } catch {
-        // Fallback to browser TTS
-        if (speechSupported) {
-          await speakWithBrowserTTS(text, options);
-        }
+      // On iOS / mobile: MUST use browser TTS synchronously — no async allowed
+      if (IS_IOS || IS_MOBILE) {
+        speakWithBrowserTTS(text, options);
+        return;
       }
+
+      // On desktop: try Google TTS (async is fine), fall back to browser
+      speakWithGoogleTTS(text, options.slow)
+        .catch(() => {
+          speakWithBrowserTTS(text, options);
+        });
     },
-    [speechSupported, speakWithGoogleTTS, speakWithBrowserTTS]
+    [speakWithGoogleTTS, speakWithBrowserTTS]
   );
 
   const stopSpeaking = useCallback(() => {
@@ -199,11 +278,11 @@ export function useSpeech() {
       audioRef.current.pause();
       audioRef.current = null;
     }
-    if (speechSupported) {
+    if ('speechSynthesis' in window) {
       window.speechSynthesis.cancel();
     }
     setIsSpeaking(false);
-  }, [speechSupported]);
+  }, []);
 
   // ── Speech Recognition ──
 
@@ -227,21 +306,9 @@ export function useSpeech() {
   }, [clearRecognitionTimeout]);
 
   const startListening = useCallback(
-    async (options = {}) => {
+    (options = {}) => {
       if (!recognitionSupported) return;
       abortExistingRecognition();
-
-      if (navigator.permissions && navigator.permissions.query) {
-        try {
-          const permResult = await navigator.permissions.query({ name: 'microphone' });
-          if (permResult.state === 'denied') {
-            if (options.onError) options.onError('not-allowed');
-            return;
-          }
-        } catch (_) {
-          // continue
-        }
-      }
 
       const SpeechRecognition =
         window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -277,7 +344,10 @@ export function useSpeech() {
         if (finalTranscript && options.onResult) {
           gotResultRef.current = true;
           clearRecognitionTimeout();
-          options.onResult(finalTranscript, event.results[event.resultIndex || 0][0].confidence);
+          options.onResult(
+            finalTranscript,
+            event.results[event.resultIndex || 0][0].confidence
+          );
         }
       };
 
@@ -312,7 +382,11 @@ export function useSpeech() {
 
       recognitionTimeoutRef.current = setTimeout(() => {
         if (recognitionRef.current) {
-          try { recognitionRef.current.stop(); } catch (_) { /* ignore */ }
+          try {
+            recognitionRef.current.stop();
+          } catch (_) {
+            /* ignore */
+          }
         }
       }, 8000);
     },
@@ -322,7 +396,11 @@ export function useSpeech() {
   const stopListening = useCallback(() => {
     clearRecognitionTimeout();
     if (recognitionRef.current) {
-      try { recognitionRef.current.stop(); } catch (_) { /* ignore */ }
+      try {
+        recognitionRef.current.stop();
+      } catch (_) {
+        /* ignore */
+      }
       setIsListening(false);
     }
   }, [clearRecognitionTimeout]);

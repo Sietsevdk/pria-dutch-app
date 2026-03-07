@@ -4,7 +4,17 @@ import { useState, useCallback, useRef, useEffect } from 'react';
  * Enhanced audio hook for Dutch pronunciation training.
  * Wraps Web Speech API with Dutch-specific voice selection,
  * word-by-word highlighting, and segment-by-segment playback.
+ *
+ * iOS Safari compatibility:
+ *   - All speak calls are synchronous (no async gap from user gesture)
+ *   - iOS pause/resume keep-alive prevents the 15s speech cutoff bug
  */
+
+const IS_IOS =
+  typeof navigator !== 'undefined' &&
+  (/iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1));
+
 export function useDutchAudio() {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [currentWordIndex, setCurrentWordIndex] = useState(-1);
@@ -13,6 +23,7 @@ export function useDutchAudio() {
   const utteranceRef = useRef(null);
   const segmentTimerRef = useRef(null);
   const cancelledRef = useRef(false);
+  const iosKeepAliveRef = useRef(null);
 
   // Find best Dutch voice on mount
   useEffect(() => {
@@ -56,16 +67,31 @@ export function useDutchAudio() {
     };
   }, []);
 
+  // Helper: clear iOS keep-alive interval
+  const clearIOSKeepAlive = useCallback(() => {
+    if (iosKeepAliveRef.current) {
+      clearInterval(iosKeepAliveRef.current);
+      iosKeepAliveRef.current = null;
+    }
+  }, []);
+
+  // Helper: start iOS keep-alive (prevents 15s speech cutoff)
+  const startIOSKeepAlive = useCallback(() => {
+    if (!IS_IOS) return;
+    clearIOSKeepAlive();
+    iosKeepAliveRef.current = setInterval(() => {
+      if (window.speechSynthesis.speaking) {
+        window.speechSynthesis.pause();
+        window.speechSynthesis.resume();
+      } else {
+        clearIOSKeepAlive();
+      }
+    }, 5000);
+  }, [clearIOSKeepAlive]);
+
   /**
    * Speak text with optional word-by-word highlighting.
-   *
-   * @param {string} text - The Dutch text to speak.
-   * @param {object} options
-   * @param {boolean} [options.slow] - Speak at 0.6 rate.
-   * @param {number}  [options.rate] - Speech rate (default 0.9).
-   * @param {number}  [options.pitch] - Pitch (default 1).
-   * @param {function} [options.onWord] - Called with word index on each word boundary.
-   * @param {function} [options.onEnd] - Called when speech finishes.
+   * SYNCHRONOUS from user gesture — safe for iOS Safari.
    */
   const speak = useCallback(
     (text, options = {}) => {
@@ -73,6 +99,7 @@ export function useDutchAudio() {
 
       // Cancel anything in flight
       window.speechSynthesis.cancel();
+      clearIOSKeepAlive();
       cancelledRef.current = false;
       setCurrentWordIndex(-1);
 
@@ -100,15 +127,18 @@ export function useDutchAudio() {
 
       utterance.onstart = () => {
         setIsSpeaking(true);
+        startIOSKeepAlive();
       };
 
       utterance.onend = () => {
+        clearIOSKeepAlive();
         setIsSpeaking(false);
         setCurrentWordIndex(-1);
         if (options.onEnd) options.onEnd();
       };
 
       utterance.onerror = (event) => {
+        clearIOSKeepAlive();
         // 'interrupted' and 'cancelled' are expected when stop() is called
         if (event.error !== 'interrupted' && event.error !== 'canceled') {
           console.warn('Speech error:', event.error);
@@ -120,25 +150,19 @@ export function useDutchAudio() {
       utteranceRef.current = utterance;
       window.speechSynthesis.speak(utterance);
     },
-    [speechSupported, preferredVoice]
+    [speechSupported, preferredVoice, clearIOSKeepAlive, startIOSKeepAlive]
   );
 
   /**
    * Speak text segment-by-segment (word-by-word) with pauses between each.
    * Ideal for pronunciation drills where learners repeat each word.
-   *
-   * @param {string} text - The text to split and speak.
-   * @param {object} options
-   * @param {number}  [options.pauseMs=500] - Pause in ms between words.
-   * @param {number}  [options.rate=0.8] - Speech rate for each segment.
-   * @param {function} [options.onSegment] - Called with segment index before speaking it.
-   * @param {function} [options.onEnd] - Called when all segments are done.
    */
   const speakBySegment = useCallback(
     (text, options = {}) => {
       if (!speechSupported || !text) return;
 
       window.speechSynthesis.cancel();
+      clearIOSKeepAlive();
       cancelledRef.current = false;
 
       const segments = text.split(/\s+/).filter(Boolean);
@@ -186,7 +210,7 @@ export function useDutchAudio() {
 
       speakNext();
     },
-    [speechSupported, preferredVoice]
+    [speechSupported, preferredVoice, clearIOSKeepAlive]
   );
 
   /**
@@ -204,6 +228,7 @@ export function useDutchAudio() {
    */
   const stop = useCallback(() => {
     cancelledRef.current = true;
+    clearIOSKeepAlive();
     if (segmentTimerRef.current) {
       clearTimeout(segmentTimerRef.current);
       segmentTimerRef.current = null;
@@ -211,18 +236,19 @@ export function useDutchAudio() {
     window.speechSynthesis?.cancel();
     setIsSpeaking(false);
     setCurrentWordIndex(-1);
-  }, []);
+  }, [clearIOSKeepAlive]);
 
   // Cleanup on unmount
   useEffect(() => {
     return () => {
       cancelledRef.current = true;
+      clearIOSKeepAlive();
       if (segmentTimerRef.current) {
         clearTimeout(segmentTimerRef.current);
       }
       window.speechSynthesis?.cancel();
     };
-  }, []);
+  }, [clearIOSKeepAlive]);
 
   return {
     speak,
