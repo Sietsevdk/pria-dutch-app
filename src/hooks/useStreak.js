@@ -36,10 +36,11 @@ const useStreak = create(
             const missed = daysBetween(state.lastActivityDate, today);
 
             if (missed === 2 && state.streakFreezeAvailable && !state.streakFreezeUsedThisWeek) {
-              // Use streak freeze — keep streak alive
+              // Use streak freeze — keep streak alive, bridge the gap
               updates.streakFreezeAvailable = false;
               updates.streakFreezeUsedThisWeek = true;
               updates.lastFreezeWeek = currentWeek;
+              updates.lastActivityDate = yesterday;
             } else {
               // Streak broken
               updates.currentStreak = 0;
@@ -58,38 +59,38 @@ const useStreak = create(
 
       // Record activity for today
       recordActivity: (xp = 0) => {
-        const state = get();
         const today = getDateString(new Date());
 
-        if (state.completedToday) {
-          // Just update XP
-          set({
+        set((state) => {
+          if (state.completedToday) {
+            // Just update XP
+            return {
+              activityCalendar: {
+                ...state.activityCalendar,
+                [today]: {
+                  ...(state.activityCalendar[today] || {}),
+                  xp: (state.activityCalendar[today]?.xp || 0) + xp,
+                  completed: true,
+                },
+              },
+            };
+          }
+
+          const newStreak = state.currentStreak + 1;
+
+          return {
+            currentStreak: newStreak,
+            longestStreak: Math.max(state.longestStreak, newStreak),
+            lastActivityDate: today,
+            completedToday: true,
             activityCalendar: {
               ...state.activityCalendar,
               [today]: {
-                ...(state.activityCalendar[today] || {}),
                 xp: (state.activityCalendar[today]?.xp || 0) + xp,
                 completed: true,
               },
             },
-          });
-          return;
-        }
-
-        const newStreak = state.currentStreak + 1;
-
-        set({
-          currentStreak: newStreak,
-          longestStreak: Math.max(state.longestStreak, newStreak),
-          lastActivityDate: today,
-          completedToday: true,
-          activityCalendar: {
-            ...state.activityCalendar,
-            [today]: {
-              xp: (state.activityCalendar[today]?.xp || 0) + xp,
-              completed: true,
-            },
-          },
+          };
         });
       },
 
@@ -117,7 +118,7 @@ const useStreak = create(
 
       // Check for Easter egg (30-day streak)
       shouldShowEasterEgg: () => {
-        return get().currentStreak === 30;
+        return get().currentStreak >= 30;
       },
 
       resetStreak: () =>
@@ -134,6 +135,8 @@ const useStreak = create(
     }),
     {
       name: 'pria-streak',
+      version: 1,
+      migrate: (state) => state,
     }
   )
 );
@@ -163,7 +166,7 @@ function daysBetween(dateStr1, dateStr2) {
 
 function getWeekString(date) {
   const d = new Date(date);
-  d.setDate(d.getDate() - d.getDay());
+  d.setDate(d.getDate() - ((d.getDay() + 6) % 7));
   return getDateString(d);
 }
 

@@ -54,6 +54,7 @@ export default function Practice() {
               setActiveTab(id);
               setSelectedDialogue(null);
             }}
+            aria-label={label}
             className={`flex-1 flex items-center justify-center gap-1.5 py-2 px-2 rounded-lg text-xs font-medium transition-all ${
               activeTab === id
                 ? 'bg-white text-primary shadow-sm'
@@ -191,7 +192,7 @@ function ReadingPractice() {
         <div className="h-1.5 bg-cream-dark rounded-full overflow-hidden mb-4">
           <div
             className="h-full bg-primary rounded-full transition-all duration-300"
-            style={{ width: `${((questionIndex + 1) / questions.length) * 100}%` }}
+            style={{ width: `${questions.length > 0 ? ((questionIndex + 1) / questions.length) * 100 : 0}%` }}
           />
         </div>
 
@@ -274,7 +275,7 @@ function ReadingPractice() {
             <div className="flex items-start justify-between">
               <div className="flex-1">
                 <h3 className="font-semibold text-sm text-charcoal">{p.title}</h3>
-                <p className="text-xs text-charcoal/40 mt-0.5 capitalize">{p.category.replace(/-/g, ' ')}</p>
+                <p className="text-xs text-charcoal/40 mt-0.5 capitalize">{(p.category || '').replace(/-/g, ' ')}</p>
               </div>
               <ChevronRight size={16} className="text-charcoal/30 mt-0.5" />
             </div>
@@ -408,13 +409,13 @@ function WritingPractice() {
         {/* Word count */}
         <div className="flex justify-between items-center mt-2 mb-4">
           <span className="text-[10px] text-charcoal/40">
-            Target: {prompt.wordCount.min}–{prompt.wordCount.max} words
+            Target: {prompt.wordCount?.min}–{prompt.wordCount?.max} words
           </span>
           <span
             className={`text-xs font-medium ${
-              wordCount < prompt.wordCount.min
+              wordCount < (prompt.wordCount?.min ?? 0)
                 ? 'text-error'
-                : wordCount > prompt.wordCount.max
+                : wordCount > (prompt.wordCount?.max ?? Infinity)
                   ? 'text-warning'
                   : 'text-success'
             }`}
@@ -503,7 +504,7 @@ function WritingPractice() {
                 {difficultyLabels[p.difficulty]}
               </span>
               <span className="text-[10px] text-charcoal/30 ml-auto">
-                {p.wordCount.min}–{p.wordCount.max} words
+                {p.wordCount?.min}–{p.wordCount?.max} words
               </span>
             </div>
           </button>

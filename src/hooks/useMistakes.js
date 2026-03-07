@@ -133,8 +133,6 @@ const useMistakes = create(
 
       // Record a new mistake and auto-detect patterns
       recordMistake: (mistake) => {
-        const state = get();
-
         const newMistake = {
           id: `mistake-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`,
           word: mistake.word,
@@ -153,39 +151,44 @@ const useMistakes = create(
           mistake.exerciseType
         );
 
-        // Update pattern tracking
-        const updatedPatterns = { ...state.patterns };
+        set((state) => {
+          // Update pattern tracking
+          const updatedPatterns = { ...state.patterns };
 
-        detectedPatterns.forEach((patternType) => {
-          const patternId = patternType;
-          const existing = updatedPatterns[patternId] || {
-            type: patternType,
-            count: 0,
-            examples: [],
-            lastOccurred: null,
+          detectedPatterns.forEach((patternType) => {
+            const patternId = patternType;
+            const existing = updatedPatterns[patternId] || {
+              type: patternType,
+              count: 0,
+              examples: [],
+              lastOccurred: null,
+            };
+
+            const example = {
+              word: mistake.word,
+              userAnswer: mistake.userAnswer,
+              correctAnswer: mistake.correctAnswer,
+              timestamp: newMistake.timestamp,
+            };
+
+            // Keep only the last 10 examples per pattern
+            const examples = [example, ...existing.examples].slice(0, 10);
+
+            updatedPatterns[patternId] = {
+              type: patternType,
+              count: existing.count + 1,
+              examples,
+              lastOccurred: newMistake.timestamp,
+            };
+          });
+
+          // Auto-prune: keep only the last 500 mistakes
+          const allMistakes = [...state.mistakes, newMistake].slice(-500);
+
+          return {
+            mistakes: allMistakes,
+            patterns: updatedPatterns,
           };
-
-          const example = {
-            word: mistake.word,
-            userAnswer: mistake.userAnswer,
-            correctAnswer: mistake.correctAnswer,
-            timestamp: newMistake.timestamp,
-          };
-
-          // Keep only the last 10 examples per pattern
-          const examples = [example, ...existing.examples].slice(0, 10);
-
-          updatedPatterns[patternId] = {
-            type: patternType,
-            count: existing.count + 1,
-            examples,
-            lastOccurred: newMistake.timestamp,
-          };
-        });
-
-        set({
-          mistakes: [...state.mistakes, newMistake],
-          patterns: updatedPatterns,
         });
       },
 
@@ -315,6 +318,8 @@ const useMistakes = create(
     }),
     {
       name: 'pria-mistakes',
+      version: 1,
+      migrate: (state) => state,
     }
   )
 );

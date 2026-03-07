@@ -36,7 +36,7 @@ export default function XPBar({ showDetails = true }) {
       {showDetails && (
         <div className="flex justify-between items-center mt-1.5">
           <span className="text-[10px] text-charcoal/50">
-            {level.xpInLevel} / {level.xpForNextLevel || '—'} XP
+            {level.xpInLevel} / {level.xpForNextLevel === 0 ? '---' : level.xpForNextLevel} XP
           </span>
           {level.nextLevel && (
             <span className="text-[10px] text-charcoal/50">

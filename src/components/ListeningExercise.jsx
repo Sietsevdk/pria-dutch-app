@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, RotateCcw, Snail, Send, Check, X } from 'lucide-react';
 import { useSpeech } from '../hooks/useSpeech';
@@ -22,6 +22,16 @@ export default function ListeningExercise({
   const [result, setResult] = useState(null);
   const answeredRef = useRef(false);
   const { speak, isSpeaking } = useSpeech();
+
+  // Reset all state when text or correctAnswer changes (handle parent not using key)
+  useEffect(() => {
+    setHasPlayed(false);
+    setSelected(null);
+    setUserInput('');
+    setHasAnswered(false);
+    setResult(null);
+    answeredRef.current = false;
+  }, [text, correctAnswer]);
 
   const isMultipleChoice = options && options.length > 0;
 
@@ -153,9 +163,9 @@ export default function ListeningExercise({
               role="radiogroup"
               aria-label="Answer options"
             >
-              {options.map((option) => (
+              {options.map((option, index) => (
                 <motion.button
-                  key={option}
+                  key={`${option}-${index}`}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   whileTap={!hasAnswered ? { scale: 0.97 } : {}}

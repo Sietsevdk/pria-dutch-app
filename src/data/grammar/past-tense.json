@@ -50,7 +50,7 @@
     "commonMistakes": [
       "'Ik werkte' (niet 'ik werkde') - de stam 'werk' eindigt op k ('t kofschip), dus -te.",
       "Bij werkwoorden met v→f of z→s in de stam: kijk naar de OORSPRONKELIJKE klank. 'Leven' heeft een v-klank (stemhebbend), dus: 'ik leefde' (niet 'ik leefte'). 'Reizen' heeft een z-klank (stemhebbend), dus: 'ik reisde' (niet 'ik reiste').",
-      "'Wij maakten' (niet 'wij maakten' met -den) - de stam 'maak' eindigt op k ('t kofschip), dus -ten.",
+      "'Wij maakten' (niet 'wij maakden') - de stam 'maak' eindigt op k ('t kofschip), dus -ten.",
       "'Hij reiste' is fout - de stam van 'reizen' is 'reis' (z → s), maar de oorspronkelijke klank is z (stemhebbend). Dus: hij reisDE.",
       "Sterke werkwoorden krijgen GEEN -te/-de: 'ik liep' (niet 'ik loopte').",
       "Vergeten dat het meervoud -ten/-den krijgt: 'wij werkten' (niet 'wij werkte')."
@@ -58,7 +58,7 @@
     "commonMistakesEN": [
       "'Ik werkte' (I worked), not 'ik werkde' — the stem 'werk' ends in k ('t kofschip), so it takes -te.",
       "For verbs with v→f or z→s in the stem: look at the ORIGINAL sound. 'Leven' (to live) has a v-sound (voiced), so: 'ik leefde' (not 'ik leefte'). 'Reizen' (to travel) has a z-sound (voiced), so: 'ik reisde' (not 'ik reiste').",
-      "'Wij maakten' (we made), not with -den — the stem 'maak' ends in k ('t kofschip), so it takes -ten.",
+      "'Wij maakten' (we made), not 'wij maakden' — the stem 'maak' ends in k ('t kofschip), so it takes -ten.",
       "'Hij reiste' is wrong — the stem of 'reizen' is 'reis' (z → s), but the original sound is z (voiced). So: hij reisDE (he traveled).",
       "Strong verbs do NOT get -te/-de: 'ik liep' (I walked), not 'ik loopte'.",
       "Forgetting that the plural takes -ten/-den: 'wij werkten' (we worked), not 'wij werkte'."
@@ -121,7 +121,7 @@
     {
       "type": "multiple_choice",
       "sentence": "Wij ___ naar de radio. (luisteren)",
-      "options": ["luisterden", "luisterden", "luisterten", "luisterde"],
+      "options": ["luisterden", "luisterdden", "luisterten", "luisterde"],
       "answer": "luisterden",
       "explanation": "De stam van 'luisteren' is 'luister'. De r zit NIET in 't kofschip, dus: luisterden (meervoud).",
       "explanationEN": "The stem of 'luisteren' (to listen) is 'luister'. The r is NOT in 't kofschip, so: luisterden (we listened, plural)."

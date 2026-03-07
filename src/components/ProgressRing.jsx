@@ -9,14 +9,15 @@ export default function ProgressRing({
   children,
   className = '',
 }) {
+  const safeProgress = isNaN(progress) ? 0 : progress;
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
-  const clampedProgress = Math.max(0, Math.min(1, progress || 0));
+  const clampedProgress = Math.max(0, Math.min(1, safeProgress || 0));
   const offset = circumference - clampedProgress * circumference;
 
   return (
     <div className={`relative inline-flex items-center justify-center ${className}`}>
-      <svg width={size} height={size} className="-rotate-90">
+      <svg width={size} height={size} className="-rotate-90" role="img" aria-label={`Progress: ${Math.round(clampedProgress * 100)}%`}>
         {/* Background circle */}
         <circle
           cx={size / 2}

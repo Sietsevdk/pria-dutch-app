@@ -458,9 +458,9 @@ function PracticeMode({ sound, audio, onBack, onComplete }) {
           onComplete(latestStats);
           return prev;
         }
-        setAnswered(false);
         return nextIndex;
       });
+      setAnswered(false);
     }, 600);
   };
 

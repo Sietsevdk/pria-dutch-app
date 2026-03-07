@@ -83,7 +83,7 @@ export default function WordsLearned() {
     // Sort
     if (sortBy === 'recent') {
       words = [...words].sort(
-        (a, b) => new Date(b.progress.learnedAt) - new Date(a.progress.learnedAt)
+        (a, b) => new Date(b.progress?.learnedAt || 0) - new Date(a.progress?.learnedAt || 0)
       );
     } else if (sortBy === 'accuracy') {
       words = [...words].sort(

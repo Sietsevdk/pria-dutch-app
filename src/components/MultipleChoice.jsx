@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Check, X } from 'lucide-react';
 
@@ -17,6 +17,13 @@ export default function MultipleChoice({
   const [selected, setSelected] = useState(null);
   const [hasAnswered, setHasAnswered] = useState(false);
   const answeredRef = useRef(false);
+
+  // Reset state when correctAnswer changes
+  useEffect(() => {
+    setSelected(null);
+    setHasAnswered(false);
+    answeredRef.current = false;
+  }, [correctAnswer]);
 
   const isCorrect = selected === correctAnswer;
 

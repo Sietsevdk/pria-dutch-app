@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef, useEffect } from 'react';
+import { useState, useCallback, useRef, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Play,
@@ -16,14 +16,17 @@ import { useSpeech } from '../hooks/useSpeech';
  * Plays through a dialogue using TTS and displays lines with expandable translations.
  */
 export default function DialoguePlayer({ dialogue }) {
+  // Null guard
+  if (!dialogue) return null;
+
   const {
     title,
     titleEN,
     context,
-    lines,
+    lines = [],
     keyPhrases,
     culturalNote,
-  } = dialogue;
+  } = dialogue || {};
 
   const [expandedLines, setExpandedLines] = useState({});
   const [isPlayingAll, setIsPlayingAll] = useState(false);
@@ -32,6 +35,15 @@ export default function DialoguePlayer({ dialogue }) {
   const scrollContainerRef = useRef(null);
   const lineRefs = useRef([]);
   const playAllAbortRef = useRef(false);
+  const playDelayRef = useRef(null);
+  const isPlayingRef = useRef(false);
+
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      if (playDelayRef.current) clearTimeout(playDelayRef.current);
+    };
+  }, []);
 
   // Auto-scroll to current playing line
   useEffect(() => {
@@ -59,8 +71,9 @@ export default function DialoguePlayer({ dialogue }) {
   );
 
   const handlePlayAll = useCallback(async () => {
-    if (isPlayingAll) {
+    if (isPlayingAll || isPlayingRef.current) {
       playAllAbortRef.current = true;
+      isPlayingRef.current = false;
       stopSpeaking();
       setIsPlayingAll(false);
       setCurrentPlayingIndex(-1);
@@ -68,6 +81,7 @@ export default function DialoguePlayer({ dialogue }) {
     }
 
     playAllAbortRef.current = false;
+    isPlayingRef.current = true;
     setIsPlayingAll(true);
 
     for (let i = 0; i < lines.length; i++) {
@@ -87,8 +101,8 @@ export default function DialoguePlayer({ dialogue }) {
         if (dutchVoice) utterance.voice = dutchVoice;
 
         utterance.onend = () => {
-          // Pause between lines
-          setTimeout(resolve, 600);
+          // Pause between lines — store timeout in ref for cleanup
+          playDelayRef.current = setTimeout(resolve, 600);
         };
         utterance.onerror = () => resolve();
 
@@ -96,12 +110,13 @@ export default function DialoguePlayer({ dialogue }) {
       });
     }
 
+    isPlayingRef.current = false;
     setIsPlayingAll(false);
     setCurrentPlayingIndex(-1);
   }, [isPlayingAll, lines, stopSpeaking]);
 
-  // Determine if a speaker is "person A" or "person B" for bubble sides
-  const speakers = [...new Set(lines.map((l) => l.speaker))];
+  // Memoize speakers computation
+  const speakers = useMemo(() => [...new Set(lines.map((l) => l.speaker))], [lines]);
 
   return (
     <div className="w-full max-w-lg mx-auto">

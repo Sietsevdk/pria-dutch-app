@@ -383,7 +383,7 @@ function CategoryQuiz({ category, onBack, onComplete, previousResult }) {
   const questions = category.questions || [];
   const totalQuestions = questions.length;
   const currentQuestion = questions[currentIndex];
-  const progress = totalQuestions > 0 ? ((currentIndex) / totalQuestions) * 100 : 0;
+  const progress = totalQuestions > 0 ? ((currentIndex + 1) / totalQuestions) * 100 : 0;
 
   const handleSelectOption = (optionIndex) => {
     if (isAnswered) return;

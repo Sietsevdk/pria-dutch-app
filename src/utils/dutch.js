@@ -131,6 +131,13 @@ export function getVerbStem(infinitive) {
 
   let stem = infinitive.slice(0, -2);
 
+  // Handle doubled final consonants (e.g., "rennen" → "ren", not "reen")
+  // Doubled consonants indicate a short vowel, so no vowel doubling needed
+  if (stem.length >= 3 && stem[stem.length - 1] === stem[stem.length - 2]) {
+    stem = stem.slice(0, -1);
+    return stem;
+  }
+
   // Handle double vowels: if removing -en creates a closed syllable
   // with a long vowel, we may need to double the vowel
   // e.g., 'maken' → 'maak' (not 'mak')

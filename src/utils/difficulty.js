@@ -56,8 +56,13 @@ export function calculateDifficultyLevel(progress) {
     grammar = 2;
   }
 
-  // Listening difficulty based on listening exercise accuracy
-  const listeningStats = exerciseTypeStats['listening'] || exerciseTypeStats['dictation'] || { correct: 0, total: 0 };
+  // Listening difficulty based on listening exercise accuracy (merge both types)
+  const listeningRaw = exerciseTypeStats['listening'] || { correct: 0, total: 0 };
+  const dictationRaw = exerciseTypeStats['dictation'] || { correct: 0, total: 0 };
+  const listeningStats = {
+    correct: listeningRaw.correct + dictationRaw.correct,
+    total: listeningRaw.total + dictationRaw.total,
+  };
   const listeningAccuracy = listeningStats.total > 0 ? (listeningStats.correct / listeningStats.total) * 100 : 0;
   let listening = 1;
   if (listeningStats.total >= 30 && listeningAccuracy >= 80) {
@@ -66,8 +71,14 @@ export function calculateDifficultyLevel(progress) {
     listening = 2;
   }
 
-  // Production difficulty based on production/writing exercise accuracy
-  const productionStats = exerciseTypeStats['production'] || exerciseTypeStats['writing'] || exerciseTypeStats['fill-in'] || { correct: 0, total: 0 };
+  // Production difficulty based on production/writing exercise accuracy (merge all types)
+  const productionRaw = exerciseTypeStats['production'] || { correct: 0, total: 0 };
+  const writingRaw = exerciseTypeStats['writing'] || { correct: 0, total: 0 };
+  const fillInRaw = exerciseTypeStats['fill-in'] || { correct: 0, total: 0 };
+  const productionStats = {
+    correct: productionRaw.correct + writingRaw.correct + fillInRaw.correct,
+    total: productionRaw.total + writingRaw.total + fillInRaw.total,
+  };
   const productionAccuracy = productionStats.total > 0 ? (productionStats.correct / productionStats.total) * 100 : 0;
   let production = 1;
   if (productionStats.total >= 30 && productionAccuracy >= 80) {
@@ -140,13 +151,12 @@ export function getExercisesForDifficulty(level, exercisePool) {
 }
 
 /**
- * Check if difficulty should increase for a given dimension
- * @param {string} dimension - The difficulty dimension to check
+ * Check if difficulty should increase based on recent accuracy
  * @param {number} recentAccuracy - Recent accuracy percentage (0-100)
  * @param {number} threshold - Accuracy threshold to trigger increase
  * @returns {boolean}
  */
-export function shouldIncreaseDifficulty(dimension, recentAccuracy, threshold = INCREASE_ACCURACY_THRESHOLD) {
+export function shouldIncreaseDifficulty(recentAccuracy, threshold = INCREASE_ACCURACY_THRESHOLD) {
   return recentAccuracy >= threshold;
 }
 

@@ -132,16 +132,16 @@
     {
       "id": "QUESTION_010",
       "dutch": "of",
-      "english": "whether / if",
+      "english": "or / whether / if",
       "pronunciation": "of",
       "article": null,
       "gender": null,
       "plural": null,
       "exampleNL": "Ik weet niet of hij komt.",
       "exampleEN": "I don't know whether he is coming.",
-      "audioHint": "Short and simple, like English 'of' but with a shorter vowel.",
+      "audioHint": "Short and simple, like English 'of' but with a shorter vowel. Note: 'of' is a conjunction (not a question word), but it is used in indirect questions.",
       "difficulty": 2,
-      "tags": ["question", "conjunction", "intermediate"]
+      "tags": ["conjunction", "indirect-question", "intermediate"]
     },
     {
       "id": "QUESTION_011",

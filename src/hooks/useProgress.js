@@ -1,6 +1,5 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { XP_VALUES } from '../utils/xp';
 
 const useProgress = create(
   persist(
@@ -59,7 +58,10 @@ const useProgress = create(
           if (state.lastXPDate) {
             const lastDate = new Date(state.lastXPDate);
             const now = new Date();
-            daysMissed = Math.round((now - lastDate) / (1000 * 60 * 60 * 24));
+            // Normalize to UTC noon to avoid DST off-by-one errors
+            const lastNoon = Date.UTC(lastDate.getFullYear(), lastDate.getMonth(), lastDate.getDate(), 12);
+            const nowNoon = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), 12);
+            daysMissed = Math.round((nowNoon - lastNoon) / (1000 * 60 * 60 * 24));
             daysMissed = Math.max(1, Math.min(daysMissed, 7));
           }
           // Shift by the number of missed days, fill gaps with 0
@@ -169,7 +171,7 @@ const useProgress = create(
       endSession: () => {
         const state = get();
         if (state.sessionStartTime) {
-          const minutes = Math.round((Date.now() - state.sessionStartTime) / 60000);
+          const minutes = Math.max(1, Math.round((Date.now() - state.sessionStartTime) / 60000));
           set({
             totalTime: state.totalTime + minutes,
             sessionStartTime: null,
@@ -201,7 +203,10 @@ const useProgress = create(
           if (state.lastXPDate && state.lastXPDate !== today) {
             const lastDate = new Date(state.lastXPDate);
             const now = new Date();
-            let daysMissed = Math.round((now - lastDate) / (1000 * 60 * 60 * 24));
+            // Normalize to UTC noon to avoid DST off-by-one errors
+            const lastNoon = Date.UTC(lastDate.getFullYear(), lastDate.getMonth(), lastDate.getDate(), 12);
+            const nowNoon = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), 12);
+            let daysMissed = Math.round((nowNoon - lastNoon) / (1000 * 60 * 60 * 24));
             daysMissed = Math.max(1, Math.min(daysMissed, 7));
             newWeeklyXP = [...newWeeklyXP.slice(daysMissed), ...Array(daysMissed).fill(0)];
           }
@@ -209,6 +214,7 @@ const useProgress = create(
             goalsCompleted: { lesson: false, review: false, speaking: false },
             todayXP: 0,
             lastGoalResetDate: today,
+            lastXPDate: today,
             weeklyXP: newWeeklyXP,
           });
         }
@@ -265,6 +271,8 @@ const useProgress = create(
     }),
     {
       name: 'pria-progress',
+      version: 1,
+      migrate: (state) => state,
     }
   )
 );

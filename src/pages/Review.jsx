@@ -19,7 +19,7 @@ export default function Review() {
         className="mb-6"
       >
         <div className="flex items-center gap-3 mb-1">
-          <button onClick={() => navigate(-1)} className="p-1 -ml-1 text-charcoal/50">
+          <button onClick={() => navigate('/')} className="p-1 -ml-1 text-charcoal/50" aria-label="Go back">
             <ArrowLeft size={20} />
           </button>
           <RefreshCw size={22} className="text-primary" />

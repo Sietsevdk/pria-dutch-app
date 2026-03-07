@@ -13,7 +13,7 @@ export function useSpeech() {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [transcript, setTranscript] = useState('');
-  const [speechSupported, setSpeechSupported] = useState(true);
+  const [speechSupported, setSpeechSupported] = useState(() => typeof window !== 'undefined' && 'speechSynthesis' in window);
   const [recognitionSupported, setRecognitionSupported] = useState(true);
   const recognitionRef = useRef(null);
   const audioRef = useRef(null);
@@ -94,7 +94,7 @@ export function useSpeech() {
       // Google Translate TTS endpoint — works via <audio> element
       const encoded = encodeURIComponent(text);
       // For longer text, Google limits to ~200 chars per request
-      if (encoded.length > 200) {
+      if (text.length > 200) {
         reject(new Error('text-too-long'));
         return;
       }
@@ -105,7 +105,6 @@ export function useSpeech() {
       const audio = new Audio(url);
       audioRef.current = audio;
 
-      audio.onplay = () => setIsSpeaking(true);
       audio.onended = () => {
         setIsSpeaking(false);
         resolve();
@@ -121,8 +120,12 @@ export function useSpeech() {
         reject(new Error('google-tts-timeout'));
       }, 4000);
 
+      audio.onplay = () => {
+        clearTimeout(timeout);
+        setIsSpeaking(true);
+      };
+
       audio.play()
-        .then(() => clearTimeout(timeout))
         .catch((err) => {
           clearTimeout(timeout);
           reject(err);
@@ -274,7 +277,7 @@ export function useSpeech() {
         if (finalTranscript && options.onResult) {
           gotResultRef.current = true;
           clearRecognitionTimeout();
-          options.onResult(finalTranscript, event.results[0][0].confidence);
+          options.onResult(finalTranscript, event.results[event.resultIndex || 0][0].confidence);
         }
       };
 

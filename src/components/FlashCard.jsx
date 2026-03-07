@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Volume2, RotateCcw, ThumbsDown, Zap } from 'lucide-react';
 import { useSpeech } from '../hooks/useSpeech';
@@ -10,6 +10,9 @@ import { dutchWithArticle } from '../utils/dutch';
  * Features: flip animation, audio (normal + slow), mastery indicator, SRS rating.
  */
 export default function FlashCard({ word, onRate }) {
+  // Early return for missing word
+  if (!word) return null;
+
   const [isFlipped, setIsFlipped] = useState(false);
   const { speak, isSpeaking } = useSpeech();
   const getItemStats = useSRS((s) => s.getItemStats);
@@ -42,8 +45,8 @@ export default function FlashCard({ word, onRate }) {
 
   const dutchDisplay = dutchWithArticle(word);
 
-  // Mastery level based on SRS data
-  const getMasteryInfo = () => {
+  // Mastery level based on SRS data — memoized
+  const mastery = useMemo(() => {
     if (!srsStats) return { label: 'New', color: 'bg-info/20 text-info', level: 0 };
     const reps = srsStats.repetitions || 0;
     const ease = srsStats.easeFactor || 2.5;
@@ -51,9 +54,7 @@ export default function FlashCard({ word, onRate }) {
     if (reps >= 3) return { label: 'Reviewing', color: 'bg-primary/20 text-primary', level: 3 };
     if (reps >= 1) return { label: 'Learning', color: 'bg-warning/20 text-warning', level: 2 };
     return { label: 'New', color: 'bg-info/20 text-info', level: 1 };
-  };
-
-  const mastery = getMasteryInfo();
+  }, [srsStats]);
 
   return (
     <div className="w-full max-w-sm mx-auto">
@@ -109,7 +110,7 @@ export default function FlashCard({ word, onRate }) {
                 whileTap={{ scale: 0.9 }}
                 aria-label="Listen slowly"
               >
-                🐢 Slow
+                Slow
               </motion.button>
             </div>
 
@@ -125,7 +126,7 @@ export default function FlashCard({ word, onRate }) {
 
             {word.audioHint && (
               <p className="text-xs text-charcoal-light/60 italic">
-                💡 {word.audioHint}
+                {word.audioHint}
               </p>
             )}
 
@@ -147,11 +148,11 @@ export default function FlashCard({ word, onRate }) {
               <div className="w-full bg-cream rounded-xl p-4 mb-2">
                 <p className="text-xs text-charcoal/50 mb-1 font-medium">Example:</p>
                 <p className="text-sm text-charcoal font-medium">
-                  🇳🇱 {word.exampleNL}
+                  {word.exampleNL}
                 </p>
                 {word.exampleEN && (
                   <p className="text-xs text-charcoal-light mt-1">
-                    🇬🇧 {word.exampleEN}
+                    {word.exampleEN}
                   </p>
                 )}
               </div>

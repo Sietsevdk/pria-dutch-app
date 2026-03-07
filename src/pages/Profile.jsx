@@ -24,9 +24,13 @@ import useSRS from '../hooks/useSRS';
 import useMistakes from '../hooks/useMistakes';
 import useFavourites from '../hooks/useFavourites';
 import { useSpeech } from '../hooks/useSpeech';
-import { dutchWithArticle, dutchBareWord } from '../utils/dutch';
+import { dutchWithArticle, dutchBareWord, shuffle } from '../utils/dutch';
 import { getLevel, LEVELS } from '../utils/xp';
 import { calculateAccuracy } from '../utils/xp';
+
+// Load grammar modules to get total count
+const grammarModules = import.meta.glob('../data/grammar/*.json', { eager: true });
+const TOTAL_GRAMMAR_TOPICS = Object.keys(grammarModules).length;
 
 // Load vocabulary for Focus Mode distractors
 const vocabModules = import.meta.glob('../data/vocabulary/*.json', { eager: true });
@@ -50,6 +54,8 @@ export default function Profile() {
   const setDailyGoal = useProgress((s) => s.setDailyGoal);
   const setTTSSpeed = useProgress((s) => s.setTTSSpeed);
   const resetProgress = useProgress((s) => s.resetProgress);
+  const lessonProgress = useProgress((s) => s.lessonProgress);
+  const wordsLearned = useProgress((s) => s.wordsLearned);
   const currentStreak = useStreak((s) => s.currentStreak);
   const longestStreak = useStreak((s) => s.longestStreak);
   const activityCalendar = useStreak((s) => s.activityCalendar);
@@ -101,7 +107,10 @@ export default function Profile() {
       streak: {
         currentStreak,
         longestStreak,
+        activityCalendar,
       },
+      lessonProgress,
+      wordsLearned,
       srs: {
         weakItems: getWeakItems(20),
       },
@@ -124,12 +133,12 @@ export default function Profile() {
   // Helper: build MC exercises from a list of vocab words
   const buildExercises = (words) => {
     return words.map((word) => {
-      const wrongOptions = allVocabWords
-        .filter((w) => w.english !== word.english)
-        .map((w) => w.english)
-        .sort(() => Math.random() - 0.5)
-        .slice(0, 3);
-      const options = [word.english, ...wrongOptions].sort(() => Math.random() - 0.5);
+      const wrongOptions = shuffle(
+        allVocabWords
+          .filter((w) => w.english !== word.english)
+          .map((w) => w.english)
+      ).slice(0, 3);
+      const options = shuffle([word.english, ...wrongOptions]);
       return {
         id: word.id,
         question: word.dutch,
@@ -210,7 +219,7 @@ export default function Profile() {
     }
     return data;
   }, [activityCalendar]); // 12 weeks
-  const weakItems = getWeakItems(5);
+  const weakItems = useMemo(() => getWeakItems(5), [getWeakItems]);
   const grammarCount = Object.values(grammarMastered).filter((g) => g.mastered).length;
 
   const container = {
@@ -269,9 +278,9 @@ export default function Profile() {
             {currentEx.question}
           </p>
           <div className="grid grid-cols-2 gap-2">
-            {currentEx.options?.map((opt) => (
+            {currentEx.options?.map((opt, i) => (
               <button
-                key={opt}
+                key={i}
                 onClick={() => {
                   if (focusAnswer) return;
                   setFocusAnswer(opt);
@@ -346,7 +355,7 @@ export default function Profile() {
         <StatCard icon={BookOpen} label="Words Learned" value={totalWordsLearned} color="text-info" onClick={() => navigate('/words')} />
         <StatCard icon={Target} label="Accuracy" value={`${accuracy}%`} color="text-success" />
         <StatCard icon={Clock} label="Time Spent" value={`${totalTime} min`} color="text-charcoal/70" />
-        <StatCard icon={TrendingUp} label="Grammar Mastered" value={`${grammarCount}/14`} color="text-primary" />
+        <StatCard icon={TrendingUp} label="Grammar Mastered" value={`${grammarCount}/${TOTAL_GRAMMAR_TOPICS}`} color="text-primary" />
       </motion.div>
 
       {/* Streak Calendar */}

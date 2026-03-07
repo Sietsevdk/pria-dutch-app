@@ -5,6 +5,7 @@
 
 export function calculateSRS(item, quality) {
   // quality: 0 = complete blackout, 1 = again, 3 = good, 5 = easy
+  quality = Math.max(0, Math.min(5, quality));
   let { easeFactor = 2.5, interval = 0, repetitions = 0 } = item;
 
   if (quality >= 3) {
@@ -42,6 +43,7 @@ export function calculateSRS(item, quality) {
 
 function addDays(date, days) {
   const result = new Date(date);
+  result.setHours(12, 0, 0, 0); // Set to noon for DST safety
   result.setDate(result.getDate() + days);
   return result;
 }
@@ -69,7 +71,7 @@ export function getDueItems(srsData) {
       // Priority: lowest ease factor first (hardest items)
       return (a[1].easeFactor || 2.5) - (b[1].easeFactor || 2.5);
     })
-    .map(([id, item]) => ({ id, ...item }));
+    .map(([id, item]) => ({ ...item, id }));
 }
 
 /**

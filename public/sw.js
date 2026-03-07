@@ -103,7 +103,7 @@ self.addEventListener('fetch', (event) => {
   }
 
   // Vite hashed assets (JS/CSS bundles): cache-first, immutable
-  if (url.origin === self.location.origin && /\/assets\/.*\.[a-f0-9]+\.(js|css|woff2?)$/.test(url.pathname)) {
+  if (url.origin === self.location.origin && /\/assets\/.*\.[a-zA-Z0-9_-]+\.(js|css|woff2?)$/.test(url.pathname)) {
     event.respondWith(
       caches.match(request).then((cached) => {
         if (cached) return cached;

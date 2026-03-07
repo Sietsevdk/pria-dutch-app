@@ -6,18 +6,26 @@ import { shuffle } from '../utils/dutch';
 /**
  * MatchPairs - Tap-to-match exercise pairing Dutch words with English translations.
  * Left column has shuffled Dutch words, right column has separately shuffled English words.
+ * Uses pair indices instead of string matching to handle duplicate words correctly.
  */
 export default function MatchPairs({ pairs, onComplete }) {
-  const shuffledDutch = useMemo(() => shuffle(pairs.map((p) => p.dutch)), [pairs]);
-  const shuffledEnglish = useMemo(() => shuffle(pairs.map((p) => p.english)), [pairs]);
+  const shuffledDutch = useMemo(
+    () => shuffle(pairs.map((p, i) => ({ word: p.dutch, pairIndex: i }))),
+    [pairs]
+  );
+  const shuffledEnglish = useMemo(
+    () => shuffle(pairs.map((p, i) => ({ word: p.english, pairIndex: i }))),
+    [pairs]
+  );
 
-  const [selectedDutch, setSelectedDutch] = useState(null);
-  const [selectedEnglish, setSelectedEnglish] = useState(null);
-  const [matchedPairs, setMatchedPairs] = useState([]); // [{ dutch, english }]
-  const [wrongFlash, setWrongFlash] = useState(null); // { dutch, english }
+  const [selectedDutch, setSelectedDutch] = useState(null); // index in shuffledDutch
+  const [selectedEnglish, setSelectedEnglish] = useState(null); // index in shuffledEnglish
+  const [matchedPairIndices, setMatchedPairIndices] = useState([]); // matched pair indices from original pairs
+  const [wrongFlash, setWrongFlash] = useState(null); // { dutchIdx, englishIdx }
   const [mistakes, setMistakes] = useState(0);
   const wrongFlashTimerRef = useRef(null);
   const completionTimerRef = useRef(null);
+  const completedRef = useRef(false);
 
   useEffect(() => {
     return () => {
@@ -26,32 +34,40 @@ export default function MatchPairs({ pairs, onComplete }) {
     };
   }, []);
 
-  const isMatched = useCallback(
-    (word, lang) => {
-      return matchedPairs.some((p) => p[lang] === word);
+  // Reset completedRef when pairs changes
+  useEffect(() => {
+    completedRef.current = false;
+  }, [pairs]);
+
+  const isDutchMatched = useCallback(
+    (shuffledIdx) => {
+      return matchedPairIndices.includes(shuffledDutch[shuffledIdx].pairIndex);
     },
-    [matchedPairs]
+    [matchedPairIndices, shuffledDutch]
+  );
+
+  const isEnglishMatched = useCallback(
+    (shuffledIdx) => {
+      return matchedPairIndices.includes(shuffledEnglish[shuffledIdx].pairIndex);
+    },
+    [matchedPairIndices, shuffledEnglish]
   );
 
   // Check for match when both sides are selected
   useEffect(() => {
     if (selectedDutch === null || selectedEnglish === null) return;
 
-    const correctPair = pairs.find(
-      (p) => p.dutch === selectedDutch && p.english === selectedEnglish
-    );
+    const dutchItem = shuffledDutch[selectedDutch];
+    const englishItem = shuffledEnglish[selectedEnglish];
 
-    if (correctPair) {
+    if (dutchItem.pairIndex === englishItem.pairIndex) {
       // Correct match
-      setMatchedPairs((prev) => [
-        ...prev,
-        { dutch: selectedDutch, english: selectedEnglish },
-      ]);
+      setMatchedPairIndices((prev) => [...prev, dutchItem.pairIndex]);
       setSelectedDutch(null);
       setSelectedEnglish(null);
     } else {
       // Wrong match
-      setWrongFlash({ dutch: selectedDutch, english: selectedEnglish });
+      setWrongFlash({ dutchIdx: selectedDutch, englishIdx: selectedEnglish });
       setMistakes((prev) => prev + 1);
 
       wrongFlashTimerRef.current = setTimeout(() => {
@@ -60,12 +76,11 @@ export default function MatchPairs({ pairs, onComplete }) {
         setSelectedEnglish(null);
       }, 600);
     }
-  }, [selectedDutch, selectedEnglish, pairs]);
+  }, [selectedDutch, selectedEnglish, shuffledDutch, shuffledEnglish]);
 
-  // Check for completion — use ref to prevent firing multiple times
-  const completedRef = useRef(false);
+  // Check for completion
   useEffect(() => {
-    if (matchedPairs.length === pairs.length && pairs.length > 0 && !completedRef.current) {
+    if (matchedPairIndices.length === pairs.length && pairs.length > 0 && !completedRef.current) {
       completedRef.current = true;
       if (onComplete) {
         completionTimerRef.current = setTimeout(() => {
@@ -73,51 +88,51 @@ export default function MatchPairs({ pairs, onComplete }) {
         }, 800);
       }
     }
-  }, [matchedPairs.length, pairs.length, mistakes, onComplete]);
+  }, [matchedPairIndices.length, pairs.length, mistakes, onComplete]);
 
   const handleDutchClick = useCallback(
-    (word) => {
-      if (isMatched(word, 'dutch') || wrongFlash) return;
-      setSelectedDutch((prev) => (prev === word ? null : word));
+    (shuffledIdx) => {
+      if (isDutchMatched(shuffledIdx) || wrongFlash) return;
+      setSelectedDutch((prev) => (prev === shuffledIdx ? null : shuffledIdx));
     },
-    [isMatched, wrongFlash]
+    [isDutchMatched, wrongFlash]
   );
 
   const handleEnglishClick = useCallback(
-    (word) => {
-      if (isMatched(word, 'english') || wrongFlash) return;
-      setSelectedEnglish((prev) => (prev === word ? null : word));
+    (shuffledIdx) => {
+      if (isEnglishMatched(shuffledIdx) || wrongFlash) return;
+      setSelectedEnglish((prev) => (prev === shuffledIdx ? null : shuffledIdx));
     },
-    [isMatched, wrongFlash]
+    [isEnglishMatched, wrongFlash]
   );
 
-  const getDutchStyle = (word) => {
-    if (isMatched(word, 'dutch')) {
+  const getDutchStyle = (shuffledIdx) => {
+    if (isDutchMatched(shuffledIdx)) {
       return 'bg-success/10 border-success/30 text-success opacity-60';
     }
-    if (wrongFlash?.dutch === word) {
+    if (wrongFlash?.dutchIdx === shuffledIdx) {
       return 'bg-error/10 border-error text-error';
     }
-    if (selectedDutch === word) {
+    if (selectedDutch === shuffledIdx) {
       return 'bg-primary/10 border-primary text-primary';
     }
     return 'bg-white border-cream-dark/40 text-charcoal hover:border-primary/40';
   };
 
-  const getEnglishStyle = (word) => {
-    if (isMatched(word, 'english')) {
+  const getEnglishStyle = (shuffledIdx) => {
+    if (isEnglishMatched(shuffledIdx)) {
       return 'bg-success/10 border-success/30 text-success opacity-60';
     }
-    if (wrongFlash?.english === word) {
+    if (wrongFlash?.englishIdx === shuffledIdx) {
       return 'bg-error/10 border-error text-error';
     }
-    if (selectedEnglish === word) {
+    if (selectedEnglish === shuffledIdx) {
       return 'bg-primary/10 border-primary text-primary';
     }
     return 'bg-white border-cream-dark/40 text-charcoal hover:border-primary/40';
   };
 
-  const allMatched = matchedPairs.length === pairs.length;
+  const allMatched = matchedPairIndices.length === pairs.length;
 
   return (
     <div className="w-full max-w-lg mx-auto">
@@ -127,7 +142,7 @@ export default function MatchPairs({ pairs, onComplete }) {
           Match the pairs
         </p>
         <p className="text-xs text-charcoal-light">
-          {matchedPairs.length}/{pairs.length} matched
+          {matchedPairIndices.length}/{pairs.length} matched
         </p>
       </div>
 
@@ -137,7 +152,7 @@ export default function MatchPairs({ pairs, onComplete }) {
           className="h-full bg-primary rounded-full"
           initial={{ width: 0 }}
           animate={{
-            width: `${(matchedPairs.length / pairs.length) * 100}%`,
+            width: `${pairs.length > 0 ? (matchedPairIndices.length / pairs.length) * 100 : 0}%`,
           }}
           transition={{ duration: 0.3 }}
         />
@@ -150,22 +165,22 @@ export default function MatchPairs({ pairs, onComplete }) {
           <p className="text-xs font-medium text-charcoal-light/50 text-center mb-2">
             Nederlands
           </p>
-          {shuffledDutch.map((word, index) => (
+          {shuffledDutch.map((item, index) => (
             <motion.button
-              key={`dutch-${index}-${word}`}
+              key={`dutch-${index}-${item.word}`}
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.05 }}
-              whileTap={!isMatched(word, 'dutch') ? { scale: 0.97 } : {}}
-              onClick={() => handleDutchClick(word)}
-              disabled={isMatched(word, 'dutch')}
-              className={`w-full px-4 py-3 rounded-xl border-2 font-medium text-sm text-center transition-colors ${getDutchStyle(word)}`}
-              aria-label={`Dutch: ${word}`}
-              aria-pressed={selectedDutch === word}
+              whileTap={!isDutchMatched(index) ? { scale: 0.97 } : {}}
+              onClick={() => handleDutchClick(index)}
+              disabled={isDutchMatched(index)}
+              className={`w-full px-4 py-3 rounded-xl border-2 font-medium text-sm text-center transition-colors ${getDutchStyle(index)}`}
+              aria-label={`Dutch: ${item.word}`}
+              aria-pressed={selectedDutch === index}
             >
               <span className="flex items-center justify-center gap-1.5">
-                {word}
-                {isMatched(word, 'dutch') && (
+                {item.word}
+                {isDutchMatched(index) && (
                   <Check size={14} className="text-success" />
                 )}
               </span>
@@ -178,22 +193,22 @@ export default function MatchPairs({ pairs, onComplete }) {
           <p className="text-xs font-medium text-charcoal-light/50 text-center mb-2">
             English
           </p>
-          {shuffledEnglish.map((word, index) => (
+          {shuffledEnglish.map((item, index) => (
             <motion.button
-              key={`english-${index}-${word}`}
+              key={`english-${index}-${item.word}`}
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.05 }}
-              whileTap={!isMatched(word, 'english') ? { scale: 0.97 } : {}}
-              onClick={() => handleEnglishClick(word)}
-              disabled={isMatched(word, 'english')}
-              className={`w-full px-4 py-3 rounded-xl border-2 font-medium text-sm text-center transition-colors ${getEnglishStyle(word)}`}
-              aria-label={`English: ${word}`}
-              aria-pressed={selectedEnglish === word}
+              whileTap={!isEnglishMatched(index) ? { scale: 0.97 } : {}}
+              onClick={() => handleEnglishClick(index)}
+              disabled={isEnglishMatched(index)}
+              className={`w-full px-4 py-3 rounded-xl border-2 font-medium text-sm text-center transition-colors ${getEnglishStyle(index)}`}
+              aria-label={`English: ${item.word}`}
+              aria-pressed={selectedEnglish === index}
             >
               <span className="flex items-center justify-center gap-1.5">
-                {word}
-                {isMatched(word, 'english') && (
+                {item.word}
+                {isEnglishMatched(index) && (
                   <Check size={14} className="text-success" />
                 )}
               </span>

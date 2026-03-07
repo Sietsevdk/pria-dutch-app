@@ -138,7 +138,7 @@
         { "word": "minuut", "ipa": "mi\u02c8nyt", "meaning": "minute", "audio_hint": "uu at the end" },
         { "word": "cultuur", "ipa": "k\u028bl\u02c8tyr", "meaning": "culture", "audio_hint": "uu in final syllable" },
         { "word": "stuur", "ipa": "styr", "meaning": "steering wheel", "audio_hint": "st cluster before uu" },
-        { "word": "uur", "ipa": "yr", "meaning": "hour", "audio_hint": "Pure uu sound" }
+        { "word": "puur", "ipa": "pyr", "meaning": "pure", "audio_hint": "p then tight uu, ends with r" }
       ],
       "minimalPairs": [
         { "pair": ["muur", "moer"], "meaning": ["wall", "nut (hardware)"] },

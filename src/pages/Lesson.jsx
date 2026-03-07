@@ -80,11 +80,21 @@ function generateExercises(lesson) {
 
     // Test only this batch with multiple choice
     batch.forEach((word) => {
-      const otherOptions = [...new Set(
+      let otherOptions = [...new Set(
         lessonWords
           .filter((w) => w.id !== word.id && w.english !== word.english)
           .map((w) => w.english)
       )];
+      // Pad from all vocab if fewer than 3 distractors available
+      if (otherOptions.length < 3) {
+        const allWordsList = Object.values(allVocab);
+        const extras = [...new Set(
+          allWordsList
+            .filter((w) => w.id !== word.id && w.english !== word.english && !otherOptions.includes(w.english))
+            .map((w) => w.english)
+        )];
+        otherOptions = [...otherOptions, ...shuffle(extras)].slice(0, 3);
+      }
       exercises.push({
         type: 'multiple_choice',
         question: `What does "${dutchWithArticle(word)}" mean?`,
@@ -370,8 +380,8 @@ export default function Lesson() {
 
         // Progress milestones
         const pct = (currentIndex + 1) / exercises.length;
-        if (pct >= 0.48 && pct < 0.55) message += ' Halfway there!';
-        else if (pct >= 0.88 && pct < 0.95) message += ' Almost done!';
+        if (pct >= 0.48 && pct < 0.55) message += '\nHalfway there!';
+        else if (pct >= 0.88 && pct < 0.95) message += '\nAlmost done!';
 
         setFeedback({ type: 'correct', message });
       } else {

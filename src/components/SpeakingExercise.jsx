@@ -11,6 +11,28 @@ import {
 } from 'lucide-react';
 import { useSpeech } from '../hooks/useSpeech';
 
+const PASS_THRESHOLD = 80;
+
+/**
+ * Map recognition error codes to user-friendly messages.
+ */
+function getErrorMessage(error) {
+  switch (error) {
+    case 'not-allowed':
+      return 'Please allow microphone access in your browser settings.';
+    case 'no-speech':
+      return 'No speech detected. Try again or self-assess below.';
+    case 'audio-capture':
+      return 'No microphone found. Check your device settings.';
+    case 'network':
+      return 'Network error. Speech recognition requires an internet connection.';
+    case 'start-failed':
+      return 'Could not start microphone. Please try again.';
+    default:
+      return 'Something went wrong. Try again or self-assess below.';
+  }
+}
+
 /**
  * SpeakingExercise - Speech recognition exercise.
  * Shows Dutch text for the user to read aloud, captures speech, and scores similarity.
@@ -40,31 +62,9 @@ export default function SpeakingExercise({ text, translation, onAnswer }) {
     checkPronunciation,
   } = useSpeech();
 
-  const PASS_THRESHOLD = 80;
-
   const handleListen = useCallback(() => {
     speak(text);
   }, [speak, text]);
-
-  /**
-   * Map recognition error codes to user-friendly messages.
-   */
-  const getErrorMessage = useCallback((error) => {
-    switch (error) {
-      case 'not-allowed':
-        return 'Please allow microphone access in your browser settings.';
-      case 'no-speech':
-        return 'No speech detected. Try again or self-assess below.';
-      case 'audio-capture':
-        return 'No microphone found. Check your device settings.';
-      case 'network':
-        return 'Network error. Speech recognition requires an internet connection.';
-      case 'start-failed':
-        return 'Could not start microphone. Please try again.';
-      default:
-        return 'Something went wrong. Try again or self-assess below.';
-    }
-  }, []);
 
   const handleStartRecording = useCallback(() => {
     if (answerTimerRef.current) { clearTimeout(answerTimerRef.current); answerTimerRef.current = null; }
@@ -92,7 +92,7 @@ export default function SpeakingExercise({ text, translation, onAnswer }) {
         setMicError(getErrorMessage(error));
       },
     });
-  }, [startListening, checkPronunciation, text, onAnswer, getErrorMessage]);
+  }, [startListening, checkPronunciation, text, onAnswer]);
 
   const handleStopRecording = useCallback(() => {
     stopListening();
@@ -111,6 +111,7 @@ export default function SpeakingExercise({ text, translation, onAnswer }) {
    */
   const handleSelfAssess = useCallback(
     (correct) => {
+      if (answerTimerRef.current) clearTimeout(answerTimerRef.current);
       setHasAttempted(true);
       setSimilarity(correct ? 100 : 0);
       setSpokenText(correct ? '(Self-assessed: correct)' : '(Self-assessed: needs practice)');

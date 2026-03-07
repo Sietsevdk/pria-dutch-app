@@ -1,6 +1,6 @@
 import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowLeft, Search, Filter, Check, X, ChevronDown, ChevronRight, BookOpen, Zap, Trophy, Heart } from 'lucide-react';
+import { Search, Filter, Check, X, ChevronDown, ChevronRight, BookOpen, Zap, Trophy, Heart } from 'lucide-react';
 import { checkAnswer, shuffle } from '../utils/dutch';
 import useProgress from '../hooks/useProgress';
 import useStreak from '../hooks/useStreak';
@@ -613,13 +613,13 @@ function GuidedLesson() {
           Verbs studied: {lessonVerbs.map((v) => v.infinitive).join(', ')}
         </p>
         <button
-          onClick={() => { setPhase('teaching'); setTeachIndex(0); setScore({ correct: 0, total: 0 }); }}
+          onClick={() => { completionRecorded.current = false; setPhase('teaching'); setTeachIndex(0); setScore({ correct: 0, total: 0 }); }}
           className="w-full py-3 rounded-xl text-sm font-semibold bg-primary text-white mb-3"
         >
           New Lesson
         </button>
         <button
-          onClick={() => { setPhase('teaching'); setTeachIndex(0); }}
+          onClick={() => { setPhase('teaching'); setTeachIndex(0); setScore({ correct: 0, total: 0 }); }}
           className="w-full py-3 rounded-xl text-sm font-medium bg-cream-dark text-charcoal/60"
         >
           Review Same Verbs
@@ -775,11 +775,16 @@ function RandomQuiz() {
 
     // For perfect tense, we handle it differently
     if (selectedTense === 'perfect') {
+      if (!tenseData?.participle) {
+        const remaining = verbList.filter(v => v !== verb);
+        if (remaining.length === 0) return null;
+        return generateChallenge(remaining, selectedTense);
+      }
       return {
         verb,
         tense: selectedTense,
         pronoun: null,
-        correctAnswer: tenseData?.participle || '',
+        correctAnswer: tenseData.participle,
         displayPrompt: `${verb.infinitive} → voltooid deelwoord`,
       };
     }

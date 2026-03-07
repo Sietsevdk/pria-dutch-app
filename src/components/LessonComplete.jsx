@@ -8,13 +8,13 @@ import { Trophy, Target, BookOpen, Sparkles, ArrowRight, RotateCcw } from 'lucid
  */
 
 // Confetti particle component
-function Particle({ delay, x, color }) {
+function Particle({ delay, x, size, color, rotateDir }) {
   return (
     <motion.div
       className="absolute rounded-full"
       style={{
-        width: Math.random() * 8 + 4,
-        height: Math.random() * 8 + 4,
+        width: size,
+        height: size,
         backgroundColor: color,
         left: `${x}%`,
         top: '-5%',
@@ -23,7 +23,7 @@ function Particle({ delay, x, color }) {
       animate={{
         y: ['0vh', '100vh'],
         opacity: [1, 1, 0],
-        rotate: [0, 360 * (Math.random() > 0.5 ? 1 : -1)],
+        rotate: [0, 360 * rotateDir],
         x: [0, (Math.random() - 0.5) * 100],
       }}
       transition={{
@@ -36,10 +36,10 @@ function Particle({ delay, x, color }) {
 }
 
 export default function LessonComplete({
-  xpEarned,
-  accuracy,
-  wordsLearned,
-  mistakeCount,
+  accuracy = 0,
+  xpEarned = 0,
+  wordsLearned = 0,
+  mistakeCount = 0,
   onContinue,
   onReviewMistakes,
 }) {
@@ -53,13 +53,15 @@ export default function LessonComplete({
       ? 'Great work!'
       : 'Keep practicing!';
 
-  // Generate confetti particles
+  // Generate confetti particles with memoized random values
   const particles = useMemo(() => {
     const colors = ['#FF6B2B', '#7FB069', '#F5A623', '#5B9BD5', '#E85D5D', '#FF8F5C'];
     return Array.from({ length: 30 }, (_, i) => ({
       id: i,
       delay: Math.random() * 0.8,
       x: Math.random() * 100,
+      size: Math.random() * 8 + 4,
+      rotateDir: Math.random() > 0.5 ? 1 : -1,
       color: colors[Math.floor(Math.random() * colors.length)],
     }));
   }, []);
@@ -113,7 +115,7 @@ export default function LessonComplete({
       {/* Confetti particles */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {particles.map((p) => (
-          <Particle key={p.id} delay={p.delay} x={p.x} color={p.color} />
+          <Particle key={p.id} delay={p.delay} x={p.x} size={p.size} rotateDir={p.rotateDir} color={p.color} />
         ))}
       </div>
 
@@ -187,7 +189,7 @@ export default function LessonComplete({
           {/* Continue button */}
           <motion.button
             whileTap={{ scale: 0.97 }}
-            onClick={onContinue}
+            onClick={() => onContinue?.()}
             className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-primary text-white font-medium hover:bg-primary-dark transition-colors shadow-sm"
             aria-label="Continue to next lesson"
           >

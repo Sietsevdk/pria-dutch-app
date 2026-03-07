@@ -57,33 +57,34 @@ const useSRS = create(
 
       // Review an item with quality rating
       reviewItem: (itemId, quality) => {
-        const state = get();
-        const item = state.items[itemId];
-        if (!item) return;
-
         const qualityScore = typeof quality === 'string' ? QUALITY_MAP[quality] : quality;
-        const updated = calculateSRS(item, qualityScore);
 
-        const isCorrect = qualityScore >= 3;
+        set((state) => {
+          const item = state.items[itemId];
+          if (!item) return {};
 
-        // Track daily review count (reset if new day)
-        const today = new Date().toDateString();
-        const isNewDay = state.dailyReviewDate !== today;
-        const newDailyCount = isNewDay ? 1 : state.dailyReviewCount + 1;
+          const updated = calculateSRS(item, qualityScore);
+          const isCorrect = qualityScore >= 3;
 
-        set({
-          items: {
-            ...state.items,
-            [itemId]: {
-              ...item,
-              ...updated,
-              correctCount: (item.correctCount || 0) + (isCorrect ? 1 : 0),
-              incorrectCount: (item.incorrectCount || 0) + (isCorrect ? 0 : 1),
+          // Track daily review count (reset if new day)
+          const today = new Date().toDateString();
+          const isNewDay = state.dailyReviewDate !== today;
+          const newDailyCount = isNewDay ? 1 : state.dailyReviewCount + 1;
+
+          return {
+            items: {
+              ...state.items,
+              [itemId]: {
+                ...item,
+                ...updated,
+                correctCount: (item.correctCount || 0) + (isCorrect ? 1 : 0),
+                incorrectCount: (item.incorrectCount || 0) + (isCorrect ? 0 : 1),
+              },
             },
-          },
-          dailyReviewCount: newDailyCount,
-          dailyReviewDate: today,
-          lastReviewSession: new Date().toISOString(),
+            dailyReviewCount: newDailyCount,
+            dailyReviewDate: today,
+            lastReviewSession: new Date().toISOString(),
+          };
         });
       },
 
@@ -193,6 +194,8 @@ const useSRS = create(
     }),
     {
       name: 'pria-srs',
+      version: 1,
+      migrate: (state) => state,
     }
   )
 );

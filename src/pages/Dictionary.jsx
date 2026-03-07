@@ -1,6 +1,6 @@
 import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Volume2, ChevronDown, X, BookOpen, Play, ArrowLeft, RefreshCw, Heart, CheckCircle } from 'lucide-react';
+import { Search, Volume2, ChevronDown, X, BookOpen, Play, ArrowLeft, Heart, CheckCircle } from 'lucide-react';
 import { useSpeech } from '../hooks/useSpeech';
 import { dutchWithArticle, dutchBareWord, shuffle, getEncouragement, getGentleCorrection } from '../utils/dutch';
 import { calculateLessonXP } from '../utils/xp';
@@ -221,7 +221,6 @@ export default function Dictionary() {
             <button
               onClick={(e) => {
                 e.stopPropagation();
-                const learnedWordsList = allWords.filter((w) => wordsLearned[w.id]?.learned);
                 const topic = { topic: '_learned', topicNL: 'Geleerde woorden', icon: '✅' };
                 setPracticeTopic(topic);
               }}
@@ -682,6 +681,7 @@ function TopicPractice({ topic, words, allWords: allWordsList, onBack }) {
   const [isComplete, setIsComplete] = useState(false);
   const [correctStreak, setCorrectStreak] = useState(0);
   const advanceTimerRef = useRef(null);
+  const handleNextRef = useRef(null);
 
   useEffect(() => {
     return () => { if (advanceTimerRef.current) clearTimeout(advanceTimerRef.current); };
@@ -707,7 +707,10 @@ function TopicPractice({ topic, words, allWords: allWordsList, onBack }) {
     } else {
       setCurrentIndex((i) => i + 1);
     }
-  }, [currentIndex, exercises.length, correctCount, mistakeCount, isComplete, recordActivity]);
+  }, [currentIndex, exercises.length, correctCount, mistakeCount, isComplete, addXP, recordActivity, completeLessonGoal]);
+
+  // Keep ref in sync so timers always call the latest version
+  useEffect(() => { handleNextRef.current = handleNext; }, [handleNext]);
 
   const handleAnswer = useCallback(
     (isCorrect, wordId) => {
@@ -732,9 +735,9 @@ function TopicPractice({ topic, words, allWords: allWordsList, onBack }) {
       }
       if (wordId) recordExercise(isCorrect, currentExercise?.type || 'unknown');
       if (currentExercise?.type === 'speaking') completeSpeakingGoal();
-      advanceTimerRef.current = setTimeout(handleNext, isCorrect ? 1200 : 2500);
+      advanceTimerRef.current = setTimeout(() => handleNextRef.current(), isCorrect ? 1200 : 2500);
     },
-    [currentExercise, handleNext, recordExercise, addSRSItem, completeSpeakingGoal, correctStreak]
+    [currentExercise, recordExercise, addSRSItem, completeSpeakingGoal, correctStreak]
   );
 
   const handleWordIntro = useCallback(
@@ -830,7 +833,7 @@ function TopicPractice({ topic, words, allWords: allWordsList, onBack }) {
                 onComplete={(mistakes) => {
                   if (mistakes === 0) setCorrectCount((c) => c + 1);
                   else setMistakeCount((m) => m + mistakes);
-                  advanceTimerRef.current = setTimeout(handleNext, 1500);
+                  advanceTimerRef.current = setTimeout(() => handleNextRef.current(), 1500);
                 }}
               />
             )}

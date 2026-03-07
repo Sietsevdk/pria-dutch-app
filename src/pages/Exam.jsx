@@ -66,21 +66,27 @@ export default function Exam() {
   // Writing prompt navigation (must be at top level to respect Rules of Hooks)
   const [promptIndex, setPromptIndex] = useState(0);
   const timerRef = useRef(null);
+  const startTimeRef = useRef(null);
+  const durationRef = useRef(30 * 60);
 
   useEffect(() => {
     if (!timerActive) return;
+    startTimeRef.current = Date.now();
+    durationRef.current = timeLeft; // capture remaining seconds at start
     timerRef.current = setInterval(() => {
-      setTimeLeft((t) => {
-        if (t <= 1) {
-          clearInterval(timerRef.current);
-          setTimerActive(false);
-          setShowResults(true);
-          return 0;
-        }
-        return t - 1;
-      });
+      const elapsed = Math.floor((Date.now() - startTimeRef.current) / 1000);
+      const remaining = durationRef.current - elapsed;
+      if (remaining <= 0) {
+        clearInterval(timerRef.current);
+        setTimerActive(false);
+        setTimeLeft(0);
+        setShowResults(true);
+      } else {
+        setTimeLeft(remaining);
+      }
     }, 1000);
     return () => clearInterval(timerRef.current);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timerActive]);
 
   // Warn user before navigating away during active exam

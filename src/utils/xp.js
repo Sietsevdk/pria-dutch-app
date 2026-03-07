@@ -59,8 +59,8 @@ export function calculateLessonXP({ correctAnswers, totalQuestions, mistakes }) 
   // XP for correct answers
   xp += correctAnswers * XP_VALUES.exerciseCorrect;
 
-  // XP for corrected mistakes
-  xp += mistakes * XP_VALUES.exerciseCorrected;
+  // XP for corrected mistakes (capped so it never exceeds perfect bonus)
+  xp += Math.min(mistakes * XP_VALUES.exerciseCorrected, XP_VALUES.perfectBonus);
 
   // Lesson completion bonus
   xp += XP_VALUES.lessonComplete;

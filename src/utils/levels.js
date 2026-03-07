@@ -74,13 +74,13 @@ export const VOCAB_DIFFICULTY = {
 /* ── KNM categories ── */
 export const KNM_DIFFICULTY = {
   'normen-en-waarden': 2,
-  'gezondheid': 2,
+  'gezondheidszorg': 2,
   'wonen': 2,
   'werk-en-inkomen': 3,
   'onderwijs': 3,
-  'overheid-en-politiek': 3,
-  'geschiedenis-en-geografie': 3,
-  'burgerschap': 3,
+  'politiek-en-recht': 3,
+  'geschiedenis': 3,
+  'dagelijks-leven': 3,
 };
 
 /**

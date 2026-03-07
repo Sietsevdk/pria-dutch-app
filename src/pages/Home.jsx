@@ -43,6 +43,7 @@ export default function Home() {
   const srsItems = useSRS((s) => s.items);
   const dueCount = useMemo(() => getDueItems(srsItems).length, [srsItems]);
 
+  const safeWeeklyXP = weeklyXP || [0,0,0,0,0,0,0];
   const [dailyIdiom, setDailyIdiom] = useState(null);
 
   const clearOldMistakes = useMistakes((s) => s.clearOldMistakes);
@@ -56,8 +57,9 @@ export default function Home() {
 
   useEffect(() => {
     if (idiomsData.idioms?.length > 0) {
+      const year = new Date().getFullYear();
       const dayOfYear = Math.floor(
-        (Date.now() - new Date(new Date().getFullYear(), 0, 0)) / 86400000
+        (Date.now() - new Date(year, 0, 1)) / 86400000
       );
       setDailyIdiom(idiomsData.idioms[dayOfYear % idiomsData.idioms.length]);
     }
@@ -301,10 +303,10 @@ export default function Home() {
             const today = new Date().getDay();
             return Array.from({ length: 7 }, (_, i) => dayNames[(today - 6 + i + 7) % 7]);
           })().map((day, i) => {
-            const xp = weeklyXP[i] || 0;
-            const maxXP = Math.max(...weeklyXP, 1);
+            const xp = safeWeeklyXP[i] || 0;
+            const maxXP = Math.max(...safeWeeklyXP, 1);
             const height = (xp / maxXP) * 100;
-            const isToday = i === weeklyXP.length - 1;
+            const isToday = i === safeWeeklyXP.length - 1;
             return (
               <div key={i} className="flex-1 flex flex-col items-center gap-1">
                 <div className="w-full flex items-end justify-center" style={{ height: '60px' }}>

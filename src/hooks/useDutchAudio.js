@@ -177,6 +177,7 @@ export function useDutchAudio() {
         utterance.onerror = () => {
           setIsSpeaking(false);
           setCurrentWordIndex(-1);
+          if (options.onEnd) options.onEnd();
         };
 
         utteranceRef.current = utterance;

@@ -249,6 +249,7 @@ function TypingReview({ word, onAnswer }) {
   const handleSubmit = useCallback((e) => {
     e?.preventDefault();
     if (!userInput.trim() || hasSubmitted) return;
+    if (feedbackTimerRef.current) clearTimeout(feedbackTimerRef.current);
 
     const checkResult = checkAnswer(userInput, dutchAnswer);
     setResult(checkResult);

@@ -15,18 +15,19 @@ const useFavourites = create(
 
       // Toggle a favourite — add if not present, remove if already saved
       toggleFavourite: (id, type, data) => {
-        const state = get();
-        const exists = state.favourites.some((f) => f.id === id);
-        if (exists) {
-          set({ favourites: state.favourites.filter((f) => f.id !== id) });
-        } else {
-          set({
-            favourites: [
-              { id, type, data, addedAt: new Date().toISOString() },
-              ...state.favourites,
-            ],
-          });
-        }
+        set((state) => {
+          const exists = state.favourites.some((f) => f.id === id);
+          if (exists) {
+            return { favourites: state.favourites.filter((f) => f.id !== id) };
+          } else {
+            return {
+              favourites: [
+                { id, type, data, addedAt: new Date().toISOString() },
+                ...state.favourites,
+              ],
+            };
+          }
+        });
       },
 
       isFavourite: (id) => {
@@ -41,6 +42,8 @@ const useFavourites = create(
     }),
     {
       name: 'pria-favourites',
+      version: 1,
+      migrate: (state) => state,
     }
   )
 );
