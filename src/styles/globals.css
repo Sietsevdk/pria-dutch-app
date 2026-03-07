@@ -24,6 +24,8 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #d1c7b8 transparent;
 }
 
 body {
@@ -59,7 +61,7 @@ body {
 }
 
 /* Fraunces for headings */
-h1, h2, h3, .font-display {
+h1, h2, h3, h4, h5, h6, .font-display {
   font-family: var(--font-display);
 }
 

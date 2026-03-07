@@ -67,10 +67,12 @@ export default function Profile() {
   const [focusAnswer, setFocusAnswer] = useState(null);
   const [focusScore, setFocusScore] = useState({ correct: 0, total: 0 });
   const focusTimerRef = useRef(null);
+  const exportTimerRef = useRef(null);
 
   useEffect(() => {
     return () => {
       if (focusTimerRef.current) clearTimeout(focusTimerRef.current);
+      if (exportTimerRef.current) clearTimeout(exportTimerRef.current);
     };
   }, []);
 
@@ -115,7 +117,8 @@ export default function Profile() {
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
     setExported(true);
-    setTimeout(() => setExported(false), 2000);
+    if (exportTimerRef.current) clearTimeout(exportTimerRef.current);
+    exportTimerRef.current = setTimeout(() => setExported(false), 2000);
   };
 
   // Helper: build MC exercises from a list of vocab words
@@ -190,7 +193,7 @@ export default function Profile() {
   const calendarData = useMemo(() => {
     const data = [];
     const today = new Date();
-    for (let i = 83; i >= 0; i--) {
+    for (let i = 55; i >= 0; i--) {
       const date = new Date(today);
       date.setDate(date.getDate() - i);
       const year = date.getFullYear();
@@ -277,6 +280,7 @@ export default function Profile() {
                     correct: s.correct + (correct ? 1 : 0),
                     total: s.total + 1,
                   }));
+                  if (focusTimerRef.current) clearTimeout(focusTimerRef.current);
                   focusTimerRef.current = setTimeout(() => {
                     setFocusAnswer(null);
                     setFocusIndex((i) => i + 1);

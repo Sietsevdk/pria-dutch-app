@@ -41,6 +41,7 @@ export default function SentenceBuilder({
   );
 
   const handleReset = useCallback(() => {
+    if (feedbackTimerRef.current) { clearTimeout(feedbackTimerRef.current); feedbackTimerRef.current = null; }
     setPlaced([]);
     setHasSubmitted(false);
     setIsCorrect(false);

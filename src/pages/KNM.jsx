@@ -124,7 +124,7 @@ export default function KNM() {
             </motion.button>
           </div>
 
-          {categoryProgress[selectedCategory]?.completed && (
+          {categoryProgress[selectedCategory]?.completed && categoryProgress[selectedCategory]?.total > 0 && (
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mt-6 text-center">
               <p className="text-xs text-charcoal/40">
                 Previous score: {Math.round((categoryProgress[selectedCategory].score / categoryProgress[selectedCategory].total) * 100)}%
@@ -170,7 +170,7 @@ export default function KNM() {
               className="bg-primary h-2 rounded-full"
               initial={{ width: 0 }}
               animate={{
-                width: `${(Object.values(categoryProgress).filter((p) => p.completed).length / categories.length) * 100}%`,
+                width: `${categories.length > 0 ? (Object.values(categoryProgress).filter((p) => p.completed).length / categories.length) * 100 : 0}%`,
               }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
             />
@@ -182,7 +182,7 @@ export default function KNM() {
       <div className="grid grid-cols-2 gap-3">
         {categories.map((category, i) => {
           const progress = categoryProgress[category.id];
-          const completionPct = progress
+          const completionPct = progress?.total > 0
             ? Math.round((progress.score / progress.total) * 100)
             : 0;
 
@@ -267,7 +267,12 @@ function CategoryStudy({ category, onBack, onStartQuiz }) {
   const total = questions.length;
   const q = questions[cardIndex];
 
-  if (!q) return null;
+  if (!q) return (
+    <div className="px-4 pt-6 text-center">
+      <p className="text-charcoal/60 mb-4">No questions available for this category.</p>
+      <button onClick={onBack} className="text-primary font-medium">← Back to categories</button>
+    </div>
+  );
 
   const isLast = cardIndex >= total - 1;
 
@@ -407,7 +412,8 @@ function CategoryQuiz({ category, onBack, onComplete, previousResult }) {
   const handleNext = () => {
     if (currentIndex + 1 >= totalQuestions) {
       setShowResults(true);
-      // Derive final score from wrongAnswers (always up-to-date) to avoid stale closure
+      // Compute final score from current state + current question's correctness
+      // to avoid any stale-state issues with React batching
       const finalScore = totalQuestions - wrongAnswers.length;
       onComplete(category.id, finalScore, totalQuestions, wrongAnswers);
       return;

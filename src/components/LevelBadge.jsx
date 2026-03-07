@@ -31,7 +31,7 @@ export default function LevelBadge({ difficulty, userLevel, compact = false }) {
     },
   };
 
-  const s = styles[tag];
+  const s = styles[tag] || styles['your-level'];
 
   return (
     <span

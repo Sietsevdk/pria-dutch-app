@@ -71,7 +71,7 @@ export default function Home() {
   }, []);
 
   const goalsCompleteCount = useMemo(() => {
-    return Object.values(goalsCompleted).filter(Boolean).length;
+    return Object.values(goalsCompleted || {}).filter(Boolean).length;
   }, [goalsCompleted]);
   const goalsProgress = goalsCompleteCount / 3;
   const allGoalsDone = goalsCompleteCount === 3;

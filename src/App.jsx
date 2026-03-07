@@ -1,6 +1,8 @@
-import { Routes, Route } from 'react-router-dom';
-import { lazy, Suspense, Component } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { lazy, Suspense, Component, useEffect } from 'react';
 import Layout from './components/Layout';
+import useStreak from './hooks/useStreak';
+import useProgress from './hooks/useProgress';
 
 // Lazy-load pages for code splitting
 const Home = lazy(() => import('./pages/Home'));
@@ -38,6 +40,13 @@ class ErrorBoundary extends Component {
     return { hasError: true };
   }
 
+  // Reset error state when location changes (navigation)
+  componentDidUpdate(prevProps) {
+    if (this.state.hasError && prevProps.locationKey !== this.props.locationKey) {
+      this.setState({ hasError: false });
+    }
+  }
+
   render() {
     if (this.state.hasError) {
       return (
@@ -45,12 +54,20 @@ class ErrorBoundary extends Component {
           <div className="text-center px-6">
             <p className="text-lg font-semibold text-charcoal mb-2">Something went wrong</p>
             <p className="text-sm text-charcoal/50 mb-4">Try refreshing the page</p>
-            <button
-              onClick={() => window.location.reload()}
-              className="px-6 py-2 bg-primary text-white rounded-xl text-sm font-medium"
-            >
-              Refresh
-            </button>
+            <div className="flex gap-3 justify-center">
+              <button
+                onClick={() => this.setState({ hasError: false })}
+                className="px-6 py-2 bg-cream-dark text-charcoal rounded-xl text-sm font-medium"
+              >
+                Try Again
+              </button>
+              <button
+                onClick={() => window.location.reload()}
+                className="px-6 py-2 bg-primary text-white rounded-xl text-sm font-medium"
+              >
+                Refresh
+              </button>
+            </div>
           </div>
         </div>
       );
@@ -60,8 +77,16 @@ class ErrorBoundary extends Component {
 }
 
 export default function App() {
+  const location = useLocation();
+
+  // Initialize streak and daily goals on app boot (not just Home page)
+  useEffect(() => {
+    useStreak.getState().checkStreak();
+    useProgress.getState().resetDailyGoals();
+  }, []);
+
   return (
-    <ErrorBoundary>
+    <ErrorBoundary locationKey={location.key}>
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route element={<Layout />}>

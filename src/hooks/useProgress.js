@@ -44,6 +44,7 @@ const useProgress = create(
       // Settings
       ttsSpeed: 'normal', // 'slow' | 'normal'
       dailyGoalMinutes: 15,
+      lastGoalResetDate: null, // Tracks when daily goals were last reset
 
       // Actions
       addXP: (amount) => {
@@ -194,11 +195,21 @@ const useProgress = create(
       resetDailyGoals: () => {
         const state = get();
         const today = new Date().toDateString();
-        if (state.lastXPDate !== today && state.lastGoalResetDate !== today) {
+        if (state.lastGoalResetDate !== today) {
+          // Also shift weeklyXP to align chart even before first XP of the day
+          let newWeeklyXP = [...state.weeklyXP];
+          if (state.lastXPDate && state.lastXPDate !== today) {
+            const lastDate = new Date(state.lastXPDate);
+            const now = new Date();
+            let daysMissed = Math.round((now - lastDate) / (1000 * 60 * 60 * 24));
+            daysMissed = Math.max(1, Math.min(daysMissed, 7));
+            newWeeklyXP = [...newWeeklyXP.slice(daysMissed), ...Array(daysMissed).fill(0)];
+          }
           set({
             goalsCompleted: { lesson: false, review: false, speaking: false },
             todayXP: 0,
             lastGoalResetDate: today,
+            weeklyXP: newWeeklyXP,
           });
         }
       },
@@ -227,6 +238,7 @@ const useProgress = create(
           totalXP: 0,
           todayXP: 0,
           weeklyXP: [0, 0, 0, 0, 0, 0, 0],
+          lastXPDate: null,
           currentLesson: 1,
           lessonProgress: {},
           currentExerciseIndex: 0,
@@ -236,8 +248,11 @@ const useProgress = create(
           totalExercises: 0,
           totalCorrect: 0,
           totalTime: 0,
+          sessionStartTime: null,
           exerciseTypeStats: {},
           goalsCompleted: { lesson: false, review: false, speaking: false },
+          knmProgress: {},
+          lastGoalResetDate: null,
         }),
 
       // Check if a lesson is unlocked — completion of the previous lesson is sufficient

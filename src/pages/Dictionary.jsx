@@ -666,6 +666,7 @@ function generateTopicExercises(words, allWordsList) {
 
 function TopicPractice({ topic, words, allWords: allWordsList, onBack }) {
   const learnWord = useProgress((s) => s.learnWord);
+  const addXP = useProgress((s) => s.addXP);
   const recordExercise = useProgress((s) => s.recordExercise);
   const completeSpeakingGoal = useProgress((s) => s.completeSpeakingGoal);
   const completeLessonGoal = useProgress((s) => s.completeLessonGoal);
@@ -698,6 +699,7 @@ function TopicPractice({ topic, words, allWords: allWordsList, onBack }) {
       if (!isComplete) {
         const totalQ = correctCount + mistakeCount;
         const xp = calculateLessonXP({ correctAnswers: correctCount, totalQuestions: totalQ, mistakes: mistakeCount });
+        addXP(xp);
         recordActivity(xp);
         completeLessonGoal();
         setIsComplete(true);
@@ -751,6 +753,15 @@ function TopicPractice({ topic, words, allWords: allWordsList, onBack }) {
         onContinue={onBack}
         onReviewMistakes={null}
       />
+    );
+  }
+
+  if (exercises.length === 0) {
+    return (
+      <div className="px-4 pt-12 text-center">
+        <p className="text-charcoal/60 mb-4">Not enough words to generate exercises for this topic.</p>
+        <button onClick={onBack} className="text-primary font-medium">← Back to Dictionary</button>
+      </div>
     );
   }
 

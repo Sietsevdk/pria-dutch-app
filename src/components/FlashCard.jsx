@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Volume2, RotateCcw, ThumbsDown, Zap } from 'lucide-react';
 import { useSpeech } from '../hooks/useSpeech';
@@ -13,6 +13,11 @@ export default function FlashCard({ word, onRate }) {
   const [isFlipped, setIsFlipped] = useState(false);
   const { speak, isSpeaking } = useSpeech();
   const getItemStats = useSRS((s) => s.getItemStats);
+
+  // Reset flip state when word changes
+  useEffect(() => {
+    setIsFlipped(false);
+  }, [word?.id]);
 
   const srsStats = word?.id ? getItemStats(word.id) : null;
 

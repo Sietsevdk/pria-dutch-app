@@ -1,4 +1,5 @@
 {
+  "id": "/",
   "name": "Pria — Learn Dutch",
   "short_name": "Pria Dutch",
   "description": "Your daily Dutch language companion for the inburgeringsexamen",
@@ -16,25 +17,25 @@
     },
     {
       "src": "/icon-192.svg",
-      "sizes": "192x192",
+      "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
     },
     {
       "src": "/icon-512.svg",
-      "sizes": "512x512",
+      "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
     },
     {
       "src": "/icon-192.svg",
-      "sizes": "192x192",
+      "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "maskable"
     },
     {
       "src": "/icon-512.svg",
-      "sizes": "512x512",
+      "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "maskable"
     }

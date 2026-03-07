@@ -14,50 +14,46 @@ const useStreak = create(
       activityCalendar: {}, // { 'YYYY-MM-DD': { xp: number, completed: bool } }
 
       // Check and update streak on app load
+      // Uses a single set() with updater function to avoid stale state between multiple set() calls
       checkStreak: () => {
-        const state = get();
         const today = getDateString(new Date());
         const yesterday = getDateString(addDays(new Date(), -1));
-
-        // Already completed today
-        if (state.lastActivityDate === today) {
-          set({ completedToday: true });
-          return;
-        }
-
-        // Check if streak should continue or reset
-        if (state.lastActivityDate === yesterday) {
-          // Yesterday was active, streak continues
-          set({ completedToday: false });
-        } else if (state.lastActivityDate) {
-          // Missed a day — check for streak freeze
-          const daysMissed = daysBetween(state.lastActivityDate, today);
-
-          if (daysMissed === 2 && state.streakFreezeAvailable && !state.streakFreezeUsedThisWeek) {
-            // Use streak freeze — keep streak alive
-            set({
-              streakFreezeAvailable: false,
-              streakFreezeUsedThisWeek: true,
-              lastFreezeWeek: getWeekString(new Date()),
-              completedToday: false,
-            });
-          } else {
-            // Streak broken
-            set({
-              currentStreak: 0,
-              completedToday: false,
-            });
-          }
-        }
-
-        // Reset weekly freeze
         const currentWeek = getWeekString(new Date());
-        if (state.lastFreezeWeek !== currentWeek) {
-          set({
-            streakFreezeAvailable: true,
-            streakFreezeUsedThisWeek: false,
-          });
-        }
+
+        set((state) => {
+          // Already completed today
+          if (state.lastActivityDate === today) {
+            return { completedToday: true };
+          }
+
+          const updates = { completedToday: false };
+
+          // Check if streak should continue or reset
+          if (state.lastActivityDate === yesterday) {
+            // Yesterday was active, streak continues — no changes needed
+          } else if (state.lastActivityDate) {
+            // Missed a day — check for streak freeze
+            const missed = daysBetween(state.lastActivityDate, today);
+
+            if (missed === 2 && state.streakFreezeAvailable && !state.streakFreezeUsedThisWeek) {
+              // Use streak freeze — keep streak alive
+              updates.streakFreezeAvailable = false;
+              updates.streakFreezeUsedThisWeek = true;
+              updates.lastFreezeWeek = currentWeek;
+            } else {
+              // Streak broken
+              updates.currentStreak = 0;
+            }
+          }
+
+          // Reset weekly freeze (only if freeze wasn't just used in this same call)
+          if (state.lastFreezeWeek !== currentWeek && !updates.lastFreezeWeek) {
+            updates.streakFreezeAvailable = true;
+            updates.streakFreezeUsedThisWeek = false;
+          }
+
+          return updates;
+        });
       },
 
       // Record activity for today
@@ -131,6 +127,9 @@ const useStreak = create(
           lastActivityDate: null,
           completedToday: false,
           activityCalendar: {},
+          streakFreezeAvailable: true,
+          streakFreezeUsedThisWeek: false,
+          lastFreezeWeek: null,
         }),
     }),
     {
@@ -154,9 +153,12 @@ function addDays(date, days) {
 }
 
 function daysBetween(dateStr1, dateStr2) {
-  const d1 = new Date(dateStr1);
-  const d2 = new Date(dateStr2);
-  return Math.round((d2 - d1) / (1000 * 60 * 60 * 24));
+  // Parse as local dates (not UTC) to avoid DST/timezone mismatches
+  const [y1, m1, d1] = dateStr1.split('-').map(Number);
+  const [y2, m2, d2] = dateStr2.split('-').map(Number);
+  const date1 = new Date(y1, m1 - 1, d1);
+  const date2 = new Date(y2, m2 - 1, d2);
+  return Math.round((date2 - date1) / (1000 * 60 * 60 * 24));
 }
 
 function getWeekString(date) {

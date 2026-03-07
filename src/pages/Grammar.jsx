@@ -266,7 +266,7 @@ function GrammarDetail({ topic, onBack }) {
 
     return (
       <div className="px-4 pt-6">
-        <button onClick={onBack} className="text-sm text-primary font-medium mb-4">
+        <button onClick={() => { if (exerciseTimerRef.current) { clearTimeout(exerciseTimerRef.current); exerciseTimerRef.current = null; } onBack(); }} className="text-sm text-primary font-medium mb-4">
           ← Back
         </button>
         <p className="text-sm text-charcoal/60 mb-4">
@@ -302,6 +302,34 @@ function GrammarDetail({ topic, onBack }) {
               exerciseTimerRef.current = setTimeout(() => setExerciseIndex((i) => i + 1), 1500);
             }}
           />
+        )}
+        {ex.type === 'reorder' && (
+          <div key={exerciseIndex} className="w-full max-w-md mx-auto">
+            <ReorderExercise
+              sentence={ex.sentence}
+              answer={ex.answer}
+              words={ex.words}
+              explanation={ex.explanationEN || ex.explanation}
+              onAnswer={(correct) => {
+                setScore((s) => ({
+                  correct: s.correct + (correct ? 1 : 0),
+                  total: s.total + 1,
+                }));
+                exerciseTimerRef.current = setTimeout(() => setExerciseIndex((i) => i + 1), 1500);
+              }}
+            />
+          </div>
+        )}
+        {!['fill_blank', 'multiple_choice', 'reorder'].includes(ex?.type) && (
+          <div className="text-center text-charcoal/60 py-8">
+            <p className="mb-3">Unsupported exercise type</p>
+            <button
+              onClick={() => setExerciseIndex((i) => i + 1)}
+              className="text-primary font-medium"
+            >
+              Skip →
+            </button>
+          </div>
         )}
       </div>
     );
@@ -476,18 +504,21 @@ function GrammarDetail({ topic, onBack }) {
  */
 function getMnemonicHint(noun) {
   const word = noun.dutch?.toLowerCase() || '';
-  // Check if any HET_WORD_RULES pattern matches
-  for (const rule of HET_WORD_RULES) {
-    if (rule.pattern && rule.pattern.test(word)) {
-      return `Rule: ${rule.rule}`;
+  // Only explain WHY it's a het-word if it actually IS a het-word
+  if (noun.article === 'het') {
+    for (const rule of HET_WORD_RULES) {
+      if (rule.pattern && rule.pattern.test(word)) {
+        return `Tip: ${rule.rule}`;
+      }
     }
+    const fullForm = `het ${word}`;
+    if (COMMON_HET_WORDS.some((hw) => hw.toLowerCase() === fullForm)) {
+      return `"het ${noun.dutch}" is a common het-word - try to memorize it!`;
+    }
+    return 'This is a het-word — try making a mental image to remember it!';
   }
-  // Check if in COMMON_HET_WORDS list
-  const fullForm = `${noun.article} ${word}`;
-  if (COMMON_HET_WORDS.some((hw) => hw.toLowerCase() === fullForm)) {
-    return `"${noun.article} ${noun.dutch}" is a common het-word - try to memorize it!`;
-  }
-  return 'This is just a word to memorize - try making a mental image!';
+  // de-word
+  return `This is a de-word — most Dutch nouns use "de". Try to remember the exceptions!`;
 }
 
 /**
@@ -545,11 +576,8 @@ function DeHetTrainer({ onBack }) {
 
   const handleIKnewIt = () => {
     setIKnewIt(true);
-    // Count it as correct since the user actually knew it
-    setStats((s) => ({
-      correct: s.correct + 1,
-      total: s.total, // total was already incremented
-    }));
+    // Visual feedback only — don't inflate stats since it was originally wrong
+    // Streak continues to motivate the user
     setStreak((s) => s + 1);
   };
 
@@ -718,6 +746,125 @@ function DeHetTrainer({ onBack }) {
           </motion.div>
         )}
       </AnimatePresence>
+    </div>
+  );
+}
+
+/**
+ * ReorderExercise — Drag-free word ordering exercise for grammar practice.
+ * Renders words as tappable buttons to build a sentence in correct order.
+ */
+function ReorderExercise({ sentence, answer, words, explanation, onAnswer }) {
+  const [selected, setSelected] = useState([]);
+  const [available, setAvailable] = useState(() => shuffle(words || answer?.split(' ') || []));
+  const [result, setResult] = useState(null);
+  const answeredRef = useRef(false);
+
+  const handleTapWord = (word, index) => {
+    if (result) return;
+    setSelected((prev) => [...prev, word]);
+    setAvailable((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  const handleRemoveWord = (word, index) => {
+    if (result) return;
+    setAvailable((prev) => [...prev, word]);
+    setSelected((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  const handleCheck = () => {
+    if (answeredRef.current) return;
+    answeredRef.current = true;
+    const userAnswer = selected.join(' ');
+    const isCorrect = checkAnswer(userAnswer, answer, 1).correct;
+    setResult({ correct: isCorrect });
+    if (onAnswer) onAnswer(isCorrect);
+  };
+
+  return (
+    <div>
+      {sentence && (
+        <p className="text-sm text-charcoal/60 mb-3 text-center">{sentence}</p>
+      )}
+
+      {/* Built sentence area */}
+      <div className="min-h-[56px] bg-white rounded-xl border-2 border-cream-dark/40 p-3 mb-4 flex flex-wrap gap-2">
+        {selected.length === 0 ? (
+          <span className="text-charcoal/30 text-sm">Tap words to build the sentence...</span>
+        ) : (
+          selected.map((word, i) => (
+            <motion.button
+              key={`sel-${i}-${word}`}
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              onClick={() => handleRemoveWord(word, i)}
+              disabled={!!result}
+              className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+                result
+                  ? result.correct
+                    ? 'bg-success/10 text-success border border-success/30'
+                    : 'bg-error/10 text-error border border-error/30'
+                  : 'bg-primary/10 text-primary border border-primary/30'
+              }`}
+            >
+              {word}
+            </motion.button>
+          ))
+        )}
+      </div>
+
+      {/* Available words */}
+      <div className="flex flex-wrap gap-2 justify-center mb-4">
+        {available.map((word, i) => (
+          <motion.button
+            key={`avail-${i}-${word}`}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => handleTapWord(word, i)}
+            disabled={!!result}
+            className="px-3 py-1.5 rounded-lg text-sm font-medium bg-cream-dark text-charcoal hover:bg-cream-dark/80 transition-colors"
+          >
+            {word}
+          </motion.button>
+        ))}
+      </div>
+
+      {/* Check button */}
+      {!result && (
+        <button
+          onClick={handleCheck}
+          disabled={selected.length === 0}
+          className={`w-full py-3 rounded-xl text-sm font-semibold transition-colors ${
+            selected.length > 0
+              ? 'bg-primary text-white hover:bg-primary-dark'
+              : 'bg-cream text-charcoal/40 cursor-not-allowed'
+          }`}
+        >
+          Check
+        </button>
+      )}
+
+      {/* Feedback */}
+      {result && (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className={`p-4 rounded-xl text-sm font-medium ${
+            result.correct ? 'bg-success/10 text-success' : 'bg-error/10 text-error'
+          }`}
+        >
+          {result.correct ? (
+            <p className="flex items-center gap-2"><Check size={16} /> Correct!</p>
+          ) : (
+            <div>
+              <p className="flex items-center gap-2"><Star size={16} /> Not quite.</p>
+              <p className="mt-1 text-charcoal/70">Correct order: <span className="font-bold text-charcoal">{answer}</span></p>
+            </div>
+          )}
+          {explanation && (
+            <p className="mt-2 text-charcoal/60 text-xs">{explanation}</p>
+          )}
+        </motion.div>
+      )}
     </div>
   );
 }

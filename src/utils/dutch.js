@@ -6,15 +6,15 @@
  * Common het-words patterns and list
  */
 export const HET_WORD_RULES = [
-  { rule: 'Diminutives ending in -je (huisje, katje, bloemetje)', pattern: /je$/ },
-  { rule: 'Words starting with ge- (gebouw, geluk, gevoel)', pattern: /^ge/ },
+  { rule: 'Diminutives ending in -tje/-pje/-kje (huisje, katje, bloemetje)', pattern: /tje$|pje$|kje$/ },
+  { rule: 'Words starting with ge- (gebouw, geluk, gevoel)', pattern: null }, // Too broad for auto-matching — many de-words start with ge-
   { rule: 'Words starting with be- (begin, besluit, bestuur)', pattern: null },
-  { rule: 'Words starting with ver- (verkeer, verschil, verleden)', pattern: /^ver/ },
+  { rule: 'Words starting with ver- (verkeer, verschil, verleden)', pattern: null }, // Too broad — many de-words start with ver-
   { rule: 'Languages (het Nederlands, het Engels)', pattern: null },
   { rule: 'Metals (het goud, het zilver, het ijzer)', pattern: null },
   { rule: 'Sports and games (het voetbal, het tennis)', pattern: null },
   { rule: 'Compass directions (het noorden, het zuiden)', pattern: null },
-  { rule: 'Two-syllable words starting with ont- (het ontbijt, het ontslag)', pattern: /^ont/ },
+  { rule: 'Two-syllable words starting with ont- (het ontbijt, het ontslag)', pattern: null }, // Too broad — many de-words start with ont-
   { rule: 'Words ending in -isme (het realisme)', pattern: /isme$/ },
   { rule: 'Words ending in -ment (het moment, het document)', pattern: /ment$/ },
   { rule: 'Words ending in -sel (het raadsel, het voedsel)', pattern: /sel$/ },

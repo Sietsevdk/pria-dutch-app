@@ -67,6 +67,7 @@ export default function SpeakingExercise({ text, translation, onAnswer }) {
   }, []);
 
   const handleStartRecording = useCallback(() => {
+    if (answerTimerRef.current) { clearTimeout(answerTimerRef.current); answerTimerRef.current = null; }
     setSpokenText('');
     setSimilarity(null);
     setHasAttempted(false);
@@ -98,6 +99,7 @@ export default function SpeakingExercise({ text, translation, onAnswer }) {
   }, [stopListening]);
 
   const handleRetry = useCallback(() => {
+    if (answerTimerRef.current) { clearTimeout(answerTimerRef.current); answerTimerRef.current = null; }
     setSpokenText('');
     setSimilarity(null);
     setHasAttempted(false);
