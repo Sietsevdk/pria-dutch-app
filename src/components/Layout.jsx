@@ -10,7 +10,7 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen bg-cream">
-      <main className={`max-w-2xl mx-auto ${showNav ? 'pb-20' : ''}`}>
+      <main className={`max-w-2xl mx-auto ${showNav ? 'pb-24' : ''}`}>
         <AnimatePresence mode="wait">
           <motion.div
             key={location.pathname}

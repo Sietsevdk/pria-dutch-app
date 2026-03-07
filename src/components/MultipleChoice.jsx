@@ -1,10 +1,11 @@
-import { useState, useCallback, useRef, useEffect } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Check, X } from 'lucide-react';
 
 /**
  * MultipleChoice - Quiz component with animated options.
  * Supports dutch-to-english and english-to-dutch question types.
+ * Calls onAnswer immediately (synchronously) so the parent controls timing.
  */
 export default function MultipleChoice({
   question,
@@ -15,24 +16,19 @@ export default function MultipleChoice({
 }) {
   const [selected, setSelected] = useState(null);
   const [hasAnswered, setHasAnswered] = useState(false);
-  const feedbackTimerRef = useRef(null);
-
-  useEffect(() => {
-    return () => { if (feedbackTimerRef.current) clearTimeout(feedbackTimerRef.current); };
-  }, []);
+  const answeredRef = useRef(false);
 
   const isCorrect = selected === correctAnswer;
 
   const handleSelect = useCallback(
     (option) => {
-      if (hasAnswered) return;
+      if (hasAnswered || answeredRef.current) return;
+      answeredRef.current = true;
       setSelected(option);
       setHasAnswered(true);
+      // Call onAnswer immediately — parent (Lesson/Dictionary) controls the advance timing
       if (onAnswer) {
-        // Brief delay so user sees the feedback
-        feedbackTimerRef.current = setTimeout(() => {
-          onAnswer(option === correctAnswer);
-        }, 1200);
+        onAnswer(option === correctAnswer);
       }
     },
     [hasAnswered, correctAnswer, onAnswer]

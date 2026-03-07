@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useId } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Lightbulb, ChevronDown } from 'lucide-react';
 
@@ -8,6 +8,7 @@ import { Lightbulb, ChevronDown } from 'lucide-react';
  */
 export default function GrammarTip({ title, content, tip, titleEN, contentEN, tipEN }) {
   const [isOpen, setIsOpen] = useState(false);
+  const contentId = useId();
 
   const displayTitle = titleEN || title;
   const displayContent = contentEN || content;
@@ -24,7 +25,7 @@ export default function GrammarTip({ title, content, tip, titleEN, contentEN, ti
           onClick={() => setIsOpen((prev) => !prev)}
           className="w-full flex items-center gap-3 p-4 text-left hover:bg-cream/50 transition-colors"
           aria-expanded={isOpen}
-          aria-controls="grammar-tip-content"
+          aria-controls={contentId}
         >
           <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-warning/15 flex items-center justify-center">
             <Lightbulb size={20} className="text-warning" />
@@ -52,7 +53,7 @@ export default function GrammarTip({ title, content, tip, titleEN, contentEN, ti
         <AnimatePresence initial={false}>
           {isOpen && (
             <motion.div
-              id="grammar-tip-content"
+              id={contentId}
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}

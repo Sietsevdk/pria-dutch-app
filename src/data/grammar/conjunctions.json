@@ -78,7 +78,44 @@
       "'Ik weet niet dat hij morgen komt of niet' — better: 'Ik weet niet of hij morgen komt.' (I don't know if he is coming tomorrow.)"
     ],
     "tip": "Onthoud: na EN, MAAR, WANT, OF, DUS verandert er NIETS aan de woordvolgorde. Na alle andere voegwoorden (omdat, dat, als, toen, terwijl, etc.) gaat het werkwoord naar het EINDE. Ezelsbruggetje: de nevenschikkende voegwoorden vormen het woord 'MOWDD' (Maar, Of, Want, Dus, en Dan) - nee, beter: onthoud gewoon de vijf: en, maar, of, want, dus.",
-    "tipEN": "Remember: after EN, MAAR, WANT, OF, DUS NOTHING changes in the word order. After all other conjunctions (omdat, dat, als, toen, terwijl, etc.) the verb goes to the END. Just memorize the five coordinating conjunctions: en (and), maar (but), of (or), want (because), dus (so). Everything else sends the verb to the end!"
+    "tipEN": "Remember: after EN, MAAR, WANT, OF, DUS NOTHING changes in the word order. After all other conjunctions (omdat, dat, als, toen, terwijl, etc.) the verb goes to the END. Just memorize the five coordinating conjunctions: en (and), maar (but), of (or), want (because), dus (so). Everything else sends the verb to the end!",
+    "examples": [
+      {
+        "nl": "Ik werk en hij studeert.",
+        "en": "I work and he studies.",
+        "note": "Coordinating 'en': word order stays the same"
+      },
+      {
+        "nl": "Ik ga niet, want ik ben ziek.",
+        "en": "I'm not going, because I am sick.",
+        "note": "Coordinating 'want': word order stays the same"
+      },
+      {
+        "nl": "Ik ga niet, omdat ik ziek ben.",
+        "en": "I'm not going, because I am sick.",
+        "note": "Subordinating 'omdat': verb (ben) goes to the end"
+      },
+      {
+        "nl": "Ik weet dat hij morgen komt.",
+        "en": "I know that he is coming tomorrow.",
+        "note": "Subordinating 'dat': verb (komt) goes to the end"
+      },
+      {
+        "nl": "Als het regent, neem ik een paraplu.",
+        "en": "If it rains, I take an umbrella.",
+        "note": "Subordinating 'als': verb to end + inversion in main clause"
+      },
+      {
+        "nl": "Toen ik jong was, woonde ik hier.",
+        "en": "When I was young, I lived here.",
+        "note": "Subordinating 'toen' (past): verb (was) to the end"
+      },
+      {
+        "nl": "Het is koud, dus ik trek een jas aan.",
+        "en": "It's cold, so I put on a coat.",
+        "note": "Coordinating 'dus': word order stays the same"
+      }
+    ]
   },
   "exercises": [
     {

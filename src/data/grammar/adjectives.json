@@ -56,7 +56,44 @@
       "'Een goudene ring' is wrong — adjectives ending in -en never get an extra -e: een gouden ring (a golden ring)."
     ],
     "tip": "De truc is simpel: ALTIJD -e, BEHALVE in deze ene situatie: het-woord + enkelvoud + een/geen = geen -e. Denk aan: 'een groot HUIS' (het huis, enkelvoud, met 'een' → geen -e) maar 'een grote AUTO' (de auto, dus altijd -e). Als je twijfelt: is het een het-woord met 'een'? Nee? Dan altijd -e!",
-    "tipEN": "The trick is simple: ALWAYS -e, EXCEPT in this one situation: het-word + singular + een/geen = no -e. Think of: 'een groot HUIS' (het huis, singular, with 'een' → no -e) but 'een grote AUTO' (de auto, so always -e). When in doubt: is it a het-word with 'een'? No? Then always -e!"
+    "tipEN": "The trick is simple: ALWAYS -e, EXCEPT in this one situation: het-word + singular + een/geen = no -e. Think of: 'een groot HUIS' (het huis, singular, with 'een' → no -e) but 'een grote AUTO' (de auto, so always -e). When in doubt: is it a het-word with 'een'? No? Then always -e!",
+    "examples": [
+      {
+        "nl": "De rode auto is snel.",
+        "en": "The red car is fast.",
+        "note": "De-word: adjective always gets -e (rode)"
+      },
+      {
+        "nl": "Een groot huis kost veel geld.",
+        "en": "A big house costs a lot of money.",
+        "note": "Het-word + een: NO -e (groot, not grote)"
+      },
+      {
+        "nl": "Het kleine kind slaapt.",
+        "en": "The small child sleeps.",
+        "note": "Het-word + definite article: adjective gets -e (kleine)"
+      },
+      {
+        "nl": "Zij heeft blauwe ogen.",
+        "en": "She has blue eyes.",
+        "note": "Plural: adjective always gets -e (blauwe)"
+      },
+      {
+        "nl": "Het weer is slecht.",
+        "en": "The weather is bad.",
+        "note": "Predicative (after 'is'): NEVER -e"
+      },
+      {
+        "nl": "Dat is een goed idee.",
+        "en": "That is a good idea.",
+        "note": "Het-word (het idee) + een: NO -e (goed)"
+      },
+      {
+        "nl": "Mijn nieuwe boek is interessant.",
+        "en": "My new book is interesting.",
+        "note": "Het-word + possessive (mijn): gets -e (nieuwe)"
+      }
+    ]
   },
   "exercises": [
     {

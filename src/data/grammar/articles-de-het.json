@@ -69,6 +69,38 @@
     ],
     "tip": "Als je twijfelt, gok dan 'de' - twee van de drie Nederlandse woorden zijn de-woorden! Leer de het-woord patronen (verkleinwoorden, ge- woorden, talen, metalen, sporten) en je hebt al een groot deel onder de knie.",
     "tipEN": "When in doubt, guess 'de' — two out of three Dutch words are de-words! Learn the het-word patterns (diminutives, ge- words, languages, metals, sports) and you will already have mastered a large portion.",
+    "examples": [
+      {
+        "nl": "De man leest het boek.",
+        "en": "The man reads the book.",
+        "note": "De-word (man, person) and het-word (boek)"
+      },
+      {
+        "nl": "Het meisje drinkt een glas water.",
+        "en": "The girl drinks a glass of water.",
+        "note": "Diminutive -je: always het (het meisje)"
+      },
+      {
+        "nl": "De huizen zijn groot.",
+        "en": "The houses are big.",
+        "note": "Plurals always take 'de' (het huis -> de huizen)"
+      },
+      {
+        "nl": "Het Nederlands is leuk.",
+        "en": "Dutch is fun.",
+        "note": "Languages are always het-words"
+      },
+      {
+        "nl": "De vrouw werkt op het kantoor.",
+        "en": "The woman works at the office.",
+        "note": "Person = de (vrouw), building = het (kantoor)"
+      },
+      {
+        "nl": "Het hondje speelt in de tuin.",
+        "en": "The little dog plays in the garden.",
+        "note": "Diminutive -je = het; tuin is a de-word"
+      }
+    ],
     "commonHetWords": [
       "het huis", "het boek", "het kind", "het meisje", "het water",
       "het brood", "het eten", "het werk", "het jaar", "het land",

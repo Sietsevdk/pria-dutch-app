@@ -12,7 +12,8 @@ const navItems = [
 export default function BottomNav() {
   return (
     <nav
-      className="fixed bottom-0 left-0 right-0 bg-white border-t border-cream-dark/50 safe-bottom z-50"
+      className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-cream-dark/50 z-50 shadow-[0_-1px_6px_rgba(0,0,0,0.06)]"
+      style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}
       role="navigation"
       aria-label="Main navigation"
     >
@@ -21,7 +22,7 @@ export default function BottomNav() {
           <NavLink
             key={to}
             to={to}
-            className="flex flex-col items-center py-2 px-3 min-w-[60px] relative"
+            className="flex flex-col items-center py-2.5 px-3 min-w-[60px] relative"
             aria-label={label}
           >
             {({ isActive }) => (

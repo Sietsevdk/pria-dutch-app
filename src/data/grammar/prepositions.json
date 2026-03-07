@@ -79,6 +79,48 @@
     ],
     "tip": "Leer de vaste werkwoord-voorzetsel-combinaties! Deze zijn heel belangrijk voor het examen. Denken AAN, wachten OP, luisteren NAAR, praten OVER, houden VAN, beginnen MET, stoppen MET, zoeken NAAR, vragen OM/NAAR. Schrijf ze op kaartjes en oefen ze elke dag!",
     "tipEN": "Learn the fixed verb-preposition combinations! These are very important for the exam. Denken AAN (think about), wachten OP (wait for), luisteren NAAR (listen to), praten OVER (talk about), houden VAN (love), beginnen MET (start with), stoppen MET (stop with), zoeken NAAR (search for), vragen OM/NAAR (ask for/about). Write them on flashcards and practice them every day!",
+    "examples": [
+      {
+        "nl": "Ik woon in Amsterdam.",
+        "en": "I live in Amsterdam.",
+        "note": "In: for location (place)"
+      },
+      {
+        "nl": "Het boek ligt op de tafel.",
+        "en": "The book is on the table.",
+        "note": "Op: for surfaces"
+      },
+      {
+        "nl": "Ik ga naar school.",
+        "en": "I go to school.",
+        "note": "Naar: for direction/destination"
+      },
+      {
+        "nl": "Zij komt uit Turkije.",
+        "en": "She comes from Turkey.",
+        "note": "Uit: for origin (country/city)"
+      },
+      {
+        "nl": "Ik ga met de trein.",
+        "en": "I go by train.",
+        "note": "Met: for means of transport"
+      },
+      {
+        "nl": "De vergadering begint om 9 uur.",
+        "en": "The meeting starts at 9 o'clock.",
+        "note": "Om: for clock times"
+      },
+      {
+        "nl": "Ik denk aan mijn familie.",
+        "en": "I think about my family.",
+        "note": "Fixed combination: denken aan (think about)"
+      },
+      {
+        "nl": "Wij wachten op de bus.",
+        "en": "We are waiting for the bus.",
+        "note": "Fixed combination: wachten op (wait for)"
+      }
+    ],
     "fixedCombinations": [
       "denken aan (think about): Ik denk aan mijn familie.",
       "wachten op (wait for): Ik wacht op de bus.",

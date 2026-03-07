@@ -3,10 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { BookOpen, Search, Check, ChevronRight, Star, ArrowLeft, Heart } from 'lucide-react';
 import FillInBlank from '../components/FillInBlank';
 import MultipleChoice from '../components/MultipleChoice';
+import LevelBadge from '../components/LevelBadge';
 import useProgress from '../hooks/useProgress';
 import useFavourites from '../hooks/useFavourites';
 import { shuffle, checkAnswer } from '../utils/dutch';
 import { COMMON_HET_WORDS, HET_WORD_RULES } from '../utils/dutch';
+import { GRAMMAR_DIFFICULTY, getUserLevel } from '../utils/levels';
 
 const grammarModules = import.meta.glob('../data/grammar/*.json', { eager: true });
 const allGrammar = Object.values(grammarModules)
@@ -27,6 +29,8 @@ export default function Grammar() {
   const [showDeHet, setShowDeHet] = useState(false);
   const [search, setSearch] = useState('');
   const grammarMastered = useProgress((s) => s.grammarMastered);
+  const currentLesson = useProgress((s) => s.currentLesson);
+  const userLevel = getUserLevel(currentLesson);
 
   const filteredGrammar = useMemo(() => {
     if (!search) return allGrammar;
@@ -102,13 +106,14 @@ export default function Grammar() {
       <GrammarTopicList
         topics={filteredGrammar}
         grammarMastered={grammarMastered}
+        userLevel={userLevel}
         onSelect={(topic) => setSelectedTopic(topic)}
       />
     </div>
   );
 }
 
-function GrammarTopicList({ topics, grammarMastered, onSelect }) {
+function GrammarTopicList({ topics, grammarMastered, userLevel, onSelect }) {
   const toggleFavourite = useFavourites((s) => s.toggleFavourite);
   const favourites = useFavourites((s) => s.favourites);
   const favIds = new Set(favourites.filter((f) => f.type === 'grammar').map((f) => f.id));
@@ -142,9 +147,12 @@ function GrammarTopicList({ topics, grammarMastered, onSelect }) {
                 )}
               </div>
               <div className="flex-1 min-w-0">
-                <h3 className="font-semibold text-sm text-charcoal truncate">
-                  {topic.topicEN || topic.topicNL || topic.topic}
-                </h3>
+                <div className="flex items-center gap-1.5">
+                  <h3 className="font-semibold text-sm text-charcoal truncate">
+                    {topic.topicEN || topic.topicNL || topic.topic}
+                  </h3>
+                  <LevelBadge difficulty={GRAMMAR_DIFFICULTY[topic.topic] || 2} userLevel={userLevel} compact />
+                </div>
                 <p className="text-xs text-charcoal/50 truncate">
                   {topic.explanation?.summaryEN || topic.explanation?.summary}
                 </p>
@@ -209,6 +217,11 @@ function GrammarDetail({ topic, onBack }) {
     const mistakes = expl.commonMistakesEN || expl.commonMistakes || [];
     if (mistakes.length > 0) {
       sections.push({ type: 'mistakes', items: mistakes, itemsNL: expl.commonMistakesEN ? (expl.commonMistakes || []) : [] });
+    }
+    // Examples (practical sentences showing the grammar in action)
+    const examples = expl.examples || [];
+    if (examples.length > 0) {
+      sections.push({ type: 'examples', items: examples });
     }
     // Tip
     if (expl.tipEN || expl.tip) {
@@ -395,6 +408,22 @@ function GrammarDetail({ topic, onBack }) {
                 </ul>
               </div>
             )}
+            {currentSection.type === 'examples' && (
+              <div>
+                <p className="text-xs font-semibold text-success uppercase tracking-wide mb-3">📝 Examples</p>
+                <div className="space-y-3">
+                  {currentSection.items.map((ex, i) => (
+                    <div key={i} className="bg-cream/50 rounded-lg p-3">
+                      <p className="text-sm font-medium text-charcoal">🇳🇱 {ex.nl}</p>
+                      <p className="text-xs text-charcoal/50 mt-0.5">🇬🇧 {ex.en}</p>
+                      {ex.note && (
+                        <p className="text-[10px] text-primary/70 mt-1 italic">↳ {ex.note}</p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
             {currentSection.type === 'tip' && (
               <div>
                 <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-3">💡 Tip</p>
@@ -489,6 +518,13 @@ function DeHetTrainer({ onBack }) {
   const [streak, setStreak] = useState(0);
   const [iKnewIt, setIKnewIt] = useState(false);
   const [showTips, setShowTips] = useState(false);
+  const guessTimerRef = useRef(null);
+
+  useEffect(() => {
+    return () => {
+      if (guessTimerRef.current) clearTimeout(guessTimerRef.current);
+    };
+  }, []);
 
   const handleGuess = (article) => {
     setAnswered(article);
@@ -500,7 +536,7 @@ function DeHetTrainer({ onBack }) {
     }));
     setStreak((s) => (isCorrect ? s + 1 : 0));
 
-    setTimeout(() => {
+    guessTimerRef.current = setTimeout(() => {
       setAnswered(null);
       setIKnewIt(false);
       setCurrentNoun(pickNoun(newCorrect));

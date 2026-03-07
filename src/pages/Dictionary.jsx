@@ -1,6 +1,6 @@
 import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Volume2, ChevronDown, X, BookOpen, Play, ArrowLeft, RefreshCw, Heart } from 'lucide-react';
+import { Search, Volume2, ChevronDown, X, BookOpen, Play, ArrowLeft, RefreshCw, Heart, CheckCircle } from 'lucide-react';
 import { useSpeech } from '../hooks/useSpeech';
 import { dutchWithArticle, dutchBareWord, shuffle, getEncouragement, getGentleCorrection } from '../utils/dutch';
 import { calculateLessonXP } from '../utils/xp';
@@ -10,10 +10,12 @@ import MatchPairs from '../components/MatchPairs';
 import ListeningExercise from '../components/ListeningExercise';
 import SpeakingExercise from '../components/SpeakingExercise';
 import LessonComplete from '../components/LessonComplete';
+import LevelBadge from '../components/LevelBadge';
 import useProgress from '../hooks/useProgress';
 import useStreak from '../hooks/useStreak';
 import useSRS from '../hooks/useSRS';
 import useFavourites from '../hooks/useFavourites';
+import { VOCAB_DIFFICULTY, getUserLevel } from '../utils/levels';
 
 // Slug → proper English title
 const TOPIC_EN = {
@@ -80,9 +82,21 @@ export default function Dictionary() {
   const [selectedTopic, setSelectedTopic] = useState(null);
   const [expandedWord, setExpandedWord] = useState(null);
   const [practiceTopic, setPracticeTopic] = useState(null);
+  const [showLearned, setShowLearned] = useState(false);
+  const wordsLearned = useProgress((s) => s.wordsLearned);
+  const currentLesson = useProgress((s) => s.currentLesson);
+  const userLevel = getUserLevel(currentLesson);
+
+  const learnedCount = useMemo(() => {
+    return Object.values(wordsLearned).filter((v) => v.learned).length;
+  }, [wordsLearned]);
 
   const filtered = useMemo(() => {
     let words = allWords;
+
+    if (showLearned) {
+      words = words.filter((w) => wordsLearned[w.id]?.learned);
+    }
 
     if (selectedTopic) {
       words = words.filter((w) => w._topic === selectedTopic);
@@ -99,7 +113,7 @@ export default function Dictionary() {
     }
 
     return words;
-  }, [query, selectedTopic]);
+  }, [query, selectedTopic, showLearned, wordsLearned]);
 
   // Group by topic when no search query
   const grouped = useMemo(() => {
@@ -117,10 +131,13 @@ export default function Dictionary() {
   const clearSearch = () => {
     setQuery('');
     setSelectedTopic(null);
+    setShowLearned(false);
   };
 
   if (practiceTopic) {
-    const topicWords = allWords.filter((w) => w._topic === practiceTopic.topic);
+    const topicWords = practiceTopic.topic === '_learned'
+      ? allWords.filter((w) => wordsLearned[w.id]?.learned)
+      : allWords.filter((w) => w._topic === practiceTopic.topic);
     return (
       <TopicPractice
         topic={practiceTopic}
@@ -179,12 +196,49 @@ export default function Dictionary() {
         )}
       </div>
 
+      {/* Learned words toggle */}
+      {learnedCount > 0 && (
+        <motion.button
+          initial={{ opacity: 0, y: 5 }}
+          animate={{ opacity: 1, y: 0 }}
+          onClick={() => { setShowLearned(!showLearned); setSelectedTopic(null); }}
+          className={`w-full mb-3 flex items-center gap-3 p-3 rounded-xl border transition-colors ${
+            showLearned
+              ? 'bg-success/10 border-success/30'
+              : 'bg-white border-cream-dark/50 hover:border-success/30'
+          }`}
+        >
+          <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${showLearned ? 'bg-success/20' : 'bg-cream-dark'}`}>
+            <CheckCircle size={16} className={showLearned ? 'text-success' : 'text-charcoal/40'} />
+          </div>
+          <div className="flex-1 text-left">
+            <span className={`text-sm font-semibold ${showLearned ? 'text-success' : 'text-charcoal'}`}>
+              Words Learned
+            </span>
+            <span className="text-xs text-charcoal/40 ml-2">{learnedCount} words</span>
+          </div>
+          {showLearned && learnedCount >= 4 && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                const learnedWordsList = allWords.filter((w) => wordsLearned[w.id]?.learned);
+                const topic = { topic: '_learned', topicNL: 'Geleerde woorden', icon: '✅' };
+                setPracticeTopic(topic);
+              }}
+              className="flex items-center gap-1 px-2.5 py-1 bg-success text-white text-xs font-medium rounded-full"
+            >
+              <Play size={10} /> Test All
+            </button>
+          )}
+        </motion.button>
+      )}
+
       {/* Topic filter chips */}
       <div className="flex gap-2 overflow-x-auto pb-3 mb-2 -mx-4 px-4 scrollbar-hide">
         <button
-          onClick={() => setSelectedTopic(null)}
+          onClick={() => { setSelectedTopic(null); setShowLearned(false); }}
           className={`flex-shrink-0 px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
-            !selectedTopic
+            !selectedTopic && !showLearned
               ? 'bg-primary text-white'
               : 'bg-white border border-cream-dark/50 text-charcoal/60'
           }`}
@@ -194,7 +248,7 @@ export default function Dictionary() {
         {allTopics.map((t) => (
           <button
             key={t.topic}
-            onClick={() => setSelectedTopic(selectedTopic === t.topic ? null : t.topic)}
+            onClick={() => { setSelectedTopic(selectedTopic === t.topic ? null : t.topic); setShowLearned(false); }}
             className={`flex-shrink-0 px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
               selectedTopic === t.topic
                 ? 'bg-primary text-white'
@@ -256,6 +310,7 @@ export default function Dictionary() {
               onToggleWord={(id) => setExpandedWord(expandedWord === id ? null : id)}
               onSelectTopic={() => setSelectedTopic(group.topic)}
               onPractice={() => setPracticeTopic(group)}
+              userLevel={userLevel}
             />
           ))}
         </div>
@@ -264,9 +319,14 @@ export default function Dictionary() {
   );
 }
 
-function TopicGroup({ group, expandedWord, onToggleWord, onSelectTopic, onPractice }) {
+function TopicGroup({ group, expandedWord, onToggleWord, onSelectTopic, onPractice, userLevel }) {
   const [isOpen, setIsOpen] = useState(false);
   const previewWords = group.words.slice(0, 3);
+  const learnedInTopic = useProgress((s) => {
+    let count = 0;
+    group.words.forEach((w) => { if (s.wordsLearned[w.id]?.learned) count++; });
+    return count;
+  });
 
   return (
     <motion.div
@@ -279,11 +339,19 @@ function TopicGroup({ group, expandedWord, onToggleWord, onSelectTopic, onPracti
       >
         <span className="text-xl">{group.icon}</span>
         <div className="flex-1 min-w-0">
-          <p className="font-semibold text-sm text-charcoal">
-            {TOPIC_EN[group.topic] || group.topic}
-          </p>
+          <div className="flex items-center gap-2">
+            <p className="font-semibold text-sm text-charcoal">
+              {TOPIC_EN[group.topic] || group.topic}
+            </p>
+            {VOCAB_DIFFICULTY[group.topic] && (
+              <LevelBadge difficulty={VOCAB_DIFFICULTY[group.topic]} userLevel={userLevel} compact />
+            )}
+          </div>
           <p className="text-xs text-charcoal/40">
             {group.topicNL || group.topic} · {group.words.length} words
+            {learnedInTopic > 0 && (
+              <span className="text-success"> · {learnedInTopic} learned</span>
+            )}
           </p>
         </div>
         <motion.div
@@ -343,6 +411,7 @@ function WordCard({ word, isExpanded, onToggle, compact = false }) {
   const { speak, isSpeaking } = useSpeech();
   const toggleFavourite = useFavourites((s) => s.toggleFavourite);
   const isFav = useFavourites((s) => s.isFavourite(word.id));
+  const isLearned = useProgress((s) => s.wordsLearned[word.id]?.learned);
 
   const handleSpeak = useCallback(
     (e, slow = false) => {
@@ -392,6 +461,9 @@ function WordCard({ word, isExpanded, onToggle, compact = false }) {
             <span className="font-semibold text-sm text-charcoal truncate">
               {dutchBareWord(word) || word.dutch}
             </span>
+            {isLearned && (
+              <CheckCircle size={12} className="text-success flex-shrink-0" />
+            )}
           </div>
           <p className="text-xs text-charcoal/50 truncate">{word.english}</p>
         </div>
@@ -698,7 +770,7 @@ function TopicPractice({ topic, words, allWords: allWordsList, onBack }) {
           </span>
         </div>
         <p className="text-xs text-charcoal/40 mt-1 ml-10">
-          {topic.icon} {TOPIC_EN[topic.topic] || topic.topic}
+          {topic.icon} {topic.topic === '_learned' ? 'Words Learned' : (TOPIC_EN[topic.topic] || topic.topic)}
         </p>
       </div>
 

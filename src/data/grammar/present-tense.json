@@ -62,7 +62,49 @@
       "'Bent u' (are you, formal) is correct (the jij-rule does not apply to u), but 'ben jij' is correct with inversion."
     ],
     "tip": "Onthoud het ezelsbruggetje: stam = infinitief min -en. Dan voeg je toe: niets voor ik, -t voor jij/hij/zij/u, en -en voor wij/jullie/zij. Bij inversie met jij: de -t valt weg. Denk aan: 'Jij vindt' maar 'Vind jij?'",
-    "tipEN": "Remember the mnemonic: stem = infinitive minus -en. Then add: nothing for ik (I), -t for jij/hij/zij/u (you/he/she/formal you), and -en for wij/jullie/zij (we/you plural/they). With inversion and jij: the -t drops. Think: 'Jij vindt' (you find) but 'Vind jij?' (do you find?)."
+    "tipEN": "Remember the mnemonic: stem = infinitive minus -en. Then add: nothing for ik (I), -t for jij/hij/zij/u (you/he/she/formal you), and -en for wij/jullie/zij (we/you plural/they). With inversion and jij: the -t drops. Think: 'Jij vindt' (you find) but 'Vind jij?' (do you find?).",
+    "examples": [
+      {
+        "nl": "Ik werk elke dag.",
+        "en": "I work every day.",
+        "note": "Ik-form: stem only, no ending"
+      },
+      {
+        "nl": "Hij loopt naar school.",
+        "en": "He walks to school.",
+        "note": "Third person: stem + t (lopen -> loop + t)"
+      },
+      {
+        "nl": "Wij leren Nederlands.",
+        "en": "We learn Dutch.",
+        "note": "Wij-form: use the full infinitive"
+      },
+      {
+        "nl": "Jij leest een boek.",
+        "en": "You read a book.",
+        "note": "Jij-form: stem + t (lezen -> lees + t)"
+      },
+      {
+        "nl": "Lees jij ook graag?",
+        "en": "Do you also like reading?",
+        "note": "Jij-rule: -t drops when jij comes after the verb"
+      },
+      {
+        "nl": "Zij schrijft een brief.",
+        "en": "She writes a letter.",
+        "note": "Spelling rule: v becomes f (schrijven -> schrijf + t)"
+      },
+      {
+        "nl": "Ik ben blij en hij is moe.",
+        "en": "I am happy and he is tired.",
+        "note": "Irregular verb 'zijn': ik ben, hij is"
+      },
+      {
+        "nl": "Werkt u hier al lang?",
+        "en": "Have you worked here long? (formal)",
+        "note": "Formal 'u': the -t stays (jij-rule does not apply)"
+      }
+    ]
   },
   "exercises": [
     {

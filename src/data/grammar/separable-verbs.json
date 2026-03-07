@@ -57,6 +57,43 @@
     ],
     "tip": "Denk aan het scheidbare werkwoord als een boemerang: in de hoofdzin gooi je het voorvoegsel naar het einde van de zin (Ik bel op), maar in de bijzin en bij infinitieven blijft alles bij elkaar (omdat ik opbel / ik moet opbellen). Bij het voltooid deelwoord: het ge- gaat ertussen, als vulling in een sandwich (op-ge-beld).",
     "tipEN": "Think of the separable verb as a boomerang: in the main clause you throw the prefix to the end of the sentence (Ik bel op), but in subordinate clauses and with infinitives everything stays together (omdat ik opbel / ik moet opbellen). For the past participle: ge- goes in between, like a sandwich filling (op-ge-beld).",
+    "examples": [
+      {
+        "nl": "Ik sta elke dag om 7 uur op.",
+        "en": "I get up every day at 7 o'clock.",
+        "note": "Main clause: verb (sta) pos. 2, prefix (op) at end"
+      },
+      {
+        "nl": "Zij trekt haar jas aan.",
+        "en": "She puts on her coat.",
+        "note": "Main clause: aantrekken splits (trekt...aan)"
+      },
+      {
+        "nl": "Ik heb mijn vriend opgebeld.",
+        "en": "I called my friend.",
+        "note": "Perfect tense: ge- between prefix (op-ge-beld)"
+      },
+      {
+        "nl": "...omdat ik vroeg opsta.",
+        "en": "...because I get up early.",
+        "note": "Subordinate clause: verb stays together (opsta)"
+      },
+      {
+        "nl": "Ik moet morgen vroeg opstaan.",
+        "en": "I must get up early tomorrow.",
+        "note": "With modal verb: stays together as infinitive"
+      },
+      {
+        "nl": "Ik probeer op te ruimen.",
+        "en": "I try to tidy up.",
+        "note": "With 'te': te goes between prefix (op te ruimen)"
+      },
+      {
+        "nl": "De trein komt om 9 uur aan.",
+        "en": "The train arrives at 9 o'clock.",
+        "note": "Main clause: aankomen splits (komt...aan)"
+      }
+    ],
     "commonSeparableVerbs": [
       "aankomen (arrive) - Ik kom om 3 uur aan.",
       "aantrekken (put on) - Ik trek mijn jas aan.",

@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, RotateCcw, Snail, Send, Check, X } from 'lucide-react';
 import { useSpeech } from '../hooks/useSpeech';
@@ -7,6 +7,7 @@ import { checkAnswer } from '../utils/dutch';
 /**
  * ListeningExercise - Audio listening exercise.
  * Plays Dutch text via TTS and lets users answer via multiple choice or free text input.
+ * Calls onAnswer immediately (synchronously) so the parent controls timing.
  */
 export default function ListeningExercise({
   text,
@@ -19,6 +20,7 @@ export default function ListeningExercise({
   const [userInput, setUserInput] = useState('');
   const [hasAnswered, setHasAnswered] = useState(false);
   const [result, setResult] = useState(null);
+  const answeredRef = useRef(false);
   const { speak, isSpeaking } = useSpeech();
 
   const isMultipleChoice = options && options.length > 0;
@@ -35,16 +37,16 @@ export default function ListeningExercise({
 
   const handleSelectOption = useCallback(
     (option) => {
-      if (hasAnswered) return;
+      if (hasAnswered || answeredRef.current) return;
+      answeredRef.current = true;
       setSelected(option);
       const isCorrect = option === correctAnswer;
       setResult({ correct: isCorrect });
       setHasAnswered(true);
 
+      // Call onAnswer immediately — parent (Lesson/Dictionary) controls the advance timing
       if (onAnswer) {
-        setTimeout(() => {
-          onAnswer(isCorrect);
-        }, 1200);
+        onAnswer(isCorrect);
       }
     },
     [hasAnswered, correctAnswer, onAnswer]
@@ -53,16 +55,16 @@ export default function ListeningExercise({
   const handleSubmitText = useCallback(
     (e) => {
       e?.preventDefault();
-      if (!userInput.trim() || hasAnswered) return;
+      if (!userInput.trim() || hasAnswered || answeredRef.current) return;
+      answeredRef.current = true;
 
       const checkResult = checkAnswer(userInput, correctAnswer, 2);
       setResult(checkResult);
       setHasAnswered(true);
 
+      // Call onAnswer immediately — parent (Lesson/Dictionary) controls the advance timing
       if (onAnswer) {
-        setTimeout(() => {
-          onAnswer(checkResult.correct);
-        }, 1500);
+        onAnswer(checkResult.correct);
       }
     },
     [userInput, correctAnswer, hasAnswered, onAnswer]

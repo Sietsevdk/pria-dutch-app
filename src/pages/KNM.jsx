@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, Check, X, ChevronRight, ChevronLeft, BookOpen, Zap, Eye } from 'lucide-react';
 import useProgress from '../hooks/useProgress';
 import useStreak from '../hooks/useStreak';
+import LevelBadge from '../components/LevelBadge';
+import { KNM_DIFFICULTY, getUserLevel } from '../utils/levels';
 
 const knmModule = import.meta.glob('../data/knm.json', { eager: true });
 let knmData = { categories: [] };
@@ -16,7 +18,9 @@ export default function KNM() {
   const knmProgress = useProgress((s) => s.knmProgress);
   const recordKNMProgress = useProgress((s) => s.recordKNMProgress);
   const completeReviewGoal = useProgress((s) => s.completeReviewGoal);
+  const currentLesson = useProgress((s) => s.currentLesson);
   const recordActivity = useStreak((s) => s.recordActivity);
+  const userLevel = getUserLevel(currentLesson);
 
   // Merge persisted progress with local session state
   const [sessionProgress, setSessionProgress] = useState({});
@@ -75,7 +79,8 @@ export default function KNM() {
 
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">
             <span className="text-4xl mb-3 block">{category.icon}</span>
-            <h2 className="font-display text-2xl font-semibold text-charcoal">{category.nameNl || category.name}</h2>
+            <h2 className="font-display text-2xl font-semibold text-charcoal">{category.name}</h2>
+            <p className="text-xs text-charcoal/40 italic">{category.nameNl}</p>
             <p className="text-sm text-charcoal/60 mt-1">{category.questions?.length || 0} questions</p>
           </motion.div>
 
@@ -139,7 +144,10 @@ export default function KNM() {
         className="mb-6"
       >
         <h1 className="font-display text-2xl font-semibold text-charcoal">KNM</h1>
-        <p className="text-sm text-charcoal/60 mt-1">
+        <p className="text-sm text-charcoal/60 mt-0.5">
+          Knowledge of Dutch Society
+        </p>
+        <p className="text-xs text-charcoal/40 italic">
           Kennis van de Nederlandse Maatschappij
         </p>
       </motion.div>
@@ -201,11 +209,17 @@ export default function KNM() {
               <span className="text-2xl">{category.icon}</span>
               <div>
                 <h3 className="font-semibold text-sm text-charcoal leading-tight">
-                  {category.nameNl || category.name}
+                  {category.name}
                 </h3>
-                <p className="text-xs text-charcoal/50 mt-0.5">
-                  {category.questions?.length || 0} questions
+                <p className="text-[10px] text-charcoal/40 italic leading-tight">
+                  {category.nameNl}
                 </p>
+                <div className="flex items-center gap-1.5 mt-1">
+                  <span className="text-[10px] text-charcoal/50">
+                    {category.questions?.length || 0} questions
+                  </span>
+                  <LevelBadge difficulty={KNM_DIFFICULTY[category.id] || 3} userLevel={userLevel} compact />
+                </div>
               </div>
 
               {/* Progress bar */}
@@ -279,7 +293,7 @@ function CategoryStudy({ category, onBack, onStartQuiz }) {
       {/* Category badge */}
       <div className="flex items-center gap-2 mb-4">
         <span className="text-lg">{category.icon}</span>
-        <span className="text-xs font-medium text-charcoal/50">{category.nameNl || category.name} — Study Mode</span>
+        <span className="text-xs font-medium text-charcoal/50">{category.name} — Study Mode</span>
       </div>
 
       {/* Study card */}
@@ -548,7 +562,7 @@ function CategoryQuiz({ category, onBack, onComplete, previousResult }) {
       <div className="flex items-center gap-2 mb-4">
         <span className="text-lg">{category.icon}</span>
         <span className="text-xs font-medium text-charcoal/50">
-          {category.nameNl || category.name}
+          {category.name}
         </span>
       </div>
 

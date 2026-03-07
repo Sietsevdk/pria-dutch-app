@@ -452,6 +452,20 @@ export default function Lesson() {
     );
   }
 
+  if (exercises.length === 0) {
+    return (
+      <div className="px-4 pt-12 text-center">
+        <p className="text-charcoal/60">No exercises available for this lesson</p>
+        <button
+          onClick={() => navigate('/learn')}
+          className="mt-4 text-primary font-medium"
+        >
+          Back to lessons
+        </button>
+      </div>
+    );
+  }
+
   if (isComplete) {
     return (
       <LessonComplete

@@ -1,4 +1,5 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Star,
@@ -36,6 +37,7 @@ Object.values(vocabModules).forEach((mod) => {
 });
 
 export default function Profile() {
+  const navigate = useNavigate();
   const totalXP = useProgress((s) => s.totalXP);
   const totalWordsLearned = useProgress((s) => s.totalWordsLearned);
   const totalExercises = useProgress((s) => s.totalExercises);
@@ -64,6 +66,21 @@ export default function Profile() {
   const [focusIndex, setFocusIndex] = useState(0);
   const [focusAnswer, setFocusAnswer] = useState(null);
   const [focusScore, setFocusScore] = useState({ correct: 0, total: 0 });
+  const focusTimerRef = useRef(null);
+
+  useEffect(() => {
+    return () => {
+      if (focusTimerRef.current) clearTimeout(focusTimerRef.current);
+    };
+  }, []);
+
+  // Clear the timer when focusMode is toggled off
+  useEffect(() => {
+    if (!focusMode && focusTimerRef.current) {
+      clearTimeout(focusTimerRef.current);
+      focusTimerRef.current = null;
+    }
+  }, [focusMode]);
 
   const handleExport = () => {
     const data = {
@@ -260,7 +277,7 @@ export default function Profile() {
                     correct: s.correct + (correct ? 1 : 0),
                     total: s.total + 1,
                   }));
-                  setTimeout(() => {
+                  focusTimerRef.current = setTimeout(() => {
                     setFocusAnswer(null);
                     setFocusIndex((i) => i + 1);
                   }, 1200);
@@ -322,7 +339,7 @@ export default function Profile() {
       <motion.div variants={item} className="grid grid-cols-2 gap-3 mb-4">
         <StatCard icon={Flame} label="Current Streak" value={`${currentStreak} days`} color="text-primary" />
         <StatCard icon={Star} label="Longest Streak" value={`${longestStreak} days`} color="text-warning" />
-        <StatCard icon={BookOpen} label="Words Learned" value={totalWordsLearned} color="text-info" />
+        <StatCard icon={BookOpen} label="Words Learned" value={totalWordsLearned} color="text-info" onClick={() => navigate('/words')} />
         <StatCard icon={Target} label="Accuracy" value={`${accuracy}%`} color="text-success" />
         <StatCard icon={Clock} label="Time Spent" value={`${totalTime} min`} color="text-charcoal/70" />
         <StatCard icon={TrendingUp} label="Grammar Mastered" value={`${grammarCount}/14`} color="text-primary" />
@@ -636,13 +653,17 @@ function ActivityCalendar({ data }) {
   );
 }
 
-function StatCard({ icon: Icon, label, value, color }) {
+function StatCard({ icon: Icon, label, value, color, onClick }) {
+  const Tag = onClick ? 'button' : 'div';
   return (
-    <div className="bg-white rounded-2xl p-3 shadow-sm border border-cream-dark/50">
+    <Tag
+      onClick={onClick}
+      className={`bg-white rounded-2xl p-3 shadow-sm border border-cream-dark/50 text-left ${onClick ? 'hover:border-primary/30 transition-colors cursor-pointer' : ''}`}
+    >
       <Icon size={16} className={`${color} mb-1.5`} />
       <div className="text-lg font-bold text-charcoal leading-tight">{value}</div>
-      <div className="text-[10px] text-charcoal/50">{label}</div>
-    </div>
+      <div className="text-[10px] text-charcoal/50">{label}{onClick ? ' →' : ''}</div>
+    </Tag>
   );
 }
 

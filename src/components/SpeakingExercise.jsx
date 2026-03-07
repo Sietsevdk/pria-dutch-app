@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Mic,
@@ -20,6 +20,14 @@ export default function SpeakingExercise({ text, translation, onAnswer }) {
   const [similarity, setSimilarity] = useState(null);
   const [spokenText, setSpokenText] = useState('');
   const [micError, setMicError] = useState(null);
+  const answerTimerRef = useRef(null);
+
+  useEffect(() => {
+    return () => {
+      if (answerTimerRef.current) clearTimeout(answerTimerRef.current);
+    };
+  }, []);
+
   const {
     speak,
     isSpeaking,
@@ -73,7 +81,7 @@ export default function SpeakingExercise({ text, translation, onAnswer }) {
         setHasAttempted(true);
 
         if (onAnswer) {
-          setTimeout(() => {
+          answerTimerRef.current = setTimeout(() => {
             onAnswer(score >= PASS_THRESHOLD);
           }, 1500);
         }
@@ -105,7 +113,7 @@ export default function SpeakingExercise({ text, translation, onAnswer }) {
       setSimilarity(correct ? 100 : 0);
       setSpokenText(correct ? '(Self-assessed: correct)' : '(Self-assessed: needs practice)');
       if (onAnswer) {
-        setTimeout(() => {
+        answerTimerRef.current = setTimeout(() => {
           onAnswer(correct);
         }, 1000);
       }

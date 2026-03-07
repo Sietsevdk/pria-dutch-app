@@ -64,7 +64,44 @@
       "Forgetting the position of 'niet' at the end: 'Ik niet kom morgen' is wrong → Ik kom morgen niet. (I'm not coming tomorrow.)"
     ],
     "tip": "Vuistregel: als je in het Engels 'no' of 'not a/any' zou zeggen voor een zelfstandig naamwoord, gebruik dan 'geen'. Als je 'not' zou zeggen bij een werkwoord, bijvoeglijk naamwoord of bijwoord, gebruik dan 'niet'. Voorbeeld: 'I have no car' = 'Ik heb geen auto'. 'I do not work' = 'Ik werk niet'.",
-    "tipEN": "Rule of thumb: if you would say 'no' or 'not a/any' before a noun in English, use 'geen'. If you would say 'not' with a verb, adjective, or adverb, use 'niet'. Example: 'I have no car' = 'Ik heb geen auto'. 'I do not work' = 'Ik werk niet'."
+    "tipEN": "Rule of thumb: if you would say 'no' or 'not a/any' before a noun in English, use 'geen'. If you would say 'not' with a verb, adjective, or adverb, use 'niet'. Example: 'I have no car' = 'Ik heb geen auto'. 'I do not work' = 'Ik werk niet'.",
+    "examples": [
+      {
+        "nl": "Ik heb geen auto.",
+        "en": "I don't have a car.",
+        "note": "Geen replaces 'een': een auto -> geen auto"
+      },
+      {
+        "nl": "Zij werkt vandaag niet.",
+        "en": "She doesn't work today.",
+        "note": "Niet at end: negating the verb"
+      },
+      {
+        "nl": "Ik drink geen koffie.",
+        "en": "I don't drink coffee.",
+        "note": "Geen with uncountable noun (no article)"
+      },
+      {
+        "nl": "Het is niet koud buiten.",
+        "en": "It's not cold outside.",
+        "note": "Niet before adjective"
+      },
+      {
+        "nl": "Hij gaat niet naar school.",
+        "en": "He doesn't go to school.",
+        "note": "Niet before preposition (naar)"
+      },
+      {
+        "nl": "Ik heb het boek niet gelezen.",
+        "en": "I haven't read the book.",
+        "note": "Niet before past participle; definite noun = niet"
+      },
+      {
+        "nl": "Wij hebben geen kinderen.",
+        "en": "We have no children.",
+        "note": "Geen with plural without article"
+      }
+    ]
   },
   "exercises": [
     {

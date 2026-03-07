@@ -70,7 +70,49 @@
       "'Hoe veel' (two words) is wrong — it is always 'hoeveel' (one word). (How much / how many)"
     ],
     "tip": "Bij ja/nee-vragen: draai het onderwerp en werkwoord om (Je werkt → Werk je?). Bij open vragen: begin met het vraagwoord, dan het werkwoord, dan het onderwerp (Waar + woon + je?). Vergeet de jij-regel niet: als 'jij/je' na het werkwoord staat, valt de -t weg!",
-    "tipEN": "For yes/no questions: swap the subject and verb (Je werkt → Werk je? = You work → Do you work?). For open questions: start with the question word, then the verb, then the subject (Waar + woon + je? = Where + live + you?). Don't forget the jij-rule: when 'jij/je' comes after the verb, the -t ending is dropped!"
+    "tipEN": "For yes/no questions: swap the subject and verb (Je werkt → Werk je? = You work → Do you work?). For open questions: start with the question word, then the verb, then the subject (Waar + woon + je? = Where + live + you?). Don't forget the jij-rule: when 'jij/je' comes after the verb, the -t ending is dropped!",
+    "examples": [
+      {
+        "nl": "Spreek je Nederlands?",
+        "en": "Do you speak Dutch?",
+        "note": "Yes/no question: verb first, jij-rule (-t drops)"
+      },
+      {
+        "nl": "Waar woon je?",
+        "en": "Where do you live?",
+        "note": "Open question with 'waar' (where)"
+      },
+      {
+        "nl": "Hoe heet je?",
+        "en": "What is your name?",
+        "note": "Open question with 'hoe' (how)"
+      },
+      {
+        "nl": "Wanneer begint de les?",
+        "en": "When does the lesson start?",
+        "note": "Open question with 'wanneer' (when)"
+      },
+      {
+        "nl": "Waarom leer je Nederlands?",
+        "en": "Why are you learning Dutch?",
+        "note": "Open question with 'waarom' (why)"
+      },
+      {
+        "nl": "Hoeveel kost dat?",
+        "en": "How much does that cost?",
+        "note": "Open question with 'hoeveel' (how much, one word)"
+      },
+      {
+        "nl": "Welke taal spreek je thuis?",
+        "en": "Which language do you speak at home?",
+        "note": "Welke with de-word (de taal)"
+      },
+      {
+        "nl": "Heb je honger?",
+        "en": "Are you hungry?",
+        "note": "Yes/no question: verb in position 1"
+      }
+    ]
   },
   "exercises": [
     {

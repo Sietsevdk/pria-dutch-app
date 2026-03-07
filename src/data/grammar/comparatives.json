@@ -62,7 +62,44 @@
       "Forgetting that 'even ... als' is for equality: 'Hij is even groot dan ik' is wrong → 'even groot als ik' (as tall as me)."
     ],
     "tip": "De drie onregelmatige vormen die je MOET kennen: goed-beter-best, veel-meer-meest, weinig-minder-minst. Bij vergelijkingen: altijd 'DAN' (niet 'als'!). Bij gelijkheid: 'even ... ALS'. Denk aan: verGELIJKing = 'DAN', geLIJKheid = 'ALS'.",
-    "tipEN": "The three irregular forms you MUST know: goed-beter-best (good-better-best), veel-meer-meest (much-more-most), weinig-minder-minst (little-less-least). For comparisons: always 'DAN' (than), not 'als'! For equality: 'even ... ALS' (as ... as). Memory trick: compariSON = 'DAN', equALity = 'ALS'."
+    "tipEN": "The three irregular forms you MUST know: goed-beter-best (good-better-best), veel-meer-meest (much-more-most), weinig-minder-minst (little-less-least). For comparisons: always 'DAN' (than), not 'als'! For equality: 'even ... ALS' (as ... as). Memory trick: compariSON = 'DAN', equALity = 'ALS'.",
+    "examples": [
+      {
+        "nl": "Mijn huis is groter dan jouw huis.",
+        "en": "My house is bigger than your house.",
+        "note": "Comparative: groot -> groter + dan"
+      },
+      {
+        "nl": "Dit is de mooiste stad van Nederland.",
+        "en": "This is the most beautiful city in the Netherlands.",
+        "note": "Superlative before noun: mooi -> mooiste"
+      },
+      {
+        "nl": "Hij is even oud als ik.",
+        "en": "He is as old as I am.",
+        "note": "Equality: even ... als (as ... as)"
+      },
+      {
+        "nl": "Dit boek is beter dan dat boek.",
+        "en": "This book is better than that book.",
+        "note": "Irregular: goed -> beter -> best"
+      },
+      {
+        "nl": "Zij heeft meer ervaring dan hij.",
+        "en": "She has more experience than him.",
+        "note": "Irregular: veel -> meer -> meest"
+      },
+      {
+        "nl": "Ik fiets liever dan dat ik autorijdt.",
+        "en": "I prefer cycling to driving.",
+        "note": "Irregular: graag -> liever -> liefst"
+      },
+      {
+        "nl": "Amsterdam is de grootste stad.",
+        "en": "Amsterdam is the biggest city.",
+        "note": "Superlative before noun: de + adjective + -ste"
+      }
+    ]
   },
   "exercises": [
     {

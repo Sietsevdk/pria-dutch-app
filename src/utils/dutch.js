@@ -8,7 +8,7 @@
 export const HET_WORD_RULES = [
   { rule: 'Diminutives ending in -je (huisje, katje, bloemetje)', pattern: /je$/ },
   { rule: 'Words starting with ge- (gebouw, geluk, gevoel)', pattern: /^ge/ },
-  { rule: 'Words starting with be- (begin, besluit, bestuur)', pattern: /^be/ },
+  { rule: 'Words starting with be- (begin, besluit, bestuur)', pattern: null },
   { rule: 'Words starting with ver- (verkeer, verschil, verleden)', pattern: /^ver/ },
   { rule: 'Languages (het Nederlands, het Engels)', pattern: null },
   { rule: 'Metals (het goud, het zilver, het ijzer)', pattern: null },
@@ -116,7 +116,17 @@ export function checkAnswer(userAnswer, correctAnswer, tolerance = 1) {
 /**
  * Dutch verb stem extraction
  */
+// Lookup table for irregular verb stems that can't be computed algorithmically
+const IRREGULAR_STEMS = {
+  zijn: 'ben', hebben: 'heb', gaan: 'ga', staan: 'sta', slaan: 'sla',
+  doen: 'doe', zien: 'zie', kunnen: 'kan', mogen: 'mag', moeten: 'moet',
+  willen: 'wil', zullen: 'zal', weten: 'weet', houden: 'houd',
+};
+
 export function getVerbStem(infinitive) {
+  // Check irregular stems first
+  if (IRREGULAR_STEMS[infinitive]) return IRREGULAR_STEMS[infinitive];
+
   if (!infinitive.endsWith('en')) return infinitive;
 
   let stem = infinitive.slice(0, -2);

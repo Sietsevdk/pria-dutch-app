@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Lock, Check, ChevronRight, RotateCcw } from 'lucide-react';
 import ProgressRing from '../components/ProgressRing';
+import LevelBadge from '../components/LevelBadge';
 import useProgress from '../hooks/useProgress';
+import { getLessonDifficulty, getUserLevel, DIFFICULTY_INFO } from '../utils/levels';
 
 const lessonsModule = import.meta.glob('../data/lessons.json', { eager: true });
 let lessonsData = { phases: [] };
@@ -15,6 +17,8 @@ export default function Learn() {
   const navigate = useNavigate();
   const lessonProgress = useProgress((s) => s.lessonProgress);
   const isLessonUnlocked = useProgress((s) => s.isLessonUnlocked);
+  const currentLesson = useProgress((s) => s.currentLesson);
+  const userLevel = getUserLevel(currentLesson);
 
   return (
     <div className="px-4 pt-6 pb-4">
@@ -37,9 +41,18 @@ export default function Learn() {
               transition={{ delay: phaseIndex * 0.1 }}
             >
               <div className="h-px flex-1 bg-cream-dark" />
-              <span className="text-xs font-semibold text-charcoal/50 uppercase tracking-wider">
-                {phase.name}
-              </span>
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-semibold text-charcoal/50 uppercase tracking-wider">
+                  {phase.name}
+                </span>
+                <span className={`text-[9px] px-1.5 py-0.5 rounded-full font-medium ${
+                  phaseIndex === 0 ? 'bg-success/10 text-success'
+                    : phaseIndex === 1 ? 'bg-info/10 text-info'
+                      : 'bg-primary/10 text-primary'
+                }`}>
+                  {DIFFICULTY_INFO[phaseIndex + 1]?.short}
+                </span>
+              </div>
               <div className="h-px flex-1 bg-cream-dark" />
             </motion.div>
 
@@ -106,9 +119,12 @@ export default function Learn() {
                             {lesson.title}
                           </span>
                         </div>
-                        <p className="text-xs text-charcoal/50 mt-0.5 truncate">
-                          {lesson.description}
-                        </p>
+                        <div className="flex items-center gap-1.5 mt-0.5">
+                          <p className="text-xs text-charcoal/50 truncate flex-1">
+                            {lesson.description}
+                          </p>
+                          <LevelBadge difficulty={getLessonDifficulty(lesson.id)} userLevel={userLevel} compact />
+                        </div>
                       </div>
 
                       {/* Progress / Arrow */}

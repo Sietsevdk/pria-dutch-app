@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef, useEffect } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Lightbulb, Send, Check, X } from 'lucide-react';
 import { checkAnswer } from '../utils/dutch';
@@ -6,6 +6,7 @@ import { checkAnswer } from '../utils/dutch';
 /**
  * FillInBlank - Sentence completion exercise.
  * Highlights a blank in the sentence and checks the user's input with typo tolerance.
+ * Calls onAnswer immediately (synchronously) so the parent controls timing.
  */
 export default function FillInBlank({
   sentence,
@@ -22,25 +23,21 @@ export default function FillInBlank({
   const [result, setResult] = useState(null); // null | { correct, exact, distance }
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const inputRef = useRef(null);
-  const feedbackTimerRef = useRef(null);
-
-  useEffect(() => {
-    return () => { if (feedbackTimerRef.current) clearTimeout(feedbackTimerRef.current); };
-  }, []);
+  const submittedRef = useRef(false);
 
   const handleSubmit = useCallback(
     (e) => {
       e?.preventDefault();
-      if (!userInput.trim() || hasSubmitted) return;
+      if (!userInput.trim() || hasSubmitted || submittedRef.current) return;
+      submittedRef.current = true;
 
       const checkResult = checkAnswer(userInput, answer);
       setResult(checkResult);
       setHasSubmitted(true);
 
+      // Call onAnswer immediately — parent (Lesson/Dictionary) controls the advance timing
       if (onAnswer) {
-        feedbackTimerRef.current = setTimeout(() => {
-          onAnswer(checkResult.correct);
-        }, 1500);
+        onAnswer(checkResult.correct);
       }
     },
     [userInput, answer, hasSubmitted, onAnswer]

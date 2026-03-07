@@ -152,7 +152,7 @@ export default function MatchPairs({ pairs, onComplete }) {
           </p>
           {shuffledDutch.map((word, index) => (
             <motion.button
-              key={`dutch-${word}`}
+              key={`dutch-${index}-${word}`}
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.05 }}
@@ -180,7 +180,7 @@ export default function MatchPairs({ pairs, onComplete }) {
           </p>
           {shuffledEnglish.map((word, index) => (
             <motion.button
-              key={`english-${word}`}
+              key={`english-${index}-${word}`}
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.05 }}

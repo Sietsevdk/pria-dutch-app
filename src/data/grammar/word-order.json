@@ -58,7 +58,44 @@
       "'Ik heb gegeten gisteren' is wrong — the past participle goes at the end, but time expressions come before it: 'Ik heb gisteren gegeten.' (I ate yesterday.)"
     ],
     "tip": "Denk aan de Nederlandse zin als een trein: het werkwoord is de locomotief en staat altijd op spoor 2 (positie 2). In een bijzin rijdt de locomotief naar het laatste spoor (het einde). Onthoud TMP: Tijd-Manier-Plaats (wanneer-hoe-waar) voor de volgorde van extra informatie.",
-    "tipEN": "Think of the Dutch sentence as a train: the verb is the locomotive and always goes on track 2 (position 2). In a subordinate clause, the locomotive moves to the last track (the end). Remember TMP: Time-Manner-Place (when-how-where) for the order of additional information."
+    "tipEN": "Think of the Dutch sentence as a train: the verb is the locomotive and always goes on track 2 (position 2). In a subordinate clause, the locomotive moves to the last track (the end). Remember TMP: Time-Manner-Place (when-how-where) for the order of additional information.",
+    "examples": [
+      {
+        "nl": "Ik ga morgen naar Amsterdam.",
+        "en": "I go to Amsterdam tomorrow.",
+        "note": "V2 rule: verb (ga) in position 2"
+      },
+      {
+        "nl": "Morgen ga ik naar Amsterdam.",
+        "en": "Tomorrow I go to Amsterdam.",
+        "note": "Inversion: time in pos. 1, verb pos. 2, subject pos. 3"
+      },
+      {
+        "nl": "Ik ga morgen met de trein naar Amsterdam.",
+        "en": "I go tomorrow by train to Amsterdam.",
+        "note": "Time-Manner-Place: morgen / met de trein / naar Amsterdam"
+      },
+      {
+        "nl": "Ik weet dat hij morgen komt.",
+        "en": "I know that he is coming tomorrow.",
+        "note": "Subordinate clause: verb (komt) goes to the end"
+      },
+      {
+        "nl": "Omdat ik moe ben, ga ik slapen.",
+        "en": "Because I am tired, I go to sleep.",
+        "note": "Subclause first: verb to end; then inversion in main clause"
+      },
+      {
+        "nl": "Ik wil morgen naar huis gaan.",
+        "en": "I want to go home tomorrow.",
+        "note": "Two verbs: modal (wil) pos. 2, infinitive (gaan) at end"
+      },
+      {
+        "nl": "Gisteren heb ik de hele dag gewerkt.",
+        "en": "Yesterday I worked all day.",
+        "note": "Inversion + perfect tense: past participle at the end"
+      }
+    ]
   },
   "exercises": [
     {

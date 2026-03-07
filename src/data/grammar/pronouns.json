@@ -60,7 +60,44 @@
       "'Dit auto' is wrong — 'auto' (car) is a de-word, so: 'deze auto' (this car). 'Dit' is only used with het-words in the singular."
     ],
     "tip": "Onthoud: de volle vormen (mij, jou, hij, zij, wij) gebruik je als je NADRUK wilt leggen: 'IK heb dat gedaan, niet hij!' De gereduceerde vormen (me, je, ie, ze, we) gebruik je in gewone, neutrale zinnen: 'Heb je dat gedaan?' Oefen met beide vormen!",
-    "tipEN": "Remember: the full forms (mij, jou, hij, zij, wij) are used when you want to add EMPHASIS: 'IK heb dat gedaan, niet hij!' (I did that, not him!) The reduced forms (me, je, ie, ze, we) are used in normal, neutral sentences: 'Heb je dat gedaan?' (Did you do that?) Practice with both forms!"
+    "tipEN": "Remember: the full forms (mij, jou, hij, zij, wij) are used when you want to add EMPHASIS: 'IK heb dat gedaan, niet hij!' (I did that, not him!) The reduced forms (me, je, ie, ze, we) are used in normal, neutral sentences: 'Heb je dat gedaan?' (Did you do that?) Practice with both forms!",
+    "examples": [
+      {
+        "nl": "Ik zie hem elke dag.",
+        "en": "I see him every day.",
+        "note": "Object pronoun: hij -> hem"
+      },
+      {
+        "nl": "Jouw fiets is rood.",
+        "en": "Your bike is red.",
+        "note": "Possessive: jouw (not jou, which is object form)"
+      },
+      {
+        "nl": "Wij geven haar een cadeau.",
+        "en": "We give her a present.",
+        "note": "Indirect object: zij (she) -> haar"
+      },
+      {
+        "nl": "Dit is ons huis.",
+        "en": "This is our house.",
+        "note": "Possessive 'ons' with het-word (het huis)"
+      },
+      {
+        "nl": "Onze kinderen spelen buiten.",
+        "en": "Our children play outside.",
+        "note": "Possessive 'onze' with plural (de-word/plural)"
+      },
+      {
+        "nl": "Ken je die vrouw?",
+        "en": "Do you know that woman?",
+        "note": "Demonstrative 'die' with de-word (far away)"
+      },
+      {
+        "nl": "Dit boek is interessant.",
+        "en": "This book is interesting.",
+        "note": "Demonstrative 'dit' with het-word singular (nearby)"
+      }
+    ]
   },
   "exercises": [
     {

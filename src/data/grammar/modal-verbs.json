@@ -60,7 +60,44 @@
       "Forgetting that the infinitive goes at the end: 'Ik moet vandaag naar de dokter gaan' (I have to go to the doctor today), not 'Ik moet gaan vandaag naar de dokter'."
     ],
     "tip": "Denk aan modale werkwoorden als een sandwich: het modale werkwoord staat op positie 2, alle andere informatie zit in het midden, en de infinitief is het 'brood' aan het einde. Voorbeeld: Ik [MOET] morgen vroeg naar kantoor [GAAN].",
-    "tipEN": "Think of modal verbs as a sandwich: the modal verb sits in position 2, all other information goes in the middle, and the infinitive is the 'bread' at the end. Example: Ik [MOET] morgen vroeg naar kantoor [GAAN] (I [MUST] tomorrow early to the office [GO])."
+    "tipEN": "Think of modal verbs as a sandwich: the modal verb sits in position 2, all other information goes in the middle, and the infinitive is the 'bread' at the end. Example: Ik [MOET] morgen vroeg naar kantoor [GAAN] (I [MUST] tomorrow early to the office [GO]).",
+    "examples": [
+      {
+        "nl": "Ik kan goed zwemmen.",
+        "en": "I can swim well.",
+        "note": "Kunnen: ability. Infinitive (zwemmen) at the end"
+      },
+      {
+        "nl": "Je mag hier niet roken.",
+        "en": "You may not smoke here.",
+        "note": "Mogen: permission (denied here)"
+      },
+      {
+        "nl": "Wij moeten om 8 uur beginnen.",
+        "en": "We must start at 8 o'clock.",
+        "note": "Moeten: obligation. Infinitive at the end"
+      },
+      {
+        "nl": "Wil je een kopje koffie?",
+        "en": "Do you want a cup of coffee?",
+        "note": "Willen: desire/wish"
+      },
+      {
+        "nl": "Zullen we naar het park gaan?",
+        "en": "Shall we go to the park?",
+        "note": "Zullen: suggestion (with wij/we)"
+      },
+      {
+        "nl": "Je hoeft niet te komen.",
+        "en": "You don't have to come.",
+        "note": "Hoeven: not necessary (niet + te + infinitive)"
+      },
+      {
+        "nl": "Zou u mij kunnen helpen?",
+        "en": "Could you help me?",
+        "note": "Zou: polite request (past tense of zullen)"
+      }
+    ]
   },
   "exercises": [
     {

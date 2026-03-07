@@ -353,9 +353,13 @@ export default function Home() {
       )}
 
       {/* Stats summary */}
-      <motion.div variants={item} className="mt-4 text-center text-xs text-charcoal/40">
-        {totalWordsLearned} words learned
-      </motion.div>
+      <motion.button
+        variants={item}
+        onClick={() => navigate('/words')}
+        className="mt-4 w-full text-center text-xs text-charcoal/40 hover:text-primary transition-colors"
+      >
+        {totalWordsLearned} words learned →
+      </motion.button>
     </motion.div>
   );
 }

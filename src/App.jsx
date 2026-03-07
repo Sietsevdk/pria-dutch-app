@@ -15,6 +15,7 @@ const Pronunciation = lazy(() => import('./pages/Pronunciation'));
 const KNM = lazy(() => import('./pages/KNM'));
 const Conjugation = lazy(() => import('./pages/Conjugation'));
 const Dictionary = lazy(() => import('./pages/Dictionary'));
+const WordsLearned = lazy(() => import('./pages/WordsLearned'));
 
 function Loading() {
   return (
@@ -75,6 +76,7 @@ export default function App() {
             <Route path="/knm" element={<KNM />} />
             <Route path="/conjugation" element={<Conjugation />} />
             <Route path="/dictionary" element={<Dictionary />} />
+            <Route path="/words" element={<WordsLearned />} />
           </Route>
           <Route
             path="/lesson/:lessonId"

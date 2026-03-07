@@ -82,7 +82,49 @@
       "Forgetting to place 'ge-' between the prefix in separable verbs: 'opgebeld' (not 'geopbeld')."
     ],
     "tip": "Onthoud voor hebben/zijn: beweging met RICHTING = zijn (ik ben naar huis gelopen), beweging zonder richting = hebben (ik heb gelopen). Verandering van toestand = zijn (hij is gestorven, het is begonnen). Bij twijfel: de meeste werkwoorden gebruiken 'hebben'.",
-    "tipEN": "Remember for hebben/zijn: movement with DIRECTION = zijn (ik ben naar huis gelopen = I walked home), movement without direction = hebben (ik heb gelopen = I walked/was walking). Change of state = zijn (hij is gestorven = he died, het is begonnen = it has started). When in doubt: most verbs use 'hebben'."
+    "tipEN": "Remember for hebben/zijn: movement with DIRECTION = zijn (ik ben naar huis gelopen = I walked home), movement without direction = hebben (ik heb gelopen = I walked/was walking). Change of state = zijn (hij is gestorven = he died, het is begonnen = it has started). When in doubt: most verbs use 'hebben'.",
+    "examples": [
+      {
+        "nl": "Ik heb gisteren gewerkt.",
+        "en": "I worked yesterday.",
+        "note": "Weak verb with hebben: ge + werk + t (kofschip)"
+      },
+      {
+        "nl": "Zij is naar Amsterdam gereisd.",
+        "en": "She traveled to Amsterdam.",
+        "note": "Movement with direction: uses 'zijn'"
+      },
+      {
+        "nl": "Wij hebben een film gekeken.",
+        "en": "We watched a movie.",
+        "note": "Strong verb: kijken -> gekeken (with hebben)"
+      },
+      {
+        "nl": "Hij heeft de rekening betaald.",
+        "en": "He paid the bill.",
+        "note": "Inseparable prefix be-: no extra ge- (betaald)"
+      },
+      {
+        "nl": "Ik heb mijn moeder opgebeld.",
+        "en": "I called my mother.",
+        "note": "Separable verb: ge- between prefix (op-ge-beld)"
+      },
+      {
+        "nl": "Zij is gisteren gekomen.",
+        "en": "She came yesterday.",
+        "note": "Movement verb komen: uses 'zijn' (gekomen)"
+      },
+      {
+        "nl": "Het kind is snel gegroeid.",
+        "en": "The child grew quickly.",
+        "note": "Change of state: uses 'zijn' (gegroeid)"
+      },
+      {
+        "nl": "Ik ben nog nooit in Japan geweest.",
+        "en": "I have never been to Japan.",
+        "note": "Irregular: zijn -> geweest (uses 'zijn')"
+      }
+    ]
   },
   "exercises": [
     {

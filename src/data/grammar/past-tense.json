@@ -64,7 +64,44 @@
       "Forgetting that the plural takes -ten/-den: 'wij werkten' (we worked), not 'wij werkte'."
     ],
     "tip": "Onthoud 't kofschip! Zeg hardop: t-k-o-f-s-ch-i-p. Als de stam eindigt op een van deze medeklinkers (t, k, f, s, ch, p), gebruik je -te/-ten. Anders -de/-den. Denk aan de zin: 'Ik kocht fischhappen op de pont' (alle medeklinkers van 't kofschip zitten erin: k, f, s, ch, p, t).",
-    "tipEN": "Remember 't kofschip! Say it out loud: t-k-o-f-s-ch-i-p. If the stem ends in one of these consonants (t, k, f, s, ch, p), you use -te/-ten. Otherwise -de/-den. Think of the word 'soft ketchup' — it contains the key consonants: s, f, t, k, ch, p."
+    "tipEN": "Remember 't kofschip! Say it out loud: t-k-o-f-s-ch-i-p. If the stem ends in one of these consonants (t, k, f, s, ch, p), you use -te/-ten. Otherwise -de/-den. Think of the word 'soft ketchup' — it contains the key consonants: s, f, t, k, ch, p.",
+    "examples": [
+      {
+        "nl": "Ik werkte gisteren hard.",
+        "en": "I worked hard yesterday.",
+        "note": "Weak verb: stem 'werk' ends in k ('t kofschip) -> -te"
+      },
+      {
+        "nl": "Zij woonde in Rotterdam.",
+        "en": "She lived in Rotterdam.",
+        "note": "Weak verb: stem 'woon' ends in n (not kofschip) -> -de"
+      },
+      {
+        "nl": "Wij speelden in het park.",
+        "en": "We played in the park.",
+        "note": "Plural: stem 'speel' + -den (not kofschip)"
+      },
+      {
+        "nl": "Hij las een boek.",
+        "en": "He read a book.",
+        "note": "Strong verb: lezen -> las (vowel change)"
+      },
+      {
+        "nl": "Ik was gisteren ziek.",
+        "en": "I was sick yesterday.",
+        "note": "Irregular: zijn -> was/waren"
+      },
+      {
+        "nl": "Wij hadden geen tijd.",
+        "en": "We had no time.",
+        "note": "Irregular: hebben -> had/hadden"
+      },
+      {
+        "nl": "Zij kwam te laat op school.",
+        "en": "She arrived late at school.",
+        "note": "Strong verb: komen -> kwam (vowel change)"
+      }
+    ]
   },
   "exercises": [
     {
