@@ -350,8 +350,8 @@ export default function Profile() {
 
       {/* Stats grid */}
       <motion.div variants={item} className="grid grid-cols-2 gap-3 mb-4">
-        <StatCard icon={Flame} label="Current Streak" value={`${currentStreak} days`} color="text-primary" />
-        <StatCard icon={Star} label="Longest Streak" value={`${longestStreak} days`} color="text-warning" />
+        <StatCard icon={Flame} label="Current Streak" value={`${currentStreak} ${currentStreak === 1 ? 'day' : 'days'}`} color="text-primary" />
+        <StatCard icon={Star} label="Longest Streak" value={`${longestStreak} ${longestStreak === 1 ? 'day' : 'days'}`} color="text-warning" />
         <StatCard icon={BookOpen} label="Words Learned" value={totalWordsLearned} color="text-info" onClick={() => navigate('/words')} />
         <StatCard icon={Target} label="Accuracy" value={`${accuracy}%`} color="text-success" />
         <StatCard icon={Clock} label="Time Spent" value={`${totalTime} min`} color="text-charcoal/70" />
