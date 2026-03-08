@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Lock, Check, ChevronRight, RotateCcw, SkipForward } from 'lucide-react';
+import { Lock, Check, ChevronRight, RotateCcw, SkipForward, Zap } from 'lucide-react';
 import ProgressRing from '../components/ProgressRing';
 import LevelBadge from '../components/LevelBadge';
 import useProgress from '../hooks/useProgress';
@@ -171,9 +171,9 @@ export default function Learn() {
                         ) : null}
                       </motion.button>
 
-                      {/* Skip button — shows on active (unlocked, not completed) lessons */}
-                      {isActive && (
-                        <div className="flex justify-end mt-1 mr-1">
+                      {/* Action buttons — shows on unlocked lessons */}
+                      {unlocked && (
+                        <div className="flex justify-end gap-2 mt-1 mr-1">
                           {confirmSkip === lesson.id ? (
                             <motion.div
                               initial={{ opacity: 0, scale: 0.9 }}
@@ -198,13 +198,24 @@ export default function Learn() {
                               </button>
                             </motion.div>
                           ) : (
-                            <button
-                              onClick={() => setConfirmSkip(lesson.id)}
-                              className="text-xs text-charcoal/40 hover:text-warning font-medium flex items-center gap-1 px-2 py-1 rounded-lg hover:bg-warning/5 transition-colors"
-                            >
-                              <SkipForward size={12} />
-                              I know this already
-                            </button>
+                            <>
+                              <button
+                                onClick={() => navigate(`/lesson/${lesson.id}?mode=test`)}
+                                className="text-xs text-info hover:text-info font-medium flex items-center gap-1 px-2 py-1 rounded-lg bg-info/5 hover:bg-info/10 transition-colors"
+                              >
+                                <Zap size={12} />
+                                Take test
+                              </button>
+                              {isActive && (
+                                <button
+                                  onClick={() => setConfirmSkip(lesson.id)}
+                                  className="text-xs text-charcoal/40 hover:text-warning font-medium flex items-center gap-1 px-2 py-1 rounded-lg hover:bg-warning/5 transition-colors"
+                                >
+                                  <SkipForward size={12} />
+                                  Skip
+                                </button>
+                              )}
+                            </>
                           )}
                         </div>
                       )}

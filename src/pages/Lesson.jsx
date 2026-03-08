@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect, useCallback, useRef } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Volume2, RefreshCw, SkipForward } from 'lucide-react';
 import MultipleChoice from '../components/MultipleChoice';
@@ -291,6 +291,8 @@ function generateReviewExercises(mistakeWordIds) {
 export default function Lesson() {
   const { lessonId } = useParams();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const isTestOnly = searchParams.get('mode') === 'test';
   const completeLesson = useProgress((s) => s.completeLesson);
   const learnWord = useProgress((s) => s.learnWord);
   const recordExercise = useProgress((s) => s.recordExercise);
@@ -303,7 +305,13 @@ export default function Lesson() {
   const completeSpeakingGoal = useProgress((s) => s.completeSpeakingGoal);
 
   const lesson = useMemo(() => getLessonData(lessonId), [lessonId]);
-  const [exercises, setExercises] = useState(() => generateExercises(lesson));
+
+  // In test-only mode, strip teaching exercises (word_intro, grammar_tip)
+  const [exercises, setExercises] = useState(() => {
+    const allExercises = generateExercises(lesson);
+    if (!isTestOnly) return allExercises;
+    return allExercises.filter((ex) => ex.type !== 'word_intro' && ex.type !== 'grammar_tip');
+  });
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
@@ -320,6 +328,21 @@ export default function Lesson() {
 
   useEffect(() => {
     startSession();
+
+    // In test-only mode, auto-register all lesson words as learned
+    // (since we skip the word_intro cards that normally call learnWord)
+    if (isTestOnly && lesson) {
+      const words = [];
+      (lesson.vocabularyTopics || []).forEach((topic) => {
+        const data = vocabByTopic[topic];
+        if (data?.words) words.push(...data.words);
+      });
+      words.slice(0, 12).forEach((word) => {
+        learnWord(word.id);
+        addSRSItem(word.id, 'vocabulary');
+      });
+    }
+
     return () => {
       endSession();
       if (advanceTimerRef.current) clearTimeout(advanceTimerRef.current);
@@ -539,6 +562,11 @@ export default function Lesson() {
           <span className="text-xs text-charcoal/50 font-medium min-w-[32px] text-right">
             {Math.min(currentIndex + 1, exercises.length)}/{exercises.length}
           </span>
+          {isTestOnly && (
+            <span className="text-[9px] px-1.5 py-0.5 rounded-full bg-info/10 text-info font-semibold uppercase tracking-wide">
+              Test
+            </span>
+          )}
           <button
             onClick={() => setShowSkipConfirm(true)}
             className="p-1.5 rounded-full hover:bg-warning/10 transition-colors"

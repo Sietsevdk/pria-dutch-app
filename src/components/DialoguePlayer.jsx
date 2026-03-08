@@ -42,9 +42,6 @@ export default function DialoguePlayer({ dialogue }) {
     };
   }, []);
 
-  // Null guard — after all hooks
-  if (!dialogue) return null;
-
   // Auto-scroll to current playing line
   useEffect(() => {
     if (currentPlayingIndex >= 0 && lineRefs.current[currentPlayingIndex]) {
@@ -121,6 +118,9 @@ export default function DialoguePlayer({ dialogue }) {
 
   // Memoize speakers computation
   const speakers = useMemo(() => [...new Set(lines.map((l) => l.speaker))], [lines]);
+
+  // Null guard — MUST be after ALL hooks (Rules of Hooks)
+  if (!dialogue) return null;
 
   return (
     <div className="w-full max-w-lg mx-auto">
