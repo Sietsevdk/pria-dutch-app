@@ -122,11 +122,14 @@ function ReadingPractice() {
   const handleAnswer = useCallback(
     (correct) => {
       if (correct) setScore((s) => s + 1);
-      if (passage && questionIndex + 1 >= passage.questions.length) {
-        setIsComplete(true);
-      } else {
-        setQuestionIndex((i) => i + 1);
-      }
+      // Delay advancing so the user sees correct/incorrect feedback in MultipleChoice
+      setTimeout(() => {
+        if (passage && questionIndex + 1 >= passage.questions.length) {
+          setIsComplete(true);
+        } else {
+          setQuestionIndex((i) => i + 1);
+        }
+      }, 1500);
     },
     [passage, questionIndex]
   );

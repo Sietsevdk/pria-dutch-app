@@ -412,10 +412,9 @@ function CategoryQuiz({ category, onBack, onComplete, previousResult }) {
   const handleNext = () => {
     if (currentIndex + 1 >= totalQuestions) {
       setShowResults(true);
-      // Compute final score from current state + current question's correctness
-      // to avoid any stale-state issues with React batching
-      const finalScore = totalQuestions - wrongAnswers.length;
-      onComplete(category.id, finalScore, totalQuestions, wrongAnswers);
+      // Use score (tracks correct answers directly) instead of totalQuestions - wrongAnswers.length
+      // to avoid off-by-one from stale state
+      onComplete(category.id, score, totalQuestions, wrongAnswers);
       return;
     }
 

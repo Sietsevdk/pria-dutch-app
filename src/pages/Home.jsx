@@ -39,7 +39,7 @@ export default function Home() {
   const currentStreak = useStreak((s) => s.currentStreak);
   const completedToday = useStreak((s) => s.completedToday);
   const checkStreak = useStreak((s) => s.checkStreak);
-  const shouldShowEasterEgg = useStreak((s) => s.currentStreak === 30);
+  const shouldShowEasterEgg = useStreak((s) => s.currentStreak >= 30);
   const srsItems = useSRS((s) => s.items);
   const dueCount = useMemo(() => getDueItems(srsItems).length, [srsItems]);
 

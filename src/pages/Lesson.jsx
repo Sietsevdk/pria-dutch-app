@@ -1,7 +1,7 @@
 import { useState, useMemo, useEffect, useCallback, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Volume2, RefreshCw } from 'lucide-react';
+import { X, Volume2, RefreshCw, SkipForward } from 'lucide-react';
 import MultipleChoice from '../components/MultipleChoice';
 import FillInBlank from '../components/FillInBlank';
 import FlashCard from '../components/FlashCard';
@@ -314,6 +314,7 @@ export default function Lesson() {
   const [mistakeIds, setMistakeIds] = useState([]);
   const [correctStreak, setCorrectStreak] = useState(0);
   const [reviewAdded, setReviewAdded] = useState(false);
+  const [showSkipConfirm, setShowSkipConfirm] = useState(false);
   const advanceTimerRef = useRef(null);
   const handleNextRef = useRef(null);
 
@@ -439,6 +440,25 @@ export default function Lesson() {
     [currentExercise, lessonId, recordExercise, updateWordAccuracy, addSRSItem, recordMistake, completeSpeakingGoal, correctStreak, currentIndex, exercises.length]
   );
 
+  const handleSkipLesson = useCallback(() => {
+    if (advanceTimerRef.current) {
+      clearTimeout(advanceTimerRef.current);
+      advanceTimerRef.current = null;
+    }
+    // Complete the lesson with current stats (what she's done so far counts)
+    const totalQuestions = correctCount + mistakeCount;
+    const accuracy = totalQuestions > 0 ? Math.round((correctCount / totalQuestions) * 100) : 0;
+    const xp = totalQuestions > 0 ? calculateLessonXP({
+      correctAnswers: correctCount,
+      totalQuestions,
+      mistakes: mistakeCount,
+    }) : 5; // Minimum 5 XP for skipping
+    completeLesson(Number(lessonId), accuracy, xp);
+    recordActivity(xp);
+    setIsComplete(true);
+    setShowSkipConfirm(false);
+  }, [correctCount, mistakeCount, lessonId, completeLesson, recordActivity]);
+
   const handleWordIntro = useCallback(
     (word) => {
       learnWord(word.id);
@@ -519,7 +539,43 @@ export default function Lesson() {
           <span className="text-xs text-charcoal/50 font-medium min-w-[32px] text-right">
             {Math.min(currentIndex + 1, exercises.length)}/{exercises.length}
           </span>
+          <button
+            onClick={() => setShowSkipConfirm(true)}
+            className="p-1.5 rounded-full hover:bg-warning/10 transition-colors"
+            aria-label="Skip lesson"
+            title="Skip rest of lesson"
+          >
+            <SkipForward size={18} className="text-charcoal/40" />
+          </button>
         </div>
+
+        {/* Skip confirmation */}
+        <AnimatePresence>
+          {showSkipConfirm && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="mt-2 bg-warning/10 rounded-xl p-3 flex items-center justify-between"
+            >
+              <span className="text-xs text-charcoal/70">Skip the rest of this lesson?</span>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={handleSkipLesson}
+                  className="text-xs font-medium text-warning px-3 py-1.5 rounded-lg bg-warning/15 hover:bg-warning/25 transition-colors"
+                >
+                  Yes, skip
+                </button>
+                <button
+                  onClick={() => setShowSkipConfirm(false)}
+                  className="text-xs font-medium text-charcoal/40 px-3 py-1.5 rounded-lg hover:bg-cream-dark/50 transition-colors"
+                >
+                  Cancel
+                </button>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       {/* Exercise area */}

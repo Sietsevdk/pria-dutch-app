@@ -16,9 +16,6 @@ import { useSpeech } from '../hooks/useSpeech';
  * Plays through a dialogue using TTS and displays lines with expandable translations.
  */
 export default function DialoguePlayer({ dialogue }) {
-  // Null guard
-  if (!dialogue) return null;
-
   const {
     title,
     titleEN,
@@ -45,6 +42,9 @@ export default function DialoguePlayer({ dialogue }) {
     };
   }, []);
 
+  // Null guard — after all hooks
+  if (!dialogue) return null;
+
   // Auto-scroll to current playing line
   useEffect(() => {
     if (currentPlayingIndex >= 0 && lineRefs.current[currentPlayingIndex]) {
@@ -70,11 +70,12 @@ export default function DialoguePlayer({ dialogue }) {
     [speak]
   );
 
-  const handlePlayAll = useCallback(async () => {
+  const handlePlayAll = useCallback(() => {
     if (isPlayingAll || isPlayingRef.current) {
       playAllAbortRef.current = true;
       isPlayingRef.current = false;
       stopSpeaking();
+      if (playDelayRef.current) clearTimeout(playDelayRef.current);
       setIsPlayingAll(false);
       setCurrentPlayingIndex(-1);
       return;
@@ -84,36 +85,39 @@ export default function DialoguePlayer({ dialogue }) {
     isPlayingRef.current = true;
     setIsPlayingAll(true);
 
-    for (let i = 0; i < lines.length; i++) {
-      if (playAllAbortRef.current) break;
+    let lineIndex = 0;
 
-      setCurrentPlayingIndex(i);
+    const playNextLine = () => {
+      if (playAllAbortRef.current || lineIndex >= lines.length) {
+        isPlayingRef.current = false;
+        setIsPlayingAll(false);
+        setCurrentPlayingIndex(-1);
+        return;
+      }
 
-      await new Promise((resolve) => {
-        const utterance = new SpeechSynthesisUtterance(lines[i].dutch);
-        utterance.lang = 'nl-NL';
-        utterance.rate = 0.9;
+      setCurrentPlayingIndex(lineIndex);
+      const currentLine = lines[lineIndex].dutch;
+      lineIndex++;
 
-        const voices = window.speechSynthesis.getVoices();
-        const dutchVoice = voices.find(
-          (v) => v.lang === 'nl-NL' || v.lang.startsWith('nl')
-        );
-        if (dutchVoice) utterance.voice = dutchVoice;
+      // Use the useSpeech hook's speak function (iOS compatible)
+      // We listen for speechSynthesis to finish, then play next after a pause
+      speak(currentLine);
 
-        utterance.onend = () => {
-          // Pause between lines — store timeout in ref for cleanup
-          playDelayRef.current = setTimeout(resolve, 600);
-        };
-        utterance.onerror = () => resolve();
+      // Poll for speech end since speak() doesn't provide onEnd callback
+      const checkDone = setInterval(() => {
+        if (playAllAbortRef.current) {
+          clearInterval(checkDone);
+          return;
+        }
+        if (!window.speechSynthesis.speaking) {
+          clearInterval(checkDone);
+          playDelayRef.current = setTimeout(playNextLine, 600);
+        }
+      }, 100);
+    };
 
-        window.speechSynthesis.speak(utterance);
-      });
-    }
-
-    isPlayingRef.current = false;
-    setIsPlayingAll(false);
-    setCurrentPlayingIndex(-1);
-  }, [isPlayingAll, lines, stopSpeaking]);
+    playNextLine();
+  }, [isPlayingAll, lines, stopSpeaking, speak]);
 
   // Memoize speakers computation
   const speakers = useMemo(() => [...new Set(lines.map((l) => l.speaker))], [lines]);

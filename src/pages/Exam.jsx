@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Clock, BookOpen, Headphones, PenTool, ArrowLeft, ChevronRight, Volume2, Mic, Eye, EyeOff, CheckCircle, XCircle } from 'lucide-react';
 import useProgress from '../hooks/useProgress';
+import { useSpeech } from '../hooks/useSpeech';
 import { shuffle } from '../utils/dutch';
 
 const readingModule = import.meta.glob('../data/exam/reading.json', { eager: true });
@@ -65,6 +66,7 @@ export default function Exam() {
   const [showTranslation, setShowTranslation] = useState({});
   // Writing prompt navigation (must be at top level to respect Rules of Hooks)
   const [promptIndex, setPromptIndex] = useState(0);
+  const { speak: examSpeak } = useSpeech();
   const timerRef = useRef(null);
   const startTimeRef = useRef(null);
   const durationRef = useRef(30 * 60);
@@ -387,25 +389,13 @@ export default function Exam() {
                   <h3 className="font-semibold text-charcoal">{passage.title}</h3>
                   <div className="flex gap-2">
                     <button
-                      onClick={() => {
-                        window.speechSynthesis.cancel();
-                        const u = new SpeechSynthesisUtterance(passage.text);
-                        u.lang = 'nl-NL';
-                        u.rate = 0.9;
-                        window.speechSynthesis.speak(u);
-                      }}
+                      onClick={() => examSpeak(passage.text)}
                       className="flex items-center gap-1 text-sm text-primary bg-primary/5 px-3 py-1.5 rounded-lg hover:bg-primary/10"
                     >
                       <Volume2 size={14} /> Play
                     </button>
                     <button
-                      onClick={() => {
-                        window.speechSynthesis.cancel();
-                        const u = new SpeechSynthesisUtterance(passage.text);
-                        u.lang = 'nl-NL';
-                        u.rate = 0.65;
-                        window.speechSynthesis.speak(u);
-                      }}
+                      onClick={() => examSpeak(passage.text, { slow: true })}
                       className="text-sm text-charcoal/50 bg-cream-dark/50 px-3 py-1.5 rounded-lg hover:bg-cream-dark"
                     >
                       Slow
@@ -694,13 +684,7 @@ export default function Exam() {
                     <h4 className="font-semibold text-sm text-success mb-2">Model Phrase (Voorbeeldzin)</h4>
                     <p className="text-sm text-charcoal/80 italic">{currentTask.modelPhrase}</p>
                     <button
-                      onClick={() => {
-                        window.speechSynthesis.cancel();
-                        const u = new SpeechSynthesisUtterance(currentTask.modelPhrase);
-                        u.lang = 'nl-NL';
-                        u.rate = 0.85;
-                        window.speechSynthesis.speak(u);
-                      }}
+                      onClick={() => examSpeak(currentTask.modelPhrase)}
                       className="mt-2 flex items-center gap-1 text-xs text-primary bg-primary/5 px-3 py-1.5 rounded-lg hover:bg-primary/10"
                     >
                       <Volume2 size={12} /> Listen to model phrase

@@ -261,6 +261,29 @@ const useProgress = create(
           lastGoalResetDate: null,
         }),
 
+      // Skip a lesson — marks it completed with a 'skipped' flag and minimal XP
+      skipLesson: (lessonId) => {
+        const state = get();
+        const existing = state.lessonProgress[lessonId];
+        // Don't overwrite if already genuinely completed
+        if (existing?.completed && !existing?.skipped) return;
+
+        set({
+          lessonProgress: {
+            ...state.lessonProgress,
+            [lessonId]: {
+              completed: true,
+              skipped: true,
+              accuracy: 0,
+              bestScore: existing?.bestScore || 0,
+              completedAt: new Date().toISOString(),
+              attempts: existing?.attempts || 0,
+            },
+          },
+          currentLesson: Math.max(state.currentLesson, lessonId + 1),
+        });
+      },
+
       // Check if a lesson is unlocked — completion of the previous lesson is sufficient
       isLessonUnlocked: (lessonId) => {
         const state = get();

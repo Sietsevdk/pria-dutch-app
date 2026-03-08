@@ -79,11 +79,17 @@ export default function FillInBlank({
 
   return (
     <div className="w-full max-w-md mx-auto">
-      {/* English context sentence */}
+      {/* Header instruction */}
+      <p className="text-xs text-charcoal-light/60 uppercase tracking-wide mb-2 text-center font-medium">
+        Fill in the blank
+      </p>
+
+      {/* English context sentence — always show if available */}
       {englishContext && (
-        <p className="text-sm text-charcoal/60 mb-3 text-center">
-          {englishContext}
-        </p>
+        <div className="bg-info/5 border border-info/15 rounded-xl p-3 mb-4 text-center">
+          <p className="text-xs text-charcoal/50 mb-0.5 font-medium">English translation:</p>
+          <p className="text-sm text-charcoal/80">{englishContext}</p>
+        </div>
       )}
 
       {/* Sentence display */}
@@ -96,11 +102,13 @@ export default function FillInBlank({
           {renderSentence()}
         </p>
 
-        {/* Target word instruction */}
+        {/* Target word instruction — prominent and clear */}
         {targetWord && (
-          <p className="text-sm font-medium text-primary text-center mt-2">
-            Fill in the Dutch word for "<span className="font-bold">{targetWord}</span>"
-          </p>
+          <div className="mt-3 pt-3 border-t border-cream-dark/30">
+            <p className="text-sm font-semibold text-primary text-center">
+              👆 Type the Dutch word for "<span className="font-bold">{targetWord}</span>"
+            </p>
+          </div>
         )}
       </motion.div>
 

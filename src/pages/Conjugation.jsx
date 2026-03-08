@@ -423,7 +423,7 @@ function GuidedLesson() {
   const completeLessonGoal = useProgress((s) => s.completeLessonGoal);
   const recordActivity = useStreak((s) => s.recordActivity);
   const [phase, setPhase] = useState('teaching'); // 'teaching' | 'quiz' | 'complete'
-  const [lessonVerbs] = useState(() => shuffle([...verbs]).slice(0, 4));
+  const [lessonVerbs, setLessonVerbs] = useState(() => shuffle([...verbs]).slice(0, 4));
   const [teachIndex, setTeachIndex] = useState(0);
   const [tense, setTense] = useState('present');
   const [quizChallenges, setQuizChallenges] = useState([]);
@@ -613,7 +613,7 @@ function GuidedLesson() {
           Verbs studied: {lessonVerbs.map((v) => v.infinitive).join(', ')}
         </p>
         <button
-          onClick={() => { completionRecorded.current = false; setPhase('teaching'); setTeachIndex(0); setScore({ correct: 0, total: 0 }); }}
+          onClick={() => { completionRecorded.current = false; setLessonVerbs(shuffle([...verbs]).slice(0, 4)); setPhase('teaching'); setTeachIndex(0); setScore({ correct: 0, total: 0 }); }}
           className="w-full py-3 rounded-xl text-sm font-semibold bg-primary text-white mb-3"
         >
           New Lesson

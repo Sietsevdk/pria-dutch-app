@@ -575,15 +575,31 @@ function WordCard({ word, isExpanded, onToggle, compact = false }) {
 
 function generateTopicExercises(words, allWordsList) {
   const exercises = [];
-  const lessonWords = words.slice(0, 12);
+  const allTopicWords = shuffle([...words]);
 
-  // Phase 1: Introduce & test in batches
+  // Phase 1: Introduce & test ALL words in batches of 4
   const batchSize = 4;
-  for (let i = 0; i < lessonWords.length; i += batchSize) {
-    const batch = lessonWords.slice(i, i + batchSize);
+  for (let i = 0; i < allTopicWords.length; i += batchSize) {
+    const batch = allTopicWords.slice(i, i + batchSize);
+
+    // Introduce each word
     batch.forEach((word) => exercises.push({ type: 'word_intro', word }));
+
+    // Test each word with MC
     batch.forEach((word) => {
-      const otherOptions = lessonWords.filter((w) => w.id !== word.id).map((w) => w.english);
+      let otherOptions = [...new Set(
+        allTopicWords
+          .filter((w) => w.id !== word.id && w.english !== word.english)
+          .map((w) => w.english)
+      )];
+      if (otherOptions.length < 3) {
+        const extras = [...new Set(
+          allWordsList
+            .filter((w) => w.id !== word.id && w.english !== word.english && !otherOptions.includes(w.english))
+            .map((w) => w.english)
+        )];
+        otherOptions = [...otherOptions, ...shuffle(extras)].slice(0, 3);
+      }
       exercises.push({
         type: 'multiple_choice',
         question: `What does "${dutchWithArticle(word)}" mean?`,
@@ -594,9 +610,22 @@ function generateTopicExercises(words, allWordsList) {
     });
   }
 
-  // Phase 2: Reverse MC (English → Dutch)
-  shuffle(lessonWords).slice(0, 4).forEach((word) => {
-    const otherOptions = lessonWords.filter((w) => w.id !== word.id).map((w) => dutchWithArticle(w));
+  // Phase 2: Reverse MC (English → Dutch) — ~30% of words
+  const reverseCount = Math.max(4, Math.ceil(allTopicWords.length * 0.3));
+  shuffle([...allTopicWords]).slice(0, reverseCount).forEach((word) => {
+    let otherOptions = [...new Set(
+      allTopicWords
+        .filter((w) => w.id !== word.id && dutchWithArticle(w) !== dutchWithArticle(word))
+        .map((w) => dutchWithArticle(w))
+    )];
+    if (otherOptions.length < 3) {
+      const extras = [...new Set(
+        allWordsList
+          .filter((w) => w.id !== word.id && dutchWithArticle(w) !== dutchWithArticle(word) && !otherOptions.includes(dutchWithArticle(w)))
+          .map((w) => dutchWithArticle(w))
+      )];
+      otherOptions = [...otherOptions, ...shuffle(extras)].slice(0, 3);
+    }
     exercises.push({
       type: 'multiple_choice',
       question: `How do you say "${word.english}" in Dutch?`,
@@ -607,29 +636,33 @@ function generateTopicExercises(words, allWordsList) {
     });
   });
 
-  // Phase 3: Fill in blank
-  shuffle(lessonWords).slice(0, 5).forEach((word) => {
-    if (word.exampleNL && word.dutch) {
-      const bareWord = dutchBareWord(word) || word.dutch;
-      const escaped = bareWord.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      const sentence = word.exampleNL.replace(new RegExp(escaped, 'i'), '___');
-      if (sentence !== word.exampleNL) {
-        exercises.push({
-          type: 'fill_blank',
-          sentence,
-          answer: bareWord.toLowerCase(),
-          hint: `Translate "${word.english}" → Dutch`,
-          explanation: word.exampleEN,
-          wordId: word.id,
-        });
-      }
+  // Phase 3: Fill in blank — words that have example sentences
+  const fibCandidates = allTopicWords.filter((w) => w.exampleNL && w.dutch);
+  const fibCount = Math.min(fibCandidates.length, Math.max(5, Math.ceil(allTopicWords.length * 0.25)));
+  shuffle([...fibCandidates]).slice(0, fibCount).forEach((word) => {
+    const bareWord = dutchBareWord(word) || word.dutch;
+    const escaped = bareWord.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const sentence = word.exampleNL.replace(new RegExp(escaped, 'i'), '___');
+    if (sentence !== word.exampleNL) {
+      exercises.push({
+        type: 'fill_blank',
+        sentence,
+        answer: bareWord.toLowerCase(),
+        hint: `Translate "${word.english}" → Dutch`,
+        explanation: word.exampleEN,
+        englishContext: word.exampleEN,
+        targetWord: word.english,
+        firstLetter: bareWord.charAt(0).toLowerCase(),
+        wordId: word.id,
+      });
     }
   });
 
   // Phase 4: Listening
-  shuffle(lessonWords).slice(0, 3).forEach((word) => {
+  const listenCount = Math.max(3, Math.ceil(allTopicWords.length * 0.2));
+  shuffle([...allTopicWords]).slice(0, listenCount).forEach((word) => {
     const text = word.exampleNL || dutchWithArticle(word);
-    const otherOptions = lessonWords.filter((w) => w.id !== word.id).slice(0, 3).map((w) => w.exampleNL || w.dutch);
+    const otherOptions = allTopicWords.filter((w) => w.id !== word.id).slice(0, 3).map((w) => w.exampleNL || w.dutch);
     exercises.push({
       type: 'listening',
       text,
@@ -639,19 +672,20 @@ function generateTopicExercises(words, allWordsList) {
     });
   });
 
-  // Phase 5: Match pairs
-  if (lessonWords.length >= 5) {
-    exercises.push({
-      type: 'match_pairs',
-      pairs: shuffle(lessonWords).slice(0, 5).map((w) => ({
-        dutch: dutchWithArticle(w),
-        english: w.english,
-      })),
-    });
+  // Phase 5: Match pairs — multiple rounds if enough words
+  const shuffledForMatch = shuffle([...allTopicWords]);
+  for (let i = 0; i < Math.min(3, Math.floor(allTopicWords.length / 5)); i++) {
+    const batch = shuffledForMatch.slice(i * 5, i * 5 + 5);
+    if (batch.length >= 3) {
+      exercises.push({
+        type: 'match_pairs',
+        pairs: batch.map((w) => ({ dutch: dutchWithArticle(w), english: w.english })),
+      });
+    }
   }
 
   // Phase 6: Speaking
-  shuffle(lessonWords).slice(0, 2).forEach((word) => {
+  shuffle([...allTopicWords]).slice(0, Math.max(2, Math.min(3, Math.ceil(allTopicWords.length * 0.1)))).forEach((word) => {
     const text = word.exampleNL || dutchWithArticle(word);
     exercises.push({
       type: 'speaking',
